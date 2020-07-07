@@ -1965,6 +1965,7 @@ Template Engine
 [모바일, 안드로이드, IOS]
 -딥링크(deep link) : 모웹에서 사용하는 테그 형태로 앱을 깨우거나 모앱의 특정 페이지를 오픈 할 수 있는 메커니즘 (!! 경우에 따라 딥링크, 앱링크, 유니버셜 링크의 이름으로 혼영하여 사용, URL 스킴 방식을 보통 일커름)
 	-URL 스킴 방식 : goodoc:// 형태의 링크로 구성, 앱내 특정 위치로 이동가능, 앱 미설치시 아무 동작 안함, 같은 스킴을 사용하는 앱이 여럿 일을경우 사용자가 선택하게 함, 초기 버전의 링크로 Universal Link로 진화
+		-스킴 ex : <myappSk://events?key=value>
 	
 	-Universal Link : (!!안드로이드의 경우 보통 앱링크라는 이름으로 불려 진다.)
 		-스킴 방식과 차이 및 특징 : 
@@ -1973,8 +1974,7 @@ Template Engine
 			-각각의 장단점으로 인해 스킴방식과 혼용해서 사용	
 			
 		-os별 구분 :		
-			-앱링크 : 안드로이드쪽에 사용하는 명칭, 
-			
+			-앱링크 : 안드로이드쪽에 사용하는 명칭, 			
 			-유니버셜 링크 : IOS에서 사용하는 명칭, 
 	
 -디퍼드(deferred) 딥링크 : Universal Link와 같으나 앱이 설치되지 않은 경우 앱설치 페이지로 이동 후 앱이 설치 되면 앱에서 원래 가려던 페이지로 이동해 준다(유니버셜링크의 경우 앱 설치후 앱의 메인으로 오픈됨)
@@ -1988,7 +1988,8 @@ Template Engine
 			-메인 솔루션 :
 				-
 				-One Link : 
-		
+
+-organic install : 특별한 마케팅 링크(디퍼드 딥링크 같은)가 걸리지 않음 순수 스토어를 통한 인스톨
 
 
 
@@ -2027,6 +2028,42 @@ Template Engine
 
 
 
+[publishing platform]
+-개념 : 웹사이트를 만들기 위한 플랫폼 (툴?)
+-주요 상품 : 
+	-wordpress : 전세계 30 쇼핑몰이 wordpress 기반, opensource 기반으로 각정 플러그인 및 테마를 제공함
+		-서비스 임대형, 설치형 등 다양한 조건으로 지원
+	-wix.com : 
+		
+
+
+[SEO]
+-SEO : search engine optimization
+-최적화 :
+	-https 사용
+	-robots.txt 사용 : https:xx;com/robots.txt 에 위치 시킴 (서치엔치이 크롤링 함)
+		-접근할수 없는 url path 구현 (로그인이 필요한 마이페이지, 장바구니, 결제 페이지 등..)
+	-sitemap.xml 
+		-robots.txt 파일을 통해 정의 할수 있음
+		-보여주고 싶은 페이지에 대한 정의 
+		
+	-SEO를 위한 타이틀 및 디스크립션 테그 적용
+		-<title></title>
+		-meta tags : 
+			-<meta name="title" content="">
+			-<meta name="description" content="">
+			-<meta name="keyword" content="">
+		-robots meta tags :
+			-<meta name="robots" content="noindex, nofollow" />
+		-이미지 테그의 alt text 활용
+		-Canonical tag : 사이트에 거의 동일한 페이지가 존재할경우 정본?? 페이지로 링크될수 있게 할수 있다. 또는 타 사이트의 내용을 따온 경우 원본? 페이지로 링크될 수 있게 할수 있다.
+			-<link rel="canonical" href="http://example.com/" />
+		-기타 sns tag : og tags...
+		
+-ASO : app store optimization (모바일 스토어에서 최적화)
+
+
+
 
 [SNS]
 -페이지 공유 :
@@ -2054,7 +2091,7 @@ Template Engine
 				-최종 링크되는 페이지에서 og테그를 지원 할수 없는 경우 originUrl을 https://my.com/productDetail?isShared=true 형태로 주고 productDetail 페이지 내 메타테그를 쓰고
 				-로딩되는 시점에 스크립트를 통해 isShared 가 true인 경우 location을 다른 곳으로 이동처리하는 방식이 가능하다 (크롤러는 js 스크립트를 무시하기 때문인듯..)
 
-
+		-og tag에 대한 확인 테스트 가능 : https://developers.facebook.com/tools/debug/
 
 
 [Chrome]
@@ -2494,5 +2531,3 @@ Template Engine
 		-scrum master : 팀이 과제를 완수할 수 있도록 지원 및 인도
 			
 		
-
-
