@@ -70,6 +70,8 @@
 		-파일 선택 후 -> Source -> Generate toString() : 해당 클래스에 대한 toString() 함수를 생성해 줌
 		-ALT+SHIFT+Z : Surround With (for, while, try 등 블륵 어시던트 기능)
 		
+		-CTRL+SHIFT+x : 대문자로 변환
+		-CTRL+SHIFT+y : 소문자로 변환
 	
 	-문제 해결
 		-red-x icon : java 에러가 파일에 반영이 되지 않는 경우 확인, project->build automatically 확인
@@ -82,16 +84,27 @@
 	
 	-디버깅 : 
 		-디버깅 perspective 로 전환 : 디버깅하기에 용이한 화면 구성으로 전환 하는 의미 (안해도 됨)
-		-디버그 모드로 실행 (run)
+		-디버그 모드로 실행
 		
 		-디버깅 관련 view :
-			-Debug : 디버깅 실행 시점부터 생성되는 쓰레드들의 현재 상태를 보여 준다.
+			-Debug : 디버깅 실행 시점부터 생성되는 쓰레드들과 그들의 연관 관계를 보여 준다.
+				-!!각 쓰레드 별로 실행되고 있는 메모리에 올라와 있는 스텍(메소드??) 정보를 함께 보여 준다. spring과 같은 프레임워크의 내부 동작을 이해하는데 큰 도움이 될 수 있다.
+				
+				
 			-Breakpoints : 잡혀 있는 break 포인트 목록을 보여준다
-			-Variables : 포인트가 접혀있는 현 상황에서 확인 가능한 변수의 value를 보여 주며 다른 값으로 수정 할 수 있다.
+				-포인트 활성/비활성/삭제 가능
+				
+				
+			-Variables : 포인트가 잡혀있는 현 상황에서 확인 가능한 변수의 value를 보여 주며 다른 값으로 수정 할 수 있다.
+				-하나의 스텍으로 진입 하게 되면 해당 스텍에서 접근 가능한 변수만 보여 주고 있는듯.. !!컴퓨터의 동작 구성상 그럴수 밖에 없을 듯
+				-화면 레이아웃 및 컬럼(보통 name, variableType, value) 추가/삭제 가능
+				-Value 값은 해당 변수(객체)를 toString() 했을때의 값으로 경우에 따라 읽기 쉽지 않을 수 있다
+				
+				
 				-화면구성 :
 					-맨윗줄 : 바로 직전 실행된 코드의 return 값을 보여 줌 (retrun 값이 있을수 없는 코드인 경우 null로 나옴)
-					-this : 해당 클래스의 멤버 변수를 보여줌
-					-그아래 : 해당 메소드의 멤버 변수를 보여줌 (stek 메모리???)
+					-this : 해당 클래스!! 선택하여 내리면 해당 클레스의 멤버 변수를 보여줌
+					-그아래 : 해당 메소드의 멤버 변수를 보여줌 (현재 stek 내의 메모리???)
 					
 			-Expressions : ???
 		
@@ -101,19 +114,48 @@
 		-suspend : 
 		-terminate : 디버깅 실행 종료 (실행 종료)
 		-step into(F5) : 현재 라인이 메소드인 경우 메소드 내부로 들어간다.
-		-step over(F6) : 현재 라인을 실행 시키고 다음 라인(논리적으로 다음 라인, 현재 메소드 내부에 한에서, !!그러나 호출된 외부 메소드 안에 브레이크 포인트가 있으면 그곳으로 이동)으로 내려 간다.
+		-step over(F6) : 현재 라인을 실행 시키고 다음 라인(논리적으로 다음 라인, 현재 메소드 내부에 한에서, !!그러나 호출된 외부 메소드 안에 브레이크 포인트가 있으면 그곳으로 이동)으로 내려 간다.		
 		-step return/out(F7) : 현재 메소드에서 리턴 한다 !!그러나 현재 메소드에 브레이크 포인트가 남아 있다면 그곳으로 이동
+		-drop to Frame : 현재 스택(메소드)의 진입점 부터 다시 시작.
+			-현재 스텍에서 이미 버러진 일이 없어지는 건 아니다. 하지만 해당 스텍이 처음 부터 다시 돌아 간다면 다시 변경된 값으로 덮어 써질꺼임..
+			-주의!!
+				-해당 스텍에서 쓰레드를 생성했거나 또는 변경한 값이(내 클레스든 타 클레스든) 이미 다른 쓰레드에서 읽어 가서 활용됐다면.. 타 쓰레드가 이미 행한 부분은 도릴킬수 없다.
+				-현재 스텍의 첨으로 재 실행되더라도 해당 스텍에서 쓰레드를 만들었다면 해당 쓰레드는 여전히 돌게 됨 (기존 쓰레드는 계속 있고 새 쓰레드가 또 생김, 자기가 죽기 전까진)
+				-!!drop to Frame이 안되는 스택이 있음 바로 JVM이나 TOMCAT(??) 과 같이 해당 스텍이 다른 프로세스?? 다른쓰레드?? 에서 호출된 첫번째 스택인 경우이다. (정확한 확인 필요하다.)
+					-이러한 스텍은 java app의 메인 메서드 또는 Servelet의 컨트럴러 (uri 매핑되어 호출되는 메서드) 이다. 시스템이 첫 호출해 주는 스택????
+					-이러한 스텍에서의 수정은 수정이 이루어져도 실제 반영되지 않는다.(이게 반영된다는 것은 내가 컨트롤할수 없는 타 쓰레드? 프로세스?에게 나를 다시 호출하라는 것이라 IDE의 권한 밖인듯...???!!!)
+		
+		-suspend : 특정 쓰레드의 동작을 정지시키는 의미 (해당스레드가 동작하지 않겠지?? 정확한것 확인 필요)
+		
+		-instruction steping mode : ????
+		-setp until a message is received : ????
+		-use step filters : ????
 		
 		
+		-Hotswap(핫스왑) Bug Fixing : JVM 1.4 이상부터 지원하는 기능으로 Java Platform Debugger Architecture (JPDA)를 이용하여 구현됨.
+			-코드를 수정하여 리컴파일이 이루어 지더라도 기존의 스텍 구성을 그대로 활용하여 디버깅을 이어서 진행할수 있다.(stop 또는 terminate 후 재시작하게 되면 기존 스텍을 모두 잃고 첨부터 재 시장됨)
+			-파일 수정 저장하여 자동 리컴파일 현 디버깅 상태에서 resume을 통해 이어서 진행이 가능하다. 
+			-디버깅 시점까지 들어가기가 까다로운 케이스의 경우 도움이 될수 있다. 
+			
+			-주의!!:
+				-현재 잡혀있는 BP(breakpoint)가 속한 메스드는 해당 어플리케이션의 최상단 스텍이라 볼수 있다. (해당 쓰레드 기준으로 그럴수 밖에 없겠지??)
+				-Hotswap을 하게 되면 현재 메소드(스택)의 첨부터 다시 시작됨 (drop to Frame 한것 처럼)
+					-!! Hotswap이 동작하지 않는 스텍이 있음, drop to Frame의 내용을 참고!!!!
+			
+				-web 어플의 경우 핫스왑시 브라우저의 커넥션이 끊어지기 때문에 완전한 연속적 테스트는 불가능 하다.(연결 했었던 커넥션을 사용하는 코드를 만나기 전까진 진행 할수 있겠찌??)
+					-브라우저가 핫스왑시 커넥션이 끊어지면 이후에 브라우저 자체 기능으로 리커넥션을 하는듯 하다.. 리커넥션되어 디버깅 혼선이 잇을수 있으므로 핫스왑중 해당 브러우저를 꺼버리는것도 방법이다.
 		
-	
-	
-	
+
+		
 -atom : git 연동 강점, 특정 language에 제한되지 않는다. (editplus 같이 가벼운 느낌임)
 	
 	
  
 [JAVA]
+-error :
+	-compile error : 언어 syntat상 오류 및 코딩 중 잘못된 구문에 의해 발생하는 에러(서로 다른 타입의 케스팅 및 어싸인 등)로 보통 개발 tool에 의해 컴파일 전 에러가 걸러 진다.		
+	-runtime error : 실행중간에 논리적 오류에 의해 발생 (아직 null인 상태의 객체의 메서드를 사용하거나 하는 등)
+	
 -class 실행 : java -cp target/classesName
 	-java : 해당 클레스를 콘솔 모드로 실행 (콘솔로그 확인 가능, 콘솔을 닫으면 종료)
 	-javaw : 해당 클레스를 윈도우 모드로 실행 (콘솔 로그를 확인 할수 없음, 콘솔을 닫아도 종료되지 않음)
@@ -211,7 +253,7 @@
 	System.out.println("end");
 	-----------
 
--enum (class): class 와 유사한 형태의 열거체, 이름과 값을 동시에 사용할수 있다(boolean 의 true/false, 0/1 처럼) index 번호도 알수 있음
+-enum (class): class 와 유사한 형태의 열거체, 이름과 값을 동시에 사용할수 있다(boolean 의 true/false, 0/1, 특정 스트링값 처럼) index 번호도 알수 있음
 	-선언 :
 		-별도 class 형태 : 별도의 자바 파일로 생성
 			-----------
@@ -221,6 +263,7 @@
 
 		-class 내부 형태 : class 파일 내부에 inner class 형태로 생성
 			-----------
+			//int 형인 경우
 			public class Myclass{
 				...
 				enum Rainbow {
@@ -237,10 +280,25 @@
 					}
 				}
 			}
+			
+			//String 형인 경우
+			public enum MylogLogLevel {
+				FATAL("fatal"), ERROR("error"), WARN("warn"), INFO("info"), DEBUG("debug"), TRACE("trace"), NA("");		
+				private final String myValue;		  		  
+				
+				MonlogLogLevel(String value) { 
+					this.myValue = value; 
+				}
+				
+				private String getValue() { 
+					return myValue; 
+				}
+			}		
 			-----------
 			
 	-사용 :	
 		-----------
+		//기본 사용
 		public void myTest() {
 			Rainbow myRainbow = Rainbow.RED;				
 			Rainbow yourRainbow = Rainbow.BLUE;
@@ -255,6 +313,10 @@
 				}
 			}
 		}
+		
+		//응용 사용 (특정 함수에 특정한 값만 들어가기 위해서 특정 값만 갖은 enum을 생성하여 선택적으로 사용 가능)
+		MyLogger.log(MylogLogLevel.ERROR, "메시지.."); 로그레벨 파람을 특정 값으로만 받고 싶은경우 
+		//MyLogger 함수 내에서는 MylogLogLevel.ERROR.getValue()로 실제 값을 가져올수 있다.
 		-----------
 	
 -call by value & reference 
@@ -806,27 +868,32 @@ Sourcetree : GIT 클라이언트 툴
 [Spring]
 -Spring Framework : 아래와 같은 주요 기능(Main Features)을 Dependency Injection 해줌
 	-Spring JDBC
-	-Spring MVC : Browser->DispatcherServlet->HandlerMapping->Controller(Bean, Model, Service, DAO, DB 이용)->DispatcherServlet->ViewResolver->View->DispatcherServlet->Browser
+	-Spring MVC : 브라우저->DispatcherServlet->HandlerMapping->Controller(Bean,Model,Service,DAO,DB 이용)->DispatcherServlet->ViewResolver->View->DispatcherServlet->브라우저
 	-Spring Security
 	-Spring AOP (aspect oriented programing) : 개발자가 핵심 로직에만 집중할수 있도록 공통 기능을 framework 에서 지원 (filter 처럼 선/후 처리를 지원하는 class 지정 가능)
 	-Spring ORM (object relational mapping) : 하이버네이트, JPA 등을 이용해서 DAO 레이어를 구축하는 방식
 	-Spring Test	
 
---Spring Boot Framework : Spring Framework의 확장형으로 설정과 관련한 편의성이 향상 되었다.
+
+-Spring Boot Framework : Spring Framework의 확장형으로 설정과 관련한 편의성이 향상 되었다.
 	-application configuration 이 간소해짐(xml이 사라지고 거의 모두 코드 레벨에서 어노테이션을 통해 이루어짐)
 	-Tomcat 같은 서버가 Embedded 되어 패키징 됨(별도의 서버 설치나 deploy가 필요 없음)
 	-Metrics, Helth check, and externalized configuration
 	-Automatic config for Spring functionality – whenever possible
 
+
 -Handler Interceptor : 인터셉터는 DispatcherServlet이 컨트롤러를 호출하기 전,후에 요청과 응답을 가로채서 가공할 수 있도록 해준다. 	
 -HandlerMethodArgumentResolver : ??
 
+
 -Spring Boot Resource : src/main/resources/static은 URL에서 Resource의 / 이다
+
 	
 -Spring Config : 		
 	-WAS 설정 : WAS(tomcat)와 Spring의 연결 고리??
 		-server.xml : 서버의 기본 설정, 포트, ssl, Context path 및 docBase 지정, (/tomcat/conf/..위치)
-		-web.xml : 서블릿 배포 기술자(Deploment Descriptor), 서블릿의 배치, mine type 지정, welcom file 지정, error 페이지 지정, filter 지정, (/Webroot/WEB-INF/..에 또는 /tomcat/conf/..)
+		-web.xml : 서블릿 배포 기술자(Deploment Descriptor)
+			-서블릿의 배치, mine type 지정, welcom file 지정, error 페이지 지정, filter 지정, (/tomcat/conf/(전역설정) 또는 /Webroot/WEB-INF/..에 )
 			-----------
 			web.xml 파일에 spring 관련 context 파일의 위치를 알려준다. (서버 스타트시 같이 읽어 로딩한다.)
 			-----------				
@@ -915,9 +982,11 @@ Sourcetree : GIT 클라이언트 툴
 	
 	-yaml-importer : Spring Framework 의 EnvironmentPostProcessor Cycle에 특정 path 의 Yaml 기반으로 Configure Property 를 로드하는 기능을 하는 모듈
 
+
 -Spring Boot Config : server.xml, web.xml, application.xml 등을 사용하지 않고 주로 어노테이션을 사용하여 설정을 정한다.(스프링은 전체 클레스의 어노테이션 스캔을 통해 해당 클레스가 어떤역할을 위한 클레스인지를 알수 있다.)
 	-@Configuration(extend WebMvcConfigurerAdapter) : spring 설정과 관련한 클레스임을 알린다. 
 		-특히 WebMvcConfigurerAdapter 클래스를 상속 받아 server.xml, web.xml, application.xml 의 설정을 대신 할수 있다.
+
 				
 -Spring boot Filter(필터) : 스프링 필터 클레스를(여러형태가있음) 상속받아 @Component 어노테이션을 통해 만들수 있다.
 	-필터가 적용되는 지점 : Filter, Interceptor, AOP (Filter는 Servlet 엔진(Servlet Context)에서 주관, Interceptor는 Spring(Application Context)에서 주관, 컨테이너 진입 전(후), AOP는 메소드 단위에 걸수 있다.	
@@ -1036,7 +1105,8 @@ Sourcetree : GIT 클라이언트 툴
 		-----------
 
 	-@EnableWebMvc : DelegatingWebMvcConfiguration(Spring MVC 설정을 담당하는 객체)에게 MVC 새 설정 사항이 있음을 알린다. (보통 @Configuration, @Bean과 함께 사용)
-	-@Bean : method-level의 어노테이션, 해당 메소드의 return 객체를 spring이 관리(인스턴스)한다. 개발자가 직접 만든 클래스가 아닌(직접 만들었다면 코드에 @Component를 붙였을거임)경우 사용됨(보통 @Configuration과 함께 사용)
+	-@Bean : method-level의 어노테이션, 해당 메소드의 return 객체를 spring이 관리(인스턴스)한다. 
+		-개발자가 직접 만든 클래스가 아닌(직접 만들었다면 코드에 @Component를 붙였을거임)경우 사용됨(보통 @Configuration과 함께 사용)
 	-@Configuration : 해당 클래스가 Spring에서 관리할 Bean(내가수정할수없는)을 정의했음을 알린다. @Bean 과 함께 사용하여 해당 메소드의 return 객채를 Spring의 Bean으로 올린다.
 		-----------
 		@Configuration
@@ -1280,6 +1350,13 @@ Sourcetree : GIT 클라이언트 툴
 		@ConfigurationProperties("service.mydb")
 		public class MyDataSource {
 		-----------
+		
+	-@ControllerAdvice : ??? 
+	-@ExceptionHandler : ???
+
+
+		
+		
 	
 	-기타
 		-@EnableJpaAuditing : JPA Audditing을 활성화 한다. ??
@@ -1341,6 +1418,7 @@ Sourcetree : GIT 클라이언트 툴
 	User user = mapper.readValue(jsonInString, User.class);
 	-----------
 
+
 -MessageSource : 다국어 처리 메커니즘을 지원해주는 class
 	-메세지 파일 형식 : [파일이름]_[언어]_[국가].properties, class path내 위치, (요건의 맞는 파일을 찾을수 없는 경우 message.properties를 기본값으로 한다.)
 	-----------
@@ -1383,6 +1461,23 @@ Sourcetree : GIT 클라이언트 툴
 				assertThat(body).contains("xxx"); //본문에 "xxx" 문자열이 있으면 테스트 통과
 			}
 		-----------
+		
+
+-Spring security
+
+-Spring 주요 개념
+	-Spring IOC(inversion of control) : 나늘 누가 생성해서 언제 쓸찌는 모른다.. 그것을 다른 주체(Spring container)에게 맞기고 나는 부품으로써의 구성을 해두면 된다. 
+		-DL(dependency lookup) : 컨테이너가 제공하는 api를 이용하여 컨테이너가 관린하는 been을 검색하는것(직접 생성하지 않고 검색하여 이용하는 것???)		
+		-DI(dependency injection) : 각 클레스를 생성할때 자신에게 필요한 다른 클레스를 컨테이너에게 알려주면 컨테이너가 알아서 주입해 주는것(개발 편리성과 더블어 뭔가 더 효율적인 관리를 하나???)
+		
+	-Spring POJO(plain Old Java Object) : getter/settr를 가진 평범한 object로 spring은 이러한 단순한 형태의 pojo 지향적 설계를 오히려 지향한다. (복잡한 플로우는 컨테이너가 알아서 해줄꺼야???)
+	-Spring AOP(Aspect Oriented programming) : 핵심 기능(실제업무)과 공통 공통기능(늘쌍있는 보안, 로그인 등..)을 구분해서 구분해서 개발하자는 주의(OOP의 개선??), 공통기능은 많은 부분 컨테이너에 위임함
+	-Spring MVC 흐름 개요 : Client->Servlet(Controller)->(DTO)->Service(비즈니스계층)->(DTO)->DAO(퍼시스턴스계층)->DB ->-역순환->..->Servlet(Controller)->View(jsp, 프리젠테이션계층)
+		-Model : 데이터 처리를 담당하는 부분 (Service와 DAO영역), model에서는 view와 controller의 어떠한 정보도 가지지 않아야 함
+			-주의점 : Service영역은 불필요한 http 통신을 하지 말아야 하며, request, response등을 파람으로 받지 않아야 한다. 또한 view에 종속적인 코드가 없어야 한다.(view의 변경과 무관해야 함)
+		-View : 사용자 interface를 담당하는 보여지는 부분, view는 controller만 연관성을 갖는다.
+		-Controller : view에서 받은 요청을 가공하여 model에 넘겨주는 역할, 모델로 받은 결과를 view로 넘겨주는 역할, 모델에서 부터 올라오는 에러등에 대한 처리
+
 		
 [DB]
 -DBMS :
@@ -2390,11 +2485,6 @@ Template Engine
 
 
 
-
-
-
-
-
 [http]
 -보안
 	-Access-Control-Allow-Origin : (옵션 : *, 특정 도메인)
@@ -2427,6 +2517,29 @@ Template Engine
 				-해당 옵션이 설정 되지 않은 경우의 동작 
 					-기존 chrome 80버전 이전에서는 None으로 동작, 80버전 이후에서는 Lax로 동작
 					
+					
+	-CSRF 방지를 위한 Anti-Forgery Tokens (CSRF Token) : CSRF 방지를 위하여 서버는 페이지를 내려줄때 CSRF 방지 토큰을 함께 내려준다.
+		-개념적 절차 :
+			-해당값은 세션 생성시 랜덤한 값으로 발급하며, session에 저장하고 session의 라이프사이클과 동일하게 관리됨 (보통 로그아웃시 세션이 바뀌겠지??)
+			-CSRF 토큰값은 브라우저의 cookie에 저장 되거나 매 페이지마다 hidden 값으로 내려온다.(둘다 갖고 있을 수도 있다)
+			-해당 페이지가 POST, PUT, DELETE 등 중요한 request를 전송하는 경우 해당 CSRF 토큰값을 request 해더(Option필드??)에 넣어 함께 전송 (쿠키에도 있을경우 함께 올라감)
+			-서버는 올라온 토큰값이 해당하는 서버쪽 세션의 값과 일치하지 않으면(둘다 있는 경우 cookie, 헤더나 모두 일치해야함) 403 Forbidden 에러를 내려 준다.
+		
+		-CSRF 공격과의 관계 : 예시
+			-해커는 숨켜진 스크립트를 통해서 특정 값과 특정인의 cookie값을 특정 서버로 보낼수 있지만 헤더로 올라오는 CSRF 값까지는 알수 없기 때문에 403을 받게 될 것이다.
+				-네이버에 로그인된 session 값이 살아있는 사용자가 같은 브라우저로 해커의 사이트에 들어 갔을때 
+				-헤커가 사용자 모르게 스크립트로 네이버쪽의 비밀번호 변경페이지로 request를 날릴수 있다 이따 네이버 세션이 살아 있기 때문에 새 비밀번호변경 양식과 동일하게 구현해서 날린다면 변경이 가능할수 있다(예시)
+				-session 은 cookie로 자동 넘어가니 어쩔수 없지만 사용자가 사용했던 CSTR Token을 알수 없기에 전달 불가 결과적으로 403을 받는다.
+				
+		-실제 적용 예시 :
+			-서버쪽 :
+				-Spring Security에서 CSRF 토큰 적용을 할지를 정할수 있다(WebSecurityConfigurerAdapter??)
+					-특정 url 패턴으로 예외 케이스를 적용할수도 있다.
+			
+			-클라이언트 코드 : 서버로 POST, PUT, DELETE 메소드 호출시 서버가 내려준 CSRF 토큰값이 request 해데에 포함되서 올라갈수 있도록 script 구성이 필요함 (submit, Ajax 포함)
+			
+		
+		
 
 -해더					
 	-Client Cookie &  Server Cookie : 생성하는 위치에 따른 차이, 서버에서 생성하느냐 바라우저에서 js 스크립트에 의해 성성 되느냐의 차이
@@ -2455,7 +2568,7 @@ Template Engine
 			-At least 3000 cookies total.
 			-!!! I note this does not mean that browsers support 50 cookies * 4096 bytes == 204,800 bytes == 204KiB per domain. 
 			-!!! I find that Safari and Chrome start to reject cookies if the total data for a domain exceeds something between 5-8KB 
-			-위의서 실제로는 5-8k 까지 쿠키가 전달 된다는 의견은 서버의 http 해더 최대값에 걸리기 때문으로 예상함 (web 서버의 기본 설정 해더 최대값은 8k 임)
+			-위의서 실제로는 5-8k 까지 쿠키가 전달 된다는 의견은 서버의 http 해더 최대값에 걸리기 때문으로 예상함 (web 서버의 기본 설정 해더 최대값은 8k 임, 헤더의 최대값은 was의 server.xml에서 수정 가능)
 	
 	-request시 url에 추가 되는 파람은 어떻게 전달되는가?
 		-모든 url 파람은 http 해더의 Request URL 영역을 통해 전달 됨, 다시 말해 url 파람이 길어 지면 head의 길이가 커지고 서버의 최대 허용 head 사이즈가 넘으면 문제가 될수 있음
@@ -2532,14 +2645,6 @@ Template Engine
 			RSA : KeyPair keyPair = gen.genKeyPair();
 
 
-		
-	
-
-
-
-
-
-
 
 
 
@@ -2548,15 +2653,101 @@ Template Engine
 	-위치 : tomcatHome/bin/setenv.sh
 	-내용 : JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active={profile_name}"
 
-	-application-XenvVallueX.yml : 기본이 되는 yml 파일로 해당 프로파일에서 프로퍼티를 못 찾을 경우 application.yml 파일에서 찾게 되있다.
+	-application-XxxenvValluexxX.yml : 기본이 되는 yml 파일로 해당 프로파일에서 특정 프로퍼티 벨류를 못 찾을 경우 application.yml 파일에서 찾게 되있다.
 		-ex : env 가 stg 일경우 
 			-application-stg.yml에서 환경 프로퍼티를 찾게 되있음 만약 해당 yml에서 찾을 수 없는 값이 있는 경우 기본 파일인 application.yml 에서 찾게 됨
 
 		
+-config : 
+	-server.xml : 톰켓 동작 전반에 대한 설정으로 기타 초기값 및 서비스 구성에 대해 정의 한다. https://tomcat.apache.org/tomcat-5.5-doc/config/engine.html
+		-Server : 가장 최상위, 서버를 정지시키는 명령어와 명령을 받기 위한 포트를 구성할 수 있다 (ex: port="8005" shutdown="SHUTDOWN" ), 클래스를 추가하여 shutdown을 위한 특정 클래스 구성 가능
+			-Listeners :
+			-Global Naming Resources :
+				-Resources :
+			
+		-Service : 논리적인(사람이 인식하는) 서비스 단위를 구성한다. (ex: 네이버 메일, 네이버 메모, 네이버 웹튼..), 톰캣의 전체 로그에서 서비스 명으로 구분되어 진다.
+			-Connectors : 여러개의 커넥터를 갖을수 있다. 해당 커넥터의 포트로 들어온 request를 해당 Engine으로 전달해 준다. http, ajp 두 커넥터를 동시에 사용 할 수 있다.
+				-HTTP Connector : http 기본 커넥터로 보통 8080, 아파치와 연동하여 ajp 포트를 쓴다면 사용하지 안하도 됨, 많은 추가 attr를 갖는다(ex: maxHttpHeaderSize)
+				-AJP Connector : apach 연동을 통해 들어오는 request를 받기위한 커넥터, 아파치 연동이 없으면 사용하지 않아도 됨, 
+				-SSL Connector : ssl/tls를 사용하는 request를 위해 구성할 수 있다. 인증서 정보등의 attr를 갖고 있다.
+				-!! HTTP, AJP에 있는 redirectPort는?? : ssl/tls로 들어오는 요청이 있는경우 리라이렉트 해주는 포트, SSL Connector가 살아 있어야 잘 되겠지??
+			
+			-Engine : 실제 request(header 까지는 엔진도 확인하는 듯) 처리를 진행하는 진입점으로 적절한(주어진) host(virtual, 실제 리소스가 있는)와 함께 처리를 진행 한다. 
+					-attr : defaultHost=request를 처리하기 위한 기본 host 네임(아래 호스트 엘레먼트 이름과 연결됨), name=로깅을 위한 식별자, jvmRoute=로드벨런싱처리시 session 생성 관련 
+				-Cluster : 서비스 2중화 구성을 위한 요소로 리소스 및 session 에 대한 이중화 처리 설정으로 복잡성이 높으며 보통 기본값 사용을 권장함
+				-Realm : ???서버를 JDBC, JNDI(LDAP)과 같이 다른 서비스와 연결하기 위한 요소???
+				
+				-Host :	도메인과 맞물리는 하나의 가상 호스트를 생성하는 개념이다. 
+						-attr인 name으로 들어온 도메인에 대해서 내가 (webApp,실제서비스코드)가 담당하겠다는 의미, Engine이 request의 해더까진 분석할수 있기 때문에 적적할 호스트로 줄수 있겠지??
+						-Engine 엘레먼트의 defaultHost로 지정 호스트는 반드시 존재 해야함.
+						-Alias 엘레먼트를 통해서 하나의 host(virtual)에 여러 도메인을 연결할 수도 있다.
+						-<host name="xxx.com" : xxx.com으로 들어온 요청인 경우 해당 호스트에서 처리하겠다는 의미 (호스명은 대소문자 구분하지 않음)
+						-local PC에서 호스트 파일을 수정후 브라우저에 가상 도메인을 입력하여 테스트 해볼수 있다.
+						
+						-attr인 appBase : 해당 호스트가 사용할 웹어플리케이션들(!!여러개의 war들)의 위치를 알려 준다. 절대 경로 사용가능, 상대 경로인 경우 $CATALINA_BASE 부터 시작
+							-!!다시말해 하나의 Engine은 여러개의 호스트를 갖을 수 있고 또한 여러개의 war파일들로 동작할 수도 있다.
+							
+						-attr인 unpackWARs : true면 war파일이 생기면 war를 풀어서 사용, false면 war파일을 풀지 않고 사용(풀지 않고도 사용 가능 한듯??...)
+						-attr인 autoDeploy : 통캣이 실행중인 경우 재시작 여부로 true면 새로운 변경이 발생시 자동 재시작, false면 자동으로 재시작 하지 않음
+						
+					-Context : Host로 들어온 특정 url 패턴에 대해서 어떤 war가 처리할지를 정한다. 하나의 Host에 여러 contex가 존재할 수 있다.
+						-!! context가 여럿인 경우 server.xml에 정의 하지 말고 별도 파일로 정의하라고 권하는것 같음(server.xml에 정의해도 동작 함)
+						-$CATALINA_HOME/conf/context.xml 에 작성한 경우 모든 webApp들이 로드(사용?)할 수 있다.
+						-$CATALINA_HOME/conf/[enginename]/[hostname]/context.xml.default 로 작성하면 해당 호스트에 속하는 webApp들이 로드(사용?)할 수 있다.
+						-$CATALINA_HOME/conf/[enginename]/[hostname]/foo#bar.xml 로 작성하면 context path가 /foo/bar 인 애들의 것이다.(???) (/에 대한 파일은 ROOT.xml)
+						-webApp가 war로 배포되고 /META-INF/context.xml 가 존재하면 $CATALINA_HOME/conf/[enginename]/[hostname]/로 카피하고 context에 맞게 이름을 변경한다.
+							-서버쪽 $CATALINA_HOME/conf/[enginename]/[hostname]/ 에 이미 파일이 존재하는 경우는 옮기지 않는듯??? 좀더 확인 필요
+							-/META-INF/ 정채가 뭐지??
+							
+						-attr인 path는 uri를 통해 진입하는 path의 시작점이다.
+							-<Context path="/" docBase="ROOT" : xx.com/로 진입시 처리해 주는 webApp(war)정의, 상대 경로의 경우 appBase 하위에서 찾는다.
+							<Context path="/myApp" docBase="D:/html/myApp" : xx.com/myApp/로 진입시 처리해 주는 webApp(war)정의, 절대 경로도 사용할 수 있다.
+						-attr인 reloadable가 ture인 경우 /WEB-INF/classes/ 와 /WEB-INF/lib 의 변경을 실시간으로 감지하여 반영해 준다. (상용에서는 사용 비권장)
+						-attr인 privileged ture인 경우 해당 context에서 다른 context의 servlet을 로딩할수 있다???
+						
+						-Resource : !!!???
+						
+						
+					-Valve : Host나 Context 또는 Engine 영역의 request processing pipeline 단에서 특정 작업을 처리하는 component들에 대한 설정을 명시한다. (파이프라인에서 동작하는 벨브??)
+						-여러 Valve가 존재하며 각각의 역할이 있다. (사용하고 싶은 것들에 대해서만 정의 하면 된다, 상대 경로가 필요할 경우 $CATALINA_HOME = $CATALINA_BASE 사용 가능)
+							-Access Log : 엑세스 로그와 관련된 설정
+							-Remote Address : request를 보내는 ip에 대한 필터링을 처리할 수 있다.
+							-Remote Host Filter : request 도메인에 대한 필터링을 처리할 수 있다. (레퍼럴을 보고 판단하나?)
+							-Request Dumper : 디버깅을 위해 request 처리에 대한 상세한 정보를 남기나 문제가 있어 deprecated 됨
+							-Single Sign On : ??? tomcat이 자체적으로 가지고 있는 인증기능(conf/tomcat-users.xml을 통한?)이 있는데
+									-이것들은 기본적으로 host 내의 각각의 context 마다 별도 인증됨
+									-Single Sign On 통해 같은 호스트상의 서로 다른 context 끼리도 인증을 연결해 주기위한 처리???
+									-!!어떤 내용인지 realm 과 session의 동작과 더블어 좀더 확인이 필요!!!
+																			
+							-Basic Authenticator : tomcat이 제공하는 기본 인증 기능(Basic Authenticator)에 대한 설정, 설정안해도 기본제공됨, 기본 셋팅에서 수정 필요시 재 정의
+								-Basic Authenticator 설정 기본 : conf/tomcat-users.xml에 Role과 User/PW를 설정하여 사용가능
+								-보통 Tomcat 관리 페이지(기본으로 제공되는 ROOT war 기능)를 이용할때 tomcat-users.xml를 이용할 수 있다.
+								-?? http의 Basic Authentication 과 session 그리고 Role, User의 매칭, 그에따른 크리덴셜 관리가 실제 어떻게 이루어 지는지 좀더 살펴 봐야 함
+								
+							-Digest Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)
+							-Form Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)
+							-SSL Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)		
+		
+		-GlobalNamingResources : ????
+		
+	
+	-환경 변수 :
+		-JAVA_OPTS : JAVA VM 의 메모리 설정과 관련 있는 옵션이다. tomcat이 별도로 설정하지 않는 경우 JAVA_OPT 설정을 따라간다. 톰캣만의 독자 적인 설정을 하고 싶으면 CATALINA_OPTS에 적용하면 된다.
+		-CATALINA_HOME : tomcat 설치 경로
+
+	-web.xml : ???
+
+-Tomcat Apache 연동 : ???
+
+	
+
+
+
 
 [CDN]
 -CDN은 원본서버로부터 전송받아 전달해 주고 캐시하는 역할을 합니다. 
 	-기본적으로 중간 캐시 서버로써 원본 서버에서 에러가 발생한 url의 경우도 CDN에서도 그 에러 상태 그대로를 캐시하여 내려주는 것이지 별도의 처리를 하지 않는다.
+
 
 
 [Node.js & NPM]
@@ -2623,9 +2814,7 @@ Template Engine
 				-개인 대시보드 : 대시보도 관리를 위해 본인이 원하는 항목으로 구성된 대시보드를 만들 수 있다.
 			-개인보드 : 직접 구성한 보드 
 			
-			-WBS Gantt-Chart : 
-			
-				
+			-WBS Gantt-Chart : 				
 
 	-용어 : 
 		-scrum :
@@ -2638,3 +2827,4 @@ Template Engine
 		-scrum master : 팀이 과제를 완수할 수 있도록 지원 및 인도
 			
 		
+shkim@topmania.com
