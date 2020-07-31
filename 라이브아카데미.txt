@@ -1,0 +1,978 @@
+[라이브 아카데미]
+-title : 연습가이드 #1 영어초보라면 이렇게 시작하세요
+	-script :
+	
+		-I usually get up at 7 o'clock. Today I got up at 8. Tomorrow I'm going to get up at 6. (보통은, 일어나다, 마시다,) 
+		-I usually drink black coffee. Today I drank a latte. Next time I'm going to drink an espresso. 
+		-I usually go to bed before midnight. Last night, I went to bed around 1 o'clock. Tomorrow I'm going to go to bed at 10. (자러가다, 언제쯤)
+		-I usually eat lunch at the caffeteria(구내식당). Today I ate some bananas in my office. Tomorrow I'm going to eat lunch at Burgerking.
+			-I usually | at 7 o'clock | get up | drink black coffee | netx time | go to bed | before midnight | last night | around 1 o'clock
+			-at the caffeteria | some bananas | in my office | at Burgerking 
+		
+-title : 당황, 당황하다, 당황스럽다
+	-script :
+	
+		-I'm embarrassed. I was so embarrassed. It was so embarrassed. 
+			-be embarrassed(감정), be embarrassing(상황)
+			
+		-She suddenly asked me a question and I panicked(당황, 부담스런 단어가 아님)
+		-My boss invited me to his house and I panicked. 
+			-invite me to (누구를 어디로 초대하다)
+			
+		-She suddenly asked me a question and I didn't know what to do (어떻게 해야 할지 몰겠어)
+		-He suddenly asked me if I wanted to come with him and I didn't know what to say. 
+			-I didn't know what to do | what to say | ....if I want to | come with(같이가다) |
+			
+		-I saw a cockroach in my room and I totally freaked out. 
+			-I saw | totally freaked out |
+			
+		-She suddenly started nose-bleeding(코피) 
+		
+		
+-title : 영화회화, 표현, 생활 속 필수 표현
+	-script :
+	
+		-I get up early. I get up a little late. Today, I got up early. Today, I got late. Today, I got up at 10 (자다 자리에서 일어나는 동작)
+			-early | late | a little early | a little late |
+	
+		-Hey go wake your brother up. Don't wake me up. He woke me up last night. (자다가 눈이 떠지는 동작)
+			-go XXX (가서 뭐하다) | wake me up, wake him up | Don't wake | 
+			
+		-Tomorrow I'm going to get up late.
+		-He showered at my place. I can't shower in other people's homes(샤워하다)
+			-at my place | in other people's homes |
+			
+		-I'm not going to take a shower. Today I took a shower at 7. I have to take a shower. I really want to take a shower. Did you take a shower?
+			-I'm not going to | take a shower | took a shower 
+			
+		-I ate breakfast today. Did you breakfast today? Did you have breakfast? I ate a banana for breakfast (먹다)
+			-for breakfast | for lunch | for dinner
+			
+		-I brushed my teeth after breakfast today. I'm going to brush my teeth before going to bed. I brush my teeth 3 times a day (이를 닦다)
+			-brush my teeth | after breakfast | before going to bed | 3 times a day |
+			
+		-After breakfast I got dressed. I'm going to get dressed now. (옷을 입다), wear(입고 있다, 장신구등을 하고 있다)
+			-get dressed | 
+			
+		-I put on makeup. I'm going to put on my(some) makeup.
+			-put on makeup | my makeup | some makeup |
+			
+		-I'm going to make sure I have everything. I'm going to check if I have everything. (확인하다. 다있다 확인하다)
+			-I make sure | I'm going to make sure | I'm going to check if I.. | Did you make sure you.. | Did you check if you.. 
+			
+		-I left early. I left on time. I left home as usual. (떠나다, 나오다, 출발하다)
+			-left early | left on time | as usual
+			
+		-When are you going to get back home?. I have to get back home quickly. I got back home around 8. (돌아오다. 집에 돌아오다)
+			-when are you going to | get back | quickly | around 8 |
+			
+		-I have to change. I want to get changed. Are you going to get changed? (갈아입다. 집옷으로 갈아 입다)
+			-change | get changed |
+			
+		-I ate dinner. I'm not going to have dinner. (저녁먹다)
+			-eat dinner | ate dinner | have dinner | had dinner
+			
+		-I watch TV everyday. I wathed TV yesterday. (tv를 보다. 텔레비전을 보다. watch/watched 발음 거의 동일)
+			-watch TV
+			
+		-Are you going to go to bed? what time are you going to go to bed? What time did you going to go to bed? (잔다. 자러가다. 잘꺼다)
+			-go to bed | what time are you going to | what time did you going to |
+			
+
+-title : 영화회화, 영어로 인사하는 법의 가장 기본
+	-script :
+	
+		-It's nice to meet you. It's a pleasure to meet you. It's so good to see you. I'm grade to meet you. (반가워요)
+			-It's nice to | It's a pleasure to | It's so goot to | I'm grade to 
+			
+		-How are you? How are you doding? How is it going? Hey, how are you doing today? How do you do? (안녕? 어떻게 지내?)
+			-How are you doding? | How is it going? | Hey, how are you doing today? | How do you do? 
+			-Fine | Greate | Oh! Not bad, How are you doing today? | Excellent | Fantastic | Not bad But today, .... (인사 답변)
+			
+		-what's up? what's going on? what's happening? (안녕, 뭔일 있어?)
+			-what's going on? | what's happening? | Not much.
+		
+		
+-title : 영어회화, 시제, 미래시제, will과 be going to 의 차이
+	-script :
+	
+		-I'm going to wake up early tomorrow . I'm going to go to bed late tonight. I'm going to watch a movie this weekend. (일어나다. 깨다. 자러가다)
+		-I'm going to hang out with my friend tonight. We're going to have a drink. (놀러가다. 나가놀다, 술마시다, 한잔하다)
+			-early tomorrow | late tonight | watch a movie | this weekend | hang out with | hung out with | have a drink (일찍, 늦게, 영화보다)
+			
+		-I'll do that. You don't have to do that. I'll lend you 50 dollers. I'll help you. I'll ask her when I see her. (안해도돼, 빌려줄께, 물어봐줄께)
+			-I'll do that | You don't have to | I'll lend you | I'll Help you | I'll ask her | When I see | 
+			
+		-Next week, on Monday, I'm going to give a presentation in class, so I'm going to prepare for that this week. (다음주 월요일, 프리젠테이션 하다, 수업에서)
+			-Next week on Monday | give a presentation | in class | for that |
+			
+		-I'll take care of that. I'll drive you to the airport. I'll stop by the convenient store on my way home/there. (처리하다, 태워줄께, 들를께, 가는길에)
+			-I'll | I'll take care of | I'll drive you to | stop by | on my way home/there | on my way to |
+			
+		-My mother is sick right now and she's at the hospital. Oh, really? I'm so sorry to hear that . I'll visit her this weekend. (지금아퍼, 병원에 있어, 어쩌냐.. 속상하겠다)
+			-is sick right now | is at the hospital | sorry to | I'm so sorry to hear that | I'll visit her
+		
+			
+-title : 영어회화, should와 have to의 차이 그리고 be supposed to
+	-script :
+	
+		-I have to go to work this Saturday. I should go to work this Saturday. You don't have to come early. I don't have to get up early tomorrow. (..해야돼, 일가야돼, 안해도돼)
+		-You don't have to worry about that. You shouldn't carry so much cash. You shouldn't take thoes vitamins so often. (안해도돼, 걱정이야, 안하는게 좋아, 가지고 다니지마, 약먹지마)
+			-go to work | don't have to | come early | carry so much cash | take vitamins | so often 
+		
+		-You are not supposed to be late on the first day. You shouldn't be late on the first day. (안하는게 좋아, 첫날에, ..해야해)
+			-be supposed to | be supposed to be | on the first day | shouldn't | shouldn't be | 
+		
+		-I have to be in Seoul by 2 o'clock today. I'm supposed to be in Seoul by 2 o'clock today. 
+			-have to be in | by 2 o'clock | be supposed to be in |
+		
+		-If you live in an apartment, you're not supposed to have parties at 3 am. (..에 살어)
+			-live in | be supposed to have |
+		
+	
+-title : 영어회화, 표현, 사과, 미안하다, 누구한테 미안하다.
+	-script :
+	
+		-I felt bad for hitting my friend's mother with my car. (미안하다, 죄송해)
+			-I feel bad for ..ing | hit xxx with my car (치다, 차로 치다)
+		
+		-I felt bed for yelling at my father last night. I felt bad for not going on a trip with my mother last year. (소리치다, 안가서, 여행가다, 결혼식 가다)
+		-I felt so bed for not going to his wedding. I felt bed for saying that.
+			-yell at my father | not going on a trip | not going to | I felt bad for saying that | yell out in pain | yell with excitement
+			
+			
+-title : 영어회화, 표현, 명절을 맞이하여 기초적인 표현 몇 가지 배워보자
+	-script :
+	
+		-What are you doing during the chuseok holidays? Do you have any plans? What are you going to do during the chuseok holidays? (뭐할꺼야? ..동안, 계획있어?)
+			-What ar you doing during the.. | any plans?| What are you going to do?
+		
+		-A big holiday is comming up. There's a big holiday comming up. (명절, 연휴, 다가오는)
+			-A big holiday | is comming up(다가온다) | is comming soon(곧 온다) | 
+		
+		-I'm going to go see my parents during the Chuseok holiday. (보러가다)
+			-go xxx | go see
+		
+		-My family and relatives are going to get together. I'm going to get together with my family and relatives. (모이다, 모일꺼야, 만날꺼야)
+		-Everyone is going to get together at my uncle's place in Busan. (어디서 만날꺼야, 어디서 모일꺼야, 부산에서)
+			-get together | get together at my place in seoul |
+		
+		-Usually, we make a lot of food and there's a big feast. (음식을 많이해, 다 모여, 거의 잔치야)
+			-make a lot of .. | a big ..|
+		
+		-I slept over at my friend's place yesterday. I'm going to sleep over at my uncle's place during the holidays. (자고가다, 자고오다)
+			-sleep over at | slept over at | stay over | stayed over |
+		
+		-The women do most of the work and the men just sit around and talk. (여자들이, 거의모든 일, 주변이 않아서 얘기해)
+		-I hate this kind of tradition, I hate it! but I don't really have a choice. (싫어, 별로야, 이런식의, 별수 없어, 나도 어쩔수 없어)
+			-The women | do most of the | sit around and talk | hate this | kind of xxx | I hate it | but I don't really have a choice
+		
+		-It takes 3 hours. It took 3 hours to get to Busan. (몇시간 걸려, 어디가는데 몇시간 걸려)
+			-It takes 3 hours | It took | to get to Busan | get to | get there |
+		
+		-After we came back, she got sick. I'm really tired. I'm so exhausted after the rip. (돌아와서, 집으로와서, 너무 피곤해, 너무 지쳐)
+			-came back | get sick | got sick | so exhausted
+			
+			
+-title : 영어회화, 어휘, 찾다의 3가지 모습, find, look for, search
+	-script :
+	
+		-I found my keys. I found my pen. I found my cellphone. I've been looking for them for two hours.. I can't find them! (찾았다!, 못찾겠어)
+			-I found | I've been looking for | I can't find |
+		
+		-Are you looking for something? What are you looking for? (뭐 찾는 중야, 뭐 찾고 있니?)
+		-I'm looking for good restaurant in this area. I'm looking for somethe to do this weekend.(이 지역에서, 이 동네에서, 뭐 할꺼 있나)
+			-Are you looking for something? | What are you looking for? | in this area | something to to | this weekend
+		
+		-I searched everywhere and I still can't find my keys. Did you search your room? I searched my coat pockets. (다 찾아봤어, 방에 찾어봤어? 옷 주머니 찾아봐)
+			-I searched everywhere | I still can't find | Did you search | coat pockets |
+		
+		-I searched the internet and I found some information about the brand. I looked for some information online/on the internet (검색해봐, 인터넷 찾아봐, 찾았어!, 온라인에서)
+			-I searched the internet | I found | the brand | looked for | online | on the internet
+		
+		-I searched for some information online. I searched the internet for some information. (인터넷에서 뭣좀 검색했어)
+			-searched for | some information | I searched the internet for some information.
+			
+			
+-title : 영어회화, 표현, 알다의 9가지 유형
+	-script :
+	
+		-I don't konw why there are so many people there. I know the way there. I know his phone number. I know where she lives. (나 알고, 알고 있어)
+			-I don't know why.. | the way there | phone number | where she lives |
+		
+		-I understand how you feel. I understand why she did that but I don't agree with her decision. (이해해, 공감해, 뭔지 알겠어, 알것 같아)
+			-how you feel | why she did that | don't agree with | her decision
+		
+		-I found out about that just yesterday. (알게되다, 알게됐어, 어제서야)
+			-I found out about that | just yesterday 
+		
+		-I figured out how to use it. I figured out how to get there. I figured out how set up the alarm. (알겠어, 알아냈어, 알것 같아, 사용법, 가는법, 가는길, 설정법)
+			-I figured out | how to use it | how to get there | how set up the.. |
+		
+		-I finally realized what the problem was. (깨닫다, 인지하다, 알게됐어, 문제가 뭔지)
+			-I finally realized what.. | what the problem was.
+		
+		-I saw my friend at school today and I noticed that she had gotten a haircut. (달라진점을 알아차리는 것, 학교에서, 알겠더라, 달라보이더라구, 머리를 했더라, 머리하다, 머리자르다)
+			-I saw | at school | I noticed that | get a haircut | had gotten a haircut
+		
+		-She came out(released) with a new album, and I noticed that her style had changed a little bit. (복귀하다, 발표하다, 재계하다, 쪼끔, 약간) 
+			-came out | released | with a new | had changed | a little bit|
+		
+		-I ran into my friend on the street this morning, and I noticed she looked a little different. (마주쳤어, 우연히 만났어, 길에서, 보이더라, 약간 다르게)
+			-I run into | I ran into | on the street | she looked | a little different |
+		
+		-I noticed you were dringking a lot of coffee today, did you have troble sleeping last night? (뭐뭐 하더라, 하더라고, 뭐뭐에 문제 있니?, 어젯밤)
+			-I noticed you were xxxing | did you have troble xxxing | troble sleeping | last night |
+		
+		-This morning, someone said hello to me on the street, but I didn't recognize him. (알아보겠다, 못알아보겠어, 나한테, 보고 뭔지/누군지 알아보는것)
+			-This morning | someone said | said hello to me | on the street | I didn't recognize
+		
+		-She looked very familiar, but I couldn't recognize her. (낮이 익어. 못알아 보겠어)
+			-look very familiar | I couldn't recognize |
+		
+		-If you saw your boyfriend's handwriting, would you recognize it? (본다면, 손글씨, 알아보겠어? 알아볼거 같아?)
+			-If you saw | handwriting | would you recognize it? |
+		
+		-I wasn't aware of that policy. They were aware of the rules. we were aware of the rules. (인지 못했어, 그런지 몰랏어, 몰랐찌!, 인지했었어)
+		-They were not aware of the situation at the time. (그때는)
+			-I wasn't aware of | be aware of | at the time 
+		
+		-I'm not very familiar with this topic. Are you familiar with this kind of situation? (잘 못해, 익숙해, 안익숙해, 잘알아)
+			-I'm very familiar with | Are you familiar with | this kind of | this kind of situation
+		
+		-I can't tell what it says. I can't tell the difference. (뭔지 알겠어? 알것같어? 판단서? 다른점)
+		-I can't tell how they are different. Can you tell what this is? Do you think it's water? (어떻게 다른지, 뭐가 다른지, 이게 xx인것 같어?)
+			-I can't tell what | what it says | the difference | how they are different |
+		
+			
+-title : would와 could을 올바르게 이해하고 자연스럽게 사용하는 법
+	-script : 
+	
+		-I couldn't get up early yesterday. I could get up early yesterday(문법상 잘못된 문장, 할수 없었어)
+			-I couldn't | 어쩌구 저쩌구 였는데 I could (앞에 과거 시점에 대한 내용이 있고 그당시 할수 있었다는 식의 내용이 와야 함)
+		
+		-I was able to get up early yesterday. I managed to get up early yesterday. (할 수 있었어)
+			-I was able to | I managed to 
+		
+		-I thought it would rain today. She promised that she wouldn't talk about that gain. (뭐뭐 일쭐 알았어, 뭐뭐 할꺼라고)
+		-I told him (that) I would try my best. They told me They would give me a answer by this Friday.(최선을 다할꺼야, 답해준다고)
+			-I thought it would | she promised that | would try | my best | give me a answer |
+		
+		-I thought you would know about that. I thought you knew about that (알줄 알았어, 알게될줄 알았어, 아는줄 알았어, 알고 있는줄 알었어)
+			-I thought you would know about | I thought you knew about
+		
+		-I thought this would be more expensive. I thought this was more expensive. (일줄 알았어, 인줄 알았어)
+			-I thought this would be | I thought this was
+		
+		-I thought you could help me. I didn't think I could get here on time. She knew she could pass the test. (할수 있을줄 알았어, 생각 못했어, 못할 줄 알았어)
+			-I didn't think I could | I knew I could
+		
+		-I didn't think I could make it on time. I knew I couldn't arrive on time. (못하줄 알았어, 못할걸 았았어, 도착하다, 제시간에, 딱맞게)
+			-could make it on time | can make it on time | make it | on time | I don't think I can make it(가다) | I'm not sure I can make it (해내다)
+		
+		-I could merry her but I think I need to think about it some more. (coudl가 현재형에 쓰이면 약한 가능성, 할수도 있어, 결혼하다, 좀더 생각하봐)
+			-I could | but I think I need to | some more
+		
+		-If you were my friend, I would help you. (니가 였다며.., 했을텐데)
+			-if you were xxx I would | 
+		
+			
+-title : 영어회화, 시급한 교정, 오랜만에를 영어로 자연스럽게 표현하기
+	-script : 
+	
+		-I hung out with some friends who I hadn't seen in a long time / for a long time. (친구 만났어, 친구랑 놀랐어, 오랫만에, 오랫만이었어, 오랫만인, 오랫동안)
+			-hang out | hung out | some friends | ... whow I hadn't seen | in a long time | for a long time
+		
+		-I humg out with some friends, which I hadn't done in a long time (오랫만에 했어, 오랫만이 었어, 오랫만이 었었어, 간만에)
+			-..., which I hadn't done in a long time
+		
+		-I went to a coffee shop and read a book, which I hadn't done in a long time.(가서 뭐했어)
+		-I went to a coffee shop and read a book. I hadn't done that in a long time (오랫만에 했어)
+			-I went to | read a book | I hadn't done that in a long time
+		
+		-We ate out for dinner, which we hadn't done in a long time, We ate out for dinner. We hadn't done that in a long time.
+			-eat out for | ate out for |
+		
+		-We are going to go shopping, which we hadn't done in a long time. we are going to go shopping this weekend. we hadn't done that in a long time (쇼핑가자)
+			-go shopping | this weekend 
+		
+		-I'm going to go to the movies this weekend, which I hadn't done in such a long time. (영화 보러 가다, 극장 가다, 영화 보자, 진짜 오랫만에, 진짜 간만이었어)
+		-I'm going to go to the movies this weekend. I hadn't done that in a very long time.
+			-go to the movies | went to the movies | in such a long time | in a very long time
+		
+			
+-title : 영어회화, if가정법, part1,2
+	-script : 일반적 조건!!(상황)하에 일반적 결론(진리나 경험을 통한), if현재-현재 (특별한 시제 변환 없음), 뭐뭐면 뭐뭐해(뭐뭔거야)
+	
+		-If he doesn't say anything, that means hi is upset. (말이 없다, 아무말 않하다, 그런거야, 그런 말이야 , 그런 뜻이야, 화나다)
+		-if it smells bad, it's probably not save to eat. (그러면 그런거야, 아마도, 냄세가 나쁘다)
+		-If there are too many people, it's better to go somewhere else. (사람이 많아, 뭐뭐 하는게 더 나아, 다론 곳으로, 다른 장소)
+		-If you take subway, it's faster. (지하철 타, 더 빨라)
+		-If you leave before 5 o'clock, there isn't much traffic. (몇시 전에 떠나자, 차가 덜막혀, 차가 별로 없어)
+			-doesn't say anything | that means | is upset | smell bad | it's probably | too many people | somewhere else | it's faster | much traffic
+			
+	-script : 현재 상황과는 다른 전제를 가정!! if과거-could/would, 그랬으면(그러면) 그럴텐데(could 할수있을테데, would 할텐데)
+	-plus : could, would는 주어진 상황(시제든	상황?)에서의 can, will의 의미 !!!!!(정리 필요)
+		
+		-I live far from school, so it takes a lot of time to go to school in the morning. (어디서 멀리 살아, 오래걸려, 많은 시간)  
+		-if I lived close to school, I could(would be able to) save more time. (어디서 가까이 살아, 할텐데, 할수 있을텐데, 시간을 아끼다)
+			-far from | it takes | a lot of time | if I lived | close to | I could | I would be able to | save time
+			-?? 현재 아닌것을 바꿔서 가정해봄, ..면 ..일꺼야 ..할수 있을꺼야
+			-?? 현재를 가정할수 있을까?? 그래서 과거형인가? 현실이 아닌조건?? 가까이살었다(과거)면, could/would 그 조건(시제)에서의 미래(가능성)를 표현?? 
+		
+		-I go to work 6 times a week. So, it's hard to make plans on weekends. (회사가, 일주일에 몇번, 약속잡아, 약속만들어, 주말에, 하기가 아려워)
+		-If I wend to work just 5 times a week, I would be able to(could) do more things on weekends.(했을텐데, 더 많은걸)
+			-go to work | wend to work | just 5 times a week | I would be able to | I could | do more things
+		
+		-I have an external hard drive, so I can carry my music and movies where I go. (외장 하드, 가지고 다녀, 휴대해, 가는곳, 갈곳, 가는곳 마다)
+		-But If I didn't have one, I couldn't do that / I wouldn't be able to do that. (만약 없으면, 그렇게 못할꺼야)
+			-external hard drive | I can carry | where I go | if I didn't have | I couldn't | I wouldn't be able to |
+			
+		-I gain weight quite easily. So I have to be careful about what I eat. (살이져, 살이 잘쪄, 조심해야해, 먹는거에 대해, 나 먹는거)
+		-But if I didn't gain weight so easily, I wouldn't have to be so careful. / I would be able to enjoy food more freely.(살이 안쪄, 너무쉽게, 조심 안해도 돼, 즐겨, 좀더편하게, 그렇게 조심히)
+			-gain weight | quite easily | have to be | be careful about | what I eat | if I didn't | so easily | I wouldn't have to | so(그렇게) careful|
+			
+			
+-title : 영어회화, if 가정법, part3
+	-script : if문 1, 2 복습
+	
+		-If there is a lot of traffic, it takes over (more than) 2 hours. (교통이 심해, 넘게 걸려, 이상 걸려)
+		-I don't have any experience, so it takes a lot of time. If I had a lot of experience, it wouldn't take so long. (경험이 없어, 안걸려, 그리 안걸려)
+			-there is a lot of traffic | it takes | over 1 hour | more than 2 hours | have experience | if i had | it wouldn't | so long |
+			
+	-script : 어떤 조건!!이 생기면 어떻게 하겠다는 의지/계획, if현재-be going to/ will(의지)
+	
+		-If it rain this weekend, I'm going to stay home. (비와, 비가와, 집에 있을꺼야)
+		-If she asks, I'm going to pretend I don't know anything. (걔가 물어보면, ..척 할꺼야, 그런척 할꺼야, 아무것도 몰라)
+		-If I get off work early today, I going to meet up with some friends for some drinks. (퇴근해, 일찍 퇴근, 친구들 만날꺼야, 한잔하러, 한잔 할꺼야, 술먹을 꺼야) 
+		-If this happens again, they are going to lose everything. (또 일아나면, 일이생기다, 다시또 그러면, 다 잃었어, 다 날렸어)
+			-If it rain | it rain | stay home | if she asks | pretend I don't .. | don't know anythig 
+			-get off work | early today | meet up with | some friends | for some drinks | if this happens again | lose everything
+			
+	-script : 어떤 조건!!이 생기면 어떻게 해도돼, 해야만해, 하지않아도돼, 할찌도 몰라 if현재-can/might/have to/don't have to 
+	
+		-If you don't like it, you can send it back / you can return it. (싫으면, 맘에 안들면, 해도돼, 반품해, 돌려보내, 반송해, 환불해, 취소해)
+		-If you study really hard, you might pass the test. (열심히 공부해, 할찌 몰라, 시험에 합경해, 시험에 통과해)
+		-If you are late, you can just take a taxi. (늦으면, 하면돼, 해도돼, 할수 있어, 택시 타, 그냥 뭐뭐해, 그냥 뭐뭐해도 돼)
+		-If you tell her the true, she might understand. (사실데로 말하면, 이해할지 몰라, 이해해 주다, 찌 몰라)
+		-You don't have to eat if you are not hungry. (안해도 돼, 배고파, 배안고파)
+			-If you don't like it | you can(해도돼, 해) | send it back | return it | really hard | xxx might xxx (할찌 몰라) | if you are late |
+			-just take a taxi (그냥 택시타) | if you tell her | the true | don't have to | not hungry
+			
+	-script : 어떤 조건!!이 생기면 어떻게 해야할찌도 모라, 해야할쑤도 있어, 할쑤도있어, 못할쑤도있어, if현재-might have to/won't be able to/might be able to/be going to be able to (예매한 예측)
+	
+		-If I can't save enough money, I might have to borrow some(money). (돈을 모으다, 저죽하다, 충분한 돈, 해야할찌도, 빌리다, 약간의 돈)
+		-Michael is supposed to give a presentation in the meeting today. (하기로 되있어, 해야하는데, 프리젠테이션 해야해, 오늘 회의 에서)
+		-But, if he is late, you might have to do it. (해야할 찌도 몰라, 해야할 쑤도 있어)
+		-If they don't help us, we won't(will not) be able to finish this on time. (안도와 주면, 할수 없을꺼야, 마무리해, 재시간에, 시간안에)
+		-If we leave(go) now, we might be able to catch the last train/bus. (지금가면, 지금 출발하면, 할수 있을찌 몰라, 막차를 타다, 차를 잡다)
+		-if the wheather is really clear(nice), we are going to be able to take some nice pictures. (날씨가 좋으면, 할수 있을꺼야 사진 찍다, 좋은 사진들)
+			-If i can't | save money | enough money | might have to | borrow some money | is supposed to | give a presentation | in the meeting today
+			-you might have to do it | help us | won't(웅트will not) be able to | finish this | on time | might be able to 
+			-catch the train/bus  | last train/bus | the weather is really clear | are going to be able to | take some nice pictures
+
+			
+-title : 영어회화 if 가정법(기초) 4
+	-script :
+		
+		-I went to bed late yesterday. and/so it was hard to get up this morning. (낮게 잤어, 어려웠어, 오늘 아침에)
+		-If I had gone to bed earlier last night, I wouldn't have been so(그렇게) hard to get up this morning. (일찍잤떠라면, 했었으면, 어젯밤, 안그랬을을 덴데, 안그랬을 꺼야)
+			-wend to bed | it was hard to | this morning | if I had gone to | earlier | last night | i wouldn't have been (우른해브)| 
+		
+		-I wasn't prepared. so I didn't do well on the interview. (준비가 되있어, 준비가 안되있어, 잘 못했어, 면접에서)
+		-If I had been more prepared, I would've done better on the interview. (였더라면, 였었더라면, 상태였더라면, 상태였으면, 했을꺼야, 더 잘하다)
+			-I wasn't prepared | I didn't do well | on the interview | If I had been more | prepared | I would've done better |
+			
+		-I didn't eat breakfast. so I was very hungry during the test. (안먹었어, 시험보는 동한, 시험 보면서, 뭐뭐 동안, 뭐뭐 중에, 뭐뭐 하면서)
+		-If I had eaten breakfast, I wouldn't have been so(그렇게) hungry during the test and I would've concentrated better. (먹었더라면, 먹었었더라면, 안그랬을꺼야, 안그랬을텐데, 아니었을 텐데, 집중해)
+			-during the test | If I had eaten | I wouldn't have been | I would've concentrated better |
+			
+		-I didn't know about his sistuation, So I couldn't help him. (몰랐어, 뭐에 대해 몰랐어, 그의 상황, 못도와 줬어)
+		-If I had known about his sistuation, I would've helped hime. (알았더라면, 했을꺼야)
+			-I didn't know about | his sistuation | I couldn't help | If I had known | I would've helped |
+		
+		-If hi had asked me, I might've helped him. (부탁했더라면, 부탁했어, 요청했어, 도와줬을찌도 몰라, 찌도몰라)
+		-If she had practiced harder, she might not've made that mistake. (연습을 열심히 했더라면, 연습하다, 실수를 하다, 안했을찌도 몰라)
+			-practiced harder | she might not've (마잇낫르브) made that mistake | make mistake
+			
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+-title : 
+	-script :
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			
+			
+	
+			
+			
+		
+			
+		
