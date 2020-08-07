@@ -3,16 +3,16 @@
 	-java project(pojo) : pojo 프로젝트를 구성한다. new>project>java>java project
 	-web project(tomcat base) : tomcat을 통한 기본 서블릿 구성. new>project>web>dynamic web project
 	-svn project : svn에서 checkout 받아 프로젝트 구성. new>project>SVN>checkout projects from SVN>기본 연결된 repo에서 가져올지 새 repo를 연동해서 가져올지 정함
-	
+
 	-maven project
 		-maven project(new) : new>project>Maven>Maven Project>quickstart>
 			-group id : local/remote repo(.m2)에 위치하는 경로(?), 코드의 pakage와는 무관하지만 pakage 경로와 통일성 있게 쓰기도 함
-			-artifact id : project 이름으로 사용되며 패키징 파일(jar,war)의 이름이 됨 
+			-artifact id : project 이름으로 사용되며 패키징 파일(jar,war)의 이름이 됨
 			-version : pakage 파일(jar,war)의 초기 버전 설정, 실제 repo에 가보면 group-id(경로)>artifact명>virsion 순으로 저장됨
 			-package : code상의 class pakage 경로
-			
+
 		-maven project(exist) : import>Maven>Check out Maven Project from SCM(git등 연동), Existing Maven Project(로컬파일)
-	
+
 		-Add Dependency : project에 필요한 lib를 추가 할수 있음(직접 pom 파일을 건들지 않는게 좋음)
 			-project(클릭)>maven>Add Dependency>필요한 lib 검색 후 선택 (Enter groupid, artifact.. 입력란에서 검색해 봄. ex) log4로 검색해봄> 검색된 리스트에서 선택하면 pom에 적용됨
 				-Scope : 해당 lib(dependency가 적용되는 범위, 테스트때만 필요한건지 최종 패키징에도 포함될지 말지..)
@@ -21,18 +21,18 @@
 					-runtime : ??
 					-test : ??
 					-system : ??
-		-Add Plugin : dependency와 동일한 개념으로 필요한 maven plugin(빌드 또는 deploy 하는 과정에서 필요로 하는 plugin등)을 추가 할수 있음 
+		-Add Plugin : dependency와 동일한 개념으로 필요한 maven plugin(빌드 또는 deploy 하는 과정에서 필요로 하는 plugin등)을 추가 할수 있음
 			-project(클릭)>maven>Add Plugin>필요한 Plugin 검색 후 선택, ex) deploy로 검색해봄
-			
+
 	-git project :
-	
+
 	-spring boot project :
 		-import Spring Getting Started Content : Spring starter가 제공하는 project 유형별 샘플을 통해 프로젝트 구성. new>project>spring Boot>import Spring Getting Started Content>프로젝트 유형 및 빌드타입(maven/gradle)선택
 		-Spring Starter Project : Spring starter가 제공하는 주요 dependency를 추가하여 프로젝트 구성. new>project>spring Boot>Spring starter Project>빌드타입(maven/gradle) 및 dependency 선택.
-	
+
 	-Eclipse plugin : 개발관련 IDE 플러그인 추가
-		-Eclipse Marketplae : 
-			-ANSI Escape in Console 
+		-Eclipse Marketplae :
+			-ANSI Escape in Console
 			-Buildship Gradle Integration 3.0
 			-Darkest Dark Theme with DevStyle CI 2019.6.17
 			-Eclipse Marketplace Client 1.7.7
@@ -49,72 +49,72 @@
 			-Quick Search for Eclipse 3.9.9.RELEASE
 			-Spring Tools 4
 			-Subclipse 4.3.0
-			
+
 	-shortcut Keys
 		-CTRL+SHIFT+T : class 찾기
-		-CTRL+SHIFT+R : 파일 찾기		
+		-CTRL+SHIFT+R : 파일 찾기
 		-CTRL+E : 열려진 파일 목록
-		-CTRL+F7 : view 목록 
+		-CTRL+F7 : view 목록
 
 		-CTRL+M : 창 확대
 		-CTRL+SHift+{ : 한파일 분할해 보기
-		
+
 		-CTRL+I : indentation 교정
 		-CTRL+SHIFT+O : import 정리
 		-CTRL+1 : fix 제안
-		-ALT+Left/Right Arrow : 최근 작업 파일 이동		
+		-ALT+Left/Right Arrow : 최근 작업 파일 이동
 		-CTRL+k : 다음 찾기
 		-CTRL+SHIFT+K : 이전 찾기
-		
+
 		-프로젝트 선택후 -> Source -> Organize imports : 프로젝트 전체 대상 import 정리
 		-파일 선택 후 -> Source -> Generate toString() : 해당 클래스에 대한 toString() 함수를 생성해 줌
 		-ALT+SHIFT+Z : Surround With (for, while, try 등 블륵 어시던트 기능)
-		
+
 		-CTRL+SHIFT+x : 대문자로 변환
 		-CTRL+SHIFT+y : 소문자로 변환
-	
+
 	-문제 해결
 		-red-x icon : java 에러가 파일에 반영이 되지 않는 경우 확인, project->build automatically 확인
 		-Hangs when building project : copying resources to output folder
-			
+
 	-편리 기능
 		-bookmark : 원하는 위치에서 코드 라이 맨 앞에서 오픈쪽 마우스 클릭 -> add bookmark ->bookmarks(general) view에서 확인 가능
 		-task : 원하는 위치에서 코드 라이 맨 앞에서 오픈쪽 마우스 클릭 -> add task ->tasks(general) view에서 확인 가능
-	
-	
-	-디버깅 : 
+
+
+	-디버깅 :
 		-디버깅 perspective 로 전환 : 디버깅하기에 용이한 화면 구성으로 전환 하는 의미 (안해도 됨)
 		-디버그 모드로 실행
-		
+
 		-디버깅 관련 view :
 			-Debug : 디버깅 실행 시점부터 생성되는 쓰레드들과 그들의 연관 관계를 보여 준다.
 				-!!각 쓰레드 별로 실행되고 있는 메모리에 올라와 있는 스텍(메소드??) 정보를 함께 보여 준다. spring과 같은 프레임워크의 내부 동작을 이해하는데 큰 도움이 될 수 있다.
-				
-				
+
+
 			-Breakpoints : 잡혀 있는 break 포인트 목록을 보여준다
 				-포인트 활성/비활성/삭제 가능
-				
-				
+
+
 			-Variables : 포인트가 잡혀있는 현 상황에서 확인 가능한 변수의 value를 보여 주며 다른 값으로 수정 할 수 있다.
 				-하나의 스텍으로 진입 하게 되면 해당 스텍에서 접근 가능한 변수만 보여 주고 있는듯.. !!컴퓨터의 동작 구성상 그럴수 밖에 없을 듯
 				-화면 레이아웃 및 컬럼(보통 name, variableType, value) 추가/삭제 가능
 				-Value 값은 해당 변수(객체)를 toString() 했을때의 값으로 경우에 따라 읽기 쉽지 않을 수 있다
-				
-				
+
+
 				-화면구성 :
 					-맨윗줄 : 바로 직전 실행된 코드의 return 값을 보여 줌 (retrun 값이 있을수 없는 코드인 경우 null로 나옴)
 					-this : 해당 클래스!! 선택하여 내리면 해당 클레스의 멤버 변수를 보여줌
 					-그아래 : 해당 메소드의 멤버 변수를 보여줌 (현재 stek 내의 메모리???)
-					
+
 			-Expressions : ???
-		
+
 		-디버그 포인트 설정 및 해제 : 코드 실행을 멈추기 위한 위치 선정 (해당 라인에서 멈출때 해당 라인은 실행되지 않음 시점), 코드라인 앞을 클릭해 선정(토글형식), 실행 중에도 추가/제거가 가능
 		-skip all breakpoints : 모든 디버그 포인드 일괄 헤제
 		-resume(F8) : 다음 포인트로 이동
-		-suspend : 
+		-suspend :
 		-terminate : 디버깅 실행 종료 (실행 종료)
 		-step into(F5) : 현재 라인이 메소드인 경우 메소드 내부로 들어간다.
-		-step over(F6) : 현재 라인을 실행 시키고 다음 라인(논리적으로 다음 라인, 현재 메소드 내부에 한에서, !!그러나 호출된 외부 메소드 안에 브레이크 포인트가 있으면 그곳으로 이동)으로 내려 간다.		
+		-step over(F6) : 현재 라인을 실행 시키고 다음 라인(논리적으로 다음 라인, 현재 메소드 내부에 한에서, !!그러나 호출된 외부 메소드 안에 브레이크 포인트가 있으면 그곳으로 이동)으로 내려 간다.
 		-step return/out(F7) : 현재 메소드에서 리턴 한다 !!그러나 현재 메소드에 브레이크 포인트가 남아 있다면 그곳으로 이동
 		-drop to Frame : 현재 스택(메소드)의 진입점 부터 다시 시작.
 			-현재 스텍에서 이미 버러진 일이 없어지는 건 아니다. 하지만 해당 스텍이 처음 부터 다시 돌아 간다면 다시 변경된 값으로 덮어 써질꺼임..
@@ -124,48 +124,48 @@
 				-!!drop to Frame이 안되는 스택이 있음 바로 JVM이나 TOMCAT(??) 과 같이 해당 스텍이 다른 프로세스?? 다른쓰레드?? 에서 호출된 첫번째 스택인 경우이다. (정확한 확인 필요하다.)
 					-이러한 스텍은 java app의 메인 메서드 또는 Servelet의 컨트럴러 (uri 매핑되어 호출되는 메서드) 이다. 시스템이 첫 호출해 주는 스택????
 					-이러한 스텍에서의 수정은 수정이 이루어져도 실제 반영되지 않는다.(이게 반영된다는 것은 내가 컨트롤할수 없는 타 쓰레드? 프로세스?에게 나를 다시 호출하라는 것이라 IDE의 권한 밖인듯...???!!!)
-		
+
 		-suspend : 특정 쓰레드의 동작을 정지시키는 의미 (해당스레드가 동작하지 않겠지?? 정확한것 확인 필요)
-		
+
 		-instruction steping mode : ????
 		-setp until a message is received : ????
 		-use step filters : ????
-		
-		
+
+
 		-Hotswap(핫스왑) Bug Fixing : JVM 1.4 이상부터 지원하는 기능으로 Java Platform Debugger Architecture (JPDA)를 이용하여 구현됨.
 			-코드를 수정하여 리컴파일이 이루어 지더라도 기존의 스텍 구성을 그대로 활용하여 디버깅을 이어서 진행할수 있다.(stop 또는 terminate 후 재시작하게 되면 기존 스텍을 모두 잃고 첨부터 재 시장됨)
-			-파일 수정 저장하여 자동 리컴파일 현 디버깅 상태에서 resume을 통해 이어서 진행이 가능하다. 
-			-디버깅 시점까지 들어가기가 까다로운 케이스의 경우 도움이 될수 있다. 
-			
+			-파일 수정 저장하여 자동 리컴파일 현 디버깅 상태에서 resume을 통해 이어서 진행이 가능하다.
+			-디버깅 시점까지 들어가기가 까다로운 케이스의 경우 도움이 될수 있다.
+
 			-주의!!:
 				-현재 잡혀있는 BP(breakpoint)가 속한 메스드는 해당 어플리케이션의 최상단 스텍이라 볼수 있다. (해당 쓰레드 기준으로 그럴수 밖에 없겠지??)
 				-Hotswap을 하게 되면 현재 메소드(스택)의 첨부터 다시 시작됨 (drop to Frame 한것 처럼)
 					-!! Hotswap이 동작하지 않는 스텍이 있음, drop to Frame의 내용을 참고!!!!
-			
+
 				-web 어플의 경우 핫스왑시 브라우저의 커넥션이 끊어지기 때문에 완전한 연속적 테스트는 불가능 하다.(연결 했었던 커넥션을 사용하는 코드를 만나기 전까진 진행 할수 있겠찌??)
 					-브라우저가 핫스왑시 커넥션이 끊어지면 이후에 브라우저 자체 기능으로 리커넥션을 하는듯 하다.. 리커넥션되어 디버깅 혼선이 잇을수 있으므로 핫스왑중 해당 브러우저를 꺼버리는것도 방법이다.
-		
 
-		
+
+
 -atom : git 연동 강점, 특정 language에 제한되지 않는다. (editplus 같이 가벼운 느낌임)
-	
-	
- 
+
+
+
 [JAVA]
 -error :
-	-compile error : 언어 syntat상 오류 및 코딩 중 잘못된 구문에 의해 발생하는 에러(서로 다른 타입의 케스팅 및 어싸인 등)로 보통 개발 tool에 의해 컴파일 전 에러가 걸러 진다.		
+	-compile error : 언어 syntat상 오류 및 코딩 중 잘못된 구문에 의해 발생하는 에러(서로 다른 타입의 케스팅 및 어싸인 등)로 보통 개발 tool에 의해 컴파일 전 에러가 걸러 진다.
 	-runtime error : 실행중간에 논리적 오류에 의해 발생 (아직 null인 상태의 객체의 메서드를 사용하거나 하는 등)
-	
+
 -class 실행 : java -cp target/classesName
 	-java : 해당 클레스를 콘솔 모드로 실행 (콘솔로그 확인 가능, 콘솔을 닫으면 종료)
 	-javaw : 해당 클레스를 윈도우 모드로 실행 (콘솔 로그를 확인 할수 없음, 콘솔을 닫아도 종료되지 않음)
-	
+
 -jar 실행 : java -jar target/jarFileName.jar MainClassFileName (실행가능 jar파일로 패키징 되어 있어야 함)
 
 -System property : JVM에서 set, get 하여 사용할 수 있는 프로퍼티, (특정 프로퍼티는 직접 설정하지 않아도 이미 설정된 내용을 가져 올수 있다.)
 	-특정 프로퍼티 예 :
 		-System.getProperty("java.vm.version") //시스템상의 vm 버전을 알수 있다.
-		
+
 	- 코드 상에서 추가 : 클레스페스 내부의 yml 파일을 프로퍼티로 올림
 		-----------
 		System.setProperty("spring.config.location", "classpath:/application-rstg.yml"); //스프링에서 사용할 spring config 파일 위치 설정, 특정 프로파일 이름은 spring에서 직접 사용함
@@ -176,59 +176,59 @@
 -Handler and Listener : Handler는 어떤 역할을 담당하기 위한 클레스, Listener는 어떤 객체를 모니터링(상태 체크)하기 위한 클레스
 	-doxxx(method) : Handler에서 보통 사용되는 method 이름
 	-xxxCreated, xxxDestroyed(method) : Listener에서 보통 사용되는 method 이름
-	
--ThreadLocal : 동일한 스레드에서만 공유되는 일종의 전역적 변수입니다. 
+
+-ThreadLocal : 동일한 스레드에서만 공유되는 일종의 전역적 변수입니다.
 	-웹 서비스에서 Request는 스레드기반이므로 동일 요청에서 호출된 메서드에서는 동일한 ThreadLocal 변수를 참조할 수 있습니다.(일반적인 WAS 서버가 Thread Pool 방식을 사용하기 때문에 재사용시 반드시 remove를 통해 초기화 필요)
 	- InheritableThreadLocal : 하위 Thread에서 변수를 공유하기 위해서는 InheritableThreadLocal 로 생성해야 함
-	
+
 -this and this() :
 	-this : 자신의 클레스 변수를 의미
 		-----------
 		private int myValue = 10;
-		
+
 		void myMethod(int value){
 			this.myValue = value;
 		}
 		-----------
-	
+
 	-this([params]) : 생성자가 여러개 있는 클레스의 경우 생성자 메서드 내에서 다른 생성자를 호출하는 의미
 		-----------
 		Class MyClass {
 			private initValue;
-			
+
 			void MyClass(){
 				this("default"); // 다른 생성자 메소드를 호출하는 방식
-			}			
+			}
 			void MyClass(String value){
 				this.initValue = value;
 			}
 		-----------
-		
--Thread and Runable : Thread를 만들기 위한 class and implement 
+
+-Thread and Runable : Thread를 만들기 위한 class and implement
 	-----------
-	class MyThread extends Thread{ 
-		public void run(){ //overwirte 
+	class MyThread extends Thread{
+		public void run(){ //overwirte
 			for(int i=0; i<1-; i++) System.out.println(i);
 		}
 	}
-	
+
 	class MyRunable implements Runable{
-		public void run(){ //overwirte 
+		public void run(){ //overwirte
 			for(int i=0; i<1-; i++) system.out.println(i);
 		}
 	}
-	
+
 	class MyMain{
 		public static void main(String args[]){
 			Thread myThread = new MyThread();
 			myThread.start();
-			
+
 			MyRunable myRunable = new MyRunable();
 			Thread myRunalbeThread1 = new Thread(myRunable);
 			Thread myRunalbeThread2 = new Thread(myRunable); //myRunable 객체를 재활용 할수 있다(메모리 이점)
 			myRunalbeThread1.start();
 			myRunalbeThread2.start();
-			
+
 			//Thread myRunalbeThread = new Thread(()->{System.out.println();}); 람다로 작성할수도 있음
 		}
 	}
@@ -238,18 +238,18 @@
 		-Thread 객체와 동작 메소드(run)를 구분하여 클래스를 생성 할수 있다. 이경우 메서드를 여러게 만든다면 runalble 객체를 재활용(공유)하여 사용할수 있다. (메모리 이점이 생긴다)
 		-일회성 클래스의 경우 람다 또는 instance class를 생성하여 코드 작성을 간단히 할수 있다.
 
-		
+
 -Thread and join() : 해당 Thread가 작업을 완료할때 까지 호출자 클래스가 wait 함 (Thread 안에서 Thread를 생성하면 APP 전체는 멀티쓰레드로 동작하면서 필요에 따라 하위 Thread가 종료될때까지 상위 Thread를 대기 시킬수 있다)
 	-----------
 	Thread myThread = new Thread();
 	myThread.start();
-	
+
 	try {
 		myThread.join(); //이 지점에서 콜러 쓰레드는 myThread가 작업을 종료할때까지 wait하게 됨, myThread.join(5000); 최대 wait 시간을 설정할 수도 있다.
 	} catch (InterruptedException e) {
 		System.out.println(t1.getName() + " interrupted");
 	}
-	
+
 	System.out.println("end");
 	-----------
 
@@ -259,7 +259,7 @@
 			-----------
 			enum Rainbow {
 			  RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET //선언 끝에 ;(세미콜론) 없음
-			}	
+			}
 
 		-class 내부 형태 : class 파일 내부에 inner class 형태로 생성
 			-----------
@@ -268,81 +268,81 @@
 				...
 				enum Rainbow {
 					//()를 통해 상수에 값을 할당 할수 있음 (boolean 의 True=1 과 같은 의미)
-					RED(3), ORANGE(10), YELLOW(21), GREEN(5), BLUE(1), INDIGO(-1), VIOLET(-11); //내부 선언시 끝에 ; 있음					
+					RED(3), ORANGE(10), YELLOW(21), GREEN(5), BLUE(1), INDIGO(-1), VIOLET(-11); //내부 선언시 끝에 ; 있음
 
 					//상수에 값을 할당 했으면 값을 가져오기 위한 생성자 및 메소드를 enum 내부에 구현 해야함
-					private final int myValue;		  		  
-					Rainbow(int value) { 
-						this.myValue = value; 
+					private final int myValue;
+					Rainbow(int value) {
+						this.myValue = value;
 					}
-					public int getMyValue() { 
-						return myValue; 
+					public int getMyValue() {
+						return myValue;
 					}
 				}
 			}
-			
+
 			//String 형인 경우
 			public enum MylogLogLevel {
-				FATAL("fatal"), ERROR("error"), WARN("warn"), INFO("info"), DEBUG("debug"), TRACE("trace"), NA("");		
-				private final String myValue;		  		  
-				
-				MonlogLogLevel(String value) { 
-					this.myValue = value; 
+				FATAL("fatal"), ERROR("error"), WARN("warn"), INFO("info"), DEBUG("debug"), TRACE("trace"), NA("");
+				private final String myValue;
+
+				MonlogLogLevel(String value) {
+					this.myValue = value;
 				}
-				
-				private String getValue() { 
-					return myValue; 
+
+				private String getValue() {
+					return myValue;
 				}
-			}		
+			}
 			-----------
-			
-	-사용 :	
+
+	-사용 :
 		-----------
 		//기본 사용
 		public void myTest() {
-			Rainbow myRainbow = Rainbow.RED;				
+			Rainbow myRainbow = Rainbow.RED;
 			Rainbow yourRainbow = Rainbow.BLUE;
-			
+
 			if(myRainbow.compareTo(yourRainbow) < 0) {
 				System.out.println(myRainbow);
 				System.out.println(myRainbow.name());
 				System.out.println(myRainbow.getMyValue());
-				
+
 				for(Rainbow rainbow : Rainbow.values()) {
 					System.out.println(rainbow);
 				}
 			}
 		}
-		
+
 		//응용 사용 (특정 함수에 특정한 값만 들어가기 위해서 특정 값만 갖은 enum을 생성하여 선택적으로 사용 가능)
-		MyLogger.log(MylogLogLevel.ERROR, "메시지.."); 로그레벨 파람을 특정 값으로만 받고 싶은경우 
+		MyLogger.log(MylogLogLevel.ERROR, "메시지.."); 로그레벨 파람을 특정 값으로만 받고 싶은경우
 		//MyLogger 함수 내에서는 MylogLogLevel.ERROR.getValue()로 실제 값을 가져올수 있다.
 		-----------
-	
--call by value & reference 
+
+-call by value & reference
 	-call by value : 기본 type(int, long, String..), 값만 복사해서 넘어감
 	-call by reference : 기본 타입이 아닌 클래스, 해당 클레스의 "주소변수"를 복사해서 새로운 "주소변수"를 넘김(두개의 "주소변수"에서 "가리키는" 실제값의 주소는 동일함)
 
 		-----------
-		String a ="a", b = "b"; 
-		public void mytest1(String c, String d) { //내부에서 하는 어떤 행위도 origin 값에 영향을 못준다.		
+		String a ="a", b = "b";
+		public void mytest1(String c, String d) { //내부에서 하는 어떤 행위도 origin 값에 영향을 못준다.
 		-----------
 		Myclass c = new Myclass()
 		Myclass d = new Myclass()
 		public void mytest1(Myclass c, Myclass d) { //위의 c,d 와 메소드 네의 c,d는 동일한 실제값의 주소를 가리키지만 해당 4개의 주소 변수는 모두 각각임
 			c.setName(d.getName); //주소를 통해 실제 object의 값을 변경했으므로 origin 값이 바뀐다.
 			c = d;                //메소드 내의 c는 메소드 밖의 c와 다른 변수임으로(실제값의 같은 주소를 보기하지만) 메소드내의 c의 주소값을 변경해도 메소드 밖의 c에 주소값에는 영향이 없다
-		-----------	
-		
+		-----------
+
 -Generic : 데이터의 타입(data type)을 일반화 하는것, 아직은 알수 없는 클래스 타입을 임의로 잡아놓고 처리하는것, 프레임워크 기술에서 많이 사용됨
 	- 이전에는 모든 클래스를 대표하는 object 클래스를 사용하였으나, 실제 사용에서 다시 타입 케스팅을 하는등 오류가 여지가 많았음. (1.7부터 generic 지원)
 		-----------
 		class My3Lists<T1, T2, T3> { //클래스 이름옆에 임의의 타입을 적는다.
 			ArrayList<T1> al = new ArrayList<T1>(); //필요한 위치에 아직 알수 없는 임이의 타입을 이용한다.
 			ArrayList<T2> a2 = new ArrayList<T2>();
-			ArrayList<T3> a3 = new ArrayList<T3>();	
+			ArrayList<T3> a3 = new ArrayList<T3>();
 
-			void metho1(T1 element) {...    	
+			void metho1(T1 element) {...
 			}
 		}
 		-----------
@@ -357,7 +357,7 @@
 	-스트링을 값을 통해 해당 이름의 메소드 및 필드에 호출(접근)할 수 있다. 다시말해 메소드 및 필드 접근을 컴파일 이후 실시간으로 처리할 수 있다(획기적인?)
 	-주로 프레임워크 기술 또는 개발툴, 디버깅툴 개발 기술에 활용 된다.
 
--Callback & listener & handler : 본질적으로 유사하다, 개발자 측면에서 다른점은 callback은 상황이 될때 이걸 호출해줘(처리할코드를포함), listener은 특정 상황이 될때 이걸 호출할께 여길 구현해놔, handler는 이것좀 처리해줘(메시지를 보낸다) 요청하면 처리른 main(?) 프로세스에서 
+-Callback & listener & handler : 본질적으로 유사하다, 개발자 측면에서 다른점은 callback은 상황이 될때 이걸 호출해줘(처리할코드를포함), listener은 특정 상황이 될때 이걸 호출할께 여길 구현해놔, handler는 이것좀 처리해줘(메시지를 보낸다) 요청하면 처리른 main(?) 프로세스에서
 	-callback : callback interface를 구현한 클레스를 main(?) 프로세스에 넘겨주는 형태로 구현하며 main은 특점 시점에 넘겨받은 callback 클레스의 특정 메소드를 호출한다.
 	-listener : mina framework의 OnConnected, OnDisconnected 또는 android view에서 OnClick 등과 같이 framework로 부터 전달되는 이벤트에 대해 처리하는 방식이다.
 	-handler : Android에서 UI 처리를 위해서 main 쓰레드로 메시지를 보내는 것이 예가 될수 있다 (받은 메세지는 메시지큐에 쌓이고 looper가 돌며 해당 메시지를 핸들러의 처리하는 곳으로 넘긴다)
@@ -366,12 +366,12 @@
 
 [build automation tool]
 -maven : Apache, Apache License 2.0
-	-의존성 관리(개발자마다 다를수 있는 lib 버전등을 명시적으로 관리), 패키징 처리(war, jar..), 버전과 릴리즈 관리, 원격 저장소 배포 지원	
+	-의존성 관리(개발자마다 다를수 있는 lib 버전등을 명시적으로 관리), 패키징 처리(war, jar..), 버전과 릴리즈 관리, 원격 저장소 배포 지원
 	-maven 설치
 		-https://maven.apache.org/download.cgi 에서 다운로드
 		-Windows : 제어판 > 시스템 등록 정보 > 고급 > 시스템 환경 변수 추가 Path 항목에 java/bin와 maven/bin 위치 추가
 		-Mac & Linux : bash 정보 파일에서 Path java/bin와 maven/bn 위치 추가 (mvn --version 으로 테스트)
-		
+
 	-main goals
 		-validate : ??
 		-clean : target 폴더를 비워준다
@@ -380,23 +380,23 @@
 		-package : pom에 명시된 패키징 수행(jar, war..)
 		-install : local repo(사용자/.m2)에 install 수행
 		-deploy : remote repo에 배포
-		
+
 	-maven project Dir 구조 : https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
 		-src/main/java(언어)/package : 실제 소스
 		-src/test/java(언어)/package : maven 빌드시 테스트를 위한 클래스가 위치한다. src/main/java/package와 동일한 패키지 처럼 동작하나 빌드 package(jar..)에 포함되지 않는다.
-		
+
 	-pom 파일 : code 관련 dependency(lib) 및 build 나 deploy 관련 plugin을 정의한다. (직접 치지 말고 STS의 Add Dependency 또는 Add Plugin 활용할 것)
-	
+
 	-repository
 		-local repository : central에서 down 받아 local에 저장된 repo, install시 빌드된 package가 저장되기도 한다. (사용자/.m2 에 위치)
 		-central repository : local repo에 없는 의존성을 다운받기 위한 repo, 기본 위치는 https://repo.maven.apache.org/maven2/
 		-plugin repository : maven plugin을 다운받을 수 있는 repo (컴파일 기능등을 위한 3rd p`arty? 정확히 몰겠음??)
-		
+
 	-versioning
 		-x.x-SNAPTION : 개발진행 중임을 나타낸다.
 		-x.x.x : release 버전
 		-관용표현 : x.x-RC(release candidate), -M(milestone release), -RELEASE(release 버전)
-		
+
 	-maven Command :
 		-mvn dependency:tree
 		-mvn clean
@@ -405,20 +405,20 @@
 		-mvn package
 		-mvn deploy
 		-mvn install
-		
+
 	-maven build elements
 		-----------
-		<build>		
+		<build>
 			<!-- package 파일명 -->
 			<finalName>Maven-Webapp</finalName>
-		
+
 			<!-- resource 폴더를 인식하게 해줌 -->
 			<resources>
 				<resource>
 					<directory>src/main/resources</directory><filtering>true</filtering>
 				</resource>
-			</resources>			
-			
+			</resources>
+
 			<!-- mvn exec:java로 실행 가능하도록 해줌 -->
 			<plugins>
 				<plugin>
@@ -427,8 +427,8 @@
 					<configuration>
 						<mainClass>com.sungil.H2_JPA.App</mainClass>
 					</configuration>
-				</plugin>		
-			
+				</plugin>
+
 				<!-- target 폴더에 libs 폴더를 만들어 maven-dependency 라이브러리를 카피해줌 -->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -490,8 +490,8 @@
 							</configuration>
 						</execution>
 					</executions>
-				</plugin>				
-				
+				</plugin>
+
 				<!-- mvn jetty:run 로 실행할 수 있게 해줌 -->
 				<!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html -->
 				<plugin>
@@ -504,24 +504,24 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 				</plugin>
-				
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
 				</plugin>
-			</plugins>		
-		</build>	
+			</plugins>
+		</build>
 		-----------
-		
-		
+
+
 -gradle : build automation system. 빌드 스크립트(Groovy, Kotlin 언어)에 논리적 개념(프로그램 처럼)을 적용, java뿐 아니라 여러 언어 프로젝트 지원
 	-DSL : Domain Specific Language (Groovy 기반)
 		-Internal(비공개) :
 		-Incubating(실헝) :
-		-Public(공개) : 
-		-Deprecated(패지) : 
-		
-	-장점 : 
+		-Public(공개) :
+		-Deprecated(패지) :
+
+	-장점 :
 		-xml을 사용하지 않아 장황하지 않고 간결하다.
 		-Groovy 언어를 기반으로 하기때문에 변수, if, else, for 등의 로직을 포함할 수 있다.
 		-공식 사이트에 문서화가 잘되어 있다. (변화 속도가 빠르므로 가능한 공식 사이트를 이용하자)
@@ -532,44 +532,44 @@
 			-데몬 프로세스 재사용 :
 			-병렬 실행 :
 			-병렬 다운로드 :
-			
-		-멀티 프로젝트 지원 : 하나의 Repository에 여러 프로젝트를 구성할 수 있다.		
+
+		-멀티 프로젝트 지원 : 하나의 Repository에 여러 프로젝트를 구성할 수 있다.
 		-유연성, 확정성 :
 			-Groovy 기반 스크립팅을 통해서 다양한 기능을 스크립트안에 직접 구현할 수 있다. (system 정보를 읽어 빌드시 이용등..)
 			-직접 Task를 구현하고 플러그인을 만들어 기능을 추가할 수도 있다.
 			-Plugin 허브를 지원하며 유용한 plugin을 이용할 수 있다.
 				-checkstyle, pmd, findBugs, Sonar, Lint : 소스코드 정적 분석 툴을 적용하면 빌드시, 룰에 어긋나는 코드를 경고한다(리포트도 만들어줌)
 				-jacoco, cobertura, clover, sonarqube : 테스트 커버리지 툴을 적용하면 빌드시, 테스크 커버리지에 대한 리포트가 만들어지고, 경고를 띄우는 등의 설정도 가능하다.
-		
-	-설치 : 
+
+	-설치 :
 		-Groovy 설치시 Library가 포함되어 있어 별도 설치 필요 없음
 		-https://gradle.org/releases/ : 공식 사이트를 통해 다운로드 (5.6.2 binary-only)
 			-unZip binary : C:\Program Files\Gradle (적당한 위치)에 다운받은 압축을 풀고 저장
 			-환경변수 설정 :
 				-GRADLE_HOME : C:\Program Files\Gradle\gradle-5.6.2
-				-path 설정 : C:\Program Files\Gradle\gradle-5.6.2\bin				
-	
+				-path 설정 : C:\Program Files\Gradle\gradle-5.6.2\bin
+
 	-기본구조
 		- gradle/wrapper/gradle-wrapper.jar : 생성된 프로젝트를 이후 어느 시스템에서도(java나 gradle이 설치되지 않은) 빌드할수 있도록 빌드가 가능한 환경 자체를 포함함
 			-gradle build : system에 설치된 gradle 환경을 이용하여 빌드
 			-./gradle build : gradle-wrapper.jar을 이용하여 빌드
-			
+
 		-gradle/wrapper/gradle-wrapper.properties : gradle-wrapper에 대한 설정 파일
 		-gradlew.bat : 윈도우용 실행 스크립트 (gradlew build = gradle-wrapper.jar을 이용하여 프로젝트 빌드)
 		-gradlew : 리눅스용 실행 스크립트 (gradle.bat 과 동일 기능)
 		-build.gradle : 의존성이나 플러그인 설정 등을 위한 스크립트 파일 (pom.xml과 유사), 하위 프로젝트가 있는경우 프로젝트 별로 각각의 build.gradle을 갖는다.
 		-settings.gradle : 프로젝트의 구성 정보(어떤 하위프로젝트들이 어떤 관계로 구성되어 있는지) 파일이다. Gradle은 이 파일을 토대로 프로젝트를 구성한다.
-		
-	-settings.gradle 구성 요소 : 
+
+	-settings.gradle 구성 요소 :
 		-----------
 		rootProject.name = 'algorithm' //최상위 프로젝트
 		include 'java' //하위 프로젝트
 		include 'java::kotlin' //하위의 하위 프로젝트
 		-----------
-			
+
 	-build.gradle 구성 요소 :
 		-----------
-		plugins { // 빌드(컴파일??)를 위한 plugin 
+		plugins { // 빌드(컴파일??)를 위한 plugin
 			id 'org.springframework.boot' version '2.1.8.RELEASE'
 			id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 			id 'java'
@@ -596,21 +596,21 @@
 			compileOnly 'org.projectlombok:lombok'
 			annotationProcessor 'org.projectlombok:lombok'
 			testImplementation 'org.springframework.boot:spring-boot-starter-test'
-		}		
+		}
 		-----------
 
 
 -jenkins server : continuous integration and continuous delivery (CI/CD) server(pipeline) written in Java, Stable release	2.176.1, MIT License
-	-jenkins 설치 : java 설치 필수 
+	-jenkins 설치 : java 설치 필수
 		-$wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add - : apt로 설치하기 위해 jenkins repo를 접속하기 위한 key 값을 받아 온다
 		-$sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list' : apt list에 jenkins repo 추가
 		-$sudo apt updatesudo : apt 업데이트
 		-$apt install jenkins : jenkins install (설시시 자동 서비스 등록 및 실행)
 		-$systemctl status jenkins : 서비스 상태 확인
-		-$sudo ufw allow 8080 : 방화벽 오픈 (sudo ufw status 확인, port 변경(vi /etc/default/jenkins 에서 HTTP_PORT=XXXX 변경 후 restart)		
-	
-	-user 생성 및 환경 설정 : (https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/)	
-	
+		-$sudo ufw allow 8080 : 방화벽 오픈 (sudo ufw status 확인, port 변경(vi /etc/default/jenkins 에서 HTTP_PORT=XXXX 변경 후 restart)
+
+	-user 생성 및 환경 설정 : (https://linuxize.com/post/how-to-install-jenkins-on-ubuntu-18-04/)
+
 	-주요 메뉴
 		-첫화면 : jenkins의 모든 빌드 상태를 보여줌
 		-새로운 Item : 새 빌드 추가 (하나의 빌드 환경을 하나의 Item으로 보는 듯), Freestyle, Maven, Pipeline, Git등 여러 템플릿 선택 가능
@@ -620,33 +620,33 @@
 		-파일 핑거프린트 확인 : 어떤 빌드 패키지(jar, war..)의 빌드 번호가 몇 인지 확인할 수 있다.
 		-Jenkins 관리 : 연동 환경에 대한 설정(설치된 plugin에 따라 다양한 설정이 필요)
 			-System Admin 정보 : email
-			-Maven 관련 : Local Maven Repository 위치, 
+			-Maven 관련 : Local Maven Repository 위치,
 			-Git 정보 : ??
 			-Pipeline :
 		-My Views : 로그인 사용자 Item 빌드 상태를 보여주는 View
 		-Lockable Resource : ??
 		-Credentials : ??
 		-New View : jenkins의 모든 Item의 빌드 상태를 보여주는 view를 추가해줌(filter 및 기타 컬럼 지정 하여 customize 함)
-		
+
 		-Build 시나리오
-			-jenkins + maven + svn : jenkins 서버의 maven local repo로 빌드 
+			-jenkins + maven + svn : jenkins 서버의 maven local repo로 빌드
 				-sts에 코드 작성 및 svn commit : main/java 와 test/java, Resouces파일(해당시), pom.xml 들을 commit
 				-jenkins Item(maven) 생성 : 소스코드관리>Repository URL(끌고올 프로젝트의 svn주소), Credentials(svn 계정, jenkins에서 생성하여 연동)
-				-Build Now : 빌드 처리				
+				-Build Now : 빌드 처리
 				-Console Output : 빌드 결과 확인
 					-빌드결과, 테스트결과 확인
 					-jenkins의 workspace 확인 가능 (svn에서 소스를 가져다논 위치), /var/lib/jenkins/workspace/projectName/
 					-jenkins가 빌드한 package를 저장한 maven local repo 확인 가능, /var/lib/jenkins/.m2/repository/groupName/projectName/
-					
-	
+
+
 [server/os]
 -ubuntu : 18.xx LTS(long-term support)
 	-Commands : 활용 높은 Commands
 		-특정 프로그램(install)의 관련 파일 위치 확인 : dpkg --listfiles firefox
 		-TCP 네트워크 사용 상태 확인(port) : sudo lsof -i -n -P | grep TCP | more
 		-비밀번호 변경 : passwd
-		
-		
+
+
 
 
 
@@ -669,25 +669,25 @@
 		-Stackable: You can stack services vertically and on-the-fly.
 
 	-구조 : Docker는 이미지를 통째로 생성하지 않고, 바뀐 부분만 생성한 뒤 부모 이미지를 계속 참조하는 방식으로 동작
-		-Image : 베이스 이미지에 필요한 프로그램과 라이브러리, 소스를 설치한 뒤 파일 하나로 만든 것 		
+		-Image : 베이스 이미지에 필요한 프로그램과 라이브러리, 소스를 설치한 뒤 파일 하나로 만든 것
 		-Container : image 파일을 실행하여 메모리로 올린 상태
 		-특징 : Docker는 특정 실행 파일 또는 스크립트를 위한 실행 환경임
 			-Docker는 이미지를 통째로 생성하지 않고, 바뀐 부분만 생성한 뒤 부모 이미지를 계속 참조하는 방식으로 동작
 			-이미지를 저장소에 올릴 때는 자식 이미지와 부모 이미지를 함께 올려야함. 받을 때도 부모 이미지를 함께 받음. 이후에는 내용이 바뀐 이미지만 주고받음
-			
+
 	-설치 : https://docs.docker.com/install/linux/docker-ce/ubuntu/
 	-docker 설치 위치 : /var/lib/docker, 이미지 파일등이 있는것 같은데 실제 파일은 권한의 이유로 볼수 없다, 보는 방법은 ??
 	-docker 서비스 실행 : service docker restart 또는 systemctl restart docker
 	-Docker Hub : docker image를 공유하기 위한 public Repository (https://hub.docker.com)
-		
-	-docker Command : docker command는 항상 root(sudo)권한으로 실행해야 함 
+
+	-docker Command : docker command는 항상 root(sudo)권한으로 실행해야 함
 		-sudo를 안쓰기 위해 나의 user를 docker 그룹에 포함시킬 수 있음(sudo usermod -aG docker ${USER}, 재 로그인 필요)
 		-search : docker search [특정유저]/ubuntu[:latest] (호스트가 CentOS 라도 Ubuntu image 사용 가능)
 		-pull : docker pull ubuntu:latest (docker hub에서 이미지 내려 받기)
 		-images : docker images [imageName] (로컬에 다운받은 이미지 목록 조회)
 		-run : docker run [-i(input) -t(out) --name containerName] ubuntu [/bin/bash(실행사항)]
 			-.. -v /root/data:/data (host의 /root/data를 container의 /data와 연결)
-			
+
 		-ps : docker ps [-a(stop상태포함)]
 		-start : docker start {containerName 또는 ID}, 정지된 container를 다시 시작한다.(image가 아니라 container 임)
 		-restart : docker restart hello, 컨테이너를 재 시작(os reboot과 유사)
@@ -697,11 +697,11 @@
 		-stop : docker stop hello, container 정지
 		-rm : docker rm hello, container 삭제 (메모리상에서 제거, 해당 container에서 작업한 모두 내용도 삭제 됨)
 		-rmi : docker rmi ubuntu:latest, 이미지를 삭제한다.
-		
+
 	-docker file 생성 : 특정 base 이미지를 이용하여 새로운 이미지를 만들수 있는 파일 (ubuntu 베이스로 nginx가 설치된 이미지 생성)
 		-Dockerfile(생성하기위한 스크립트 파일) : 파일은 원하는 위치 어디에든 만들수 있으나 파일명은 반드시 Dockerfile로 해야함
 		-Dockerfile Command :
-			-FROM : base 이미지				FROM ubuntu:14.04 
+			-FROM : base 이미지				FROM ubuntu:14.04
 			-MAINTAINER : 작성자				MAINTAINER Foo Bar <foo@bar.com>
 
 			-RUN : 스트립 실행					RUN apt-get update
@@ -715,18 +715,18 @@
 
 			-EXPOSE : 호스트와 연결 port			EXPOSE 80
 											EXPOSE 443
-											
+
 			-ADD : Copy a file from the host machine to the new docker image ??
 			-ENV : Define an environment variable. ??
 			-ENTRYPOINT : Define the default command that will be executed when the container is running. ??
 			-USER : Set the user or UID for the container created with the image. ??
-			
+
 		-Dockerfile Build : Dockerfile로 부터 image를 만든다.
 			-docker build --tag mynewimage(이미지명):0.1(버전,디폴트 latest) ./(Dockerfile 위치) , 생성된 이미지 파일은 docker의 기본 위치로 들어간다.
 			-docker run --name mynewimage -d -p 80:80 -v /root/data:/data mynewimage:0.1 , 해당 이미지 실행
-				
 
-	
+
+
 [Virsion Control (VCS)]
 SVN : Apache, Apache License 2.0, Central VCS 방식
 	-ubuntu, apahche(web), svn : svn 클라이언트가 http 방식으로 svn에 연결할수 있도록 apache 설치 필요(일반적)
@@ -736,10 +736,10 @@ SVN : Apache, Apache License 2.0, Central VCS 방식
 	-/etc/apache2/mods-enabled/dav_svn.conf 연결위한 설치 파일
 	-svnadmin 명령을 통해 사용자 및 repository 생성(cli를 대체할 gui 툴이 있을듯)
 	-http://, https://, file://, svn:// 여러 접속 방식 설정 가능
-	
-	-사용		
-		-서버접속 : pc에서 TortoiseSVN 설치하여 서버 접속 (TortoiseSVN을 서버처럼 사용할수도 있는것 같음, create repository here 명령을 통해 폴더를 서버의 repo 처럼 사용가능, 잘은 모르겠음??) 
-		-여러 사용자를 생성하여 각 repository 별 사용 권한을 주는 부분을 잘 모르겠음??	
+
+	-사용
+		-서버접속 : pc에서 TortoiseSVN 설치하여 서버 접속 (TortoiseSVN을 서버처럼 사용할수도 있는것 같음, create repository here 명령을 통해 폴더를 서버의 repo 처럼 사용가능, 잘은 모르겠음??)
+		-여러 사용자를 생성하여 각 repository 별 사용 권한을 주는 부분을 잘 모르겠음??
 
 Git : version control system, local에서 개발자 단독으로 사용가능, Distributed VCS 방식, 2005년 Linus Torvalds가 개발
 	-빠른속도, 단순한 구조, 비선형적인 개발(수천개의 브랜치 동시 개발 가능), 완벽한 분산, 대형 프로젝트에서 검증(안정성)
@@ -747,32 +747,32 @@ Git : version control system, local에서 개발자 단독으로 사용가능, D
 	-Git은 Github와 연동하기 전까진 많은 부분 local에서 개발자 본인을 위한 VCS 기능에 충실한 역할을 한다.
 	-소스코드의 각 상태에 대한 스냅샷의 개념
 	-repository에 들어간(commit) 데이터는 어떤한 경우에도 임의로 변경할수 없다 (SHA-1 해시를 사용하여 체크섬값을 갖는다.)
-	
+
 	-local에서의 코드 상태
 		- working Directory : 실제 작업 디렉토리(수정되면 해당파일은 modified 상태가 됨)
-		- staging Area(가상의 공간으로 index라고 부름) : 
+		- staging Area(가상의 공간으로 index라고 부름) :
 		- git directory(Repository) : 수정된(새로생성된) 파일이 최종 commit 되어 해당 파일이 snapshot된 상태
-	
-	
+
+
 	-git 설치
 		-ubuntu : sudo apt install git-all, Source Code를 다운받아 설치도 가능(기능 수정이 필요하거나 특정 플러그인의 추가 삭제가 필요한 특별한 경우에 함)
 			-기본설정 : ~/.gitconfig 또는 /etc/gitconfig 설정 (개인 설정이 우선함)
 			-필수설정 : $git config --global user.name "John Doe" and $git config --global user.email johndoe@example.com
 			-설정확인 : $git config --list
-			
+
 		-window : http://git-scm.com/download/win, git(git for window), cli 및 gui 환경을 제공하는 3rd party 제품 (여러 종류가 3rd party가 있는듯 함)
 			-설정 : ubuntu 설정과 유사하게 하면된다.
 			-GitHub Desktop
 				-local에 새 git repo생성(git init 해주는 의미), 이미 존재하는 git repo를 툴에 로드, GitHub에서 clone 받아 local에 신규 git repo 생성
-				-툴에 로딩되어 있는 repo에서 변경 사항이 발생시 확인할수(changes 리스트에서) 있음(바로 commit 가능, stage로 올리는 단계(add를 통해) 없이 바로 commit 하는것 같음??)				
+				-툴에 로딩되어 있는 repo에서 변경 사항이 발생시 확인할수(changes 리스트에서) 있음(바로 commit 가능, stage로 올리는 단계(add를 통해) 없이 바로 commit 하는것 같음??)
 				-툴에 로딩되어 있는 repo에 대한 commit결과를 확인할수(history 리스트에서) 있음(cli 통해 commit한 내용도 desktop에 실시간 반영됨)
-				-GitHub로 push(Fetch), pull 가능 
+				-GitHub로 push(Fetch), pull 가능
 				-툴을 GitHub 계정과 연동 가능(File>options) - GitHub에서 인증키 복사해서 사용했나??
-				
-			-GitHub GUI : repo 생성, 오픈, clone 기능 제공(별쓸모 없어 보임)			
+
+			-GitHub GUI : repo 생성, 오픈, clone 기능 제공(별쓸모 없어 보임)
 			-Git CMD(deprecated) : cli를 사용할수 있도록 cmd 창을 열어줌(별쓸모 없어 보이며 deprecated 됨)
 			-Git Bash : cli를 사용할수 있도록 bash 창을 열어줌 (linux command 사용해야 함)
-			
+
 			-Cit Command
 				-git 처리 단계 : working Dir(빨강글씨) $git add [fileName] -> stage/index(녹색글씨) $git commit [fileName] -> Repository
 				-git init : 새로운 git repo 생성, .git 디렉토리가 생성됨
@@ -785,25 +785,25 @@ Git : version control system, local에서 개발자 단독으로 사용가능, D
 				-git mv oldFileName newFileName : 파일명 변경된
 				-git reset fileName : staged 상태의 파일을 working 상태로 다시 내린다. (이번 커밋에서 제외가 필요할 경우)
 				-git checkout -- fileName : 해당 파일을 최초 clone 했을때의 상태로 복구
-				-git log [옵션이 많음] : 해당 repo의 history 확인 (Gui 툴을 쓰는게 날듯)				
+				-git log [옵션이 많음] : 해당 repo의 history 확인 (Gui 툴을 쓰는게 날듯)
 				-git remote -v : 해당 repo의 origin remote 정보를 보여준다. (또한 해당 orign에 할수 있는 권한도 보여 준다(push/fetch)
-				
+
 			-Commit 수정(이미 commit된 것에 파일을 추가하고 하나의 커밋으로 보이도록 처리, 오류 커밋 직후 사용할것)
 				-git add fileName : 추가할 파일을 stage/index 로 올린다.
 				-git commit --amend : 직전 커밋과 하나로 만들어 준다
-				
+
 			-.gitIgnore
 				-repo /(루트)에 위치해야 함, 표준 Glob 패턴을 사용한다, https://github.com/github/gitignore 참고
-				
-			(https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C)	
-				
+
+			(https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C)
+
 			-git pull and git merge : pull은 remote repo의 내용으로 local로 가져온다(complict이 날수 있음), git merge는 서로다른 브랜치의 코드를 합치는 작업
 
 GitLap : web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking and CI/CD pipeline features
 	-사용자 무제한 무료 (기술 서포트를 받기 위해서는 비용 지불 필요)
 	-minimum requirement : 2core, 4GB (to support up to 100 users)
 	-공식 사이트 : https://about.gitlab.com/update/#ubuntu
-	
+
 	-설치 : https://teamlab.github.io/jekyllDecent/blog/tutorials/%EB%82%98%EB%A7%8C%EC%9D%98-Git-%EC%84%9C%EB%B2%84-Gitlab-%EA%B5%AC%EC%B6%95
 		-$sudo apt-get install curl openssh-server ca-certificates postfix : 필요한 부가 모듈 설치 (postfix=메일전송기능관련, openssh-내부적으로 필요)
 		-$curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash : Gitlab 패키지 저장소 추가
@@ -818,36 +818,36 @@ GitLap : web-based DevOps lifecycle tool that provides a Git-repository manager 
 		-$sudo gitlab-ctl reconfigure , $sudo gitlab-ctl restart , $sudo gitlab-ctl status : reconfigure 및 재 실행
 		-gitlab web 접속 및 초기 설정 : root 계정의 비밀번호를 등록 한다.
 		-SSL 접속 설정 : https 접속시 설정 (https://blog.lael.be/post/5476)
-		
+
 	-내부 사용 모듈 : nginx, openssh, postfix(mail), unicorn(DB??), redis ..
 	-방화벽(TCP인바운드) 오픈 포트 : http(nginx=9081), https(nginx=443), ssh(openssh=22)
-	
-	-관리 : 
+
+	-관리 :
 		-Backup : $sudo gitlab-rake gitlab:backup:create (환경 설정, 사용자 정보, 저장소 정보를 포함한 모든 gitlab 정보가 백업)
 			-backup 위치 : /var/opt/gitlab/backups (/etc/gitlab/gitlab.rb 파일의 gitlab_rails[‘backup_path’] 에서 수정가능)
-		-Recovery : 
+		-Recovery :
 			-/var/opt/gitlab/backups/ : 해당 위치에 백업할 tar 파일이 존재 해야함 (신규 서버에서 백업 파일을 복구할경우 이동해 준다.)
 			-$sudo gitlab-ctl stop unicorn , sudo gitlab-ctl stop sidekiq : DB 관련 서비스 중지
 			-$gitlab-rake gitlab:backup:restore BACKUP=1553573272_2019_03_26_11.9.0 : _gitlab_backup.tar을 제외한 백업날자 까지만 입력(확실한지 물으면 yes)
 			-신규 서버로 복구시 : /etc/gitlab/gitlab-secrets.json 파일도 같이 이동 (gitlab에서 사용하는 암호화키 파일)
 			-$gitlab-ctl restart : 서비스 재시작
-			-$gitlab-rake gitlab:check SANITIZE=true : 복구된 체크 및 교정(해결될때까지 반복)		
-		
-	
-Github :
-BitBucket : 
+			-$gitlab-rake gitlab:check SANITIZE=true : 복구된 체크 및 교정(해결될때까지 반복)
 
-Git command : 
-	-merge revert : git revert 머지커밋번호(7자) -m 1 
-	
+
+Github :
+BitBucket :
+
+Git command :
+	-merge revert : git revert 머지커밋번호(7자) -m 1
+
 Sourcetree : GIT 클라이언트 툴
 	-repository 만들기 : 상단 + 탭을 이용하여 생성
-		-Local : 기존에(이미) local pc에 존재하는(sourcetree에서 만들었던) reposity 목록을 보여 주고 선택시 해당 repository로 바로 연결해 준다. 
+		-Local : 기존에(이미) local pc에 존재하는(sourcetree에서 만들었던) reposity 목록을 보여 주고 선택시 해당 repository로 바로 연결해 준다.
 		-remote : 등록된 계정을 통해(gitlab 이든 github등) 해당 계정에 연결된 remote(계정이 있다는건 당연히 remote를 의미하겠지만)의 repository를 보여주고 clone 할수 있게 해준다.
 		-clone : 이미 존재하는 (로컬이든 리모트든) repository에 접근하여 local로 clone(복제)후 연결해 준다.
-		-add : 기존에(이미) local pc에 존재하는(sourcetree에서 만들었던 아니든) reposity 목록을 보여 주고 선택시 해당 repository로 바로 연결해 준다. 
+		-add : 기존에(이미) local pc에 존재하는(sourcetree에서 만들었던 아니든) reposity 목록을 보여 주고 선택시 해당 repository로 바로 연결해 준다.
 		-create : 로컬에 새로운 repository를 만들어 준다.
-		
+
 	-존재하는 로컬 프로젝트를 로컬 repository로 만들고 서버 repository로 올리는 방법 :
 		-create를 이용해 기존 프로젝트 폴더를 repository로 만든다. (기존 코드를 첫 커밋하기 전에 .gitignore 파일을 만들고 하는게 좋다)
 			-해당 로컬 리포지토리를 서버 repository로 올리고 싶을때  :
@@ -856,14 +856,14 @@ Sourcetree : GIT 클라이언트 툴
 						-서로 연결 고리가 없어서 pull, push, merge가 안됨
 							-git command로 연결해 준다(연결성 없는 관계지만 pull 하는 옵션) : git pull origin master --allow-unrelated-histories
 								-연결성이 생겼음으로 push 할 수 있게 된다.
-					
-	-참고: 
+
+	-참고:
 		-origin Branch로 local Branch로 생성 후 최초로 push 하기 위해서는 pull할 것이 없더라도 최초 origin으로 부터 pull을 한후 push 해야 한다.(최초 연결 고리가 없기 때문에 pull할께 있어도 모르기 때문)
-		
-		
-		
-		
-		
+
+
+
+
+
 
 [Spring]
 -Spring Framework : 아래와 같은 주요 기능(Main Features)을 Dependency Injection 해줌
@@ -872,7 +872,7 @@ Sourcetree : GIT 클라이언트 툴
 	-Spring Security
 	-Spring AOP (aspect oriented programing) : 개발자가 핵심 로직에만 집중할수 있도록 공통 기능을 framework 에서 지원 (filter 처럼 선/후 처리를 지원하는 class 지정 가능)
 	-Spring ORM (object relational mapping) : 하이버네이트, JPA 등을 이용해서 DAO 레이어를 구축하는 방식
-	-Spring Test	
+	-Spring Test
 
 
 -Spring Boot Framework : Spring Framework의 확장형으로 설정과 관련한 편의성이 향상 되었다.
@@ -882,47 +882,47 @@ Sourcetree : GIT 클라이언트 툴
 	-Automatic config for Spring functionality – whenever possible
 
 
--Handler Interceptor : 인터셉터는 DispatcherServlet이 컨트롤러를 호출하기 전,후에 요청과 응답을 가로채서 가공할 수 있도록 해준다. 	
+-Handler Interceptor : 인터셉터는 DispatcherServlet이 컨트롤러를 호출하기 전,후에 요청과 응답을 가로채서 가공할 수 있도록 해준다.
 -HandlerMethodArgumentResolver : ??
 
 
 -Spring Boot Resource : src/main/resources/static은 URL에서 Resource의 / 이다
 
-	
--Spring Config : 		
+
+-Spring Config :
 	-WAS 설정 : WAS(tomcat)와 Spring의 연결 고리??
 		-server.xml : 서버의 기본 설정, 포트, ssl, Context path 및 docBase 지정, (/tomcat/conf/..위치)
 		-web.xml : 서블릿 배포 기술자(Deploment Descriptor)
 			-서블릿의 배치, mine type 지정, welcom file 지정, error 페이지 지정, filter 지정, (/tomcat/conf/(전역설정) 또는 /Webroot/WEB-INF/..에 )
 			-----------
 			web.xml 파일에 spring 관련 context 파일의 위치를 알려준다. (서버 스타트시 같이 읽어 로딩한다.)
-			-----------				
+			-----------
 			//tomcat은 서블릿 컨테이너를 제공한는 웹서버로 자신의 기본 servlet(Catalina) Container를 이용할수도 있고 spring등 다른 컨테이너를 사용할 수도 있다.
 			//사용할 container를 web.xml을 통해 설정할수 있고 동시에 여러 servlet container를 사용할 수도 있다.
 			//DispatcherServlet 은 spring MVC용 서블릿인가??
 			<servlet>
-				<servlet-name>sungil-Servlet</servlet-name> 
-				<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> 
-				<init-param> 
-					<param-name>contextConfigLocation</param-name> 
-					<param-value>/WEB-INF/config/*-servlet.xml</param-value> 
-				</init-param> 
-			</servlet> 
-			
+				<servlet-name>sungil-Servlet</servlet-name>
+				<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+				<init-param>
+					<param-name>contextConfigLocation</param-name>
+					<param-value>/WEB-INF/config/*-servlet.xml</param-value>
+				</init-param>
+			</servlet>
+
 			<servlet-mapping> //.do 패턴은 sungil-Servlet 설정의 컨테이너에서 처리한다.
-				<servlet-name>sungil-Servlet</servlet-name> 
-				<url-pattern>*.do</url-pattern> 
-			</servlet-mapping>				
+				<servlet-name>sungil-Servlet</servlet-name>
+				<url-pattern>*.do</url-pattern>
+			</servlet-mapping>
 			-----------
-			
+
 		-context.xml : ??, (/tomcat/conf/..위치)
-		
-		
+
+
 	-Spring 내부 설정 : 예전방식(Boot 이전), 요즘은 Anotation으로 거의 처리 함
-		-application-context.xml : spring 설정과 관련한 가장 상위 configuration (여러 형태의 XXX-contex.xml 파일로 쪼갤수 있다. 하나로도 뭉칠수도 있다)				
+		-application-context.xml : spring 설정과 관련한 가장 상위 configuration (여러 형태의 XXX-contex.xml 파일로 쪼갤수 있다. 하나로도 뭉칠수도 있다)
 			-----------
 			Datasource 관련 설정, apache의 BasicDataSource 클래스를 Bean으로 올리고 필요값들을 설정해 준다.
-			-----------				
+			-----------
 			<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 				<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
 				<property name="url" value="jdbc:mysql://주소/스키마"/>
@@ -937,11 +937,11 @@ Sourcetree : GIT 클라이언트 툴
 			<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
 				<property name="dataSource" ref="dataSource" />								<!--사용할 Datasource-->
 				<property name="mapperLocations" value="classpath:/mapper/**/*_SQL.xml" /> 	<!--SQL문의 위치-->
-			</bean>				
+			</bean>
 			<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 				<constructor-arg index="0" ref="sqlSession"/>
 			</bean>
-			-----------			
+			-----------
 
 			-----------
 			modelAndVew 관련 설정, controller 가 이 방식의 modelAndVew 를 쓰겠다는건 어떻게 알려주지??
@@ -968,29 +968,29 @@ Sourcetree : GIT 클라이언트 툴
 			Mybatis 를 이용한 DAO 구성한다
 			-----------
 			public class myDAO {
-				@Autowired 
+				@Autowired
 				private SqlSessionTemplate sqlSessionTemplate;		//mybatis의 SqlSessionTemplate 주입
 
-				result = sqlSessionTemplate.insert(queryId, params);		//insert	
+				result = sqlSessionTemplate.insert(queryId, params);		//insert
 				result = sqlSessionTemplate.update(queryId, params);		//update
-				result = sqlSessionTemplate.delete(queryId, params);		//delete			
+				result = sqlSessionTemplate.delete(queryId, params);		//delete
 				result = sqlSessionTemplate.selectOne(queryId);				//여러 형태 select 들
 				result = sqlSessionTemplate.selectOne(queryId, params);
 				resultList = sqlSessionTemplate.selectList(queryId);
 				resultList = sqlSessionTemplate.selectList(queryId,params);
 			-----------
-	
+
 	-yaml-importer : Spring Framework 의 EnvironmentPostProcessor Cycle에 특정 path 의 Yaml 기반으로 Configure Property 를 로드하는 기능을 하는 모듈
 
 
 -Spring Boot Config : server.xml, web.xml, application.xml 등을 사용하지 않고 주로 어노테이션을 사용하여 설정을 정한다.(스프링은 전체 클레스의 어노테이션 스캔을 통해 해당 클레스가 어떤역할을 위한 클레스인지를 알수 있다.)
-	-@Configuration(extend WebMvcConfigurerAdapter) : spring 설정과 관련한 클레스임을 알린다. 
+	-@Configuration(extend WebMvcConfigurerAdapter) : spring 설정과 관련한 클레스임을 알린다.
 		-특히 WebMvcConfigurerAdapter 클래스를 상속 받아 server.xml, web.xml, application.xml 의 설정을 대신 할수 있다.
 
-				
+
 -Spring boot Filter(필터) : 스프링 필터 클레스를(여러형태가있음) 상속받아 @Component 어노테이션을 통해 만들수 있다.
-	-필터가 적용되는 지점 : Filter, Interceptor, AOP (Filter는 Servlet 엔진(Servlet Context)에서 주관, Interceptor는 Spring(Application Context)에서 주관, 컨테이너 진입 전(후), AOP는 메소드 단위에 걸수 있다.	
-	-필터 생성 : 
+	-필터가 적용되는 지점 : Filter, Interceptor, AOP (Filter는 Servlet 엔진(Servlet Context)에서 주관, Interceptor는 Spring(Application Context)에서 주관, 컨테이너 진입 전(후), AOP는 메소드 단위에 걸수 있다.
+	-필터 생성 :
 		-----------
 		@Component
 		@Order(1) //필터 적용 순서를 명시할 수 있다.
@@ -999,70 +999,70 @@ Sourcetree : GIT 클라이언트 툴
 			public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 				HttpServletRequest req = (HttpServletRequest) request;
 				//..하고싶은 코드 작성
-				LOG.info("Starting a transaction for req : {}", req.getRequestURI()); //Spring 컨테이너로 진입 전 처리			
+				LOG.info("Starting a transaction for req : {}", req.getRequestURI()); //Spring 컨테이너로 진입 전 처리
 				chain.doFilter(request, response); //다음필더 적용(모든 필터가 처리되면 실제 컨트롤로 로직까지 처리된 후 복귀함)
 				//..하고싶은 코드 작성
 				LOG.info("Committing a transaction for req : {}", req.getRequestURI()); //후 추리
 			}
 		}
-		
+
 		@Component
 		@Order(2)
-		public class MyFilter2 implements Filter {	
+		public class MyFilter2 implements Filter {
 		...
 		-----------
-	
+
 	-필터 적용 :
 		-----------
-		@Configuration //config class 에서 AbstractFilterRegistrationBean을 상속받은 class를 bean으로 잡는것으로 처리 가능 
+		@Configuration //config class 에서 AbstractFilterRegistrationBean을 상속받은 class를 bean으로 잡는것으로 처리 가능
 		public class MyConfiguration extends WebMvcConfigurerAdapter
 			...
-			
+
 			@Bean //MyFilter1을 특정 url(/users/*)에만 적용하고 싶은 경우
 			public FilterRegistrationBean<MyFilter2> loggingFilter(){
-				FilterRegistrationBean<MyFilter2> registrationBean = new FilterRegistrationBean<>();					 
+				FilterRegistrationBean<MyFilter2> registrationBean = new FilterRegistrationBean<>();
 				registrationBean.setFilter(new MyFilter2());
-				registrationBean.addUrlPatterns("/users/*");					 
-				return registrationBean;    
-			}	
+				registrationBean.addUrlPatterns("/users/*");
+				return registrationBean;
+			}
 
 			@Bean //MyFilter2는 특정 url(/produc/*)에만 적용하고 싶은 경우
 			public FilterRegistrationBean<MyFilter2> loggingFilter(){
-				FilterRegistrationBean<MyFilter2> registrationBean = new FilterRegistrationBean<>();					 
+				FilterRegistrationBean<MyFilter2> registrationBean = new FilterRegistrationBean<>();
 				registrationBean.setFilter(new MyFilter2());
-				registrationBean.addUrlPatterns("/produc/*");					 
-				return registrationBean;    
+				registrationBean.addUrlPatterns("/produc/*");
+				return registrationBean;
 			}
 		}
 		-----------
 
 -Spring boot Interceptor(인터셉터) : 스프링 인터셉터 클레스를(여러형태가있음) 상속받아 @Component 어노테이션을 통해 만들수 있다.
-	-인터셉터 생성 : 
-		-----------	
+	-인터셉터 생성 :
+		-----------
 		@Component
 		public class MyHandlerInterceptor1 extends HandlerInterceptorAdapter {
-			@Override 
+			@Override
 			public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler){
 				//controller 진입 직전, return true시 controller 진입
 				return true // true=다음 interceptor chain을 실행한다.
 			}
-			
-			@Override 
+
+			@Override
 			public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView){
 				//controller 처리 후 view 진입 직전, modelAndView로 view로 데이터 전송 가능
 			}
 
-			@Override 
+			@Override
 			public void afterComplete(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
-				//view 랜더링 이후 
+				//view 랜더링 이후
 			}
 
-			@Override 
+			@Override
 			public void afterConcurrentHandlingStarted(HttpServletRequest request, HttpServletResponse response, Object handler){
 				//servlet 3.0에서 지원, postHandle, afterComplete 대신 역할
 			}
 		}
-		-----------	
+		-----------
 
 	-인터셉터 적용 :
 		-----------
@@ -1092,7 +1092,7 @@ Sourcetree : GIT 클라이언트 툴
 
 
 
-	
+
 -Annotation : https://gmlwjd9405.github.io/2018/12/02/spring-annotation-types.html
 	-@SpringBootApplication : 완전한 하나의 web application으로 인식하게 한다.
 		-----------
@@ -1105,7 +1105,7 @@ Sourcetree : GIT 클라이언트 툴
 		-----------
 
 	-@EnableWebMvc : DelegatingWebMvcConfiguration(Spring MVC 설정을 담당하는 객체)에게 MVC 새 설정 사항이 있음을 알린다. (보통 @Configuration, @Bean과 함께 사용)
-	-@Bean : method-level의 어노테이션, 해당 메소드의 return 객체를 spring이 관리(인스턴스)한다. 
+	-@Bean : method-level의 어노테이션, 해당 메소드의 return 객체를 spring이 관리(인스턴스)한다.
 		-개발자가 직접 만든 클래스가 아닌(직접 만들었다면 코드에 @Component를 붙였을거임)경우 사용됨(보통 @Configuration과 함께 사용)
 	-@Configuration : 해당 클래스가 Spring에서 관리할 Bean(내가수정할수없는)을 정의했음을 알린다. @Bean 과 함께 사용하여 해당 메소드의 return 객채를 Spring의 Bean으로 올린다.
 		-----------
@@ -1117,40 +1117,40 @@ Sourcetree : GIT 클라이언트 툴
 			return new DemoManagerImpl(); //Bean으로 올릴 Class를 리턴, 이 방식을 통해 Spring의 기본 Bean들을 수정거나 다른 클래스로 대치 할수 있다.(ex.ViewResolver)
 		}
 		-----------
-		
+
 		@AutoConfigureBefore(After)을 통해 해당 @Configuration 클래스가 읽히는 순서를 정할수 있다.
 		-----------
 		@Configuration
 		@AutoConfigureBefore(Myclass.class) //해당 설정을 Myclass 보다 항상 먼저 읽는다.
 		public class SpringAutoConfiguration {
-		}		
-		
+		}
+
 		AnnotationConfigApplicationContext를 통해 Spring에 올라온 Bean을 가져올수 있다.
 		-----------
 		public static void main(String[] args){
 			ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 			DemoManager  myDemoManager = (DemoManager) context.getBean("demoService");
-		}	
+		}
 		-----------
-		
+
 	-@Component : Spring에 의해 인스턴스가 관리 된다. 개발자가 직접 만든 클레스에 적용됨
 		-@Controller : 해당 클래스가 Controller 임을 알림
 		-@Service : 해당 클래스가 Service 임을 알림 (spring이 DB transaction을 지원)
 		-@Repository : 해당 글래스가 DAO 임을 알림, (spring이 DB Exception Translation을 지원)
-		
+
 	-@RequestMapping
 		-Class Level
 			-----------
 			@RequestMapping("/home")
 			public class HomeController {
 			-----------
-			
+
 		-Handler Level(Method)
-			-----------			
+			-----------
 			@RequestMapping(value = "/employees", method = RequestMethod.POST) //method 적시를 않하면 get, post.. 모두
 			public String addEmployee(Employee employee) {
 			-----------
-			
+
 	-@GetMapping("/home") : http://localhost:8080/home?index=1
 		-@RequestParam
 			-----------
@@ -1160,7 +1160,7 @@ Sourcetree : GIT 클라이언트 툴
 			@GetMapping("/user/{userId}/invoices")
 			public List<Invoice> listUsersInvoices(@PathVariable("userId") int user,@RequestParam(value = "date", required = false) Date dateOrNull) {
 			-----------
-			
+
 		-@ModelAttribute : @RequestParam의 값들을 Object로 매핑해줌
 			-----------
 			@RequestMapping(value="/add" method = RequestMethod.POST)
@@ -1169,24 +1169,24 @@ Sourcetree : GIT 클라이언트 툴
 				return "redirect:/myInfo"; //return 되는 스트링값을 viewResolver가 받아 해당 처리
 			}
 			-----------
-		
-	
+
+
 	-@PostMapping("/index/{idx}") : http post만 처리 가능
 		-@pathVariable("idx") :
 			-----------
 			@PostMapping("/index/{idx}")
 			public boolean deletePost(@PathVariable("idx") int postNum) {
 			-----------
-	
-	-@ResponseBody : 메핑 메소드의 리턴 값을(class) json 문자열 형태로 반환한다. 
+
+	-@ResponseBody : 메핑 메소드의 리턴 값을(class) json 문자열 형태로 반환한다.
 	-@RequestBody : http post 요청만 처리, request body의 값을 object(messageConverter)로 읽기 위해 사용 ??
-	
-	-@RestController : @Controller + @ResponseBody	
+
+	-@RestController : @Controller + @ResponseBody
 		-@ResponseBody : method의 반환 결과(class)를 jason 형태로 반환
-		-@Controller 와 @RestController 의 차이 : 
+		-@Controller 와 @RestController 의 차이 :
 			-@Controller : API 또는 view(웹화면)을 처리, 주로 view 리턴이 주목적
 			-@RestController : view가 필요없는 API만 지원하는 경우 사용
-		
+
 	-@required : Boot에서 사용??, bean property xml 설정시 해당 클래스가 주입 받아야 하는 필수 class를 정의 한다.
 	-@Autowired : Spring에게 해당 Bean의 주입을 요청 (생성자 (@AllArgsConstructor 사용) -> 권장방식)??
 		-@Qualifier : Boot에서 사용??, @Autowired를 통해 주입 요청시 동일한 이름의 클래스가 두개 존재할 경우 특정 class를 지목하기 위해 사용, Qualifier값은 xml에 적용
@@ -1199,13 +1199,13 @@ Sourcetree : GIT 클라이언트 툴
 	-@Resource : @Autowired와 같이 Bean의 주입을 요청, (표준 어노테이션으로 특정 framework에 종속적이 않게 하기위해 권장함)
 
 	-@Transactional : Exception 발생시 모든 DB 작업을 롤백하기 위해 사용 (비즈니스 로직과 DB 로직이 있는 Service 모듈에 보통 적용)
-	
+
 	-@Value("${welcome.message}") : application.properties(classpath 내부 존재, 보통 resource 폴더)의 값을 초기값으로 지정함
 		-----------
 		@Value("${welcome.message}")
 		private String message;
 		-----------
-	
+
 	-@PropertySource : Property 파일을 Environment로 로딩 (yml 파일은 읽을수 없다)
 		-----------
 		@PropertySource("classpath:/setting-dev.properties") //동일한 키값이 있는경우 override 됨
@@ -1220,8 +1220,8 @@ Sourcetree : GIT 클라이언트 툴
 				logger.info("my.value : {}" + environment.getProperty("my.value"));
 			}
 		-----------
-		
-	
+
+
 	-Spring AOP(Aspect Oriented Programming) : 주로 공통작업을 처리하기 위해 (인증, 로깅 등)
 		-@EnableAspectJAutoProxy : ??
 		-@Aspect : 해당 클래스가 Aspect 클래스 임을 선언
@@ -1230,9 +1230,9 @@ Sourcetree : GIT 클라이언트 툴
 		-@After : 타겟 메소드의 결과에 관계없이(즉 성공, 예외 관계없이) 타겟 메소드가 완료 되면 어드바이스 기능을 수행
 		-@Around : 메소드 실행 전후, 어드바이스가 타겟 메소드를 감싸서 타겟 메소드 호출전과 후에 어드바이스 기능을 수행
 		-@AfterReturning : 정상적 반환 이후, 타겟 메소드가 성공적으로 결과값을 반환 후에 어드바이스 기능을 수행
-		-@AfterThrowing : 예외 발생 이후, 타겟 메소드가 수행 중 예외를 던지게 되면 어드바이스 기능을 수행			
+		-@AfterThrowing : 예외 발생 이후, 타겟 메소드가 수행 중 예외를 던지게 되면 어드바이스 기능을 수행
 
-			-----------				
+			-----------
 			@Component //Bean으로 등록
 			@Aspect    //해당 클래스가 Aspect 임을 선언
 			public class PerfAspect {
@@ -1279,19 +1279,19 @@ Sourcetree : GIT 클라이언트 툴
 				}
 			}
 			-----------
-		
+
 	-JPA
 		-@Entity : DB의 테이블과 매칭될 클래스임을 선언. (DTO는 컨트롤러에서 사용되는 객체로 주로 request, response 데이터를 담는다, Entity는 DB 고유의 상태를 가져야 함으로 둘을 분리하는것이 좋다.)
 		-@Table : @Table(name = "USER"), 엔티티 클래서에 매핑할 테이블을 나타낸다.
 		-@ID : 테이블의 PK 필드를 나타낸다.
 		-@GeneratedValue : PK의 생성규칙 (엔티티의 PK는 Long 타입의 Auto_increment를 추천)
 		-@Column : @Column(name="username"), 테이블의 컬럼과 매핑됨을 선언한다. 컬럼명이 같은경우 자동 매핑됨
-	
+
 	-@Vaild : import javax.validation.Valid
 		-@Size(max=10, min=2, message=”errMsg”) : ??
 		-@Email(message=”errMsg”) : ??
 		-@NotEmpty(message=”errMsg”) : ??
-		
+
 	-@Configuration
 		-@EnableWebSecurity
 		-@SpringBootApplication
@@ -1299,7 +1299,7 @@ Sourcetree : GIT 클라이언트 툴
 		-@RestControllerAdvice
 		-@ExceptionHandler
 		-@ResponseStatus
-		
+
 	-Lombok
 		-@NoArgsConstructor : 기본 생성자를 추가해 주고 생성자의 접근 권한을 protected로 제한한다. (Entity 클래스를 new해서 생성하는것은 막고 JPA에 생성하는 것은 허용하기 위해)??
 		-@AllArgsConstructor : 모든 필드 값을 파라미터로 받는 생성자를 추가한다.
@@ -1310,89 +1310,89 @@ Sourcetree : GIT 클라이언트 툴
 		-@EqualsAndHashCod : @EqualsAndHashCode(callSuper = true), 클래스의 equals() 와 HashCode()를 생성한다. callSuper = false 시 해당 메소드를 구성할때 상속받은 클래스의 정보는 활용하지 않는다.
 		-@Builder : 생성자와 유사하게 클래스 생성 시점에 값을 채워주는 역할을 한다. (어떤 필드에 어떤값을 채울지 명확히 인지 가능 ??)
 		-@Data : Lombok 에서 제공하는 모든 필드 관련 코드를 생성해 준다.
-		
+
 	-Json
 		-@JsonManagedReference : ??
 		-@JsonBackReference : ??
 		-@JsonProperty : ??
 		-@JsonIgnore : ??
-		
+
 	-Jackson Property Inclusion Annotation
 		-@JsonIgnoreProperties : 무시할 속성이나 속성 목록을 표시할 때 사용한다. ??
 		-@JsonIgnore : 필드 레벨에서 무시할 속성을 표시할 때 사용한다. ??
-		-@JsonIgnoreType : ?? 
+		-@JsonIgnoreType : ??
 		-@JsonInclude : 어노테이션 속성을 제외할 때 사용한다. @JsonInclude(JsonInclude.Include.NON_NULL)NON_NULL 사용 시 name이 null인 경우에 제외된다. ??
-		-@JsonAutoDetect : @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) ??			
-	
+		-@JsonAutoDetect : @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY) ??
+
 	-@ConfigurationProperties : Config 클레스를 만들면서 properties 파일을 참조하여 초기값을 셋팅할수 있게함(yml 파일도 가능)
 		-----------
 		@Configuration //옵션?
 		@PropertySource("classpath:configprops.properties") //위치 지정이 없다면 기본값으로 클레스 페스내 application.properties 을 로딩
 		@ConfigurationProperties(prefix = "service.mydb") //prefix는 옵션, "service.mydb"만 써도 됨
-		public class MyDataSource { 
+		public class MyDataSource {
 			private String dbUrl;
-			private int dbPort; 
+			private int dbPort;
 			// standard getters and setters
 		-----------
-	
+
 	-@EnableConfigurationProperties : 특정 Bean을 특정 property 값으로 초기화 해서 생성 할수 있다.
 		-----------
 		@SpringBootApplication //메인 클레스 생성 시점에서 적용할 수 있다.
 		@EnableConfigurationProperties(MyDataSource.class) //MyDataSource클레스를 property 값으로 초기화 하여 Bean으로 로딩한다.
-		public class MainApplication {		
+		public class MainApplication {
 		-----------
 		@Configuration //Configuration 클레스 생성 시점에서 적용할 수 있다.
 		@EnableConfigurationProperties(MyDataSource.class)
-		public class MainApplication {		
-		
-		
+		public class MainApplication {
+
+
 		//실제 클래스에 @ConfigurationProperties가 적용되어 있어야 하낟.
 		@ConfigurationProperties("service.mydb")
 		public class MyDataSource {
 		-----------
-		
-	-@ControllerAdvice : ??? 
+
+	-@ControllerAdvice : ???
 	-@ExceptionHandler : ???
 
 
-		
-		
-	
+
+
+
 	-기타
 		-@EnableJpaAuditing : JPA Audditing을 활성화 한다. ??
 		-@MappedSuperclass : JPA Entity 클래스들이 BaseTimeEntity을 상속할 경우 필드들(createdDate, modifiedDate)도 컬럼으로 인식하도록 한다 ??
 		-@EntityListeners(AuditingEntityListener.class) : BaseTimeEntity 클래스에 Auditing 기능을 포함한다.
 		-@CreatedDate : Entity가 생성되어 저장될 때 시간이 자동으로 저장된다.
 		-@LastModifiedDate : 조회한 Entity의 값을 변경할 때 시간이 자동으로 저장된다.
-		
+
 		-@SuppressWarnings : warn 발생을 막음(IDE에서)
-				
-		
+
+
 	-Spring Boot Profile :  dev, test, prod 등으로 구동 환경을 세분화하여 서비스를 관리한다. 이런 식별 키워드를 바로 Profile이라고 부른다
 		-Profile 설정 값에 따라 config 및 클래스 로딩을 선택적으로 가능 (spring boot에서 config 파일일 application-xxx.yml 형태의 파일이 클레스 페스내에 있을때 자동 인식됨)
 		-프로파일이 명시적으로 설정 되지 않은 경우  : local 또는 default 키워드로 처리 됨
-		
+
 		-설정 방법 :
 			-환경 변수로 설정
-				-윈도우 시스템 환경 변수: 
-					-변수 이름: SPRING_PROFILES_ACTIVE 
+				-윈도우 시스템 환경 변수:
+					-변수 이름: SPRING_PROFILES_ACTIVE
 					-변수 값 : prd, stg, ...
-					
+
 				-리눅스 환경 파일로 설정 :
 					-환경 파일 : vi $HOME/.bashrc
-					-설정 : export SPRING_PROFILES_ACTIVE=prd ...				
-				
-			-실행시 파라미터 : -D옵션(시스템의 property 값을 설정한다)		
+					-설정 : export SPRING_PROFILES_ACTIVE=prd ...
+
+			-실행시 파라미터 : -D옵션(시스템의 property 값을 설정한다)
 				- java -Dspring.profiles.active=dev -jar project-이름.jar
-			
-			-코드상으로 저정 : 
+
+			-코드상으로 저정 :
 				-System.setProperty("spring.profiles.active", "dev"); //프로파일 자체를 지정
-				-System.setProperty("spring.config.location", "classpath:/application-dev.yml"); 
+				-System.setProperty("spring.config.location", "classpath:/application-dev.yml");
 					-원래는 프로파일에 의해 config가 자동 로드 되지만 특정 config(property)를 지정 하고 싶을때 설정 가능 (이경우 프로파일이 변경되는 것은 아님)
-					
-				
+
+
 				-테스트시 지정?? : 테스트 클레스에 @ActiveProfiles(value={"develop"}) 직접 지정 가능
-		
+
 		-특정 프로파일 환경(dev) 에서 application-dev.yml 에 특정 값이 없는 경우 기본?? config 파일이 되는 application.yml을 참조하여 가져 온다.
 		-사용 예시 : 해당 Configuration 클레스는 Profile이 develop 일때만 적용되며 읽어올 property 파일은 클레스페스 내 develop/ 디렉토리것을 읽어라
 			-----------
@@ -1402,11 +1402,11 @@ Sourcetree : GIT 클라이언트 툴
 			public class ProfileDevelop {
 			}
 			-----------
-	
+
 -ObjectMapper : json 데이터를 변형하기 위한 객체 (json String -> boject, object -> json String)
 	-----------
 	//Object to JSON in file, user 객체로 부터 json String 파일을 생성
-	mapper.writeValue(new File("c:\\user.json"), user); 
+	mapper.writeValue(new File("c:\\user.json"), user);
 
 	//Object to JSON in String, user 객체를 json 스트링으로 변환
 	String jsonInString = mapper.writeValueAsString(user);
@@ -1422,21 +1422,21 @@ Sourcetree : GIT 클라이언트 툴
 -MessageSource : 다국어 처리 메커니즘을 지원해주는 class
 	-메세지 파일 형식 : [파일이름]_[언어]_[국가].properties, class path내 위치, (요건의 맞는 파일을 찾을수 없는 경우 message.properties를 기본값으로 한다.)
 	-----------
-	# messages_en_US.properties	
+	# messages_en_US.properties
 	greeting={0} and {1} are friends.
-	
+
 	# messages_ko_KR.properties
 	greeting={0} 와 {1} 는 친구이다.
 	-----------
-	
+
 	@Autowired
 	MessageSource messageSource;
 
 	void messageCall(){
-		System.out.println(messageSource.getMessage("greeting", new String[]{"Tom", "Jerry"}, Locale.KOREA));	
+		System.out.println(messageSource.getMessage("greeting", new String[]{"Tom", "Jerry"}, Locale.KOREA));
 	}
 	-----------
-	
+
 	//자동 reload 필요시 ReloadableResourceBundleMessageSource 사용
 	ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
 	messageSource.setBasename("classpath:/messages");
@@ -1461,15 +1461,15 @@ Sourcetree : GIT 클라이언트 툴
 				assertThat(body).contains("xxx"); //본문에 "xxx" 문자열이 있으면 테스트 통과
 			}
 		-----------
-		
+
 
 -Spring security
 
 -Spring 주요 개념
-	-Spring IOC(inversion of control) : 나늘 누가 생성해서 언제 쓸찌는 모른다.. 그것을 다른 주체(Spring container)에게 맞기고 나는 부품으로써의 구성을 해두면 된다. 
-		-DL(dependency lookup) : 컨테이너가 제공하는 api를 이용하여 컨테이너가 관린하는 been을 검색하는것(직접 생성하지 않고 검색하여 이용하는 것???)		
+	-Spring IOC(inversion of control) : 나늘 누가 생성해서 언제 쓸찌는 모른다.. 그것을 다른 주체(Spring container)에게 맞기고 나는 부품으로써의 구성을 해두면 된다.
+		-DL(dependency lookup) : 컨테이너가 제공하는 api를 이용하여 컨테이너가 관린하는 been을 검색하는것(직접 생성하지 않고 검색하여 이용하는 것???)
 		-DI(dependency injection) : 각 클레스를 생성할때 자신에게 필요한 다른 클레스를 컨테이너에게 알려주면 컨테이너가 알아서 주입해 주는것(개발 편리성과 더블어 뭔가 더 효율적인 관리를 하나???)
-		
+
 	-Spring POJO(plain Old Java Object) : getter/settr를 가진 평범한 object로 spring은 이러한 단순한 형태의 pojo 지향적 설계를 오히려 지향한다. (복잡한 플로우는 컨테이너가 알아서 해줄꺼야???)
 	-Spring AOP(Aspect Oriented programming) : 핵심 기능(실제업무)과 공통 공통기능(늘쌍있는 보안, 로그인 등..)을 구분해서 구분해서 개발하자는 주의(OOP의 개선??), 공통기능은 많은 부분 컨테이너에 위임함
 	-Spring MVC 흐름 개요 : Client->Servlet(Controller)->(DTO)->Service(비즈니스계층)->(DTO)->DAO(퍼시스턴스계층)->DB ->-역순환->..->Servlet(Controller)->View(jsp, 프리젠테이션계층)
@@ -1478,105 +1478,105 @@ Sourcetree : GIT 클라이언트 툴
 		-View : 사용자 interface를 담당하는 보여지는 부분, view는 controller만 연관성을 갖는다.
 		-Controller : view에서 받은 요청을 가공하여 model에 넘겨주는 역할, 모델로 받은 결과를 view로 넘겨주는 역할, 모델에서 부터 올라오는 에러등에 대한 처리
 
-		
+
 [DB]
 -DBMS :
-	-RDB : 
+	-RDB :
 		-Mysql :
 		-Maria :
-		
+
 	-NoSQL DB : Not Only SQL
-		-MongoDB : MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema. 
-			-개요 :	
-				-명칭 : 
+		-MongoDB : MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema.
+			-개요 :
+				-명칭 :
 					-Database : Database는 Collection들의 물리적인 컨테이너입니다. 각 Database는 파일시스템에 여러파일들로 저장됩니다.
 					-Collection : 테이블과 유사한 개념으로 Collection 내부에 Document이 위치하고 있다.
 					-Document : Record와 유사한 개념, Jason 형태, 같은 Collection(테이블)에 있는 Document들이 서로 다른 형태를 갖을 수 있다.
 					-embeded Document : { a:'a', b:'b', c:[{c1:'c1', c2:'c2'..},{}..]} 또는 { a:'a', b:'b', c:['c1', 'c2'..]}
-					
+
 				-장점 :
 					-정해진 스키마가 없으며 같은 Collection 안에 서로다른 스키마의 Document가 있을수 있다 (데이터의 형태를 매우 유연하게 가져갈수 있다, 그래서 더 모호한 느낌도 있음)
 					-복잡한 JOIN이 없으며 단일 각 Collection 의 구조(의미)가 뚜렷하다.
 					-Deep Query ability 를 통해 SQL만큼의 쿼리 성능을 제공한다.
 					-application의 Object를 DB에 적용할때 Conversion/Mapping이 불필요하다. (DB 자체가 json 구조임)
-		
+
 				-ubuntu install : $ sudo apt-get update, $ sudo apt-get install -y mongodb-org, $ sudo service mongod start
 					-log : $ cat /var/log/mongodb/mongod.log1
 					-port : 27017(default) /etc/mongod.conf
 					-connect : $ mongo (터미널을 통해 접속)
-					
-				-schema 고려 사항 : RDB 상에서 join 할 엔티티들을 하나의 엔티티로 구성한다. 
+
+				-schema 고려 사항 : RDB 상에서 join 할 엔티티들을 하나의 엔티티로 구성한다.
 					-read할때 collection간 join을 하려하지 말고 embeded document를 이용하여 하나의 document로 구성한다.(생성때 join 의 형태로 구성)
 					-collection간 join은 하지 않는다는 것을 전제로 한다.
-				
-				
+
+
 			-쿼리 :
 				-DB 관리
 					-use mydbname :  해당 이름의 db로 switch 한다. 해당 이름의 db가 없는 경우 생성하고 스위치 한다.
 					-db : 현재 사용중인 db 이름을 확인 한다.
 					-show dbs : db 목록을 확인 한다. (db에 하나 이상의 collection이 있어야 목록에 보임)
 					-db.dropDatabase(); : 사용중인(switched) db를 삭제한다.
-					
+
 				-Collection	관리
-					-db.createCollection("myCollectionName") : myCollectionName으로 collection 생성 
+					-db.createCollection("myCollectionName") : myCollectionName으로 collection 생성
 						-옵션 : collection 생성시 옵션을 줄수도 있다. (최대용량적용여부(롤링됨), 자동인덱스필드추가여부, 최대용량적용시사이즈(byte), document최대저장갯수)
 							-----------
 							db.createCollection("book", {capped: true, autoIndex: true, size: 6142800, max: 10000})
 							-----------
-					
-					-document를 만들면서 collection이 없으면 collection도 함께 생성됨 
+
+					-document를 만들면서 collection이 없으면 collection도 함께 생성됨
 						-----------
 						db.book.insert({"name": "MongoDB Tutorial", "author": "velopert"}); : book이란 collection이 없다면 document 입력과 동시에 생성됨
 						-----------
-						
+
 					-show collections : 생성된 collection 목록 확인
 					-db.collectionName.drop() : 현재 switch 된 DB에서 collectionName을 제거 한다.
-					
+
 				-Document 관리
-					-insert : db.collection.insert([{document},..] or {document});					
+					-insert : db.collection.insert([{document},..] or {document});
 						-db.books.insert({"name": "NodeJS Guide", "author": "Velopert"}) : book collection에 하나의 document 추가
 						-db.books.insert([{"name": "Book1", "author": "Velopert"}, {"name": "Book2", "author": "Velopert"}]); : 동시에 2개 추가
-					
-					-find : db.book.find({query 검색조건}, {projection 보여질 필드}).sort({}).skip().limit().pretty()					
+
+					-find : db.book.find({query 검색조건}, {projection 보여질 필드}).sort({}).skip().limit().pretty()
 						-db.books.find().pretty() : books collection 확인(모든 document의 모든 필드가 select 됨), .pretty()는 보기 좋게 보여줌
 						-db.books.find({"name": "mybook"}) : name값 mybook인 document만 확인
 						-db.books.find({"likes": {$lte:30}}).pretty() : 좋아요 수가 30 이하인 것만 조회. (less than or equal)
-							-비교연산 : $eq, $gt, $gte, $lt, $lte, $ne, $in, $nin  
+							-비교연산 : $eq, $gt, $gte, $lt, $lte, $ne, $in, $nin
 								-db.books.find({"writer":{$in:["Alpha", "Bravo"]}}).pretty()
-								
+
 							-논리연산 : $or, $and, $not, $nor
 								-db.book.find({$or:[{"title":"article01"}, {"writer":"Alpha"}]})
-							
+
 							-정규식 : i대소문자 무시, m정규식에서 anchor(^)를 사용할 때 값에\n이 있다면 무력화, x	정규식 안에있는 whitespace를 모두 무시, s	dot(.)사용 할떄 \n을 포함해서 매치
 								-db.book.find({"title":/article0[1-2]/}) : /정규식/
-								
+
 							-$where 연산자 : javascript expression 을 사용 할 수 있습니다.
 								-db.book.find({$where:"this.comments.length == 0"})
-								
+
 							-$elemMatch 연산자 : Embedded Document가 배열 형태이고 그 값을 조건으로 할때
 								-{.., comments:[{name, ..},{}]} : comment가 여러개(배열)일수 있는데.. comment 작성자명이 Charlie 인것 검색
 									-db.book.find({"comments":{$elemMatch:{"name":"Charlie"}}})
-								
-							-Embedded Document가 배열 형태가 아닐 경우 
+
+							-Embedded Document가 배열 형태가 아닐 경우
 								-{.., comment:{name, ..}} : comment가 배열의 형태는 아닌경우
 									-db.book.find({"comment.name":"Charlie"})
-							
+
 							-Embedded Document가 값으로만 된 배열인 경우
 								-{.., comments:["", ""]}} : comment가 값으로만 구성된 배열인 경우
 									-db.book.find({"comment":"Charlie"})
-						
+
 						-db.articles.find({"comments":{$elemMatch: { "name": "Charlie" }}}, {"title":true, "comments.name":true, "comments.message":true})
 							-댖글 배열에서 작성자가 Charlie인 사람이 들어 있는 document에서 책의 title과 댖글 배열에서 이름과, 내용을 보여준다.(여러 사람 댖글이 다 나온다)
 
 						-db.book.find({"comments":{$elemMatch:{"name":"Charlie"}}}, {"title":true, "comments":{$elemMatch:{"name":"Charlie"}}, "comments.name": true, "comments.message":true})
 							-댖글 배열에서 작성자가 Charlie인 사람이 들어 있는 document에서 책의 title과 댖글 배열에서 오직 이름이 Charlie인 사람의 댖글의 이름과, 내용을 보여준다.(Charlie인 사람의 댖글만 나옴)
-								
+
 						-db.book.find().sort({"_id":1}) : id 값으로 정렬, 1=오름, -1=내림
-						-db.book.find().sort({"amount":1, "_id":-1}), 2가지 정렬 조건으로 
+						-db.book.find().sort({"amount":1, "_id":-1}), 2가지 정렬 조건으로
 						-db.book.find().limit(3) : 출력 갯수를 3개로 제한
 						-db.book.find().skip(2) : 시작부분의 2개의 Document 제거 (paging 처리등에 사용)
 							-db.book.find().sort({"_id":-1}).skip((page-1)*2).limit(2); :2개씩 페이징 예
-					
+
 					-update : db.collection.update({query}, {update}, {upsert:true}, {multi:true}, {writeConcern:true}})
 						-db.people.update({name:"Abet"}, {$set:{age:20}}) : Abet의 나이를 20으로 변경
 						-db.people.update({name:"Betty"}, {"name":"Betty 2nd", age:1}) : Betty의 document의 field 값을 바꾸는 것이 아니라 전체 document를 replace(기존값은 모두 사라지고 현재 값으로 샛팅)
@@ -1595,22 +1595,22 @@ Sourcetree : GIT 클라이언트 툴
 						-db.userinfo.createIndex({firstName:1, lastName:1}, {unique:true}) : 복합 인덱스를 만들고 해당 값(쌍)은 중복될수 없다.
 						-db.store.createIndex({name:1}, {partialFilterExpression:{visitors:{$gt:1000}}}) : name으로 인덱스를 만드는데 visitors값이 1000보다 큰경우의 document만 적용(속도와 저장공간 절약가능)
 						-db.notifications.createIndex({"notifiedDate":1}, {expireAfterSeconds:3600}) : 3600초 후에 해당 인덱스 제거??
-					
+
 						-db.COLLECTION.getIndexes() : 해당 COLLECTION의 인덱스 조회
 						-db.COLLECTION.dropIndex({KEY:1}) : 해당 COLLECTION의 해당 인덱스 제거
-						
-					
 
--Frameworks : 
+
+
+-Frameworks :
 	-JDBC : Java Database Connectivity, DB 접속 및 사용을 위한 java interface (개발자의 많은 코딩이 필요함)
 	-Datasource : DB 접속을 위한 정보 set(url, userId, password..) 갖는 클래스 (그 정보 자체를 말하기도 한다.)
-	
+
 	-Persistence Framework : 미들웨어 소프트웨어의 성격으로 프로그램과 DB의(보통RDB) 연결 레이어로 작동한다.
 		-Mybatis : 개발자의 코드와 sql들을 연결하고 결과 매핑을 도와주는 Persistence Framework, 일반적으로 스프링에서 Dao와 DB를 연결하는 하나의 방식으로 사용됨, JDBC로 처리할때의 많은 부분을 대신 처리해줌.
 			-dependency : mybatis dependency를 추가해줘야 함(mybatis-x.x.jar)
-			
+
 		-Ibatis : ?
-		
+
 	-Hibernate : ??
 
 
@@ -1625,51 +1625,51 @@ Sourcetree : GIT 클라이언트 툴
 	-Logger : 코드상에서 로그를 발생시키는 주체, error, warn, info 다양한 로그를 발생시킨다. 발생한 로그는 실제 처리하는 Appender 클레스로 전달된다. Appender 클래스를 지정하지 않으면 Console로 처리됨
 	-Appender : 발생된 로그를 처리(어디로, 어떻게 보낼지)하기 위한 주체, Logback, Log4j등 다양한 Logging Framewor에서 다양한 Appender를 제공한다. (Logback, Log4j를 쓰는 이유임)
 	-log level : FATAL(사용안함), ERROR, WARN, INFO, DEBUG, TRACE
-		
+
 	-SLF4J : SLF4J(Simple Logging Facade for Java) is basically an abstraction layer (not implement), parameterized logging 지원
 		-로그 처리를 위한 중간 layer로써의 표준같은(?) 역할을 함, logback-classic을 기본 implement로 가지고 있어 별도의 logging implement를 바인딩하지 않고도 사용할 수 있음(그럴경우 console에 찍힘)
 		-logback 이나 log4j 등을 바인딩 하여 사용할 수 있음
-		
+
 			-----------
 			import org.slf4j.Logger;
 			import org.slf4j.LoggerFactory;
 			-----------
-			//로그의 시작인 LoggerFactory는 항상 slf4j에서 생성(??), 
+			//로그의 시작인 LoggerFactory는 항상 slf4j에서 생성(??),
 			Logger logger = LoggerFactory.getLogger(MyClass.class); //MyClass.class의 의미는 logger의 name을 "com.sungil.MyClass"로 set, 실제 스트링 값으로 입력해도 무관함.
 			String myName = "sungil";
 			int myAge = 40;
-				
+
 				logger.info("Name : {}, age : {}.", myName, myAge); // parameterized logging, ({}에 어떤 object 도 대입 가능 함), +string 보다 빠르다. 로그 활용성이 좋아짐.
 			} catch (Exception e) {
 				logger.info("Name : {}, age : {}.", myName, myAge, e); //excepton 에 대해서는 대응되는 {} 가 없어도 적용 가능.
 			}
 			-----------
-			14:21:49.500 [main]  INFO com.sungil.MyClass - Name : sungil, age : 40.			
+			14:21:49.500 [main]  INFO com.sungil.MyClass - Name : sungil, age : 40.
 			   호출시간     호출스레드  로그레벨      호출클래스             로깅내용(파라미터 값)
 			-----------
-		
+
 		-Logger Context의 구조 : LoggerFactory.getLogger("com.sungil.MyClass.class")를 통해 Logger의 name을 셋팅하고 그 이름의 "."을 기준으로 Logger Context를 hierarchy 하게 갖음.
 			-----------
 			-logger1=LoggerFactory.getLogger("a"), logger2=LoggerFactory.getLogger("a.b"), logger3=LoggerFactory.getLogger("c")
-			-logger2는 logger1의 하위 context를 갖음, logger1.setLevel(Level.INFO) 시 logger2 에도 적용됨. logger3는 적용되지 않음 (특별히 이걸 뭐에 쓸까??)	
+			-logger2는 logger1의 하위 context를 갖음, logger1.setLevel(Level.INFO) 시 logger2 에도 적용됨. logger3는 적용되지 않음 (특별히 이걸 뭐에 쓸까??)
 			-----------
-			
-			
-			
+
+
+
 	-Logback : 크게 3개로 구분되어짐 (https://www.baeldung.com/logback#example)
 		-logback-core : slf4j 처럼 abstraction layer의 역할을 함
 		-logback-classic : slf4j에 native 되어 있음, slf4j, log4j등과 함께 사용될 수 있다.
-		-logback-access : tomcat, jetty등 servlet container와 access log를 수집하는 기능을 함(잘 모르겠음??)	
-		
+		-logback-access : tomcat, jetty등 servlet container와 access log를 수집하는 기능을 함(잘 모르겠음??)
+
 			-----------
 			import org.slf4j.LoggerFactory;
 			importch.qos.logback.classic.Logger
-			import ch.qos.logback.classic.LoggerContext; 
+			import ch.qos.logback.classic.LoggerContext;
 			import ch.qos.logback.core.util.StatusPrinter;
 			-----------
 			qos.logback.classic.Logger logger = (qos.logback.classic.Logger)LoggerFactory.getLogger(MyClass.class); //logback Logger를 사용하기로 함
-			logger.info("Name : {}, age : {}.", "sungil", 40); //기본 사용법은 slf4j와 거의 동일(제품마다 고유 메소드가 제공됨 ex=setLevel) 
-			
+			logger.info("Name : {}, age : {}.", "sungil", 40); //기본 사용법은 slf4j와 거의 동일(제품마다 고유 메소드가 제공됨 ex=setLevel)
+
 			LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory(); //logback의 configuration 상태를 확인.(logback은 클래스페스 내부를 모두 scan해서 자신의 설정파일을 스스로 찾음)
 			StatusPrinter.print(lc);
 			-----------
@@ -1678,18 +1678,18 @@ Sourcetree : GIT 클라이언트 툴
 			15:10:25,937 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
 			15:10:25,938 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.xml]
 			15:10:25,947 |-INFO in ch.qos.logback.classic.BasicConfigurator@2437c6dc - Setting up default configuration.
-			//위의 설정파일을 통해 ConsoleAppender 및 여러 형태의 Appender destination(console, files, Syslog, TCP Sockets, JMS and many more)을 설정 할수 있다.			
-			
+			//위의 설정파일을 통해 ConsoleAppender 및 여러 형태의 Appender destination(console, files, Syslog, TCP Sockets, JMS and many more)을 설정 할수 있다.
+
 		-LogBack Configuration file
-			-----------		
+			-----------
 			logback.xml (classpath 어느 위치에 있어도 됨), logback-test.xml??, logback-spring.xml, logback.groovy??
-			-----------		
+			-----------
 			<configuration debug="false" scan="fase" scanPeriod="15"> <!-- 디버깅용 으로 모든 정보가 다 보여지도록 일괄 설정됨 , 설정 파일을 15초마다 재스캔하여 로드함 -->
 				<statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" /> <!--설정된 패키지별 Logback 설정 정보(level..) 및 에러, 경고를 시작때 알려 준다. -->
-	
+
 				<property name="LOG_DIR" value="C:/TESTLOG/" /> <!-- 내부 변수 설정 -->
 				<property name="LOG_FILE_NAME" value="myLog" />
-				<property name="LOG_FILE_NAME2" value="myLog2" />		
+				<property name="LOG_FILE_NAME2" value="myLog2" />
 
 				<!-- appender1 : console로 찍히는 기본 -->
 				<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -1698,8 +1698,8 @@ Sourcetree : GIT 클라이언트 툴
 							%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
 						</pattern>
 					</encoder>
-				</appender>		
-				
+				</appender>
+
 				<!-- appender2 : 파일로 찍히며, 파일명 설정 -->
 				<appender name="FILE1" class="ch.qos.logback.core.FileAppender">
 					<file>${LOG_DIR}/${LOG_FILE_NAME}.log</file>
@@ -1707,58 +1707,58 @@ Sourcetree : GIT 클라이언트 툴
 					<encoder>
 						<pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
 					</encoder>
-				</appender>	
-				
+				</appender>
+
 				<!-- appender3 : 파일로 찍히며, 파일명 및 롤링(day, size) 기준 설정 -->
 				<appender name="FILE2" class="ch.qos.logback.core.rolling.RollingFileAppender">
 					<file>${LOG_DIR}/${LOG_FILE_NAME2}.log</file>
 					<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-						<fileNamePattern>${LOG_FILE_NAME2}.%d{yyyy-MM-dd}.gz</fileNamePattern>				 
+						<fileNamePattern>${LOG_FILE_NAME2}.%d{yyyy-MM-dd}.gz</fileNamePattern>
 						<maxHistory>30</maxHistory>
 						<totalSizeCap>3GB</totalSizeCap>
 					</rollingPolicy>
 					<encoder>
 						<pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
 					</encoder>
-				</appender> 
-				
+				</appender>
+
 				<!-- 특정 로거의 레벨 지정 (해당 패키지 이하의 로거의 기본 레벨) -->
 				<logger name="com.sungil" level="INFO" />
 
-				<!-- 로거의 root 레벨 지정  -->	
+				<!-- 로거의 root 레벨 지정  -->
 				<root level="debug" additivity="true">
 					<appender-ref ref="STDOUT" />
 					<appender-ref ref="FILE1" />
 					<appender-ref ref="FILE2" />
 				</root>
-			</configuration>			
-			-----------		
-			
+			</configuration>
+			-----------
+
 			-보통의 사용 예 :
 				-private Logger logger = LoggerFactory.getLogger(getClass()); getClass통해 자신 클래스명(패키지포함)을 이용하여 생성함
 				-각 클레스 마다 자신의 패키지에 대한 로거를 생성한 후 필요에 따라 logger.debug(msg); logger.info(msg); 등을 선택적으로 사용하여 필요 위치에 로깅 함
-				-이후 logback-spring.xml 파일에서 각 profile에 따른 appender를 설정하고 로그형태, 로그policy, 로그레벨(나의 팩키지 별, 외부 패키지 등)을 설정 할 수 있다. 
-			
+				-이후 logback-spring.xml 파일에서 각 profile에 따른 appender를 설정하고 로그형태, 로그policy, 로그레벨(나의 팩키지 별, 외부 패키지 등)을 설정 할 수 있다.
+
 			-참고!!
 				-로거를 통한 로깅은 파일에만 가능한 것이 아니다. 시스템의 표준 출력 Standard out(STDOUT, 모통은 모니터, 다시말해 콘솔)을 통해서도 가능하다.
 				-console에 로깅하기 위해서는 <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender"> STDOUT 네임으로 어펜더를 구성할 수 있다.
 				-!! system.print.out(); 또는 e.printStackTrace(); 같은 경우 console에 남으나 로깅이 아님으로 STDOUT 어펜더에 영향을 받지 않는다.
 				-!! system.print.out(); 또는 system.err.out(); 의 경우 console이 기본이지만 구현을 통해 파일에 남기게 할수도 있다 (logger를 통한 것과는 별개로...)
 				-!! exception을 트레이스 정보와 함께 로거로 남기고 싶은 경우 logger.xxx(e.getMessage(), e);
-				
+
 				-특정 어펜더 로거의 기본 레벨을 설정 가능, root 지만 default 값의 의미, 특정 패키지별로 레벨이 설정 되지 않은 경우의 기본이 되는 레벨
 					<root level="OFF"> OFF는 사용하지 않겠다는 의미
 						<appender-ref ref="FILE_APPENDER" />
 					</root>
-					
+
 				-특정 패키지 별로(하이러키하게 상속) 로그 레벨을 설정할 수 있다. (root level 보다 명시된 레벨이 적용된다. 디폴트 레벨 느낌???)
 					<logger name="kr.ap.amt.config.DebugParamInterceptor" level="DEBUG" />
 					<logger name="kr.ap" level="DEBUG" />
-					
+
 				-외부 패키지 (라이브러 내의 로깅 레벨 설정 : ???
-					<logger name="feign" level="DEBUG" />	
-					
-	
+					<logger name="feign" level="DEBUG" />
+
+
 	-Log4j2 : 크게 2개로 구분되어짐
 		-log4j API : slf4j 처럼 abstraction layer의 역할을 함, logback등과 연동할수 있음, parameterized logging 지원, lsf4j보다 더많은 logging api를 제공, 람다 표현식 지원
 		-log4j implement : abstraction layer에 바인딩되어 사용됨
@@ -1768,9 +1768,9 @@ Sourcetree : GIT 클라이언트 툴
 -MVC frame work : model(도메인, DTO, VO), View(html, jsp, thymeleap), Controller(Spring Controller) 방식의 Web frame work
 
 -ModelAndView : model(데이터set)과 view(html)을 포함하는 object로 spring mvc의 controller의 return object로 사용될수 있다.
-	-----------	
+	-----------
 	DispatcherServlet 의 controller 일부 내용
-	-----------	
+	-----------
 	{
 		ModelAndView model = new ModelAndView("employeeDetails"); /employeeDetails는 html또는 jsp 파일명(Template Engine 설정에 따라)
 		model.addObject("employeeObj", new EmployeeBean(123));
@@ -1778,19 +1778,19 @@ Sourcetree : GIT 클라이언트 툴
 		model.addObject("msg", "Employee information.");
 		return model;
 	}
-	-----------	
+	-----------
 
 -Spring View : 화면을 렌더링 하기위해 미리 정의되어 있는 페이지 객체? 이다. Template Engines을 통해 실행되며 보통 html 파일형태로 저장, EL표기법${}을 사용한다.
 
 -Spring View Resolver : Controller 와 view 간의 바인딩 역할을 수행한다. View Resolver의 설정을 통해 동작할 Template Engines(JstlView, Thymeleaf)이 선택 된다.
 
--Text Template Engines : 
+-Text Template Engines :
 	-JSP : Java Server Page
 	-Freemarker :
-	-JSTL : html(jsp)에 포함되어 로직을 구성할수 있게해주는 표기법(기술)	
-	
+	-JSTL : html(jsp)에 포함되어 로직을 구성할수 있게해주는 표기법(기술)
+
 	-Thymeleaf : MVC based web application에서 view 레이어에 해당, servlet에서 xml, html의 template engine으로 동작함 (JSP를 대체함)
-		-----------	
+		-----------
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -1799,10 +1799,10 @@ Sourcetree : GIT 클라이언트 툴
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-		-----------	
-		
+		-----------
+
 		controller 클래스
-		-----------	
+		-----------
 		@GetMapping("/") //@RequestMapping(value="/", method = RequestMethod.GET) 동일
 		public String main(Model model) {
 			model.addAttribute("message", message);
@@ -1811,14 +1811,14 @@ Sourcetree : GIT 클라이언트 툴
 			//Model object의 내용을 갖고 해당 view로 return 됨
 			return "welcome"; //view (thymeleaf가 적용된 html 명)
 		}
-		-----------	
-		
-		thymeleaf 적용된 html 파일, EL표기법과 유사 (보통 src/main/resources/templates/ 에 위치)
-		-----------	
-		<h2><span th:text="'Hello, ' + ${message}"></span></h2>	
-		-----------	
+		-----------
 
--Layout Template Engines : 
+		thymeleaf 적용된 html 파일, EL표기법과 유사 (보통 src/main/resources/templates/ 에 위치)
+		-----------
+		<h2><span th:text="'Hello, ' + ${message}"></span></h2>
+		-----------
+
+-Layout Template Engines :
 	-Tiles :
 	-Sitemesh :
 
@@ -1826,8 +1826,8 @@ Sourcetree : GIT 클라이언트 툴
 [Cloud]
 -용어 :
 	-SLA(Service Level Agreement) : 해당 서비스의 성능(?), API 호출수,  장애(?) 상황등에 대한 보장 이다
-	
--Azure : 
+
+-Azure :
 
 -AWS :
 
@@ -1840,22 +1840,22 @@ Sourcetree : GIT 클라이언트 툴
 
 -Azure DevOps : Plan smarter, collaborate better and ship faster with a set of modern dev services. (프로젝트 일정, 개발 항목 관리(Scrum지원) 및 관련 CICD 기능을 제공)
 	-Organization : 계정별 프로젝트 관리의 가장 큰 단위 (Organization 단위 또는 프로젝트 단위의 팀원 관리(추가/삭제)는 어떻게 이루어 지지??)
-		-project : 하나의 Organization에 여러개의 프로젝트를 갖을 수 있다. 
+		-project : 하나의 Organization에 여러개의 프로젝트를 갖을 수 있다.
 			-Overview : 프로젝트 전반에 대한 요약 정보를 제공한다.
 				-Summary : 프로젝트 소개, 관련통계, 구성원 정보
 				-Dashboards : 원하는 형태의 여러개의 데시보드를 만들수 있으며 선택적으로 switch 할수 있다
 				-Wiki : 해당 프로젝트와 관련한 위키 페이지를 만들 수 있다. (각 페이지의 버전 관리가 이루어진다.)
-				
-			
-			
+
+
+
 			-Board : 애자일 방법론을 기반으로 프로젝트의 계획, 논의, 개발, 관리, 추적등 팀원간의 성공적 업무 환경을 제공한다.(https://docs.microsoft.com/en-us/azure/devops/boards/get-started/what-is-azure-boards?view=azure-devops&tabs=basic-process)
-				Work item : 자신에게 할당된 아이템과 같은 특정 기준으로 item을 검색하기 쉽다.		
+				Work item : 자신에게 할당된 아이템과 같은 특정 기준으로 item을 검색하기 쉽다.
 					-BASIC Work item :
 						-Epic :
 						-Issue :
 						-Task :
-						
-					-SCRUM Work items : 
+
+					-SCRUM Work items :
 						-Bug :
 						-Epic :
 						-Feature :
@@ -1863,7 +1863,7 @@ Sourcetree : GIT 클라이언트 툴
 						-Product Backlog Item :
 						-Task :
 						-Test Case :
-						
+
 					-Agile Work items :
 						-Bug :
 						-Epic :
@@ -1872,8 +1872,8 @@ Sourcetree : GIT 클라이언트 툴
 						-Task :
 						-Test Case :
 						-User Story : -main?
-					
-					-CMMI Work items : 
+
+					-CMMI Work items :
 						-Bug :
 						-Change Request :
 						-Epic :
@@ -1884,15 +1884,15 @@ Sourcetree : GIT 클라이언트 툴
 						-Risk :
 						-Task :
 						-Test Case :
-					
-					
+
+
 
 				-Board : kanban 형태의 보드로 item 의 현재 상태를 파악하고 관리하기 쉽다.
 				-Backlogs : item 목록을 보여주며 plan 기능을 이용하여 item 그룹을 만들거나 조직화 할수 있다.
 				-Sprints : Sprint를 생성하고 Sprint에 item을 할당해 줄수 있다
-				-Queries : item들을 자기가 만든 필터를 적용하여 리스팅 할수 있다 
-				
-			
+				-Queries : item들을 자기가 만든 필터를 적용하여 리스팅 할수 있다
+
+
 			-Repos : 프로젝트를 위한 Git 방식의 Private Repository를 제공해 준다.
 				-Files :
 				-Commits :
@@ -1900,24 +1900,24 @@ Sourcetree : GIT 클라이언트 툴
 				-Branches :
 				-Tags :
 				-Pull requests :
-				
-			
+
+
 			-Pipelines : 여러 개발언어 및 타 플랫폼(Github..)과 연동하여 빌드, 테스트, 배포 등 CICD 역할을 수행한다.
 				-Builds :
 				-Library :
 				-Task groups :
 				-Deployment groups :
-				
-			
+
+
 			-Test Plans : 개발한 앱에 대한 기능, 성능, 부하 등 다양한 측면의 테스트가 가능한 tool을 제공한다.
 				-Test plans :
 				-Parameters :
 				-Configurations :
 				-Runs :
 				-Load test :
-				
-			
-			-Artifacts : 연계성(Library) 패키지를 생성 관리하여 간단한 방법으로 다른 Pipeline과 공유할 수 있는 방법을 제공한다. 
+
+
+			-Artifacts : 연계성(Library) 패키지를 생성 관리하여 간단한 방법으로 다른 Pipeline과 공유할 수 있는 방법을 제공한다.
 
 -Bitbucket :
 -IBM Jazz
@@ -1925,26 +1925,26 @@ Sourcetree : GIT 클라이언트 툴
 [development principles]
 -Waterfall : old 스타일 개발 방법론으로 모든 프로젝트 일정이 종료되어야 product를 볼수 있음, 후반으로 갈수록 부담이 커지고 고객(요구자)의 변화된 요구 사항을 반영하기 어렵다.
 -Agile : Waterfall 방식의 개선을 위해 탄생?, 주기적인(2w) Iteration을 통해 product를 개선해 나간다. 매 Iteration(=sprint) 마다 실행 가능한 결과물이 빌드되야 한다.
-	
+
 	-Scrum : Agile 방법론을 구체화 시킴
 		-Backlog : 해당 프로덕트를 만들기 위해 해야할 것들 (기능정의, 출시일자, 우선순위 등 포함)
-		-Sprint : 프로덕트가 완성되기 까지 일정한 기간을 두고 주기적으로 이루어지는 개발 및 빌드 기간(분석,설계,디자인 포함됨) 
+		-Sprint : 프로덕트가 완성되기 까지 일정한 기간을 두고 주기적으로 이루어지는 개발 및 빌드 기간(분석,설계,디자인 포함됨)
 		-Sprint Backlog : 해당 스프린트에 진행하기로한 Backlog.
 		-Task : Sprint Backlog를 좀더 상세히 쪼개놓은 것으로 우선순위, 요구설명, 예상시간, 진행자를 명시한다.(1 테스크는 1일 작업량을 넘지 않게하며 팀원이 직접 쪼개는것을 권장)
 		-기본적 Workflow : Commitment Point -> Todo -> in progress -> Done -> Delivery Point (보통 cycle기간을 Lead time 이라함)
 		-WIP(work in progress) Limit : 각 단계별 진행중인 상태에 단계를 둘수 있다 (ex. in progress 상태에 2개 이상의 테스크를 동시에 둘수 없는 제약)
-		
+
 		-담당자
 			-product 관련자(고객) : 고객사 또는 서비스 사용자등
-			-product owner : 회사의 임원 또는 전략 기획 및 영업 담당자로 고객과 함께 프로덕트의 기능정의, 출시일자, 기능별 우선순위를 정한다. 
+			-product owner : 회사의 임원 또는 전략 기획 및 영업 담당자로 고객과 함께 프로덕트의 기능정의, 출시일자, 기능별 우선순위를 정한다.
 			-scrum master : scrum 방법론의 전반적 관리자
-				-Sprint 계획 : owner와 함께 이번 sprint에 포함될 backlog를 선정하고 팀원과 함께  
+				-Sprint 계획 : owner와 함께 이번 sprint에 포함될 backlog를 선정하고 팀원과 함께
 				-Team 관리 : 협의, 외부간섭, 장애 제거등 scrum팀의 생산적 활동을 보장해 준며 팀원의 scrum 프로세스 준수를 관리한다.
 				-일일 스크럼 미팅 : 매일 15분정도의 스크럼 미팅을 통해 진행사항을 확인하고 장애제거를 돕는다.
 				-스프린트 리뷰 및 회고 : 스프린트 종료시 고객,오너,팀원 모두 모여 리뷰 미팅을 진행, 팀원만 모여 회고 미팅 진행
 			-scrum team : 해당 스프린트를 직접 진행할 담당자(기획, 설계, 디자인, 개발, 테스트 모두 포함 가능), 5-9명 적정
 			-Agile 코치 : 외부 또는 전사적으로 애자일을 코칭해줄수 있는 전문가?
-	
+
 		-Rule
 			-마스터는 매 스프린트 시작전 팀원의 휴일 및 잡업무를 고려하여 명확한 업무가능 시간을 도출해야 한다. (하루 4시간을 실질적인 코딩 가능 시간으로 봐야함)
 			-스프린터가 잘 진행되기 위해서는 각 task에 대한 정확한 분석(업무량 및 소요시간)이 필요하며 불확실한 요소를 최대한 줄여야 한다.
@@ -1980,7 +1980,7 @@ Sourcetree : GIT 클라이언트 툴
 			age: Int!
 		}
 		-----------
-	
+
 
 
 [TEST]
@@ -1993,7 +1993,7 @@ Sourcetree : GIT 클라이언트 툴
 		@FixMethodOrder(MethodSorters.DEFAULT) //내부 테스트 클래스의 호출 순서를 정의 할수 있다. (default는 메소드 내임 헤시값 순)
 		public class ATest {
 		...
-		
+
 		@Test
 		public void a1(){
 			A a = new A();
@@ -2001,17 +2001,17 @@ Sourcetree : GIT 클라이언트 툴
 			assertEquals(5, result); //a1 메소드의 결과 값이 5이면 테스트 통과
 		}
 		-----------
-	
-	-Annotations : 
+
+	-Annotations :
 		-@FixMethodOrder(MethodSorters.DEFAULT), 클래스 어노테이션 : 테스트 클래스의 테스트 메소드 호출 순서를 정함 (필수 요소는 아님, 작성을 안할시는 Default로 메소드 네임 헤시값 순)
 		-@BeforeClass : 해당클레스 시작시 한번 실행된다. (JUnit5 에서는 @BeforeAll 로 변경)
 		-@Before : 각 @Test 메소드 실행전 매번 호출 됨 (JUnit5 에서는 @BeforeEach 로 변경)
 		-@Test : 테스트 메소드 임을 선언한다.
-		-@After : 각 @Test 메소드 실행후 매번 호출 됨 
+		-@After : 각 @Test 메소드 실행후 매번 호출 됨
 		-@AfterClass : 해당클레스 종료시 한번 실행된다.
-		
-	
--Junit 5 : 
+
+
+-Junit 5 :
 
 
 
@@ -2023,23 +2023,23 @@ Template Engine
 -Mustache :
 
 -Handlebar : html에 data를 바인딩함
-	-spring 설정 : handlebars-spring-boot-starter 라이브러리가 있으므로 특별한 설정을 요구하지 않음	
+	-spring 설정 : handlebars-spring-boot-starter 라이브러리가 있으므로 특별한 설정을 요구하지 않음
 		-----------
 		@GetMapping("/")
 		public String main() {
 			return "main"; //(기본 설정에 의해 prefix: src/main/resources/templates, suffix: .hbs 적용하여 해당 view를 찾는다.)
 		}
 		-----------
-		
 
-	-jsfiddle(js피들) : HTML, CSS, 자바스크립트(jquery, handlebars, react..)등 코드 스니펫을 테스트하고 결과를 볼수 있는 웹사이트	
+
+	-jsfiddle(js피들) : HTML, CSS, 자바스크립트(jquery, handlebars, react..)등 코드 스니펫을 테스트하고 결과를 볼수 있는 웹사이트
 
 	-template : html 과 데이터 바인드를 위한 핸들바 expression, 논리적 처리를 위한 헬퍼 코드로 구성됨
 		-선언 : <script id="entry-template" type="text/x-handlebars-template">
 		-데이터 : {{XXX}} 형태가 기본
 		-주석 : {{!-- --}}
 		-partial한 template 삽입 : {{#> positionName}} 삽입 실패시 default 내용 {{/positionName}}
-		
+
 		-helper : if, unless 등 기본적 헬퍼를 제공하여 로직 처리를 포함하게 해준다.(custom helper도 지원)
 			-loop : {{#users}} 와 {{/users}} 를 통해 반복 ( 또는 {{#each users}} 와 {{#each}} )
 			-if :
@@ -2052,15 +2052,15 @@ Template Engine
 					<td>중간 아이템 ({{@key}} 번째 요소)</td>
 				{{/if}}
 				-----------
-	
+
 			-custom helper
 				-----------
 				//js내 email 함수를 호출하며 id값를 인자로 넘김
-				<td><a href="mailto:{{email id}}">{{email id}}</a></td> 
-				-----------					
-			
+				<td><a href="mailto:{{email id}}">{{email id}}</a></td>
+				-----------
+
 	-template 와 데이터를 바인드 해주는 js 파일 : 뭐라 명명하지 ???
-		-----------	
+		-----------
 		//조각 템플릿 가져오기
 		var partial = $("#partial-template").html();
 
@@ -2068,7 +2068,7 @@ Template Engine
 		var source = $("#entry-template").html();
 
 		//메인 템플릿 컴파일
-		var template = Handlebars.compile(source); 
+		var template = Handlebars.compile(source);
 
 		//메인 템플릿에 바인딩할 데이터
 		var data = {
@@ -2079,7 +2079,7 @@ Template Engine
 					{ name: "홍길동4", id: "aaa4" },
 					{ name: "홍길동5", id: "aaa5" }
 				]
-		}; 
+		};
 
 		//조각 템플릿 partial을 메인 템플랫의 'commonHeader' 위치에 삽입
 		Handlebars.registerPartial('commonHeader', partial);
@@ -2094,9 +2094,9 @@ Template Engine
 
 		//생성된 HTML을 DOM에 주입
 		$('body').append(html);
-		-----------	
-	
- 
+		-----------
+
+
 
 
 
@@ -2116,7 +2116,7 @@ Template Engine
 
 
 [JS, javascript]
--함수 변수: 여러 js 파일에서 함수 명이 겹쳐서 발생한느 문제를 해결하기 위해 
+-함수 변수: 여러 js 파일에서 함수 명이 겹쳐서 발생한느 문제를 해결하기 위해
 	-----------
 	var main = {
 		init : function () {
@@ -2132,12 +2132,12 @@ Template Engine
 				content: $('#content').val()
 			};
 		}
-	};		
+	};
 	//호출시
 	main.init();
 	main.save();
 	-----------
-	
+
 
 
 [윈도우]
@@ -2151,28 +2151,28 @@ Template Engine
 -딥링크(deep link) : 모웹에서 사용하는 테그 형태로 앱을 깨우거나 모앱의 특정 페이지를 오픈 할 수 있는 메커니즘 (!! 경우에 따라 딥링크, 앱링크, 유니버셜 링크의 이름으로 혼영하여 사용, URL 스킴 방식을 보통 일커름)
 	-URL 스킴 방식 : goodoc:// 형태의 링크로 구성, 앱내 특정 위치로 이동가능, 앱 미설치시 아무 동작 안함, 같은 스킴을 사용하는 앱이 여럿 일을경우 사용자가 선택하게 함, 초기 버전의 링크로 Universal Link로 진화
 		-스킴 ex : <myappSk://events?key=value>
-	
+
 	-Universal Link : (!!안드로이드의 경우 보통 앱링크라는 이름으로 불려 진다.)
-		-스킴 방식과 차이 및 특징 : 
+		-스킴 방식과 차이 및 특징 :
 			-앱 미설치시 스토어로 이동해 준다.(URL 스킴 방식을 보안하여 형태가 https://도메인 임으로 고유성(앱간중복방지)을 갖는다)
 			-사용자의 트리거(클릭)에 의해서만 동작한다 (스크립트에서 자동으로 동작하게 하는 경우 앱이 설치되어 있어도 웹 URL로 동작되는 브라우저가 많음)
-			-각각의 장단점으로 인해 스킴방식과 혼용해서 사용	
-			
-		-os별 구분 :		
-			-앱링크 : 안드로이드쪽에 사용하는 명칭, 			
-			-유니버셜 링크 : IOS에서 사용하는 명칭, 
-	
+			-각각의 장단점으로 인해 스킴방식과 혼용해서 사용
+
+		-os별 구분 :
+			-앱링크 : 안드로이드쪽에 사용하는 명칭,
+			-유니버셜 링크 : IOS에서 사용하는 명칭,
+
 -디퍼드(deferred) 딥링크 : Universal Link와 같으나 앱이 설치되지 않은 경우 앱설치 페이지로 이동 후 앱이 설치 되면 앱에서 원래 가려던 페이지로 이동해 준다(유니버셜링크의 경우 앱 설치후 앱의 메인으로 오픈됨)
 	-단점 : 안드로이드, IOS 각각의 디퍼트딥링크가 존재해서 개발을 두벌씩 해야 하는 번거럼이 있음, 해결을 위해 Firebase 사의 Dynamic Link, Appsflyer사의 One Link 가 생겨남
 		-Firebase : 모바일 앱, 웹어플리케이션 앱 플랫폼 개발 회사로 google에서 인수, 앱 개발시 제공하는 SDK를 추가하여 개발하는 방식
-			-메인 솔루션 : 
+			-메인 솔루션 :
 				-Cloud Firestore(NoSQL) : web, Aos, Ios 사용가능
 				-Dynamic Link :
-			
+
 		-Appsflyer(앱스플라이어) : a SaaS mobile marketing analytics and attribution platform, facebook 등의 마케팅 파트너사,  앱 개발시 제공하는 SDK를 추가하여 개발하는 방식
 			-메인 솔루션 :
 				-
-				-One Link : 
+				-One Link :
 
 -organic install : 특별한 마케팅 링크(디퍼드 딥링크 같은)가 걸리지 않음 순수 스토어를 통한 인스톨
 
@@ -2180,46 +2180,46 @@ Template Engine
 
 [하이브리드 앱]
 -function call :
-	-android :		
+	-android :
 		-javascript -> native :
-			-네이티브에 웹뷰 생성 : WebView web; 
-			-네이티브에 app 라는 이름으로 스크립트 인터페이스 생성 : web.addJavascriptInterface(new MainJsInterface(getApplicationContext()), "app"); 
-			-네이티브에 스크립트에서 호출될 실제 펑션 구현, public void recordEvent(String name, String json){...} , !! 리턴값을 줄수도 있음			
+			-네이티브에 웹뷰 생성 : WebView web;
+			-네이티브에 app 라는 이름으로 스크립트 인터페이스 생성 : web.addJavascriptInterface(new MainJsInterface(getApplicationContext()), "app");
+			-네이티브에 스크립트에서 호출될 실제 펑션 구현, public void recordEvent(String name, String json){...} , !! 리턴값을 줄수도 있음
 			-스크립트에서 네이티브의 펑션 호출 : <script>abc.recordEvent(eventName, eventParams);</script> !! 리턴값도 받을 수 있음
-			
+
 		-native -> javascript :
 		     -네이티브 버튼에 특정 스크립트 펑션을 걸수 있다. : public void onClick(View v) {webView.loadUrl("javascript:getValue()");}
 				-getValue() 내부에서는 스크립트 -> 네이티브 방식으로 값을 다시 native 쪽으로 넘겨주게 처리 해야 한다. : function getValue(){MyAndroid.receiveValueFromJs(val);}
 					-getValue() 내부에 스크립트 -> 네이티브 방식을 구현하지 않고 그냥 return val 형식으로 바로 리턴해서 네이티브로 값을 전달 할 순 없다.!!
 					-변칙적으로 특정 값을 가져오기 ?? : (확실히 가능한지는 확인 필요!!)
 						-public void onClick(View v) {webView.loadUrl("javascript:MyAndroid.receiveValueFromJs(document.myform.xxx.value)");}
-					
+
 					-기타 참고 :
 						-네이티브에서 webview 어느 url을 로딩하는지 알수 있다.
-						-webview 로딩이 끝나는 시점을 캐치해서 이벤트를 걸수 있다.			
-		
+						-webview 로딩이 끝나는 시점을 캐치해서 이벤트를 걸수 있다.
+
 	-ios :
 		-javascript -> native :
-			-네이티브 view controller에 메시지 수신코드 추가 : 
-			-(void)userContentController:(WKUserContentController *)userContentController 
+			-네이티브 view controller에 메시지 수신코드 추가 :
+			-(void)userContentController:(WKUserContentController *)userContentController
 			didReceiveScriptMessage:(WKScriptMessage *)message {..구현..};
-			
-			-스크립트에서 네이티브의 펑션 호출 : <script>webkit.messageHandlers.event.postMessage(eventName + "+" + eventParams);</script> 
+
+			-스크립트에서 네이티브의 펑션 호출 : <script>webkit.messageHandlers.event.postMessage(eventName + "+" + eventParams);</script>
 				-펑션 호출이라기 보단 네이티브의 메시지 핸들러로 메시지를 전달하는 형식 (메시지를 파싱해서 value로 사용 하는듯.. 당연히 네이트브로 부터 리턴도 못 받겠지??)
-				
+
 		-native -> javascript :
-	
+
 
 
 
 
 [publishing platform]
 -개념 : 웹사이트를 만들기 위한 플랫폼 (툴?)
--주요 상품 : 
+-주요 상품 :
 	-wordpress : 전세계 30 쇼핑몰이 wordpress 기반, opensource 기반으로 각정 플러그인 및 테마를 제공함
 		-서비스 임대형, 설치형 등 다양한 조건으로 지원
-	-wix.com : 
-		
+	-wix.com :
+
 
 
 [SEO]
@@ -2228,13 +2228,13 @@ Template Engine
 	-https 사용
 	-robots.txt 사용 : https:xx;com/robots.txt 에 위치 시킴 (서치엔치이 크롤링 함)
 		-접근할수 없는 url path 구현 (로그인이 필요한 마이페이지, 장바구니, 결제 페이지 등..)
-	-sitemap.xml 
+	-sitemap.xml
 		-robots.txt 파일을 통해 정의 할수 있음
-		-보여주고 싶은 페이지에 대한 정의 
-		
+		-보여주고 싶은 페이지에 대한 정의
+
 	-SEO를 위한 타이틀 및 디스크립션 테그 적용
 		-<title></title>
-		-meta tags : 
+		-meta tags :
 			-<meta name="title" content="">
 			-<meta name="description" content="">
 			-<meta name="keyword" content="">
@@ -2244,7 +2244,7 @@ Template Engine
 		-Canonical tag : 사이트에 거의 동일한 페이지가 존재할경우 정본?? 페이지로 링크될수 있게 할수 있다. 또는 타 사이트의 내용을 따온 경우 원본? 페이지로 링크될 수 있게 할수 있다.
 			-<link rel="canonical" href="http://example.com/" />
 		-기타 sns tag : og tags...
-		
+
 -ASO : app store optimization (모바일 스토어에서 최적화)
 
 
@@ -2257,7 +2257,7 @@ Template Engine
 			-html head에 메타 테그로 들어가며 서버사이드에서 wirte 되어 내려와야 함 (js에 의해 값이 변경되는 것은 크롤러가 감지하지 못함), 크롤러에게 해당 페이지의 정체를 설명하는 테그들임
 			-페이지를 공유하면 공유받은 서비스의 크롤러가 해당 페이지를 읽어 들여 og tag를 확인 후 화면상에 어떻게 보여 줄지를 정함
 			-기본적으로는 실제 공유될 페이지에 해당 테그가 존재해야 함 (꼼수로 실제 랜딩 페이지와 다른곳에서 메타 테그를 제공 할수 있긴 함)
-		
+
 		-주요 og Tags :
 			-og:url : 특정된 파람이 붙지 않은 해당 페이지 고유의 url, 해당 페이지의 유니크한 id이며 좋아요, 싫어요 카운트 키값으로도 사용됨, 넣지 않아도 됨(넣지 않으면 자기 자신의 url로 인식 되는듯??)
 			-og:title : 제목
@@ -2266,11 +2266,11 @@ Template Engine
 			-fb:app_id : 페이스북의 인사이트를 사용하는 업체의 경우 해당 앱 ip를 추가하면 대시보드를 통해 트래픽 정보를 받을 수 있음
 			-og:type : 문서의 타입으로 기본은 website
 			-og:locale : 해당 문서의 언어
-		
+
 	-facebook :
 		-링크 팝업 예시 : popupUrl = '//www.facebook.com/sharer/sharer.php?u=' + originUrl;
 		-참고 :
-			-기본적으로 originUrl쪽 페이지에 og테그들이 있고 링크도 originUrl로 가야 하나 
+			-기본적으로 originUrl쪽 페이지에 og테그들이 있고 링크도 originUrl로 가야 하나
 			-만약에 og:url이 originUrl과 다르게 설정되면 크롤러가 og:url쪽으로 이동하여 og테그를 읽고 최종 링크는 originUrl로 랜딩 되는 듯 함(??)
 			-클롤러는 페이지 내에 있는 js 스크립트에는 영향을 받지 않는듯 함
 				-최종 링크되는 페이지에서 og테그를 지원 할수 없는 경우 originUrl을 https://my.com/productDetail?isShared=true 형태로 주고 productDetail 페이지 내 메타테그를 쓰고
@@ -2288,10 +2288,10 @@ Template Engine
 	-브라우저 랜더링 시간 절약 : 순처적으로 불러와 지는 js가 dom, cssom 의 개입을 최소화
 	-haed 태그에는 필수 css, js만 적용 (가능하면 body태그 마지막에 js를 넣는다)
 	-dom 제어와 관련이 있는 스크립트는 defer attribute를 이용
-	-Google Analytics 같이 의존성이 없는 스크립트는 async를 이용	
+	-Google Analytics 같이 의존성이 없는 스크립트는 async를 이용
 	-webpack, parcel : 모듈번들러
 	-lazy loading
-	
+
 -develop tool :
 	-network :
 		-initial connection : 연결 설정 시간(tcp handshake, ssl 협상)
@@ -2304,15 +2304,15 @@ Template Engine
 
 
 [인증]
--Token Based Authentication : 
+-Token Based Authentication :
 	-web 전통 방식 인증 : id/pw 입력후 유효하면 session 및 cookie를 생성하여 다음 요청시 사용
-	-단점 : 
+	-단점 :
 		-web base가 아닌 Mo 앱등 cookie를 사용할 수 없는 환경에서 한계가 있음, 어떠한 형태의 client의 요청에도 인증하기 위해 token 방식이 이용됨
 		-서버 세션등의 사용은 서버의 리소스 증가를 발생시키며 Stateful 서버의 형태로 dependency가 생긴다.
-	
+
 
 -Token Based Authentication : (token 스트링 값을 통해 인증)
-	-장점 : 
+	-장점 :
 		-전통 방식의 한계 극복, web 서비스(브라우저 base)가 아닌 경우에도 이용 가능
 		-redis 등으로 session 관리하여 확장성 및 stateless 서버 형태를 구현할수 있는 추세지만 기본적으로 클라이언테에 token 관리를 넘김으로서 서버는 항시 stateless 상태 유지 가능(실제는 안그런듯?)
 		-다른 app간 토큰을 공유하여 사용 가능
@@ -2320,46 +2320,46 @@ Template Engine
 		-토큰 방식은 보안성 측면에서 더 강화된 방식이라 볼 수 없다
 		-서버의 Stateless, Scalability, Extensibility 관점에서 의미를 갖는다.
 		-token 유출 및 관리자에 의한 해당 사용자의 상태 변화시 대응을 위해서 https를 사용하고 timestemp를 갖고 주기적으로(내부적으로) 재 인증을 하게 하거나 하는 보완이 필요
-		
+
 	-관련 스팩(?) 및 기술 : OAuth,
 	-절차 : https 를 사용하여 id/pw(hashed) 서버 전송 -> 인증 -> (access)Token 생성(JWT방식)및 반환 (header? body?) -> 다음 요청시 header에 Authentication : Bearer 값 전송하여 인증
 		-http 해더 ex: Authorization: Bearer eyJhbGciOiJSU...
-	
-	-token을 만드는 방식	
+
+	-token을 만드는 방식
 		-의미 없는 고유키값을 토큰으로 사용하는 방식 : face북등의 OAuth의 경우 그저 유니크한 토큰을 발급 (해당 토큰을 통해 원하는 정보를 lookup 해야 함, lookup을 위한 리소스 낭비 발생)
 		-token 자체에 필요한 정보를 담는 방식 : id, 권한, 롤 등 기타 필요 정보를 담음 (서버가 해당 토큰을 까서 직접 필요한 정보를 얻을 수 있다)
-			
-		-토큰 생성 스팩 : 
-			-JWT(Json Web Token) : 정보를 담는 인증 토큰을 만들기 위한 포맷, 
+
+		-토큰 생성 스팩 :
+			-JWT(Json Web Token) : 정보를 담는 인증 토큰을 만들기 위한 포맷,
 				-구성요소 : Header, Payload, Signature
 				-Header : 토큰 타입과 암호화 방법을 정의 (Base-64 인코딩됨) =>B-64({typ:'JWT', alg:'HS256'})
 				-Payload : 필요한 정보 (유저 및 기타 상품 정보 등, Base-64 인코딩됨) =>B-64({name:'sungil', grade:'admin'})
 				-Signature : 유효성을 체크하기 위한 값 => HMACSHA256(B-64(header)+','+B-64(payload)+','+secret_key), secret_key는 서버에 안전하게 보관되야 함
 				-token값 : Header + '.' + Payload + '.' + Signature
-		
+
 	-기본 system 아키텍쳐 : client, Load-Balancer, 인증서버, API서버
 		-흐름1 : client 인증요청(id/pw) -> Load-Balancer 적절한 인증서버로 요청 -> 인증서버는 id/pw 확인하여 Token 값 생성하여 반환 (id/pw 오류시 에러 페이지로 redirect)
 		-흐름2 : client API 요청(token 값을 Bearer 값으로 사용하여 요청) Load-Balancer 적절한 인증서버로 요청 -> bearer값이 유효한 경우 적절한 API 서버로 redirect (인증오류시 403)
-		
-		
+
+
 -SSO (single sign on) : 한번의 인증(로그인)으로 여러 사이트 인증
 	-서비스 형태 별 구분 :
 		-클라이언트 기반 : 개인 PC에서 각 사이트에 대한 계정 정보를 가지고 있다가 자동으로 로그인 시켜줌 (윈도우나 브라우저의 계정 저장 기능과 유사)
-		-서비스 기반 : 인증만을 처리해 주는 서비스 (ex : MS passport)	
-		-서버 기반 : 인증 서버를 두고 처리하는 방식	
+		-서비스 기반 : 인증만을 처리해 주는 서비스 (ex : MS passport)
+		-서버 기반 : 인증 서버를 두고 처리하는 방식
 			-서버 기반 구현 모델: (개념적으로 설명)
 				-인증 대행 모델(delegation 방식) : 사용자 -> 인증서버 -> 각각의 모든 서버에 접속하여 해당 사용자를 인증 상태로 만들어 논는다(사용자를 대신해서 모든 사이트에 대신 로그인 해줌(상태를 만듬))
-					-특징 : 각 서비스가 수정하기가 어려운 경우 사용됨 
-					
+					-특징 : 각 서비스가 수정하기가 어려운 경우 사용됨
+
 				-인증 정보 전달 모델(propagation 방식) : 사용자 -> 인증서버 인증토큰 발급 -> 사용자 (인증토큰을 이용하여 각 사이트 접속) -> 각사이트 (인증토큰이 유효한시 매번(?) 인증서버에 확인)
 					-특징 : 인증 서버의 신뢰가 높고 각각의 서비스가 수정이 용이한 경우 (같은 도메인 영역을 사용할 경우 인증 토큰을 cookie로 생성하여 처리 가능)
-			
-	-주요 개발 형태 별 구분 : 
+
+	-주요 개발 형태 별 구분 :
 		-OAuth 2.0 : 표준으로 정립, 2.0부터 OAuth로 명명, SSO의 개념보다는 API 서버 인증, 인가용으로 많이 사용(?), 웹, 모바일, 데스크탑, IoT 장비에 확장성이 좋음, 개발적 인증 절차에서 표준이 된것에 의미가 큼
-		-wiki 정의 일부 : Generally, OAuth provides clients a "secure delegated access" to server resources on behalf of a resource owner. It specifies a process 
+		-wiki 정의 일부 : Generally, OAuth provides clients a "secure delegated access" to server resources on behalf of a resource owner. It specifies a process
 						for resource owners to authorize third-party access to their server resources without sharing their credentials.
 						-!! 위 정의에 따르면 자원소유자패스워드승인 방식은 credential이 오픈되는 문제가 있어 보임
-		
+
 			-주요개념(용어) : facebook 예시
 				-자원서버(Resource Server) : 실제 고객의 컨텐츠 정보를 가지고 있는 facebook 서버 (API 서버)
 				-자원소유자(Resource Owner) : 페이스북 유저
@@ -2367,7 +2367,7 @@ Template Engine
 				-클라이언트(Client) : facebook API를 통해 서버가 뭔가 서비스를 제공하는 제3의 서버,웹서버,앱 등등
 				-사용자에이전트(User Agent) : 일반적으로는 브라우저가 될수 있으나 반드시 그런것은 아님, 앱의 경우 에이전트 없이 앱 자체가 에이전트의 역할을 할수도 있음
 					-참고 : 클라이언트와 에이전트를 구분짓는 이유는 에이전트는 보통 오픈된 형태의 도구 즉 브라우저등을 의미, 보안이 상대적으로 취약할수 있는 구간을 설명하기 위해 구분 짓는 듯(?)
-					
+
 			-상황별 시스템 구성
 				-인가코드승인(Authorization Code Grant) : OAuth가 가질수 있는 full stack(?), 보안성 높음,  클라이언트가 웹서버(Auth code를 받아서 서버로 리다이렉트 해야 함으로?)인 케이스
 					-로그인시도 > 클라이언트가 에이전트로 Auth 서버 주소로 리다이렉트 시켜줌 (클라이언트id, state, 인증후 리다이렉트로 돌아올 returnUrl과 함께)
@@ -2375,53 +2375,53 @@ Template Engine
 							-정확히는 Auth 서버가 에이전트로 Authorization Code + state 값을 주면서 클라이언트쪽의 returnUrl로 바로 리다이렉트 시켜 버림
 							-!! 바로 access 코드를 내려 주지 않는 이유 : 실제 resource 서버로 접속가능한 access 토큰이 agent까지 내려간다면 보안상 취약점이 발생할 수 있기에??
 							-!! state를 달고 다니는 이유 : 제3의 서비스를 통해 후킹한 Authorization Code를 이용하여 타 서비스로 접근하는 시도를 막기위해 정상적인 요청인지 한번더 체크??
-							
+
 								-클라이언트는 전달받은 state 값이 자신이 발행한 유효값인지 확인후 Authorization Code + client crdential 이용하여 Auth 서버로 최종 access Token을 요청
 									-응답받은 access 토큰은 에이전트로 내려가지 않고 클라이언트(클라이언트는 앱이될수도 서버가 될수도 있다)에서만 관리되어 짐
 									-!! client 입장에서의 자체 로그인 처리(session 생성등)는 어느 시점? : Auth 서버로 부터 정상적인 access 토큰이 발급되는 이 시점에 처리하면 되지 않을까??
-								
+
 				-암시적승인(Implicit Grant) : 중간 웹서버가 없이 브라우저(js)를 이용하는 앱으로 구성된 경우, Auth code를 가지고 리다이렉트 할수 없음으로 에이전트로 엑세스토콘을 바로 내림(상대적으로 보안 취약)
 					-!! 앱스킴값을 이용하여 리다이렉트 할수 있지도 않을까??
 					-로그인시도 > 클라이언트가 에이전트로 Auth 서버 주소를 내려줌 (클라이언트id, state값 과 함께)
 						-에이전트는 전달 받은 auth 주소로 접속하여 사용자가 credentials(id/pw)을 입력하여 전송하면 Auth 서버가 인증/인가 확인 후 에이전트로 바로 엑세스토큰 + state 값을 내림
 							-에이전트는 받은 엑세스 코드를 클라이언트로 전달
 							-!! 클라이언트 id 가 앱 형태의 어플에 존재하기 때문에 디컴파일등으로 인한 노출 우려가 있음, 이를 위해 실시간으로 클라이언트 id를 생성해내는 방식이 있다는데.. 잘은 모르겠음??
-							
+
 				-자원소유자패스워드승인(Resource Owner Password Grant) : 사용자가 자신의 클라이언트로 직접 credentials(id/pw)을 입력함 클라이언트에 크리덴셜이 노출됨 (보안 취약, Oauth라 볼수 있나??)
 					-사용자가 클라이언트 (보통 앱일듯)에 직접 개인 크리덴셜을 입력
 						-클라이언트는 클라이언트id와 개인 크리덴셜을 갖고 auth 서버로 인증 요청
 							-auth 서버는 바로 엑세스 토큰을 클라이언트로 내림
 							-!! 개인 크리덴셜이 제3의 클라이언트로 바로 노출됨으로 보안이 취약함, 다른 유형의 승인 방식을 사용할 수 없는 경우에만 사용
-							
+
 				-클라이언트인증정보승인(Client Credentials Grant) : 클라이언트가 자원의 소유자이거나 자원 소유자가 이미 클라이언트에 접근 위임을 받은 경우 (회사가 자기 직원 정보를 턴키로 위임 받은 케이스??)
-					-사용자 크리덴셜을 입력 받지 않는다 
+					-사용자 크리덴셜을 입력 받지 않는다
 						-클라이언트는 인가서버로 클라이언트id 만을 가지고 엑세스 코드를 발급 받는다
 						-!! 해당 엑세스 코드는 해당 클라이언트와 관련된 모든 자원 소유자의 정보에 엑세스 가능??
-						
-			-보안 고려 사항 : 
+
+			-보안 고려 사항 :
 				-Oauth 스팩에 Bearer 토큰을 쿼리 파라미터로 전달하는 방법이 있지만 이러한 방식으로 엑세스 토큰이 노출되지 않게 해야함
 				-엑세스 토큰이 log 파일등에 남아서는 안된다.
 				-auth 서버가 엑세스 토큰을 DB 등으로 관리할때 plain 텍스트가 아닌 암호화해서 저장해 둬야 한다.
 				-auth 코드는 한번 access 코드를 발급하면 더이상 사용 할수 없도록 해야 하며 동일한 auth 코드로 요청이 들어오면 기존 해당 auth 코드로 발급된 엑세스 코드도 패기 처리하는게 좋다
 				-리다이렉트 url은 client id를 발급해 줄때 미리 받아서 등록되어 있는 return url로만 내려주게 해야 하고 return url은 패턴 형식보다 명확히 픽스된 형태의 uri로 등록되게 해야 좋다
 					-등록된 url과 다른 scope의 url이 넘어올경우 400오류를 발생하는것이 좋다
-					
-				
-				
-					
-				
-								
-					
-		
-		-SAML(Security Assertion Markup Language) :  
-	
-	
-	
+
+
+
+
+
+
+
+
+		-SAML(Security Assertion Markup Language) :
+
+
+
 [REST API (Representational safe transfer)]
--인증	
+-인증
 	-API key 방식 : API포털(개발자사이트)를 통해 특정 스트링 형태의 키를 발급받아 API 호출시 함께 전송 (서버는 키값을 통해 사용자를 확인), 가장 초기적인 방식 이며 특정 표준이 없다.
 		-문제점 : api 키값이 노출시 보안에 문제 발생이 쉽다.
-		
+
 	-API Token 방식 : id/pw를 이용하여 인증후 토큰값을(사용기간등 유효한) 내려 받아 api 호출시 id/pw 대신 api 토큰을 전송하여 인증 받는 방식
 		-장점 : 매 api 호출시 id/pw를 보내는 이유는 문제 발생시 pw는 변경이 가능하고 매번 id/pw를 넘기는 것 보다 보안에 유리하다.
 		-주요 방식 예시 :
@@ -2429,29 +2429,29 @@ Template Engine
 			-Digest access Authentication :
 			-클라이언트 인증 추가 :
 				-클라이언트에도 자체 id(client id)와 pw(client secret)을 추가하여 클라이언트 인증 후 id, pw 를 추가 인증 함(조금더 개선된 정도)
-				
+
 			-제3자 인증 방식 : google 이나 facebook 계정을 이용하여 서비스 서버는 사용자의 pw를 공유 받지 않지만 해당 사용자가 google이나 페이스북의 사용자임만 확인 받는다.
 				-주요!! : API 서버가 제3의(페이스북 같은) 서버의 API를 이용해야 하는 경우 사용하는 용도로 봐야 겠지?? 단순히 회원가입을 하지 않기 위한 인증용으로만 활용할 수도 있지만
-				-인증을 위해 페이스북이 입력 받는 기본 항목 : 페이스북 developr portal에 등록 하는 주요 항목		
+				-인증을 위해 페이스북이 입력 받는 기본 항목 : 페이스북 developr portal에 등록 하는 주요 항목
 					-서비스명 :
 					-시비스 url :
 					-callback url : 인증이 성공 했을때 인증 정보를 받는 url (인증 정보는 보통 client id, client secret)
-					
+
 				-OAuth 방식 : OAuth Provider부터 인증을 받아 OAuth 토큰을 받고 API 호출시 OAuth 토큰을 함께 전송, API키 방식보다 높은 보안 및 OAuth 인증 표준이 존재함 (개발 난이도가 조금 있음)
-				
+
 	-Bi-diretional Certification : 가장 높은 수준의 인증, 서버/클라이언트 양방향 SSL을 제공, 메시지까지 암호함으로 인중 수준이 높다.(개발이 어렵고 특정 서비스에서 사용)
-	
--메시지 암호화 : 
+
+-메시지 암호화 :
 	-https : 데이터 암호화를 위해 주로 사용(RSA)
-		-문제점 : 
+		-문제점 :
 			-Man in middle attack : Client 와 서버가 Handshke 시점에 해커가 서버의 인증서를 갈취 후 client에는 자신의 인증서를 내려줌
 				-client는 해커의 인증서로 암호화 하여 데이터 전송, 해커는 중간에 갈취하여 자신이 열어본 후 다시 진짜 서버의 인증서로 재 암호화 하여 실재 서버로 전송 (계속 하여 데이터 갈취 가능)
-			
+
 	-데이터 레벨의 암호화 : 보안이 필요한 특정 데이터만 암호화 하여 전송
 		-주로 대칭키 기반의 암호화 알고리즘 사용
 			-종료 : DES, Triple DES, Blowfish-256, AES-128, AES-256, RC4-256
 				-각 암호화 종류마다 보안성 및 처리속도가 다름
-				
+
 -무결성 보장 : 암호화는 데이터를 몰래 볼수 없도록 하기위한 처리라면 무결성은 데이터가 중간에 변경되지 않았는지를 보장하기 위한 조치
 	-주요 알고리즘 : HMAC 알고리즘
 		-방식 : 클라이언트는 서버와 미리 공유된 key 값을 통해 전송할려는 데이터의 Hash값을 추출하여 전송할 데이터와 함께 전송 한다, 서버는 전송받은 데이터를 공유된 키값으로 해쉬하여 전달 받은 해쉬값과 같은지 본다.
@@ -2470,7 +2470,7 @@ Template Engine
 
 	-http method를 명확히 구분하여 사용시 장점
 		-http 기존 웹 표준의 인프라를 그대로 사용 가능 : 웹캐싱 등..
-		-계층형 구조로 구성이 용이(Layered System) : 
+		-계층형 구조로 구성이 용이(Layered System) :
 			-Authentication, 암호화(SSL), 로드밸런싱을 api gateway나, 간단한 기능의 경우에는 HA Proxy나 Apache와 같은 Reverse Proxy를 이용해서 구현하는 경우가 많다.
 
 	-하지 말아야 하는 실수
@@ -2478,7 +2478,7 @@ Template Engine
 			-update : HTTP Get, http://myweb/users?method=update&id=terry (http get 메소드를 이용해서 실제로는 update를 구현)
 			-select : HTTP Post, HTTP POST, http://myweb/users/, body={"getuser":{"id":"terry",}} (http post 메소드를 이용해서 실제로는 select를 구현)
 			-이런식의 사용은 기존 http 인프라(웹케싱 기능등...)을 사용할 수 없게 만든다
-			
+
 		-result Code 값을 임의로 정의 : result 코드값은 http 해더에 기존 http result 코드 값을 최대한 사용해야 한다.
 
 
@@ -2489,7 +2489,7 @@ Template Engine
 -보안
 	-Access-Control-Allow-Origin : (옵션 : *, 특정 도메인)
 		-CORS (Cross Origin Resource Sharing) : 다른 서버(도메인, 포트)의 리소스를 사용하는 매커니즘 (HTTP는 기본적으로 CORS를 허용했음, 지금도 html에서 img, css, js, 비디오파일은 기본으로 허용?)
-			-CORS 인하여 사용자의 정보 보안 이슈 및 타 사이트가 무분별하게 타 사이트의 리소스를 사용하는 상황이 생겨 이를 위한 정책이 생김 
+			-CORS 인하여 사용자의 정보 보안 이슈 및 타 사이트가 무분별하게 타 사이트의 리소스를 사용하는 상황이 생겨 이를 위한 정책이 생김
 				-same-origin policy : 브라우저에서 <script></script> 내부의 코드가 외부 서버로 request를 요청할때 reponse를 브라우저 단에서 차단하는 매커니즘 (js엔진표준스팩으로 브라우저들이 채택하고 있음)
 				-ajax 통한 API 호출이 많은 추세에서 same-origin policy 가 문제가 있어 해결책을 제시함
 				-해결책 :
@@ -2499,116 +2499,116 @@ Template Engine
 						-Post 방식일때 Response의 Content-type은 application/x-www-form-unlencoded, multipart/form-data, text/plain 만 가능
 						-응답 해더에 Access-Control-Allow-Origin:* 포함 (이것을 보고 브라우저가 판단하여 해당 response를 차단 하지 않는다. *대신 요청한 도메인을 넣어 준다)
 							-API 서버가 Access-Control-Allow-Origin:* 를 항상 내려 주게 설정되어 있다면 이것이 브라우저 사용자의 보안 문제를 해결하기 위한 조치로 볼수 있을까???
-					
+
 					-Preflight Request : 예비 요청과 본 요청으로 나뉘어서 처리 (프로그램으로 절차를 만드는 것이 아니라 Header 값 조정을 통해 처리)
 					-Request with Credential :
 					-Request without Credential :
-					
+
 	-Set-Cookie: SESSION=1f5487cd-bbc5-43e6-b5bf-d476871fbd3a; Path=/kr/ko/; Secure; HttpOnly; SameSite=None
 		-CSRF(cross-site request forgery) 또는 XSRF : 웹사이트 취약점 공격의 하나로, 사용자가 자신의 의지와는 무관하게 공격자가 의도한 행위(수정, 삭제, 등록 등)를 특정 웹사이트에 요청하게 하는 공격
 			-흔한 예시 : A사이트에 게시판에 가짜 링크를 만들어 사용자 몰래 B사이트로 request 날리도록 속임
 				-B사이트의 request가 회원 탈퇴 요청 API일 경우 B사이트는 단지 로그인 여부로만 처리를 한다고 하면 만약 사용자가 A사이트 전에 B사이트에 로그인 한 이력이 있고 세션 cookie 가 살아 있다면
 				-cookie의 특성상 B사이트로 request 요청시 해당 B사이트의 cookie 값을 그대로 물고 감으로 자신도 모르게 회원 탈퇴 될수 있음
 				-하여 브라우저에서 타 사이트 페이지 내에서 타 사이트로 request를 요청시 cookie 값을 넘겨주지 않도록 처리가 필요하게 됨
-					-서버에서 Cookie 쿠키 생성하여 내려줄때 옵션에 SameSite=None 으로 되어 있다면 타사이트로 Cookie를 넘어가도록 허락한 것임 
+					-서버에서 Cookie 쿠키 생성하여 내려줄때 옵션에 SameSite=None 으로 되어 있다면 타사이트로 Cookie를 넘어가도록 허락한 것임
 						-옵션:None(A사이트로 B 요청시 B사이트의 쿠키가 있다면 cookie도 전송), Strict(전송 불가), Lax(Strict에서 GET, a href, link href 일때 예외로 허용)
 					-기타 : secure(https 일때만 쿠키 생성), httpOnly(도큐먼트의 자바스크립트 코드에서 해당 쿠키에 접속하는 것을 막음, 오직 http 요청에 의해서만 자동으로 주고 받음)
-						
-				-해당 옵션이 설정 되지 않은 경우의 동작 
+
+				-해당 옵션이 설정 되지 않은 경우의 동작
 					-기존 chrome 80버전 이전에서는 None으로 동작, 80버전 이후에서는 Lax로 동작
-					
-					
+
+
 	-CSRF 방지를 위한 Anti-Forgery Tokens (CSRF Token) : CSRF 방지를 위하여 서버는 페이지를 내려줄때 CSRF 방지 토큰을 함께 내려준다.
 		-개념적 절차 :
 			-해당값은 세션 생성시 랜덤한 값으로 발급하며, session에 저장하고 session의 라이프사이클과 동일하게 관리됨 (보통 로그아웃시 세션이 바뀌겠지??)
 			-CSRF 토큰값은 브라우저의 cookie에 저장 되거나 매 페이지마다 hidden 값으로 내려온다.(둘다 갖고 있을 수도 있다)
 			-해당 페이지가 POST, PUT, DELETE 등 중요한 request를 전송하는 경우 해당 CSRF 토큰값을 request 해더(Option필드??)에 넣어 함께 전송 (쿠키에도 있을경우 함께 올라감)
 			-서버는 올라온 토큰값이 해당하는 서버쪽 세션의 값과 일치하지 않으면(둘다 있는 경우 cookie, 헤더나 모두 일치해야함) 403 Forbidden 에러를 내려 준다.
-		
+
 		-CSRF 공격과의 관계 : 예시
 			-해커는 숨켜진 스크립트를 통해서 특정 값과 특정인의 cookie값을 특정 서버로 보낼수 있지만 헤더로 올라오는 CSRF 값까지는 알수 없기 때문에 403을 받게 될 것이다.
-				-네이버에 로그인된 session 값이 살아있는 사용자가 같은 브라우저로 해커의 사이트에 들어 갔을때 
+				-네이버에 로그인된 session 값이 살아있는 사용자가 같은 브라우저로 해커의 사이트에 들어 갔을때
 				-헤커가 사용자 모르게 스크립트로 네이버쪽의 비밀번호 변경페이지로 request를 날릴수 있다 이따 네이버 세션이 살아 있기 때문에 새 비밀번호변경 양식과 동일하게 구현해서 날린다면 변경이 가능할수 있다(예시)
 				-session 은 cookie로 자동 넘어가니 어쩔수 없지만 사용자가 사용했던 CSTR Token을 알수 없기에 전달 불가 결과적으로 403을 받는다.
-				
+
 		-실제 적용 예시 :
 			-서버쪽 :
 				-Spring Security에서 CSRF 토큰 적용을 할지를 정할수 있다(WebSecurityConfigurerAdapter??)
 					-특정 url 패턴으로 예외 케이스를 적용할수도 있다.
-			
-			-클라이언트 코드 : 서버로 POST, PUT, DELETE 메소드 호출시 서버가 내려준 CSRF 토큰값이 request 해데에 포함되서 올라갈수 있도록 script 구성이 필요함 (submit, Ajax 포함)
-			
-		
-		
 
--해더					
+			-클라이언트 코드 : 서버로 POST, PUT, DELETE 메소드 호출시 서버가 내려준 CSRF 토큰값이 request 해데에 포함되서 올라갈수 있도록 script 구성이 필요함 (submit, Ajax 포함)
+
+
+
+
+-해더
 	-Client Cookie &  Server Cookie : 생성하는 위치에 따른 차이, 서버에서 생성하느냐 바라우저에서 js 스크립트에 의해 성성 되느냐의 차이
 		-공통점 : 어느 cookie든 해당 url에 대한 request 시 자동으로 모두 request 해더에 포함되어 올라감
-		
+
 	-keep-alive : http는 리소스 낭비를 줄이기 위해 response후 접속을 끊는 속성이 있는데 keep-alive 동안 접속을 끊지않고 기다려 커넥션을 재활용함 (내부적으로는 TCP 커넥션이 되겠지? http1.1에서 디폴토 기능)
-	-content-Type : request 또는 response 하는 데이터의 형식을 알려 준다 
+	-content-Type : request 또는 response 하는 데이터의 형식을 알려 준다
 		-보통 request때는 www-url-form-encoded, multipart/form-data, application/json
-		-보통 response때는 text/html;charset=UTF-8, application/json;charset=UTF-8 
-		
+		-보통 response때는 text/html;charset=UTF-8, application/json;charset=UTF-8
+
 	-Accept : request 전용 해더로 respose 받고자 하는 데이터 형식을 알려주는 것 (REST 서버에 요청시 xml, json, text 등 클라이언트가 선호하는 데이터 형식을 알려 줄수 있다, 요청데로 응답하는 것은 아님)
 	-Accept-Charset : utf-8
 	-Accept-Language : ko, en-US
 	-Accept-Encoding : br, gzip, deflate
 	-Origin : 서버로 request를 보내는 현재 페이지의 주소 (요청 받은 서버가 Origin 값을 확인했을때 자신의 페이지에서 요청된것이 아니면 CORS 를 발생 시킬수 있다. Agent에서 채워주는 값인가?)
 	-Referer : 서버로 request를 보내는 현재 페이지의 이전 주소
-		
+
 	-X-abc : X- 로 시작하는 해더는 custom headers들로 많이 알려진 X-Forwarded-For, X-Forwarded-Host, X-Forwarded-Proto, X-Powered-By 등이 있지만 사용을 권장하지 않음
-		
-	
--참고 : 
-	-cookie : 
-		-RFC 기준 에이전트의 cookie 처리 
+
+
+-참고 :
+	-cookie :
+		-RFC 기준 에이전트의 cookie 처리
 			-At least 4096 bytes per cookie (as measured by the sum of the length of the cookie's name, value, and attributes).
 			-At least 50 cookies per domain.
 			-At least 3000 cookies total.
-			-!!! I note this does not mean that browsers support 50 cookies * 4096 bytes == 204,800 bytes == 204KiB per domain. 
-			-!!! I find that Safari and Chrome start to reject cookies if the total data for a domain exceeds something between 5-8KB 
+			-!!! I note this does not mean that browsers support 50 cookies * 4096 bytes == 204,800 bytes == 204KiB per domain.
+			-!!! I find that Safari and Chrome start to reject cookies if the total data for a domain exceeds something between 5-8KB
 			-위의서 실제로는 5-8k 까지 쿠키가 전달 된다는 의견은 서버의 http 해더 최대값에 걸리기 때문으로 예상함 (web 서버의 기본 설정 해더 최대값은 8k 임, 헤더의 최대값은 was의 server.xml에서 수정 가능)
-	
+
 	-request시 url에 추가 되는 파람은 어떻게 전달되는가?
 		-모든 url 파람은 http 해더의 Request URL 영역을 통해 전달 됨, 다시 말해 url 파람이 길어 지면 head의 길이가 커지고 서버의 최대 허용 head 사이즈가 넘으면 문제가 될수 있음
-		-http 스팩상 url의 최대 길이는 2k, 
-	
+		-http 스팩상 url의 최대 길이는 2k,
+
 	-서버의 400 에러 : Bad Request
 		-단일 쿠키의 최대 허용치 4k를 넘으면 발생 할 수 있음
 		-http의 header의 최대 크기(서버에서 제한하는, 보통 8k)를 넘어서는 경우 발생 할수 있음, 해더크기는 cookie 및 기타 헤어 옵션, url 파람등 모든 값의 합산으로 정해짐.
-		
-	
-	
-	
-	
+
+
+
+
+
 [API 서버 플랫폼]
 -정의 : API 서비스를 운영할 수 있도록 구축에 필요한 기반(공통) 기능을 제공(판매)하는 시스템(서비스)
 	-구성 :
 		-API G/W : 진입 포인트
 		-API 포털 : 개발자를 위한 문서 및 샘플 코드를 제공
 		-API 모니터링 : 서비스 상황 및 관리 기능 제공
-	
--서비스 플로우 : 
+
+-서비스 플로우 :
 	-API 인증 : 인증된 API 호출인지 판단하기 위한 Authentication 기능, (API키 또는 OAuth 기반의 인증), Admin 웹을 사용하기 위한 인증도 포함
 	-SLA management(Service Level Agreement) : 해당 서비스의 성능(?), API 호출수,  장애(?) 상황등에 대한 보장 이다
-	-Mediation : 요청된 API에 대한 변형을 가하는 것					
-		-라우팅 : 
+	-Mediation : 요청된 API에 대한 변형을 가하는 것
+		-라우팅 :
 			-요청된 해더의 API버전에 따라 라우팅 처리..
 			-요청된 해더의 국가 코드에 따라 라우팅 처리..
-			
+
 		-Function adding : 기존 클라이언트나 서버 변동 없이 처리 가능
-			-주문API에 포인트 적립 API를 추가한다든지.. 
-	
+			-주문API에 포인트 적립 API를 추가한다든지..
+
 		-Message Transformation : request 메시지를 변경해 준다.
 			-XML을 Json으로 변경 하거나, Json 형태나 필드명을 수정하거나..
-			
+
 	-모니터링 : 현황 체크를 위한 어드민 기능 제공
 	-Monetization : 유료화 하기 위한 API 과금 정책, 호출 건수 등등 처리 (그를 위한 기로 로그 데이터 수집)
 	-포털 : 개발 문서 및 관련 가이드 제공 사이트
 		-Swagger 가 대표적 오픈 소스
 			-API 메뉴얼 자동 생성, 테스트 사이트 생성 기능 제공, API 테스트 request 기능 등 제공
-	
+
 	-API Governance : API 개발 부서들 간에 규격에 대한 표준이 없어서 발생하는 문제를 해결하기 위해 통제성을 확보
 		-어느 부서는 버전을 해더에 넣고 어느 부서는 url 에 넣고 하는 등의...
 
@@ -2618,24 +2618,24 @@ Template Engine
 [암호화]
 -Hash : 데이터를 고정된 길이의 문자열로 변환하는 역할, 복호화 불가, 해당 데이터의 검증용으로 사용
 	-알고리즘 : MD5, SHA1, SHA2(256~512bit), SHA3(신형? 좀 내용이 다름)..
-	-활용 : 
+	-활용 :
 		-비밀번호 확인용 (비밀번호는 노출되지 않지만 동일한지는 확인 가능)
 		-데이터 무결성(인증) 확인용 : 통신구간에서 데이터의 유실이 없는지(정확한 원본이 맞는지) 데이터의 해쉬값을 함께 보내 재 확인해 볼수 있다.
 			-문제점 : 해커등에 의해 데이터가 위변조 되고 해쉬값까지 새로생성하여 전달된다면 수신자는 위변조 사실을 알수 없다.
 				-해결점 : 송신자가 데이터를 해쉬할때 수신자와 공유한 비밀키를 포함하여 해쉬한 후 비밀키를 제외한 "실데이터" + "실데이터+비밀키의 해쉬코드" 를 보내는 방식으로 처리 가능 (수신자는 공유된 비밀키를 추가해서 해쉬후 비교해 본다)
 					-문제점 : 데이터를 위변조 하지는 않았지만 부정하게 동일한 데이터를 수신자에게 전달할수 있다.
 						-해결점 : 데이터에(해더에??) timestamp를 추가하여 오래된(+-1분??) 요청은 무시하도록 처리 할수 있다.
-						
+
 	-코드 : 각 해쉬 클레스를 사용하여 해쉬 코드를 생성 후 16진수로 리턴해 준다. 알고리즘에 따라 최종 해쉬값의 길이는 항상 일정
 		MD5 : MessageDigest md = MessageDigest.getInstance("MD5");
 		SHA-256 : MessageDigest md = MessageDigest.getInstance("SHA-256");
 
 
-	
+
 
 -Encryption : 데이터를 알아볼수 없도록 변환, 복호화 가능, 해당 데이터의 내용을 보호하는데 사용
 	-대칭형 알고리즘 : DES, SEED(한국 KISA), AES(128~256)..
-		장단점 : 상대적으로 속도가 빠르다, 그래서 장문의 데이터를 암호화 하는데 유리, 하나의 키만 존재함으로 전달된 비밀키가 노출되면 누구나 복호화 될수 있다.		
+		장단점 : 상대적으로 속도가 빠르다, 그래서 장문의 데이터를 암호화 하는데 유리, 하나의 키만 존재함으로 전달된 비밀키가 노출되면 누구나 복호화 될수 있다.
 		코드 : 시크릿 키값(맘대로설정)으로 바이트어레이를 만들어 암호화에 이용, 16byte면 AES128, 32byte면 AES256이 된다. 암호화된 데이터를 Base64인코딩(디코딩)하여 리턴(웹에서 주로 사용해서 그런가??)
 			AES256 :
 
@@ -2654,42 +2654,42 @@ Template Engine
 	-내용 : JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active={profile_name}"
 
 	-application-XxxenvValluexxX.yml : 기본이 되는 yml 파일로 해당 프로파일에서 특정 프로퍼티 벨류를 못 찾을 경우 application.yml 파일에서 찾게 되있다.
-		-ex : env 가 stg 일경우 
+		-ex : env 가 stg 일경우
 			-application-stg.yml에서 환경 프로퍼티를 찾게 되있음 만약 해당 yml에서 찾을 수 없는 값이 있는 경우 기본 파일인 application.yml 에서 찾게 됨
 
-		
--config : 
+
+-config :
 	-server.xml : 톰켓 동작 전반에 대한 설정으로 기타 초기값 및 서비스 구성에 대해 정의 한다. https://tomcat.apache.org/tomcat-5.5-doc/config/engine.html
 		-Server : 가장 최상위, 서버를 정지시키는 명령어와 명령을 받기 위한 포트를 구성할 수 있다 (ex: port="8005" shutdown="SHUTDOWN" ), 클래스를 추가하여 shutdown을 위한 특정 클래스 구성 가능
 			-Listeners :
 			-Global Naming Resources :
 				-Resources :
-			
+
 		-Service : 논리적인(사람이 인식하는) 서비스 단위를 구성한다. (ex: 네이버 메일, 네이버 메모, 네이버 웹튼..), 톰캣의 전체 로그에서 서비스 명으로 구분되어 진다.
 			-Connectors : 여러개의 커넥터를 갖을수 있다. 해당 커넥터의 포트로 들어온 request를 해당 Engine으로 전달해 준다. http, ajp 두 커넥터를 동시에 사용 할 수 있다.
 				-HTTP Connector : http 기본 커넥터로 보통 8080, 아파치와 연동하여 ajp 포트를 쓴다면 사용하지 안하도 됨, 많은 추가 attr를 갖는다(ex: maxHttpHeaderSize)
-				-AJP Connector : apach 연동을 통해 들어오는 request를 받기위한 커넥터, 아파치 연동이 없으면 사용하지 않아도 됨, 
+				-AJP Connector : apach 연동을 통해 들어오는 request를 받기위한 커넥터, 아파치 연동이 없으면 사용하지 않아도 됨,
 				-SSL Connector : ssl/tls를 사용하는 request를 위해 구성할 수 있다. 인증서 정보등의 attr를 갖고 있다.
 				-!! HTTP, AJP에 있는 redirectPort는?? : ssl/tls로 들어오는 요청이 있는경우 리라이렉트 해주는 포트, SSL Connector가 살아 있어야 잘 되겠지??
-			
-			-Engine : 실제 request(header 까지는 엔진도 확인하는 듯) 처리를 진행하는 진입점으로 적절한(주어진) host(virtual, 실제 리소스가 있는)와 함께 처리를 진행 한다. 
-					-attr : defaultHost=request를 처리하기 위한 기본 host 네임(아래 호스트 엘레먼트 이름과 연결됨), name=로깅을 위한 식별자, jvmRoute=로드벨런싱처리시 session 생성 관련 
+
+			-Engine : 실제 request(header 까지는 엔진도 확인하는 듯) 처리를 진행하는 진입점으로 적절한(주어진) host(virtual, 실제 리소스가 있는)와 함께 처리를 진행 한다.
+					-attr : defaultHost=request를 처리하기 위한 기본 host 네임(아래 호스트 엘레먼트 이름과 연결됨), name=로깅을 위한 식별자, jvmRoute=로드벨런싱처리시 session 생성 관련
 				-Cluster : 서비스 2중화 구성을 위한 요소로 리소스 및 session 에 대한 이중화 처리 설정으로 복잡성이 높으며 보통 기본값 사용을 권장함
 				-Realm : ???서버를 JDBC, JNDI(LDAP)과 같이 다른 서비스와 연결하기 위한 요소???
-				
-				-Host :	도메인과 맞물리는 하나의 가상 호스트를 생성하는 개념이다. 
+
+				-Host :	도메인과 맞물리는 하나의 가상 호스트를 생성하는 개념이다.
 						-attr인 name으로 들어온 도메인에 대해서 내가 (webApp,실제서비스코드)가 담당하겠다는 의미, Engine이 request의 해더까진 분석할수 있기 때문에 적적할 호스트로 줄수 있겠지??
 						-Engine 엘레먼트의 defaultHost로 지정 호스트는 반드시 존재 해야함.
 						-Alias 엘레먼트를 통해서 하나의 host(virtual)에 여러 도메인을 연결할 수도 있다.
 						-<host name="xxx.com" : xxx.com으로 들어온 요청인 경우 해당 호스트에서 처리하겠다는 의미 (호스명은 대소문자 구분하지 않음)
 						-local PC에서 호스트 파일을 수정후 브라우저에 가상 도메인을 입력하여 테스트 해볼수 있다.
-						
+
 						-attr인 appBase : 해당 호스트가 사용할 웹어플리케이션들(!!여러개의 war들)의 위치를 알려 준다. 절대 경로 사용가능, 상대 경로인 경우 $CATALINA_BASE 부터 시작
 							-!!다시말해 하나의 Engine은 여러개의 호스트를 갖을 수 있고 또한 여러개의 war파일들로 동작할 수도 있다.
-							
+
 						-attr인 unpackWARs : true면 war파일이 생기면 war를 풀어서 사용, false면 war파일을 풀지 않고 사용(풀지 않고도 사용 가능 한듯??...)
 						-attr인 autoDeploy : 통캣이 실행중인 경우 재시작 여부로 true면 새로운 변경이 발생시 자동 재시작, false면 자동으로 재시작 하지 않음
-						
+
 					-Context : Host로 들어온 특정 url 패턴에 대해서 어떤 war가 처리할지를 정한다. 하나의 Host에 여러 contex가 존재할 수 있다.
 						-!! context가 여럿인 경우 server.xml에 정의 하지 말고 별도 파일로 정의하라고 권하는것 같음(server.xml에 정의해도 동작 함)
 						-$CATALINA_HOME/conf/context.xml 에 작성한 경우 모든 webApp들이 로드(사용?)할 수 있다.
@@ -2698,16 +2698,16 @@ Template Engine
 						-webApp가 war로 배포되고 /META-INF/context.xml 가 존재하면 $CATALINA_HOME/conf/[enginename]/[hostname]/로 카피하고 context에 맞게 이름을 변경한다.
 							-서버쪽 $CATALINA_HOME/conf/[enginename]/[hostname]/ 에 이미 파일이 존재하는 경우는 옮기지 않는듯??? 좀더 확인 필요
 							-/META-INF/ 정채가 뭐지??
-							
+
 						-attr인 path는 uri를 통해 진입하는 path의 시작점이다.
 							-<Context path="/" docBase="ROOT" : xx.com/로 진입시 처리해 주는 webApp(war)정의, 상대 경로의 경우 appBase 하위에서 찾는다.
 							<Context path="/myApp" docBase="D:/html/myApp" : xx.com/myApp/로 진입시 처리해 주는 webApp(war)정의, 절대 경로도 사용할 수 있다.
 						-attr인 reloadable가 ture인 경우 /WEB-INF/classes/ 와 /WEB-INF/lib 의 변경을 실시간으로 감지하여 반영해 준다. (상용에서는 사용 비권장)
 						-attr인 privileged ture인 경우 해당 context에서 다른 context의 servlet을 로딩할수 있다???
-						
+
 						-Resource : !!!???
-						
-						
+
+
 					-Valve : Host나 Context 또는 Engine 영역의 request processing pipeline 단에서 특정 작업을 처리하는 component들에 대한 설정을 명시한다. (파이프라인에서 동작하는 벨브??)
 						-여러 Valve가 존재하며 각각의 역할이 있다. (사용하고 싶은 것들에 대해서만 정의 하면 된다, 상대 경로가 필요할 경우 $CATALINA_HOME = $CATALINA_BASE 사용 가능)
 							-Access Log : 엑세스 로그와 관련된 설정
@@ -2718,19 +2718,19 @@ Template Engine
 									-이것들은 기본적으로 host 내의 각각의 context 마다 별도 인증됨
 									-Single Sign On 통해 같은 호스트상의 서로 다른 context 끼리도 인증을 연결해 주기위한 처리???
 									-!!어떤 내용인지 realm 과 session의 동작과 더블어 좀더 확인이 필요!!!
-																			
+
 							-Basic Authenticator : tomcat이 제공하는 기본 인증 기능(Basic Authenticator)에 대한 설정, 설정안해도 기본제공됨, 기본 셋팅에서 수정 필요시 재 정의
 								-Basic Authenticator 설정 기본 : conf/tomcat-users.xml에 Role과 User/PW를 설정하여 사용가능
 								-보통 Tomcat 관리 페이지(기본으로 제공되는 ROOT war 기능)를 이용할때 tomcat-users.xml를 이용할 수 있다.
 								-?? http의 Basic Authentication 과 session 그리고 Role, User의 매칭, 그에따른 크리덴셜 관리가 실제 어떻게 이루어 지는지 좀더 살펴 봐야 함
-								
+
 							-Digest Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)
 							-Form Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)
-							-SSL Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)		
-		
+							-SSL Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)
+
 		-GlobalNamingResources : ????
-		
-	
+
+
 	-환경 변수 :
 		-JAVA_OPTS : JAVA VM 의 메모리 설정과 관련 있는 옵션이다. tomcat이 별도로 설정하지 않는 경우 JAVA_OPT 설정을 따라간다. 톰캣만의 독자 적인 설정을 하고 싶으면 CATALINA_OPTS에 적용하면 된다.
 		-CATALINA_HOME : tomcat 설치 경로
@@ -2739,13 +2739,13 @@ Template Engine
 
 -Tomcat Apache 연동 : ???
 
-	
+
 
 
 
 
 [CDN]
--CDN은 원본서버로부터 전송받아 전달해 주고 캐시하는 역할을 합니다. 
+-CDN은 원본서버로부터 전송받아 전달해 주고 캐시하는 역할을 합니다.
 	-기본적으로 중간 캐시 서버로써 원본 서버에서 에러가 발생한 url의 경우도 CDN에서도 그 에러 상태 그대로를 캐시하여 내려주는 것이지 별도의 처리를 하지 않는다.
 
 
@@ -2754,41 +2754,41 @@ Template Engine
 -설치 :
 	-node.js 홈페이지를 통해 node.js 설치가 가능하며 보통 node.js를 설치하면 npm이 함께 설치됨. (node -v : 설치된 node.js 버전 확인, npm -v : 설치된 npm 버전 확인)
 
--node.js : 
-	-개념 : 
+-node.js :
+	-개념 :
 		-As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications
 		-Chrome V8 JavaScript 엔진으로 빌드된 JavaScript 런타임입니다. Node.js는 이벤트 기반, Non 블로킹 I/O 모델을 사용해 가볍고 효율적입니다. (chrome을 기반으로 한 jvm의 개념과 유사한 런타임 환경)
 		-chrome base의 태생으로 실시간 웹 어플리케이션을 만들기에 적합하고 lock과 직접적인 i/o를 수행하지 않기 때문에 쉽게 확장 가능한 서비스가 개발 가능하다.
 		-특정 js 파일을 실행할 수도 있고 특정 스크립트를 입력하여 실행할 수도 있는 cl 클라이언트를 제공한다. (일종의 컴파일러의 개념도 있어 보인다)
-		
-	-command : 
+
+	-command :
 		-node : 직접 스크립트를 작성하여 테스트 해볼수 있는 cl 환경을 제공한다.
 		-node abc.js : abc.js 파일을 실행해 준다.
--npm : 
-	-개념 : 
+-npm :
+	-개념 :
 		-Node Package Manager, 리눅스의 apt와 유사한 개념으로 javascript 모듈의 완성도를 확인 하여 storege에 올리는 관리 주체로서 사용자는 cl 클라이언트를 이용하여 다운 및 인스톨이 가능하다.
 		-npm 을 통해 관리되는 패키지들은 브라우저 및 node.js 환경 (또는 그러한 개발환경)에서 사용하는 라이브러리, 컴포넌트 개념이다.
-		-본인이 원하는 패키지를 직접 만들수 있도록 프로젝트(?) 개념을 제공하고 있는듯 (package.json 파일이 프로젝트 파일??), 
-		
-	-package.json : 패키지를 정의 하는 메타파일(프로젝트 파일??)		
-		
-	-package-lock.json : 패키지의 내부 dependency(그 dependency 마다 내부에 또 있구..) 마다 버전들이 있는데 그 하위 버전들까지 최상이 패키지는 알기 어렵다, 
-		-그리고 그 버전도 특정 버전이 아니고 범위로 지정되는 경우도 많아서 현재 나의 패키지를 위해 하위 패키지들이 어떤 버전으로 설치되어 있는지 알기 어려움, 
+		-본인이 원하는 패키지를 직접 만들수 있도록 프로젝트(?) 개념을 제공하고 있는듯 (package.json 파일이 프로젝트 파일??),
+
+	-package.json : 패키지를 정의 하는 메타파일(프로젝트 파일??)
+
+	-package-lock.json : 패키지의 내부 dependency(그 dependency 마다 내부에 또 있구..) 마다 버전들이 있는데 그 하위 버전들까지 최상이 패키지는 알기 어렵다,
+		-그리고 그 버전도 특정 버전이 아니고 범위로 지정되는 경우도 많아서 현재 나의 패키지를 위해 하위 패키지들이 어떤 버전으로 설치되어 있는지 알기 어려움,
 		-그러한 일련의 모든 패키지 디펜던시 트리를 제공해 주는 역할을 한다. package.json 파일이 변경되는 시점에 변경된 내용을 기반으로 현재 설치된 정보를 재 정리 하게됨
 		-depency 모듈을 함게 배포하지 않는 경우 반드시 해당 파일도 같이 배포되야 해야 안정적임, (package-lock.json 파일도 git을 통해 관리 할것)
-		
-	-command : 
+
+	-command :
 		-npm init -y : 해당 폴더에 package.json을 생성해줘서 패키지를 구성할 수 있는 토대를 만들어 줌. 추가로 패키지를 인스톨하게 되면 node_modules(설치된 추가 패키지 저장 폴더) 및 package-lock가 생성
 		-npm install mocha --save-dev : mocha라는 디팬던시를 설치해 주고 package.json에 반영해줌, --save(패당 패키지에서만 유효함) -dev(프로덕션 빌드시 포함안됨, 개발할때만 쓰겠다는..)
 		-npm install mocha -g : mocha를 전역 install하겠다는 의미(사용자경로/AppData/Roaming/npm에 설치됨), 링크를 통해 특정 패키지에서 끌어 쓸수 있음
 		-npm link mocha : 전역 설치된 패키지를 끌어다 현재 패키지에 적용할 수 있음
-		
+
 		-npm list : 현재 패키지에 구성된 트리
 		-npm list -g : 글로벌 패키지 구성 트리
 		-npm list -depth=0 : 1 댑스 까지만
-		
-	
-	
+
+
+
 
 
 
@@ -2798,7 +2798,7 @@ Template Engine
 		-프로젝트 :
 			-데이터 형식 :
 				-이슈 :
-				
+
 			-뷰여 형식 :
 				-백로그 :
 				-작업중인 스프린트 :
@@ -2806,17 +2806,17 @@ Template Engine
 				-보고서 :
 				-이슈 :
 				-컴포넌트
-				-WBS Gantt-Chart : 
-			
+				-WBS Gantt-Chart :
+
 		-보드 : 프로젝트의 뷰어 형식의 구성 요소 이기도 하면서 프로젝트를 초월하여 구성도 가능하다.
-			-대시보드 : 
+			-대시보드 :
 				-시스템 대시보드 : 기본으로 제공되는 대시보드로 프로젝트 목록 및 나에게 할된된 이슈등을 보여준다.
 				-개인 대시보드 : 대시보도 관리를 위해 본인이 원하는 항목으로 구성된 대시보드를 만들 수 있다.
-			-개인보드 : 직접 구성한 보드 
-			
-			-WBS Gantt-Chart : 				
+			-개인보드 : 직접 구성한 보드
 
-	-용어 : 
+			-WBS Gantt-Chart :
+
+	-용어 :
 		-scrum :
 		-scrum team : 이러한 조직
 		-product owner : 제품 책임자
@@ -2825,6 +2825,9 @@ Template Engine
 			-sprint backlog : sprint 마다 해야할 일 목록
 		-increment : 매 sprint 마다의 결과물
 		-scrum master : 팀이 과제를 완수할 수 있도록 지원 및 인도
-			
-		
-shkim@topmania.com
+
+
+[DB]
+-백업 :
+	-문리백업 : DB파일 자체를 복사
+	-논리백업 : sql문 형태로 복사
