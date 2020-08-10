@@ -1,3 +1,14 @@
 -Server Name Indication (SNI) is an extension to the Transport Layer Security (TLS) computer networking protocol by which a client indicates which hostname it is attempting to connect to at the start of the handshaking process.
 	-by which : 어떤 computer networking protocol 인지를 수식해 준다.
 	-클라이언트가 어느 호스트로 접속을 시도하고 있는지를 나타내 주는 (수식) 프로토콜이다
+	
+-The CXF SOAP client by default overrides the default host name verifier with its custom implementation.
+	-by default : 기본적으로 
+	
+-Man-in-the-middle attackers can manipulate networks to serve their own keys, thereby compromising any communication.
+
+-Publicly-trusted PKIs, which are trusted by the browsers, must conform to RFC 5280, which requires the use of the X.509 v3 format. X.509 v3 allows certificates to include additional data, such as usage constraints or policy information, as extensions. 
+
+-Each of these extensions is either critical or non-critical, with browsers being required to process and validate all critical ones.	
+
+-Browsers check that a certificate’s issuer field is the same as the subject field of the previous certificate in the certificate path.
