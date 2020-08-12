@@ -462,55 +462,56 @@
 			-confused | frustrated | excited | interested | annoyed | amazed | surprised
 
 	-script : 상황 묘사
-		-It was confusing. It was frustrating. It was really exciting
-		-It was very interesting. It was very annoying. It was amazing. It was surprising.
+		-It was confusing. It was frustrating. It was really exciting (헷갈려, 짜증나, 답답해, 신난다)
+		-It was very interesting. It was very annoying. It was amazing. It was surprising. (진짜 재밌다, 성가셔, 귀찮아, 짱이다, 놀랐어, 깜짝 놀랐어)
 			-confusing | frustrating | exciting | interesting | annoying | amazing | surprising
 
 
 -title : 영어회화, 표헌, 교통수단에 대해서 얘기할 때 사용하는 여러 표현/유형
 	-script : 이용하다
-		-use(take) subway, use(take) bus, use(take) elevator, use(take) escalator, take my bike(놀이가 아니라 이동수단으로 봣을때) (타다)
+		-use(take) subway, use(take) bus, use(take) elevator, use(take) escalator, take my bike(놀이가 아니라 이동수단으로 봣을때) (타다, 이용하다, 엘레베이터, 지하철, 버스, 자전거)
 			-use(take) subway, use(take) bus, use(take) elevator, use(take) escalator, take my bike
 
 	-script : 승차하다(올라타는 동작)
-		-Hey! get on the subway! get off the subway! (올라타, 승차해, 타, 내려)
+		-Hey! get on the subway! get off the subway! (올라타, 승차해, 타, 내려) 
 			-get on the | get off the
 
 	-script : 놀이기구를 타다
-		-go on a ride. go on a roller coaster. go on a viking. Do you like going on rides? I don't like going on a rides. (놀이 타다)
+		-go on a ride. go on a roller coaster. go on a viking. Do you like going on rides? I don't like going on a rides. (놀이 타다, 롤러코스터 타자, 바이킹 타자, 놀이기구)
 			-go on a ride | go on a roller coaster | Do you like going on a |
 
 	-script : 자전거, 오토바이, 말처럼 올라타서 가는거
-		-I'm going to go ride my bike today along the Han river.
+		-I'm going to go ride my bike today along the Han river. (자전거 탈꺼야, 한강 따라서, 뭐뭐 따라서 가다)
 			-go ride (go 동사원 ~뭐뭐 하러가다) | along the |
 
 	-script : 내가 운전해 갈꺼야
-		-How are you going to get there? I'm going to drive there. I'm going to take my car.
+		-How are you going to get there? I'm going to drive there. I'm going to take my car. (어떻게 갈꺼야? 운전할꺼야, 운전해 갈까야, 내차로 갈꺼야)
 			-How are you going to get here? | I'm going to drive there | I'm going to take my car.
 
 	-script : 걸어서 갈꺼야 (보도로)
 		-let's walk. I'm going to walk. (걸어갈꺼야, 걸어가자)
-		-it's about 10 minutes on foot. From here to there, It's about 10 minutes walk (걸어서, 도보로, 분 걸려, 분 거리야)
+		-it's about 10 minutes on foot. From here to there, It's about 10 minutes walk (걸어서, 도보로, 분 걸려, 분 거리야, 여기서 거기까지)
 			-let's walk | I'm going to walk | it's about 10 minutes | on foot | 10 minutes walk
 
 
 -title : 영어회화, talk, speak, say, tell 구분하기
 	-script : talk, speak 말하는 행위
-		-what did you do with your friends? we didn't do much, and we just talked. we talked for 2 hours.
-		-We talked about our job. We talked about our school lives. My friend talked about his girlfriend.
+		-what did you do with your friends? we didn't do much, and we just talked. we talked for 2 hours. (뭐했어?, 별거 안했어, 그냥 얘기했어)
+		-We talked about our job. We talked about our school lives. My friend talked about his girlfriend. (학교 생활)
 			-what did you do with | didn't do much | not much | we just talked | talked about | our job | school lives
 
 	-script : say, tell 말의 내용 (어떤 말을 했다)
-		-She said she was very sick recently. She told me she was very sick recently. They said it's going to rain this week. The president gave a speech, and he said...
+		-She said she was very sick recently. She told me she was very sick recently. They said it's going to rain this week. The president gave a speech, and he said... (엄청 아펏어, 진짜 아펏어, 연설했어, 그러더라)
 			-I said | You said | He said | She said | We said | They said | very sick recently | it's going to rain this week | give a speech, and he said..
 
 
 -title : 영어회화, 연습가이드, be, get, become 의 절묘하고 중요한 관계
 	-script : be(상태, 였어) get(상태의 변화, (변화) 됐어) become(변화의 결과, 최종 이렇게 됐어)
-		-Up until a year ago, we were complete strangers. but after we met at a party, we got really close(r). Now, we've become best friend.
-		-I was really sick. but after some time, I got a lot (much) better. and now, I've  become completely cured.
-		-He was(used to be) the slowest person in our class. But he exercised really hard, he got much faster. And now, he has become the fastest person in our class.
-		-The place used to be completely empty. but after a lot of development, the place got much more popular. And now it's become one of the most popular places in my neighborhood.
+		-Up until a year ago, we were complete strangers. but after we met at a party, we got really close(r). Now, we've become best friend. (언제 까지만 해도, 1년전만 해도, 완전 모르는 사이, 만난 후로, 가까워 졌어)
+		-I was really sick. but after some time, I got a lot (much) better. and now, I've  become completely cured. (진짜 아펏어, 근데 좀 지나서, 지간이 좀지나서, 많이 좋아 졌어, 지금은 완전 낫았어, 치료됐어, 회복됐어)
+		-He was(used to be) the slowest person in our class. But he exercised really hard, he got much faster. And now, he has become the fastest person in our class. (뭐뭐 였었어, 이곤했어, 느린사람, 우리반에서, 빨라졌어)
+		-The place used to be completely empty. but after a lot of development, the place got much more popular. (완전히 비어 있어, 많은 개발이후, 훨씬 인기가 좋아)
+		-And now it's become one of the most popular places in my neighborhood. (것중에 하나가 됐어, 가장 인기있는 것중에 하나, 가장 인기있는 장소중 하나, 우리 동네에서)
 			-Up until a year ago, | we were complete strangers | but after we met at a party | got really close(r) | We've become | but after some time, | I got much better
 			-I got a lot better | and now, | I've become | completely cured | He was the slowest person | He used to be the slowest person | in our class | got much faster | the fastest person
 			-The place used to be completely empty | but after a lot of | much more popular | it's become | one of the most | in my neighborhood
@@ -518,13 +519,14 @@
 
 -title : 시급한교정, expect의 올바른 이해와 '기대하다', '기대되다'를 자연스럽게 표현하는 방법
 	-script : 예상하다 의 기대
-		-You shouldn't (must not 하면 안돼) expect your parents to do everything for you. I was expecting everyone to be (come) on time. I don't expect everyone to agree with me.
+		-You shouldn't (must not 하면 안돼) expect your parents to do everything for you. (하면안돼, 안하는게 좋아, 기대하지마, 너대신, 널위해)
+		-I was expecting everyone to be (come) on time. I don't expect everyone to agree with me. (재때 오다, 시간마춰 오다, 딱 맞춰 오다, 동의하다)
 			-You shouldn't | You must not (하면안돼)| expect someone to | for you (대신) | I was expecting (..중이었어, 상황을 그리는 느낌) | be on time | agree with
 
 	-script : 너무 좋겠다(하고싶은)는 의미의 기대 (I can't wait to / look forward to something(doing something))
-		-Oh~ I can't wait to get the new iPhone X. I can't wait to graduate and start making money. I can't wait to move out of my parents place.
-		-I'm really looking forward to the movie. We're really looking forward to the trip next month.
-		-My parents are really looking forward to meeting my boyfriend. I'm so sorry, I know you were really looking forward to it.
+		-Oh~ I can't wait to get the new iPhone X. I can't wait to graduate and start making money. I can't wait to move out of my parents place. (못참겠어, 기대돼, 하고싶어, 갖고싶어, 새 아이폰, 졸업하고, 돈벌다, 이사 나오다)
+		-I'm really looking forward to the movie. We're really looking forward to the trip next month. (뭐뭐가 너무 기대돼, 다음달 여행)
+		-My parents are really looking forward to meeting my boyfriend. I'm so sorry, I know you were really looking forward to it. (뭐하는걸 기대하고 있어, 미안해 니가 정말 기대했는데.. 기대했는걸 아는데...)
 			-Oh~ I can't wait to (명,동) | start making money | make money | move out of | out of | look forward to | I'm looking forward to (명, 동명+명) | the trip next month
 			-are really looking forward to meeting his girlfriend | I'm so sorry, I know you were | I'm so sorry, I know you were really looking forward to it.
 
