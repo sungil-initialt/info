@@ -531,18 +531,35 @@
 			-are really looking forward to meeting his girlfriend | I'm so sorry, I know you were | I'm so sorry, I know you were really looking forward to it.
 
 
--title :
+-title : 영어회화, comfortable 와 convenient 그리고 현하다, 알고보면 다른 말들
 	-script :
+		-The bed is very comfortalbe. This app is really convenient. (편안해, 편해, 편리해)
+			-very comfortable | really convenient
 
 
--title :
+-title : 영어회화, 시급한교정, 내가 알기로는, 내가 듣기로는, 내가 보기에는 자연스러운 영어를 위한 필수 표현 3가지
 	-script :
+		-As far as I know, that movie is releasing this week.	Based on what I know, According to what I know, To my knowledge, (내가 알기로는, 내가 아는바론, 내가 알고있기론, 내가 아는것에 따르면, 내지식에 따르면, 영화 개봉해)
+		-From what I hear, From what I heard, From what I've heard, As far as I've heard, I was told that...(내가 듣기론, 내가 들어오기론, 내가 들었을때는)
+		-The way I see it, the timing was the problem. As far As I can tell,(내가 보기로는, 내가 판단하기로는)
+			-As far as I know | Based on what I know | According to what I know | To my knowledge | From what I hear | From what I heard | From what I've heard | As far as I've heard | I was told that
+			-The way I see it | As far as I can tell | movie is released | movie is releasing this week | the timing is the problem.
+			
 
-
--title :
+-title : 영어회화, 표현, 아까, 이따가, 얼마전에, 나중에, 일상적으로 사용하는 시간표현 영어로 자연스럽게 말하는 법
 	-script :
-
-
+		-
+			-5 minutes ago |  several hours ago | a couple of hours ago | several minutes ago | a few minutes ago (아까)
+			-I spoke with him on the phone | earlier today |  earlier this morning | earlier this afternoon | earlier this evening (아까 오전에, 아까 오후에, 아까 저녁에)
+			-in several hours | several hours from now | in 2 hours | an hourlater today | later this morning | later this afternoon | later this evening | later tonight (이따가)
+						
+			-a week ago | several months ago | several days ago | a couple of weeks ago | a (little) while ago | earlier this week | earlier this month | earlier this year (얼마전에)
+			-later this week | later this month | later this year | later this quarter | a week from now | in a week | a year from now | in a year | several days from now | in several days (나중에)
+			
+			-a while later | some time later | in my life (나중에 언제가는, 인생에서 언젠간)
+			
+			
+			
 -title :
 	-script :
 
