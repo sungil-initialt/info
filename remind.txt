@@ -1839,11 +1839,14 @@ Sourcetree : GIT 클라이언트 툴
 -용어 :
 	-SLA(Service Level Agreement) : 해당 서비스의 성능(?), API 호출수,  장애(?) 상황등에 대한 보장 이다
 
--Azure :
+-주요 서비스 제공자 :
+	-Azure :
+	-AWS :
+	-GCP :
+	
 
--AWS :
-
--GCP :
+[AWS]
+	-EC2: Amazon Elastic Compute Cloud, EC2
 
 
 [DevOps]
@@ -2319,7 +2322,7 @@ Template Engine
 -Token Based Authentication :
 	-web 전통 방식 인증 : id/pw 입력후 유효하면 session 및 cookie를 생성하여 다음 요청시 사용
 	-단점 :
-		-web base가 아닌 Mo 앱등 cookie를 사용할 수 없는 환경에서 한계가 있음, 어떠한 형태의 client의 요청에도 인증하기 위해 token 방식이 이용됨
+		-web base가 아닌 Mo 앱등 cookie를 사용할 수 없는 환경에서 한계가 있음, 어떠한 형태의 client의 요청에도 인증하기 위해 token 방식이 이용됨, 특히 API 서버인 경우 client가 브라우저가 아닌경우가 대부분이기 때문
 		-서버 세션등의 사용은 서버의 리소스 증가를 발생시키며 Stateful 서버의 형태로 dependency가 생긴다.
 
 
@@ -2337,18 +2340,20 @@ Template Engine
 	-절차 : https 를 사용하여 id/pw(hashed) 서버 전송 -> 인증 -> (access)Token 생성(JWT방식)및 반환 (header? body?) -> 다음 요청시 header에 Authentication : Bearer 값 전송하여 인증
 		-http 해더 ex: Authorization: Bearer eyJhbGciOiJSU...
 
-	-token을 만드는 방식
+	-Access token을 만드는 방식
 		-의미 없는 고유키값을 토큰으로 사용하는 방식 : face북등의 OAuth의 경우 그저 유니크한 토큰을 발급 (해당 토큰을 통해 원하는 정보를 lookup 해야 함, lookup을 위한 리소스 낭비 발생)
-		-token 자체에 필요한 정보를 담는 방식 : id, 권한, 롤 등 기타 필요 정보를 담음 (서버가 해당 토큰을 까서 직접 필요한 정보를 얻을 수 있다)
+		-token 자체에 필요한 정보를 담는 방식 : id, 권한, 롤 등 기타 필요 정보를 담을 수 있다. (서버가 해당 토큰을 까서 직접 필요한 정보를 얻을 수 있다)
 
 		-토큰 생성 스팩 :
-			-JWT(Json Web Token) : 정보를 담는 인증 토큰을 만들기 위한 포맷,
+			-JWT(Json Web Token) : 기본(?) 정보를 담을 수 있는 인증 토큰을 만들기 위한 포맷,
 				-구성요소 : Header, Payload, Signature
 				-Header : 토큰 타입과 암호화 방법을 정의 (Base-64 인코딩됨) =>B-64({typ:'JWT', alg:'HS256'})
 				-Payload : 필요한 정보 (유저 및 기타 상품 정보 등, Base-64 인코딩됨) =>B-64({name:'sungil', grade:'admin'})
 				-Signature : 유효성을 체크하기 위한 값 => HMACSHA256(B-64(header)+','+B-64(payload)+','+secret_key), secret_key는 서버에 안전하게 보관되야 함
 				-token값 : Header + '.' + Payload + '.' + Signature
 
+	-refresh token : ????
+	
 	-기본 system 아키텍쳐 : client, Load-Balancer, 인증서버, API서버
 		-흐름1 : client 인증요청(id/pw) -> Load-Balancer 적절한 인증서버로 요청 -> 인증서버는 id/pw 확인하여 Token 값 생성하여 반환 (id/pw 오류시 에러 페이지로 redirect)
 		-흐름2 : client API 요청(token 값을 Bearer 값으로 사용하여 요청) Load-Balancer 적절한 인증서버로 요청 -> bearer값이 유효한 경우 적절한 API 서버로 redirect (인증오류시 403)

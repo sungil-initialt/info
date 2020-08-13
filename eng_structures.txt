@@ -1,6 +1,7 @@
 -Server Name Indication (SNI) is an extension to the Transport Layer Security (TLS) computer networking protocol by which a client indicates which hostname it is attempting to connect to at the start of the handshaking process.
 	-by which : 어떤 computer networking protocol 인지를 수식해 준다.
 	-클라이언트가 어느 호스트로 접속을 시도하고 있는지를 나타내 주는 (수식) 프로토콜이다
+	-at the start of the handshaking process.
 	
 -The CXF SOAP client by default overrides the default host name verifier with its custom implementation.
 	-by default : 기본적으로 
@@ -12,3 +13,24 @@
 -Each of these extensions is either critical or non-critical, with browsers being required to process and validate all critical ones.	
 
 -Browsers check that a certificate’s issuer field is the same as the subject field of the previous certificate in the certificate path.
+
+-when the upstream Internet service provider was replaced, but could not route the networks address space.
+
+-The hidden addresses are changed into a single (public) IP address as the source address of the outgoing IP packets so they appear as originating not from the hidden host but from the routing device itself
+
+-This method enables communication through the router only when the conversation originates in the private network since the initial originating transmission is what establishes the required information in the translation tables.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LG전자 55UT641S0NB (스탠드)
