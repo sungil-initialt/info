@@ -559,25 +559,66 @@
 			-a while later | some time later | in my life (나중에 언제가는, 인생에서 언젠간)
 			
 			
+-title : 영어회화, 표현, 마침, 혹시, 자연스러운 영어 구사를 위한 필수 영어 표현
+	-script : 
+		-I happen to have some cash on me right now. I happen to have a really good idea. 
+		-I happen to have some left-over from yssterday in my refrigerator. There happen to be some left-over ..
+		-It just so happens that I have some cash on me. It just so happens that I have a really good idea. 
+		-It just so happens that I have some left-over from yesterday in my refrigerator.
+		
+		-Do you happen to have some cash on you right now? Do you happen to know where I could get(buy) something like this? Do you happen to have something to eat?
+		-Do you by any chance have something to eat right now? Do you by any chance have some cash on you? Do you have some cash on you by any chance? 
+		
+		-Do you happen to know someone who is planing to go abroad soon? Do you happen to know someone who is plaing to go on a trip overseas soon?
+		-I happen to know someone who is planing to go to Australia soon. I happen to know someone who is planing to go on a trip to Australia.
+		-It just so happens that I know someone who is planing to go to Australia soon. It just so happens that I know someone whowho is going to Australia.
+		
+		
+-title : 영어회화, 연습가이드 03, 기본, 시간표현, 시제 훈련 패턴
+	-script : 
+		-I used to eat only pepperoni pizza. But one day, a friend said that I shoud try a Hawaiian pizza. And so I did. And I liked it. 
+		-It was really good. So, I started eatting Hawaiian pizza much often.
+		-And Since then, whenever I want a pizza, I've been getting the Hawaiian rather than the pepperoni.
+		-And nowadays, I only eat Hawaiian. I can't eat pizza without pineapple toppings.
+
+
+-title : 시급한 교정 02, 자연스러운 영어 구사를 위해 반드시 필요한 교정 한묶음
+	-script :
+		-I usually hang out with my friends on weekends. This morning, a bird flew into my apartment.
+		-This weekend, my friends are coming over to my apartment. Last weekend, I wend over to my friend's apartment.
+		-I went over to his place last weekend. Last weekend, I went over to my friend's place.
+		-Hey, let's go over to Susan's place and hang out there. 
+		-I'm going to go home. I have to go home. I think I shuold get back home now. I got back home late yesterday. What time are you getting back home today?
+			-all week(일주일내내) | all this week(이번주일주일내내) | this week | last week | this weekend | next weekend | last weekend | on weekdays(평일에는) | on weekends(주말에는) | apartment complex(아파트 단지)
+			-go home | stay home | leave home | go back home |  get back home | 
+		
+		-I'm going to go on a diet (from) next week. Are you on a diet now? I'm on a diet now. I was on a diet util last week.
+		-How long have you been on a diet? How long has it been?
+		-I want to lose weight. I want to lose 5kg. I lost 2kg. I've lost 2kg os far. Wow, you've lost a lot of weight. 
+			-go on a diet | be on a diet | gain weight | lose weight | gain 2kg | lose 5kg
 			
--title :
+		
+-title : 영어회화, 연습가이드 04, 막 하고나서, 막 하려는 순간에, 과거완료 시제
 	-script :
+		-This morning, I was at home. I had just eaten breakfast. Just as I was about to leave, I had to go to the bathroom really bad.
+		
+		-Last night, I had just gotten off work. I was in front of the my office building. 
+		-And just as I was about to take the bus, I noticed that I didn't have my wallet with me.
+		-So what did you do? What else could I do? I had to go back up to get it.
+
+		-A few days ago, I was in the school library. I had just finished my report. And just as I was trying to send it to my professor,
+		-I started having problems with my Wi-Fi connection!
+		
+		-This morning, I was at home. I had just gotten up. 
+		-And just as I was walking over to the bathroom, I heard mother talking to someone downstairs.
+		
+		-3 years ago, I had just graduated from school. And just as I was getting ready to get a job, my uncle passed away.
 
 
--title :
+-title : 영어회화, 시급한 교정, by와 until에 대해서 올바르게 이해하고 사용하기
 	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
+		-I have to submit this by Wednesday. I have to finish this by the end of the day today. I have to be in Jongro by 2 o'click.
+		-I'm going to study until 10 o'clock. Hey, Let's wait her until 6 o'clock. If she's not here until then, we can just leave without her.
 
 
 -title :
