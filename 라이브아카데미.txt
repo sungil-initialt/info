@@ -619,6 +619,34 @@
 	-script :
 		-I have to submit this by Wednesday. I have to finish this by the end of the day today. I have to be in Jongro by 2 o'click.
 		-I'm going to study until 10 o'clock. Hey, Let's wait her until 6 o'clock. If she's not here until then, we can just leave without her.
+		
+		
+-title : 영어회화, 연습가이드 08, 자연스러운 영어 구사를 위한 훈련가이드 
+	-script :
+		-Recently, I bought a new laundry machine and it arrived yesterday. It turned out to be much bigger than I thought.
+		-I was going to put it in my bathroom, but it didn't fit. So, you know there wasn't anything I could do. I had to send it back.
+		-It's not like I could keep it in my bedroom, right? 
+		-But you know, it just feel like too much troble looking for a different model and scheduling another delivery.
+		-So, I just canceled the purchase and I decided to keep using my old one.
+
+
+-title : 영어회화, 표현, 상관없어요의 2가지 의미와 영어로 표현하는 방법
+	-script :
+		-what does that matter? It doesn't really matter. I don't think it really matter. It doesn't matter to me what he says. (상관없어, )
+		
+		-what does that have to do with this? (그게 이거랑 무슨 상관이 있어? ), This has a lot to do with that. That doesn't have anything to do with this.
+		-This has nothing to do with you. That has nothing to do with this.
+		-Why does this happen? It has something to do with the worsening economy. (it's because of the worsening economy)
+			-have something to do with (~과 상관이 있다) | have nothing to do with | have a lot to do with | have little to to with | don't(doesn't) have anything to do with
+			
+		-This doesn't concern you. (이건 너한테 해당되지 않아)
+		
+		-The two incidents were related to each other (연결되 있다)
+		
+			
+
+
+
 
 
 -title :
