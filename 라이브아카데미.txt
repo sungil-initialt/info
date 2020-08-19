@@ -559,15 +559,117 @@
 			-a while later | some time later | in my life (나중에 언제가는, 인생에서 언젠간)
 			
 			
+-title : 영어회화, 표현, 마침, 혹시, 자연스러운 영어 구사를 위한 필수 영어 표현
+	-script : 
+		-I happen to have some cash on me right now. I happen to have a really good idea. 
+		-I happen to have some left-over from yssterday in my refrigerator. There happen to be some left-over ..
+		-It just so happens that I have some cash on me. It just so happens that I have a really good idea. 
+		-It just so happens that I have some left-over from yesterday in my refrigerator.
+		
+		-Do you happen to have some cash on you right now? Do you happen to know where I could get(buy) something like this? Do you happen to have something to eat?
+		-Do you by any chance have something to eat right now? Do you by any chance have some cash on you? Do you have some cash on you by any chance? 
+		
+		-Do you happen to know someone who is planing to go abroad soon? Do you happen to know someone who is plaing to go on a trip overseas soon?
+		-I happen to know someone who is planing to go to Australia soon. I happen to know someone who is planing to go on a trip to Australia.
+		-It just so happens that I know someone who is planing to go to Australia soon. It just so happens that I know someone whowho is going to Australia.
+		
+		
+-title : 영어회화, 연습가이드 03, 기본, 시간표현, 시제 훈련 패턴
+	-script : 
+		-I used to eat only pepperoni pizza. But one day, a friend said that I shoud try a Hawaiian pizza. And so I did. And I liked it. 
+		-It was really good. So, I started eatting Hawaiian pizza much often.
+		-And Since then, whenever I want a pizza, I've been getting the Hawaiian rather than the pepperoni.
+		-And nowadays, I only eat Hawaiian. I can't eat pizza without pineapple toppings.
+
+
+-title : 시급한 교정 02, 자연스러운 영어 구사를 위해 반드시 필요한 교정 한묶음
+	-script :
+		-I usually hang out with my friends on weekends. This morning, a bird flew into my apartment.
+		-This weekend, my friends are coming over to my apartment. Last weekend, I wend over to my friend's apartment.
+		-I went over to his place last weekend. Last weekend, I went over to my friend's place.
+		-Hey, let's go over to Susan's place and hang out there. 
+		-I'm going to go home. I have to go home. I think I shuold get back home now. I got back home late yesterday. What time are you getting back home today?
+			-all week(일주일내내) | all this week(이번주일주일내내) | this week | last week | this weekend | next weekend | last weekend | on weekdays(평일에는) | on weekends(주말에는) | apartment complex(아파트 단지)
+			-go home | stay home | leave home | go back home |  get back home | 
+		
+		-I'm going to go on a diet (from) next week. Are you on a diet now? I'm on a diet now. I was on a diet util last week.
+		-How long have you been on a diet? How long has it been?
+		-I want to lose weight. I want to lose 5kg. I lost 2kg. I've lost 2kg os far. Wow, you've lost a lot of weight. 
+			-go on a diet | be on a diet | gain weight | lose weight | gain 2kg | lose 5kg
 			
--title :
+		
+-title : 영어회화, 연습가이드 04, 막 하고나서, 막 하려는 순간에, 과거완료 시제
 	-script :
+		-This morning, I was at home. I had just eaten breakfast. Just as I was about to leave, I had to go to the bathroom really bad.
+		
+		-Last night, I had just gotten off work. I was in front of the my office building. 
+		-And just as I was about to take the bus, I noticed that I didn't have my wallet with me.
+		-So what did you do? What else could I do? I had to go back up to get it.
+
+		-A few days ago, I was in the school library. I had just finished my report. And just as I was trying to send it to my professor,
+		-I started having problems with my Wi-Fi connection!
+		
+		-This morning, I was at home. I had just gotten up. 
+		-And just as I was walking over to the bathroom, I heard mother talking to someone downstairs.
+		
+		-3 years ago, I had just graduated from school. And just as I was getting ready to get a job, my uncle passed away.
 
 
--title :
+-title : 208 영어회화, 시급한 교정, by와 until에 대해서 올바르게 이해하고 사용하기
 	-script :
+		-I have to submit this by Wednesday. I have to finish this by the end of the day today. I have to be in Jongro by 2 o'click.
+		-I'm going to study until 10 o'clock. Hey, Let's wait her until 6 o'clock. If she's not here until then, we can just leave without her.
+		
+		
+-title : 시급한 교정 03, for -ing에 대한 오해와 올바른 사용, 다른데, 다른거, 다른사람, 다른방법, 다른이유, 다른때
+	-script :	
+		-This button here, this button is for adjusting the volume. (용도)
+		-I bought this notebook for taking notes. This cake is not for eating. It's for decorating.
+		-In my wallet, there's a small pocket for carrying coins.
+		-I come here everyday to study English. I get up early everyday to exercise (work out). I make these videos to help people. (목적)
+		
+		-We went to a restaurant and there were too many people, so we went to somewhere else.
+			-somewhere else | some other place | someplace else | other place(X) | another place(x) | (딴데)
+			
+		-Right after she broke up with him, she immediately met someone else (some other guy). (딴사람)
+			-something else | some other model | some other brand | someone else | some other person(man, guy, woman) | (딴거, 딴사람)
+		
+		-I think we need to find(look for) some other way.
+			-some other way | some other reason | some other time (딴방법, 딴이유, 딴때)
+		
 
+-title : 영어회화, 연습가이드 05, 일상적으로 사용하는 문맥으로 영어 말하기 훈련
+	-script :	
+		-Yesterday, I went to the department store. There was a coat that I really liked.
+		-The clerk said that it was the last one. So, I could've just bought(gotten) it, right away. (바로 살수도 있었다)
+			-could've pp (할수도 있었다) |
+			
+		-But I wanted to see if there was something better.
+		-But I couldn't find anything better.
+		-But by the time I went back to the first store, someone had(대과거) already purchased(bought) that coat. 
+		-I should've bought(gotten) it when I had the chance. (샀어야 했었어, 샀어야 했는데)
+			-should've pp (해야 했었어, 했었어야 되는데)
+	
+	
+-title : 영어회화, must have, might have, couldn't have, 했나보다 했을수도 있다, 했을리가 없다.
+	-script :	
+		-You must've been really frustrated. (했겠다)
+		-One of my friends recently quit her job. I don't know(글쎄요), she must've had some probles with her boss.
+		-Either that or(그게 아니라면), she might've had some health problems. 
+		-Either way(어느쪽이든간에, 뭐든간에, 두개일 경우만 사용가능), it couldn't have been because she was sick and tired of the job. (got tired of the job) (그랬을리가 없다)
+			-have some problems with (누구와 문제가 있다) | have a problem with (누구에게 불만이 있다)
 
+	
+-title : 영어회화, 자연스러운 영어구사를 위한 연습가이드, look, look like, almost look as if, it was clear, judging by
+	-script :	
+		-Just now(before), on my way here, I saw a dog wandering around by itself.
+			-I saw a man smoking | I saw a woman holding a baby | There were children playing in the park
+		-It looked really dirty. It looked like it hadn't(대과거) washed(taken a bath) in several months.(몇달은)
+		-It was pretty clear that it didn't have an owner. (보나마나)
+		-The worst thing(part) was the dog was so thin(skinny), it almost looked as if it had nothing left but(Except) its skin and bones.
+		-Roughly judging by its size and everything, I think it was pretty young.
+
+	
 -title : 영어회화, 연습가이드 08, 자연스러운 영어 구사를 위한 훈련가이드 
 	-script :
 		-Recently, I bought a new laundry machine and it arrived yesterday. It turned out to be much bigger than I thought.
@@ -591,439 +693,6 @@
 		-The two incidents were related to each other (연결되 있다)
 		
 			
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
-
--title :
-	-script :
-
 
 -title :
 	-script :
