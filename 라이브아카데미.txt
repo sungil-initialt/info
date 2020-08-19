@@ -694,8 +694,16 @@
 		
 			
 
--title :
+-title : 영어회화, 대화가이드 01, part1/2, 일상적으로 이루어지는 대화로 배우는 영어호화
 	-script :
+		-I'm thinking of going out for some lunch right now. I'm thinking of setpping out(outside) for some fresh air.
+		-Do you want to come along? Do you want to come with me? Do you want to join me?
+		-Oh! sure. That sound great. But, you know, I'm in the middle of something right now, Could you wait for me a little bit?
+		-like 5 minutes? It'll take only(about) 10 minutes. It won't take more than 10 minutes.
+		-I will be downstairs. Ok, I will be there as soon as I can. (No,) That's ok, Take your time.			
+			
+		-I'm thinking of traveling overseas during my winter vacation.
+			-be thinking of(about) -ing | go out for a walk | go out for a drive | 
 
 
 -title :
