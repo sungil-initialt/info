@@ -692,7 +692,6 @@
 		
 		-The two incidents were related to each other (연결되 있다)
 		
-			
 
 -title : 영어회화, 대화가이드 01, part1/2, 일상적으로 이루어지는 대화로 배우는 영어호화
 	-script :
@@ -706,5 +705,90 @@
 			-be thinking of(about) -ing | go out for a walk | go out for a drive | 
 
 
--title :
+-title : 영어회화, 연습가이드09, 아직을 영어로 표현하는 여러가지 유형
 	-script :
+		-There is an event tomorrow, and a very famous author will be giving a speech. (연설하기로 되있다)
+		-How was it? (어땟니? 기대심리) What was it like?(정말 궁금한 느낌의 어땟니?). 
+			-will be -ing (하기로 되어있다) |
+				
+		-Do you have any plans during the holidays next month?
+		-I might be going on a short trip with my parents. (갈찌도 모른다)
+			-might be -ing(할찌 모른다) | 
+		
+		-But it's not for sure yet. So far, we've olny decided where to go.
+		-We haven't even decided on a specific date, yet.
+		-I still have to check with my boss (about) what my work schedule is going to be like, that week. (어떻게 될찌)
+			-is going to be like(어떻게 되다) |
+
+
+-title : 영어회화, 연습가이드 10, 일상적으로 사용하는 문맥으로 영어 말하기 훈련
+	-script :
+		-I thought I would've gotten really good at it by now.
+		-I thought it would've (been) finished(ended) by now.
+		-I thought you would've quit your job by now.
+		-I thought he would've gotten marryed by now.
+			-would've pp(일쭐) | by now | 
+			
+		-How did it go? Did you hear from the school?
+		-No, actually I'm still working on my application.
+		-What happen?(어떻게 된거야)? I thought you would've submitted it by now.
+		-I was afraid(worried) that there might be some typos, so I was up all night double-checking it.
+		-I don't want to look careless. I don't want them to think that I lack responsibility.
+		-What if they find a typo and don't even read through the entire application.
+		
+
+-title : 영어회화, 대화가이드 01, part 2/2, 간접화법 기초 훈련
+	-script :
+		-I'm on my way to breakfast. I'm on my way to lunch. I'm on my way to dinner. I'm on my way to the party. I'm on my way to the festival. I'm on my way to class.
+			-I'm on my way to (the) |
+
+		-She said she was on her way to lunch and asked me if I wanted to come along?
+		-I told her I was in the middle of something and asked her if she could wait for me a little bit.
+		-She said she would be downstairs.
+		-And I told her I would be there as soon as I could.
+		-She told me (that) I didn't need to hurry.
+			-She said | She told 누구 | 
+
+
+-title : 영어회화, 표현, 빈도묘사, 하루에 한번, 2~3일에 한번, 어쩌다가 한번씩, 때때로
+	-script :
+			-once a day | twice a week | three times a month | 
+			-once every two days | once every three weeks | once every four months | every other week (격주로) | once every two or three days (2,3일에 한번씩)| once in a while | from time to time (때때로)
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
