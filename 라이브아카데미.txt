@@ -772,8 +772,29 @@
 			-around this time of the year | towards the end(뒤로갈수록) | towards the end of the xxx | as Christmas comes(gets) closer | as we get closer to xxxx
 			
 			
+-title : 대화가이드 02, 일상적으로 나누는 대화패턴으로 영어 말하기 훈련
+	-script :
+		-I'm going to get a new phone. What did you do on the weekend? How was your weekend? did you do something? I didn't do much. Not much. you? 
+		-Didn't you say you were moving?
+		-Didn't you say you were going to move? 
+		-Didn't you say you were going to get a new phone? 
+		-Didn't you say you were going to break up with her?
+		-Didn't you say you were going to call me?
+		-Didn't I say I was going to be here?
 
-
+		-Oh~ right! Check it(this/that) out~(짜잔~). I think you shoud check it out.(확인해 보는게 좋을꺼야)
+		-I got this fixed(사역 get pp) 수리 받았어. I got it delivered yesterday. I have to get some clothes dry-cleaned.
+		-I've tried getting it fixed a couple of times. (사역), (try to 노력하다, try -ing 해보다)
+		
+		-How was your weekend? Did you do something?
+		-Not much, you? 
+		-Didn't you say you were going to get a new phone?
+		-Oh! right! Check it out~
+		-Congratulations! What about your old one? (What about the one you were using before?) Is it broken?
+		-Yeah, I think so. I've tried getting it fixed a couple of times. but for some reason, I kept causing problems(acting up) (keep -ing 계속 뭐뭐하다, cause problems 문제가 발생하다, act up 오작동이 일어나다).
+		-So, I decided (that) it was the time to buy(get) a new one.
+			-I decided that (이다 싶었어)
+		
 
 
 
