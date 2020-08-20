@@ -756,11 +756,22 @@
 			-once every two days | once every three weeks | once every four months | every other week (격주로) | once every two or three days (2,3일에 한번씩)| once in a while | from time to time (때때로)
 			
 
+-title : 영어회화, 발음, can, cann't 발음 구분하기
+	-script :
+		-I can(사이짧게)finish this by tomorrow. I cann't(한박자쉬고)finish this by tomorrow.
+		-It's hard for me to get up early in the morning. It's hard for me to speak in front of many people.(잘못한다). I cann't speak in front of many people.(뭔가할수없는 이유가 있는 느낌)
+		-These days, I'm having a hard time sleeping.(수면에 어려움을 겪고 있다) I'm having a hard time diciding which one to buy. I cann't dicide which one to buy. (뭔가할수없는 이유가 있는 느낌)
+			-It's hard for me to | I cann't | It's not easy for me to | I'm struggling to | I'm having a hard time -ing |
+			
 
-
-
-
-
+-title : 영어회화, 표현, 시간표현, 이맘때쯤, 연말에 가까워질 수록
+	-script :
+		-Around this time of the year, there are a lot of gatherings. We get really busy around this time of the year. (이맘때쯤)
+		-There are a lot of year-end gatherings around this time of the year and it gets even worse towards the end of the month. (특정 시기에 가까워질 수록)
+		-There are a lot of year-end gatherings around this time of the year and it gets even worse as Chistmas comes(gets) closer. as we get closer to Christmas.
+			-around this time of the year | towards the end(뒤로갈수록) | towards the end of the xxx | as Christmas comes(gets) closer | as we get closer to xxxx
+			
+			
 
 
 
