@@ -753,6 +753,8 @@ Git : version control system, local에서 개발자 단독으로 사용가능, D
 		- working Directory : 실제 작업 디렉토리(수정되면 해당파일은 modified 상태가 됨)
 		- staging Area(가상의 공간으로 index라고 부름) :
 		- git directory(Repository) : 수정된(새로생성된) 파일이 최종 commit 되어 해당 파일이 snapshot된 상태
+		
+	-git Graph 에서의 HEAD 의 의미 : 트정 브랜치로 체크아웃 한것이 아니라 특정 브랜치의 특점 시점으로 체크아웃 한후 그 위치에서 코드를 수정한 경우 해당 위치를 HEAD로 표기한다.
 
 
 	-git 설치
@@ -3065,7 +3067,9 @@ Template Engine
 			-issuer(발급자) : 해당 인증서의 발급자 (보통 인증서의 경우 자신의 인증서에 자신을 발급한 ICA, 그상위의 ROOT CA를 포함하여 구성)
 			-public key(공개키) : 주체자에게 전달할 데이터를 암호화할 키값
 			-issuer (발급자,기관) : 인증서를 발행한 인증 기관
-			-signature(지문) : 자기 인증서의 내부 정보를 해쉬한 후 상위(발급자) 인증서의 비밀키로 암호화한 값(상위 인증서의 공개키로 복화했을때 정상이면 위변조가 없는 것으로 판단)
+			-fingerPrint (지문) : 해당 인증서 정보를 hash 한 값
+			-signature(서명) : 해당 인증서의 fingerPrint 값을 private 키로 암호한 값(해당 인증서의 public 키로 복호화 했을때 fingerPrint와 동일하면 위조되지 않았음을 나타낸다.) !! 서명값은 사람이 보는 용이 않임으로 ssl 정보에 보통 표기 되지 않는다.
+				-해당 인증서 자체의 위조 여부는 해당 인증서의 상위 인증서에서 동일한 방식으로 확인(Chain of Trust)
 			
 			-subject(신청시 CN값, 주체) : 인증서의 소유자 (사람이나 서버(도메인))
 			-DNS Name(신청시 SAN값, 주체 대체 이름) : V3 확장 필드로 멀티 도메인 인증서인 경우 포함할 도메인 네임들(FQDN)
@@ -3085,7 +3089,7 @@ Template Engine
 					-CRL은 해지, 패기된 인증서 목록을 받아와서 확인하는 것
 					-OCSP는 서버를 통해 확인 요청 하는것, IETF에서 승인된 인증서 유효성 점검 방법은 OCSP(Online Certificate Status Protocol)이다. ??? OCSP에 대해 더 확인 필요!!
 				
-		-인증서 파일 확장자 (주요)
+		-인증서 파일 종류
 			-.CER : 암호화된 인증서, 복수의 인증서도 가능
 			-.PEM (Privacy Enhanced Mail) : Base64로 인코딩 된 인증서로 "-----BEGIN CERTIFICATE-----"와 "-----END CERTIFICATE-----" 가운데에 들어간다.
 			-.DER, .P7B, .P7C, .PFX, .P12 … : ????
