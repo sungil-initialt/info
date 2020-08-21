@@ -796,21 +796,39 @@
 			-I decided that (이다 싶었어)
 		
 
+-title : 영어회화, 연습가이드 11, 일상적으로 사용하는 문맥으로 영어 말하기 훈련
+	-script :
+		-I'm really hoping that it doesn't rain this weekend. I'm really hoping that I can move to a bigger house next year.
+		-Something came up and I had to go back home. If something comes up, let me know.
+			-I'm really hoping that | I'm really hoping to | something comes up(일이 생기다) | 
+		
+		-I'm planing to go skiing this weekend with some friends. I'm really hoping that we can go this time. We've already postponed it twice.
+		-And Everyone is going to get pretty busy soon, if we can go this time, we might not get another chance this year.
+		-So this time, we made promise. As long as it's not an emergency, nobody can cancel. (no one is allowed to cancel)
+		-So, unless something comes up, I think we are going to be able to go this time.
 
 
+-title : 필수 영어 표현, 여러모로, 어느정도, 어떻게 보면
+	-script :
+		-Let's go with black(one). I like this idea. Let's go with that.
+		
+		-I think I'm just going to go with a compact car. I understand it can be inconvenient in many ways. But there's no such thing as a perfect car.
+		-Whaterver I go with, I'm going to have to make compromises on some levels. Beside, I have to think about money at the moment.
+		-So in some ways(어떻게 보면), that's the smartest option. (그게 가장 현명한 선택이야)
 
 
+-title : 영어회화, 문법, 차이점에 대해서 말할 때 꼭 필요한 패턴
+	-script :
+		-My friend is taller than me. I'm shorter than my friend. I'm not as tall as my friend.
+			-B is not as big as A (B는 A만큼 크지 않다)
+
+		-Yesterday wasn't as colder as today. Yesterday, it wasn't as colder as it is today.
+		-Today is colder than yestderday. Today, it is colder than it was yesterday.
+
+		-I think the remake is better than the original. The original isn't as better as the remake. The original is worse than the remake.
 
 
-
-
-
-
-
-
-
-
-
+ 
 
 
 
