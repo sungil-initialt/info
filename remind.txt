@@ -3042,6 +3042,7 @@ Template Engine
 [인증서]
 -용어 : 
 	Cipher Suites : 해당 호스트(서버 또는 클라이언트)가 사용 가능한 암호화 방식 내역
+	Credential : 인증정보로 상황에 따라 id/ps가 될수도 있고 인증토큰이 될수도 있고 기타 인증서 정보가 될수도 있다.
 	
 -인증서 명칭 : 공인인증서, 공개키증명서, 디지털증명서, 전자증명서, 전자서명 등 여러 행태로 불린다.
 -기본동작 : 
@@ -3092,15 +3093,21 @@ Template Engine
 		-인증서 파일 종류
 			-.CER : 암호화된 인증서, 복수의 인증서도 가능
 			-.PEM (Privacy Enhanced Mail) : Base64로 인코딩 된 인증서로 "-----BEGIN CERTIFICATE-----"와 "-----END CERTIFICATE-----" 가운데에 들어간다.
+				-PEM은 인증서를 위한 파일 포맷은 아니고 어떠한 데이터(바이너리)든(인증서든, 키파일, csr등) base64로 인코딩하여 텍스트 형태로 바이너리를 주고 받기 위한 파일 포멧이다. -----BEGIN -----END는 해당 데이터가 어떤 정보를 갖고 있는지 알려주는 해더의 의미이다.
+				
 			-.DER, .P7B, .P7C, .PFX, .P12 … : ????
 			
 		-인증서 관련 파일
-			-.csr : ???
+			-.csr (Certificate Signing Request) : 인증서 생성을 위한 정보(private 키정보, 사용알고리즘 등) 를 담고 있는 파일로 보통 PEM 포멧의 형태임
+			-.key : 보통 private key 정보를 갖고 있는 파일로 보통 PEM 포멧의 형태임. key 파일은 생성시 파일 자체에 암호를 걸게됨.
 
 
 -개인 인증서 : 개인 인증서 또한 public key, private key로 구현되며 서버인증서와 거의 동일한 구조이다. 은행 및 전자 상거래 활용에서 어떤 방식으로 활용되는지는 확인 필요??
 
--코드 사인 인증서 : !!여기부터 해야함
+
+-코드 사인 인증서 : 어플리케이션(바이너리) 빌드시 해당 어플리케이션이 위조되지 않았는지를 확인하기 위한 방법
+	-코드사인 = (어플리케이션 바이너리 + 어플리케이션의 바이너리 해시값을 인증서(공인)의 private key로 암호(서명값,signature)한 값 + 인증서(공인))
+		-확인절차 : 코드사인된 파일을 어플리케이션, signature값, 인증서로 분리하여 signature 값을 인증서의 public key로 복호화 해서 실제 어플리케이션의 해시 값과 같은경우 변조가 없는 것으로 판단 (인증서의 위조여부는 기존 인증서와 동일한 절차로 확인)
 
 
 -서버 인증서
@@ -3134,22 +3141,40 @@ Template Engine
 					-Keep-Alive: timeout=5, max=100 (5초간 socket 연결을 유지하여 같은 client에서 들어오는 rquest를 같은 tcp 세션으로 유지할수 있다. max는 해당 세션으로 100번까지만 연장할수 있다는 의미)
 						-물론 해당 기능을 사용하기 위해서는 client도 해당 기능을 지원해야 함(모든 브라우저가 지원함)
 						
+
+-인증서 생성 개요: private key, CSR파일, certificate(인증서 파일), 아래 확장자는 생성 tool 및 인증기관에 따라 달라진다.
+	-공인인증서 : 
+		-모든 과정을 인증대행 기관 사이트를 통해 처리할수 있도 있고 사설인증서 만드는 방법과 병행할 수도 있다. (private key 및 CSR 파일은 사설 인증서를 만드는 tool을 이용해 만들고 CSR 파일을 공인증서 만드는 사이트로 전달하여 공인 인증서를 만들수도 있음)
+			-공인인증서를 만들기 위해서는 물리적인 파일 생성과 별도로 요청자가 특정 도메인의 소유자가 맞는지를 확인하는 절차가 추가됨 (확인 방법은 여러 형태가 있으며 이를 DCV(Domain Control Validation) 인증이라 한다.
+	
+	-사설인증서 : openSSL 또는 java Keytool을 이용하여 생성 가능
+		-생성과정 :
+			-private key 생성 : key 파일명 지정(xx.key), 파일 비밀번호 설정가능
+				-CSR 파일 생성 : 미리 생성한 key 파일에 추가 정보(요청자 정보, 도메인 정보등)를 포함하여 인증서를 생성하기 위한 중간 파일(xx.csr)을 생성 --> 자신이 만든 CSR 파일을 공인인증 기관으로 전달하여 공인인증서를 생성할 수도 있다.
+					-key 파일 및 csr 파일 그리고 추가 정보(유효기간 등..)를 포함하여 인증서 파일(cert.pem)을 생성
+				
+	
 	
 -keyStore :
 	-사전 개념 :
 		-certificate : (일반적으로)특정 private key 대응하는 public key를 소유하고 있는 인증서(기타 암호 방식 및 인증 정차에 대한 정보를 포함하고 있다)
-			-certificate chain : 특정 private key에 대응하는 certificate 그룹(?)		
+			-certificate chain : 특정 private key에 대응하는 certificate 그룹(?)
 	-keyStore 개념 :	certificate 및 certificate chain 그리고 그에 대응하는 private key를 관리하는 인증서정보 보관소??
 	
 	-시스템 별 keyStore : 
-		-Windows-MY : 윈도우 시스템이 관리하는 keystore 타입이다. (윈도우의 네이티브 keyStore로 java등 외부 API에서 직접 접근할 수 없다.)	
+		-원도우 Windows-MY(사용자들의 인증서및 개인키, 루트인증서들은 Windows-ROOT에 별도 저장) : 윈도우 시스템이 관리하는 keystore 타입이다. (윈도우의 네이티브 keyStore로 java등 외부 API에서 직접 접근할 수 없다.)	
 			-private key, certificate, certificate chain 등을 저장 관리한다.(!!!??? private key, certificate, certificate chain은 keytool등에서 생성하는 것 같고 Windows-MY API에서 직접 생성하는 것 같지는 않음)
 			-java를 통한 접근 : java 기본 API로는 접근 불가하면 window에서 제공한 SunMSCAPI(<JAVA_HOME>\lib\security에 위치)를 통해 사용이 가능하다.
 			-https://www.pixelstech.net/article/1452337547-Different-types-of-keystore-in-Java----Windows-MY
 		
-		-(java) KeyStore (JKS) : Java JDK가 관리하는 인증서 보관소 이다(java_home/jre/lib/security)
-			-저장 항목 : Java 는 KeyStore 라는 인터페이스를 통해 Encryption/Decryption 및 Digital Signature 에 사용되는 Private Key 그에 대응하는 Public Key 및 Certificate 를 추상화하여 제공하고 있다.
-			-keytool : keystore를 관리하기 위해 JDK가 제공하는 CLI 유틸, keytool로 인증서의 priviate key를 추출할 수는 없다. (하지만 다른 3rd 툴을 이용하여 추출은 가능 jksExportKey, KeyStore Explorer(key tool의 GUI버전)등등)
+		-자바 KeyStore (JKS) : Java JDK가 관리하는 인증서 보관소 이다 (특별한 위치를 지정하지 않으면 사용자의 홈디렉터리에서 .keystore 파일)
+			-저장 항목 : 개발적 측면에서 Java 는 KeyStore 라는 인터페이스(java_home/jre/lib/security)를 통해 Encryption/Decryption 및 Digital Signature 에 사용되는 Private Key 그에 대응하는 Public Key 및 Certificate 를 추상화하여 제공하고 있다.
+			-keytool : keystore를 관리하기 위해 JDK가 제공하는 CLI 유틸(openSSL과 유사), keytool로 인증서의 priviate key를 추출할 수는 없다. (하지만 다른 3rd 툴을 이용하여 추출은 가능 jksExportKey, KeyStore Explorer(key tool의 GUI버전)등등)
+				-java keytool 활용 :
+					-keytool을 이용해서 keystore 파일을 만들경우 다양한 파일 형태로 만들수 있다(keystore의 파일 표준은 여러 형태가 있다. jks_keystore, pkcs12_keystore 등등)
+					-JAVA가 인식하는 ROOT CA 저장소에 특정 인증서를 추가 시킬 수 있다. (특정 root CA 인증서를 jvm에서 인자하지 못한다면 root 인증저장소에 수동으로 추가 할수 있다. 특별한 케이스일 듯?)
+					
+				
 		
 	-관련 편의 기능 : 
 		-Mac (OSX) : 
@@ -3162,7 +3187,7 @@ Template Engine
 		-Windows :
 			-자격 증명 관리 : 
 				-windows 자격 증명 : 일반 자격 증명과 거의 동일한데 차이점은???
-				-인증서 기반 자격 증명 : 도메인 또는 네트우크 주소에 인증서를 매핑하여 해당 위치로 이동시 시스템이 저장된 계정 정보를 제공하여 편리하게 연결해 주는 기능					
+				-인증서 기반 자격 증명 : 도메인 또는 네트우크 주소에 인증서를 매핑하여 해당 위치로 이동시 시스템이 저장된 계정 정보를 제공하여 편리하게 연결해 주는 기능
 				-일반 자격 증명 : 도메인 또는 네트우크 주소에 id, pw를 매핑하여 해당 위치로 이동시 시스템이 저장된 계정 정보를 제공하여 편리하게 연결해 주는 기능
 				
 				-웹 자격 증명 : ???
