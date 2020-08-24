@@ -1028,9 +1028,24 @@
 		-I doubt that he already knows about this.
 	
 	
-	
-	
-	
+-title : 영어회화, 연습가이드 15, 이번이 특히 좋았던 것은
+	-script : 
+		-The other day,(몇일전에, 불특정) some friends and I went to an Indian restaurant and it was really good.
+		-I mean I have been to quite a few Indian restaurant before, but what made this place especially better was.. 
+		-they showed us the traditional way to eat the food and I thought that was really fun.
+		-It was really nice to be able to experience their culture instead of just eating the food.
+			-the other day(불특정한 몇일전) | I mean.. I.. (근데..) | I have been to... before, | quite a few (꽤많이) | what made especially this place better was.. |
+			-that was really fun | it was really nice to be able to | instead of just eating the food (그냥 음식만 먹는것만이 아니라...)
+			-it was really nice to be able to | it was really nice to be able to finally meet her | it was really nice to be able to get a new phone
+		
+		
+-title : 영어회화, 시급한 교정 06, part 1/3, 결국, 결국은, 결국에는
+	-script : 
+		-I finally found what I was looking for. I finally found what I wanted. We finally decided where to go.(드디어, 마침내)
+		-Eventually, we couldn't dicide where to go. We couldn't decide where to go eventually. 
+		-Eventually, it's up to you (it's your decision). When you consider everything, eventually they are all the same.(이것저걱 생각하다 보면 결국 다 똑같아) (결국은)
+			-found what I was looking for | where to go | we couldn't decide | it' up to you | it's your decision | when you consider everything(다고려했을때) | they are all the same | the same 
+			
 	
 	
 	
