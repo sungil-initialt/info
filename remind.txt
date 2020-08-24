@@ -3200,11 +3200,38 @@ Template Engine
 
 
 [Network]
+-IPS(Internet Protocol Suite) : 인터넷에서 컴퓨터들이 데이트를 주고 받는데 사용하는 프로토콜 모음으로 TCP/IP 가 가장 대표적이다.
+
+-(TCP)/IP(Internet Protocol) : 인터넷상에서 데이터를 주고 받는 프로토콜이다. IP는 데이터의 전달 여부(보장) 및 순서에 관여 하지 않는다 그래서 TCP 프로토콜에 실데이터를 얹고(TCP 세그먼트, TCP패킷이라 불리지만 잘못된 말) 이를 IP 프로토콜에 넣어 전송한다.
+	-http, ftp, smtp 등이 이러한 TCP/IP 레이어에 올라간 어플리케이션 프로토콜이다.
+
+-TCP(Transmission Control Protocol) : 인터넷을 통해 노드간 주고 받는 데이터를 안정적으로, 순서대로, 에러없이, 가장 빠르게 교환할 수 있게 하는 Transmission Control Protocol이다 IP프로토콜위에 넣어서 동작된다.
+	-unitcast :
+	
+	-options : 
+		-connection Timeout :
+		-So Timeout :
+		
+		-TCP keepalive : TCP 레이어에서 두 노드가 서로 살아있음을 알리기 위해 주고 받는 데이터 패키 및 그 매커니즘 이다. 주 목적은 상대가 살아있지 않은데 혼자 계속하여 대기하는 상태를 제거하기 위함이다. 
+			-또한 NAT 장비의 경우 일정 시간동안 두 노드가 패킷 교환이 없는 경우 NAT 테이블에서 제거하는 하기때문에 이를 막기 위해서도 필요하다.(장시간 안쓰고 있는 커넥션에 대해서도 포트할당을 해준다면 한계가 있겠지?? 그래서 나름의 룰로 정리하겠지??)
+			
+			-Keepalive time : 휴지상태에서 얼마동안 유지될경우 Keepalive를 보낼지를 정한다. 보통 2h (15분 미만으로는 설정하지 않는것을 권장)
+			-Keepalive interval : Keepalive에 대한 응답을 받지 못한경우 얼마뒤에 다시 보내 볼찌.. (tcp_rexmit_interval 값보다 작은 값을 보내서는 안된다.)
+			-Keepalive retry : Keepalive에 대한 응답이 없을때 몇번까지 보내보고 close 할지..
+	
+-UDP
+	-multicast :
+	-broadcast :
+	
+
+
 -NAT(network address translation) : 컴퓨터 네트워킹에서 쓰이는 용어로서, IP 패킷의 TCP/UDP 포트 숫자와 소스 및 목적지의 IP 주소 등을 재기록하면서 라우터를 통해 네트워크 트래픽을 주고 받는 기술
 	-NAT IP : 외부로 나갈때 표출되는 ip로 보면 된다. (공인 ip를 절약하기 위해 내부의 여러 호스트들이 외부로 연결될때는 하나의 NAT ip로 나가게 된다.)
 
 -RTT (Round-trip time) : RTT is the duration, measured in milliseconds, from when a browser sends a request to when it receives a response from a server. 
 	-It’s a key performance metric for web applications and one of the main factors, along with Time to First Byte (TTFB), when measuring page load time and network latency.
+	
+
 	
 	
 [Hardware]
