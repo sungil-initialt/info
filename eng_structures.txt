@@ -6,21 +6,115 @@
 -The CXF SOAP client by default overrides the default host name verifier with its custom implementation.
 	-by default : 기본적으로 
 	
--Man-in-the-middle attackers can manipulate networks to serve their own keys, thereby compromising any communication.
-
--Publicly-trusted PKIs, which are trusted by the browsers, must conform to RFC 5280, which requires the use of the X.509 v3 format. X.509 v3 allows certificates to include additional data, such as usage constraints or policy information, as extensions. 
-
--Each of these extensions is either critical or non-critical, with browsers being required to process and validate all critical ones.	
-
--Browsers check that a certificate’s issuer field is the same as the subject field of the previous certificate in the certificate path.
-
--when the upstream Internet service provider was replaced, but could not route the networks address space.
-
--The hidden addresses are changed into a single (public) IP address as the source address of the outgoing IP packets so they appear as originating not from the hidden host but from the routing device itself
-
--This method enables communication through the router only when the conversation originates in the private network since the initial originating transmission is what establishes the required information in the translation tables.
+Man-in-the-middle attackers can manipulate networks to serve their own keys, thereby compromising any communication.
 
 
+Publicly-trusted PKIs, which are trusted by the browsers, must conform to RFC 5280, which requires the use of the X.509 v3 format. X.509 v3 allows certificates to include additional data, such as usage constraints or policy information, as extensions. 
+
+
+Each of these extensions is either critical or non-critical, with browsers being required to process and validate all critical ones.	
+
+
+Browsers check that a certificate’s issuer field is the same as the subject field of the previous certificate in the certificate path.
+
+
+when the upstream Internet service provider was replaced, but could not route the networks address space.
+
+
+The hidden addresses are changed into a single (public) IP address as the source address of the outgoing IP packets so they appear as originating not from the hidden host but from the routing device itself
+
+
+This method enables communication through the router only when the conversation originates in the private network since the initial originating transmission is what establishes the required information in the translation tables.
+
+
+Data encapsulation is also done at this layer. The sender end and the receiving end should be in synchronization and the transmission rate in the form of bits per second is also decided at this layer.
+	-transmission rate in the form of bits per second : 비트버 세컨드 형태의 전송률
+
+
+Ethernet switch manufacturers often tout that their switches use cut-through switching rather than store-and-forward packet switching, used by routers and bridges.
+	 -used by routers and bridges : 라우터나 브릿지가 이용하듯
+
+
+When the packet arrives, there may or may not be other packets in the outbound link's output buffer. When there are packets in the output buffer, there is absolutely no difference between store-and-forward and cut-through switching. The two switching techniques only differ when the output buffer is empty.
+	-there may or may not be : 있을수도 없을수도 있다.
+
+
+Let us consider an example and delve into the details of the IPsec use case. 
+	-Let us consider : 알아보자
+	-delve into something : 뭐에 대해 더 알아보자, 캐보자
+
+
+Apart from the technicalities, if we try to understand what it really does?
+	-Apart from .. : ..는 차치하고
+
+
+It is generally denoted in a dotted-decimal format with four numbers split by dots.
+
+
+While each packet is going to the same place, the route they take to get there may be different. 
+	-While each packet is going to the same place, the route they take to get there may be different.: 각각의 패킷이 동일한 곳으로 가는동안 그곳을 가기위해 그들이 취한 경로는 다를 수 있다.
+
+
+When it arrives, the IP layer hands it back to the TCP layer, which reassembles the packets into the message and hands it to the email application, where it shows up in the Inbox.
+	-the IP layer hands it back to the TCP layer : IP레이어는 그것을 뒤쪽 TCP레이어로 넘긴다.
+	-hands it to the email application, where it shows up in the Inbox. 그것을 인박스 안에서 보여주는 이멜일 app로 넘긴다.
+
+
+which .. 하는
+
+
+This will help in keeping the data safe and the whole data host will never completely get lost if some crash happens. Also, token management, will not allow two networks of heavy data and of the same type to transmit at the same time.
+	-This will help in keeping : 유지하는데 도움을 준다.
+	-if some crash happens : crash가 일어 났을 때
+
+
+Does HUB work on MAC addresses? How does HUB work?
+	-work on : 작용하냐? 관여하냐?
+
+
+Session-layer services are commonly used in application environments that make use of remote procedure calls (RPCs).
+	-make use of remote procedure calls : remote procedure calls을 이용한다. 사용한다.
+
+
+The session layer is also responsible for masking potential transport layer failures from upper-layer protocols.
+	-The session layer is also responsible for : (처리를) 담당한다.
+	
+
+Additionally, sessions help to group multiple transport streams that belong to a specific application. 
+	-sessions help to group : 그룹화에 도움을 준다. (화에 도움을 준다)
+	-streams that belong to a specific application. : 특정 application에 속해있는 스트림
+
+
+Different data streams can then be combined and synchronized at the endpoint destination prior to sending the streams received up the stack to the presentation layer.
+	-can then be combined : 결합되어 진다.
+	-?? prior to sending the streams received up the stack to the presentation layer. : 받은 스트림을 위 스택인 프리젠테이션 스택으로 보내기 전에
+
+
+Network devices or components used by the presentation layer include redirectors and gateways.
+	-Network devices or components used by the presentation layer : the presentation layer 에서 사용되는 Network devices or components
+
+
+the presentation layer is responsible for integrating all formats into a standard format for efficient and effective communication.
+	-the presentation layer is responsible for integrating : 통합하는것을 책임진다. 통합하는 것을 처리한다. 
+	-all formats into a standard format : 모든 형식들을 표준 형식으'로'!!
+	
+
+The presentation layer is concerned with preserving the meaning of information sent across a network.
+	-is concerned with preserving the meaning : 의미를 보존하는 것과 관련되 있다.
+
+
+As suggested by the name itself, the presentation layer will present the data to its end users in the form in which it can easily be understood. 
+	-As suggested by the name itself, : 이거 자체의 이름에서 암시하고 있는것 처럼
+	-in the form in which : 어떠 어떠한 형식으로
+	
+
+There is vagueness in this layer as is not all user-based information and the software can be planted into this layer.
+	-as is not all user-based information and the software can be planted into this layer:  all user-based information 상태가 아니고(and) 
+	
+		-The Automobile is sold AS-IS and with ALL FAULTS. : 결함이 있는 (있는) 그대로
+		-as is no warranty : 있는그대로판매함(판매문구, 구입후 어떠한 결함도 보장하지 않음)
+		-be planted into : 심어진다.
+		-Keep it as it is : 현상태 그데로 보관해라.
 
 
 
@@ -33,11 +127,15 @@
 
 
 
-LG전자 55UT641S0NB (스탠드)
 
 
-﻿https://npay.amorepacificmall.com/kr/ko/order/syncNPayProduct?product[0][id]=37657/147070&product[1][id]=29941/122567
 
-https://npay-cf.amorepacificmall.com/kr/ko/order/syncNPayProduct?product%5B0%5D%5Bid%5D=39851%2F148079&product%5B0%5D%5BmerchantProductId%5D=111570422&product%5B1%5D%5Bid%5D=39851%2F148080&product%5B1%5D%5BmerchantProductId%5D=111570423&supplementSearch=true&optionSearch=true
 
-https://npay.amorepacificmall.com/kr/ko/order/syncNPayProduct?product%5B0%5D%5Bid%5D=39851%2F148079&product%5B0%5D%5BmerchantProductId%5D=111570422&product%5B1%5D%5Bid%5D=39851%2F148080&product%5B1%5D%5BmerchantProductId%5D=111570423&supplementSearch=true&optionSearch=trued
+
+
+
+
+
+
+
+
