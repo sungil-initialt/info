@@ -181,7 +181,7 @@
 			-I found | I've been looking for | I can't find |
 
 		-Are you looking for something? What are you looking for? (뭐 찾는 중야, 뭐 찾고 있니?)
-		-I'm looking for good restaurant in this area. I'm looking for somethe to do this weekend.(이 지역에서, 이 동네에서, 뭐 할꺼 있나)
+		-I'm looking for good restaurant in this area. I'm looking for something to do this weekend.(이 지역에서, 이 동네에서, 뭐 할꺼 있나)
 			-Are you looking for something? | What are you looking for? | in this area | something to to | this weekend
 
 		-I searched everywhere and I still can't find my keys. Did you search your room? I searched my coat pockets. (다 찾아봤어, 방에 찾어봤어? 옷 주머니 찾아봐)
@@ -221,8 +221,8 @@
 		-I ran into my friend on the street this morning, and I noticed she looked a little different. (마주쳤어, 우연히 만났어, 길에서, 보이더라, 약간 다르게)
 			-I run into | I ran into | on the street | she looked | a little different |
 
-		-I noticed you were dringking a lot of coffee today, did you have troble sleeping last night? (뭐뭐 하더라, 하더라고, 뭐뭐에 문제 있니?, 어젯밤)
-			-I noticed you were xxxing | did you have troble xxxing | troble sleeping | last night |
+		-I noticed you were dringking a lot of coffee today, did you have trouble sleeping last night? (뭐뭐 하더라, 하더라고, 뭐뭐에 문제 있니?, 어젯밤)
+			-I noticed you were xxxing | did you have trouble xxxing | trouble sleeping | last night |
 
 		-This morning, someone said hello to me on the street, but I didn't recognize him. (알아보겠다, 못알아보겠어, 나한테, 보고 뭔지/누군지 알아보는것)
 			-This morning | someone said | said hello to me | on the street | I didn't recognize
@@ -675,7 +675,7 @@
 		-Recently, I bought a new laundry machine and it arrived yesterday. It turned out to be much bigger than I thought.
 		-I was going to put it in my bathroom, but it didn't fit. So, you know there wasn't anything I could do. I had to send it back.
 		-It's not like I could keep it in my bedroom, right? 
-		-But you know, it just feel like too much troble looking for a different model and scheduling another delivery.
+		-But you know, it just feel like too much trouble looking for a different model and scheduling another delivery.
 		-So, I just canceled the purchase and I decided to keep using my old one.
 
 
@@ -1047,51 +1047,569 @@
 			-found what I was looking for | where to go | we couldn't decide | it' up to you | it's your decision | when you consider everything(다고려했을때) | they are all the same | the same 
 			
 	
+-title : 영어회화, 시급한 교정 06, part 2/3, 대신, 대신에 ..을 해주다, 하다
+	-script : 
+		-could you return this book for me? Hey, I am cooking right now. Could you get that for me? (나대신, 그 대신함이 원주체에게 이익이 있음)
+			-I'm cooking right now | could you get that |
+		
+		-Our presenter suddenly got sick so I had to give the presentation instead of her. (그녀 대신, 그 대신함이 그녀에게 이익이 없음, 그저 대체하는 의미)
+		-I want to get this steak, but can I get the salade instead of the soup?
+		-I arrived here a little earlier so instead of just waiting, I looked around the neighborhood.
+		-I thought she would be busy so I sent her a text instead of calling.
+			-suddenly got | I want to get this | arrived here | a little earlier | looked around | I thought she would be(일꺼라고) 
+		
+	
+-title : 영어회화, 시급한 교정 06, part 3/3, 누구에게 알리다, 알려 주다, 비난하다, 탓하다, 잘못하다.
+	-script : 	
+		-Let me know when you are in trouble. (let me know something) We need to tell him about this (알려주다, 말해주다)
+			-notify(알리다, 통보하다)
+			
+		-He committed a crime. I committed a crime. I've never committed a crime. (범죄를 저지르다)
+		-I made a big mistake. This is my mistake. This isn't my mistake. It wasn't my mistake. (실수를 저지르다)
+			-commit a crime | make mistake | is my mistake
+		
+		-I didn't do anything wrong. Did I do something wrong? I did something wrong. I think I did something wrong. (뭔가 잘못하다)
+		-I disappointed her. I upset her. I made her upset. I did something that disappointed her. I did something that upset her. (누구에게 잘못하다라는 직설적인 표현이 영어에 없음, 화나게 하다, 실망시키다로 표현)
+			-I didn't do anything wrong | something wrong | I think I did | I disappointed her (실망시키다) | I'm disappointed (실망하다) | made her upset | something that disappointed her
+			
+		-It's not my fault. I didn't do anything wrong. (탓이 아니다) 
+			-blame (누구를 탓하다) | criticize (누구를 비난하다)
 	
 	
+-title : 영어회화, 연습가이드 16, 둘다, 각각 장단점이 있다
+	-script : 		
+		-The other day, some friends and I watched the new Marvel movie and it was really good. 
+		-I mean I've seen quite a few superhero movies before, but what made this one(movie) especially better was..
+		-that it featured(등장시키다) many different characters at the same time.
+		-It was really nice to be able to see my favorite characters in a single movie.
+			-the other day | and it was really good | I mean | I've seen | quite a few | what made this movie especially better was | it featured many different..|
+			-at the same time(동시에) | it was really nice to be able to | my favorite characters | in a single movie (영화한편에서)
+		
+	-Both are Fantasy movies. Both of them are Fantasy movies. They are both Fantasy movies.
+	-Each have their own unique stories. Each of them have their own unique stories. They each have their own unique stories.
+	-Neither were very(별로) popular in Korea. Neither of them were very popular in Korea. But personally, I really enjoyed them.
+		-Both are | Both of them are | they are both | Fantasy movie | Each have | Each of them have | They each have | their own | each를 단수 취급(has)해야 하지만 보통 each는 have를 씀
+		-Neither(두개일때만) were very (별로 아니었다) | Neither of them were very | is very popular in Korea | But, personally,.. | I really enjoyed them (좋았어)
+	
+	-I use 3 kinds(types). All are foreign brands. All of them are foreign brands. They are all foreign brands.
+	-Each have their own strengths and weaknesses. Each of them have their own strengths and weaknesses. They each have their own strenghts and weaknesses.
+	-They all have different personalities. But, None of them are very(별로) expensive.
+		-I use 3 kinds | I use 3 types | All are | All of them are | They are all | foreign brand Each have their own | Each of them have their own | They each have their own 
+		-pros and cons | advantages and disadvantages | strengths and weaknesses | upsides and downsides | They all have different | different personalities | None of them 
 	
 	
+-title : 영어회화, 어휘정리 | pay, pay for, cost, afford, charge 
+	-script :
+		-I bought this yesterday and it was really expensive. It wasn't very expensive. It was very cheap.(괭장히 쌋다) It wasn't very cheap.(그렇게 싸진 않았다)
+		-It cost a lot (of money). It cost almost 1 million won. It cost nearly 1 million won. It cost close to 1 million won. It cost much(a lot) more than I thought.
+		-It didn't cost that much(그렇게 많이). It didn't cost very much. It didn't cost so much. It didn't cost as much as I thought. It cost less than I thought.
+		-Did it cost a lot?(돈이 많이 들었어?) How much did it cost?
+			-and it was | it was very cheap | it cost a lot | almost 1 million won | nearly 1 million won | close to 1 million won |  a lot more than I thought | much more than I thought
+			-Did it cost a lot?| taht much | very much | so much | less than | 
+	
+		-I spend 1 million won yesterday.
+		-I paid 10 dollars. I paid a lot. Did you pay?(돈너가냈니?). I had to pay a lot more than I thought. 
+		-Did you buy that? Did you pay for that? I paid a lot for this(..을 돈 많이 주고 사다). How much did you pay for that? I have to save this money if I want to pay for the flight ticket.
+			-pay the bill(s) | pay the fine | pay the utilities(광과금) | I paid a lot | Did you pay? | a lot more than | 
+			-Did you buy that? | Did you pay for that? | pay for (을 사다) | pay a lot for(돈을 많이 주고 사다) | How much did you pay for | I have to.. if I want to..(뭐뭐 하려면 뭐뭐 해야해)
+			
+		-I can't afford this.(이력이, 여건이 안돼) I can't afford to do this. I can't afford to buy this. I can't afford to pay for this.
+			I can't afford this(여력이 없어..추상적) | I can't afford to | I can't afford to pay for this
+	
+		-The library charge (me) 5 dollars for returning it(the book) late. I returned the book a little late and the library charged (me) 5 dollars.
+		-They charged 5 dollars for the late return.
+			-charged me 5 dollars (청구하다, 내라하다, 물리다) | charged me 5 dollars for .. | .. and .. (..그랬더니..) | for the late return | late return 
+	
+
+-title : 영어회화, 연습가이드 17, even if, would rather 
+	-script :	
+		-I live an hour and a half away from my workplace. Commuting is certainly not easy. 
+		-But I like the fact that I can afford a much better home. 
+		-Honestly, even if I could live just 5 minutes away from my workplace, I don't want to live in a small and crappy apartment.
+		-I'd(would) rather have a long commutes and live in a decent place.
+			-I live an hour and a half away from my workplace | an hour and a half | away from | workplace | commuting | is certainly not easy |
+			-But I likt the fact that I.. | I can afford | a much better home | Honestly | even if I could.. , I don't want to.. | live in a small and crappy apartment
+			-I'd rather ... and .. | I'd rather have a long commutes and live in a decent place
+	
+
+-title : 영어회화, 표현, 딱히, 의외로, 아무렇지도 않게, 어쩔수 없이, 점차
+	-script :	
+		-How was your first day at work?
+		-Yeah.. you know, it was OK(alright). 
+		-Why, was there a problem? (what was a problem 문슨 분제가 있었어?)
+		-There wasn't particularly(팟 팃 큐러리) a problem, it's just that people asked surprisingly very private questions like it was nothing!
+			-There wasn't a problem per ce(펄 세이), it's just that people asked surprisingly very private questions like it was nothing!
+		-I wanted to fit in quickly so I couldn't help answering their questions. But I gotta(got to, have to) say, I didn't feel very comfortable.
+		-Hey, I's just phase(풰이즈). Don't worry about it. It's going to get better(gradually / over time). 
+	
+		
+-title : 영어회화, 연습가이드 18, 비용, 시간, 번거러움 비교하기
+	-script :	
+		-I don't work very long hours but(그래서) I don't make a lot of money.
+		-It's certainly not easy living on such a small salary but I really like the fact that I have a lot of time for myself.
+		-Honestly, even if I could make a lot of money, I don't want to spend all my time working. I'd(would) rather earn little and have time to do what I want.
+			-I don't work very long hours | very long hours | but(그래서) | I don't make a lot of money | make money | It's certainly not easy ..ing(한다는게) | live on such a small salary
+			-I like the fact that I .. | time for myself | Honestly, | even if I could.., I don't want to 
+			-spend all my time working(일하면서) | I'd rather 동사.. and 동사.. | time to do what I want
+
+		-It takes a little more time(시간이 좀 걸린다). It takes a little longer.
+		-but it's less trouble. it's less work. it's less cumbersome(컴버 썸). it's less of a hassle(햇슬, 명사). it's easier.
+			-it takes much more time | it takes a lot more time | it takes much longer | it takes a lot longer
+		
+		-That's a little more trouble. but it's a much faster way.
+		-That(It) costs a little more but it takes much less time.
+		-That(It) costs a little more but it takss much less time and it's less of a hassle.
+		
+		-It costs only half as much. It costs twice as much.
+		-It takes only half as long. It takes twice as long.
+		-That's a little more of a hassle but it takes much less time and you can save some money. (and it costs less. and it doesn't cost as much.)
+		-That takes a little less time but it's a much more of a hassle and it costs more, too.
+		
+		-That costs a little less and it takes a little less time but it's definitely(부사) somewhat(부사,약간,다소) risky. (but there's definitly some risk.)
+		
+	
+-title : 영어회화, 표현정리, 처음에는, 애초에, 먼저, ..하는게 처음이다
+	-script :	
+		-At first, it was a little awkward. It was a little awkward at first. At first, I wasn't very interested. I wasn't very interested at first. (처음에는)
+		-At first, it was a little hard(difficult) but it was OK once(after) I got used to it.
+		-It was a little difficult at first, but it was OK after I got used to it.
+		
+		-I think there was some misunderstanding in the first place. I think there was some misunderstanding to begin with.(애초에, 처음에)
+		-I made some mistakes in the first place. I made some mistakes to begin with.
+		-I didn't check properly in the first place. I didn't check properly to begin with.
+		-I shouldn't have brought it up in the first place. I shouldn't have mentioned it to begin with.
+		
+		-He brought it up first. He hit me first. I asked you first. (먼저)
+		
+		-I met her in person for the first time. I met her for the first time in person. (I first met her in person. 일단!이란 의미로 해석됨) (처음으로)
+		-They had a argument(fight) for the first time since they started going out. since they started dating. since they started seeing each other.
+		-I drove(차를 운전하다로 차를 언급 안해도 됨) by myself for the first time since I got my driver's license.
+		
+		-It was my first time going(무대에선게) on stage. It was my first time to go(서게되는게) on stage. (처음이다, 처음이었다)
+		
+		-It was(과거) the first time I'm traveling by myself(진행). (나 혼자 여행하는 건 처음이었어)
+		-It's(현재) the first time I'm going to travel by mysel(미래). (나 혼자 여행 가는 건 처음이야)
+		-It's going to(미래) be the first time I travel by myself(현재). (나 혼자 여행하는 건 처음이 될 거야)
+		
+		
+-title : 영어회화, 대화가이드 03, 전화와 관련된 기본 표현 익히기 part1
+	-script :	
+		-Aren't you going to get that? Aren't you going to answer that? It's OK. Go ahead, answer it(get it).
+		-Hello? Oh, yeah, could hold on a second? I'm sorry but I need(have) to take this(this call).
+		-Yeah, go ahead. Take your time.
+			-Aren't you going to | Aren't you going to get that? | answer that | go ahead | answer it | get it | could you hold on a second? | take this call | take your time
+		
+		-That was my uncle.
+		-Are you close with your uncle?
+		-Since(돌아가신 후)(Ever since, 돌아가신 후부터) my father passed away, he have been calling me from time to time (ever now and then 가끔씩).
+		-We are not very(that 그렇게) close, but these days, we talk on the phone once or twice a week.
+			-That was my uncle | Thta's him(저사람이 그야) | is that him? | close with | Since | Ever since | passed away | 
+			-from time to time | ever now and then | not very close | but these days | talk on the phone | once or twice a week
+		
+		-I was dialing a number.(전화를 거는 행위 자체) I got a call from a friend.(전화연락은 받는거) I got in touch with one of my friends.(연락하다, 꼭전화는 아닐수 있음?)
+			-dial a number | I got a call from | I got in touch with(연락하다) | one of my friends
+		
+		
+-title : 영어회화, 표현, 전화 통화, 연락, 문자, 이메일 관련 표현 몇 가지 part2
+	-script :	
+		-I'm on the phone right now. I was on the phone. I think she's on the phone right now. (통화중)
+			-on the phone | right now | 
+		
+		-We still keep in touch. We still stay in touch.
+			-still keep in touch | still stay in touch
+			
+		-We've been staying in touch even after(이후에도) I came back. We've been in touch (keep, stay 생략 가능).
+			-we've been staying in touch | even after | I came back 
+			
+		-We were very close but after we graduated, we kind of(쫌) lost touch.
+			-very close | after we graduated | we kind of lost touch | lost touch
+		
+		-I sent him a text(an email) with a picture. I got a text(an email) from him with a picture. He sent me a text(an email) with a picture.
+		-I got an email from my bank with an attachment. They sent me an email with a document. (with an attached document)
+		
+		-I sent her a message saying I'm almost there. I sent her a text telling her that I am(was) almost there.
+		-I got a reply from him saying that he's(바쁘다고) busy this weekend. (he will be busy this weekend 바쁠꺼라고 ??)
+		-I got a reply from him telling me that he's(was) busy this weekend.
+			-syaing I'm almost there | telling her that I was almost there | I got a reply | he is busy this weekend | I will be busy this weekend
+		
+		-I got a text from a friend asking (me) where I was. A friend sent me a text this morning asking (me) where I was.
+		-I got a text from a friend asking if I was busy. A friend sent me a text asking if I was busy.
+		-I sent him a message asking if he wants to go (to) see a movie together this weekend.
+			-asking me where I was | A friend | asking if I was busy | saking if he want to go see a movie together this weekend
+		
+		-I got a text from work reminding me about the meeting tomorrow morning.
+		-I got a message from work telling me not to forget the meeting tomorrow morning.
+			-from work | reminding me about | telling me not to forget |
+		
+		-I got an email from them letting me know what I need to prepare.
+		-I got an email from them letting me konw the exact time and location.
+			from them | letting me know | what I need to prepare | letting me know the exact time and location
+		
+		-I got a call from him asking me where I was. I got a call from her asking me what I was doing.
+		-I got a message from my friend with a picture asking me if I know who she was.
+		-I sent him a message with a link to an articcle saying that he should read it.
+			-got a call from | where I was | what I was doing | with picture | asking me who she was | with a link to an article saying that you shuld read it
+		
+	
+-title : 영어회화, 대화가이드 04, part1/2, 저란사람 처음봐, 저렇게 고집센 사람은 처음봐, 일상적으로 사용하는 극단적인 표현
+	-script :		
+		-Wow unbelievable(언 빌리 버블). No way. That's impossible.
+		-I've never seen anyone so stubborn (about..). I've naver seen such a stubborn person (about.. 불가능!)
+		
+		-Yeah, I don't think I've ever seen anyone like that(저런). I've never seen that person(저사람).
+		
+		-I've never had such a hard time just(만) talking to someone.
+		
+		-Right, I don't think I've ever been under so much stress just having a conversation with someone.
+			-I've never seen anyone | I don't think I've ever seen anyone | so stubborn(저렇게) | anyone like that(저런사람) | such a(이렇게, 이런) | have hard time ..ing 
+			-have hard time ..ing | I've naver had such a hard time ..ing | talking to someone 
+			-be stressed | get stressed | be under stress | I've never been under so much stress ..ing | have a conversation with someone 
+			
+		-I'm under a lot of stress these days. I'm very stressed these days.
+			-I'm under a lot of stress  | I'm under so much stress | I'm very stressed | I get very stressed 
 	
 	
+-title : 영어회화, 대화가이드 04, part2/2, 일상적으로 사용하는 극단적인 표현 추가 정리
+	-script :			
+		-I've naver had pasta this good (as good as this) before.
+		-This is the best pasta I've ever had his year. This is the best movie I've ever seen in years(몇년만에).
+		-This has to be the best pasta I've ever had . This must be the best pasta I've ever had. This has got to be the best pasta I've ever had.
+			-I've naver had | this good | the best pasta I've ever had | in years | this year | the best movie I've ever seen | 
+			-this has to be the best.. | this must be the best | this has got to be the best
+		
+		-I've naver seen anyone eat(drink/sleep) so much. I've naver seen anyone eat as much as you. I've naver seen anyone eat as much as him.
+		-I don't think I've ever seen anyone eat so much. I don't think I've ever seen anyone eat as much as you. I don't think I've ever seen anyone eat as much as him.		
+		-I've naver seen anyone curse so much. I've naver seen anyone curse as much as him.
+		-I've naver seen anyone work so hard. I've naver seen anyone work as hard as him.
+			-anyone eat so much | anyone eat as much as you | anyone eat as much as him | anyone curse(욕하다) so much | anyone work so hard
 	
 	
+-title : 영어회화, 표현, 정확히 뭐라고 하기에는 어려운데 이건 도저히 뭔가 적응이 안돼, 애매한 인상 묘사하기 
+	-script :	
+		-There's somthing a little strange about him. There's something about him that's a litter strange.
+		-There's something very attractive about her. There's something about her that's very attractive. 
+			-something a little strange about him | something about her that' very attractive.
+		
+		-He reminds me of my dad for some reason. I don't know what it is but there's something about him that reminds me of my dad.
+		-I don't know what it is but there's something about her voice that's very unique.
+		-I don't know what it is but there's something about the way she asked me that question that didn't make me feel very comfortable.
+		-I don't know what it is but there's something about the way she talks(acts) that's very unique(attractive).
+			-He reminds me of | for some reason | I don't know what it is but | but there's something about | about her voice | that's very unique |
+			-something about the way she asked | that didn't make me feel very comfortable | make me very comfortable | didn't make me feel very comfortable |
+			-the way she asked me that.. | the way she talks that..| the way she acts that.. | 
+		
+		-I don't know exactly what it is. I can't say exactly what it is. It's hard to say exactly what it is.
+		-It's hard to say exactly what it is but there's something about this mouse that I just(도저히) can't get used to.
+			-I don't know exactly what it is | I can't say exactly what it is | it' hard to say exactly what it is | about this mouse that I just can't get used to | can't get used to
+			
+			
+-title : 영어회화, 대화가이드 05, 하는김에, 어차피, 이왕 하는거, 부탁좀 할게
+	-script :	
+		-Hey, I'm on my way to the bank right now, I'll be back in about half an hour.
+		-Oh hey, while you are out, could you pick up an extension cord for me?
+		-Sure, I guess I can stop by a supermarket on my way back. I guess I can drop by a supermarket on my way back. I guess I can swing by a supermarket on my way back.
+		-Oh and, while you are at it, I actually have a few more things I need.. if you don't mind.. (if it's not too much trouble..). 
+		-If you have something to buy, you might as well just come with me. you might as well just come along. you might as well just go together.
+			-I'm on my way to(가는길이야, 가려해) | right now | I'll be back | in about half an hour | while you're out, | could you pick up | sure, I guess I can
+			-stop by | drop by | swing by | on my way back | Oh and..(그래고..) | while you're at it(하는김에) | I actually | a few more things | things I need
+			-if you don't mind.. | if it's not too much trouble | something to buy | things to buy | you might as well(하는게 낫다,좋다) | just come with me | just come along | just go together
+			
+		-Hey, while you're at it, could you clean my room, too?
+			-could you clean my room, too?
+		
+	
+-title : 영어회화, 연습가이드 19, par1/2, 한번에 하나씩, 동시에 여러개, 일일이 따로 따로
+	-script :
+		-This is your first time so don't overdo it and just focus on one thing at a time. 
+		-If you try to do many things at the same time you are just going to make mistakes.
+		-So, until you get completely used to it you are going to do everything separately, one by one. Ok? Alright?
+		-You just have to do it in order and you won't have any problems. Don't hurry and just take your time. Don't rush through it and just take your time.
+		
+			-This is your first time so | don't overdo it | focus on | one thing at a time | two thing at a time | one person at a time | one student at a time
+			-If you try to | at the same time | simultaneously | if you try to... you just going to..(뭐뭐하면 뭐뭐할뿐이다)| you just going to | make mistakes |
+			-get used to | until you get completely used to it | do everything separately | one bye one | OK? Alright? 
+			-just have to | and .. won't | in order | you won't have any problems | there won't be any problems | don't hurry | don't rush through it | just take your time
 	
 	
+-title : 영어회화, 연습가이드 19, par2/2, 추가 표현 정리
+	-script :
+		-The applicants(어플리켄츠) were interviewed three at a time. They interviewed the applicants three at a time. (a few at a time, a couple at a time, several at a time)
+		-The interviews were carry out a few applicants at a time. The interviews were conducted a couple of applicants at a time. The interviews were done several applicants at a time.
+			-the applicants were interviewed | they interviewed the applicants | the interviews were carryed out | the interviews were conducted | the interviews were done
+			-three at a time | a few at a time | a couple at a time | several at a time |
+			
+		-Everything happened at the same time. Everything happened at once. Everything happened all at the same time. Everything happened all at once (모두 동시에, 모두 한번에)
+			-something happened | at the same time(동시에) | at once(한번에) | all at the same time(모두동시에) | all at once(모두한번에)
+			
+		-you put this in the wrong order! No, I put it in the right order! No, you didn't put it in the right order.
+		-you just have to do it in the right order. it just has to be in the right order.(순서만 맞으면 돼). 
+		-Hey, check if it's in the right order. Did you check if it's in the right order. It's in the right order(순서가 맞다). It's not in the right order. It's in the wrong order. 
+			-you put this in the right order | in the wrong order | just have to | do it in the right order | just has to be | Hey, check if | it's in the right order
+
+
+-title : 영어회화, 연습가이드 20, part1/2, 누가 무엇을 담당할지 정하자, 문장 속에 의문형 내용 포함시키기 연습
+	-script :
+		-Let's decide who will be in charge of what. Let's decide who is going to be in charge of what. 
+			-let's decide | who will be in charge of what | be in charge of | I don't care who said what to who.(누가 누구에 뭐가 하든) | who said what to who
+			
+		-You find out who is going and who is not (going) and exactly how many people there are going to be.
+			-find out | who is going and who is not | how many people there are going to be
+			
+		-Kim, you are in charge of transportation. Find out if there is a bus (that) we can(could) rent(rent-rented-rented) 
+			-you are in charge of | find out if there is | we could rent 
+			
+		-and if so, when we can rent it and how much it costs and let Choi know.
+			-and if so, | how much it costs | let Choi know
+			
+		-Choi, you find out how much everything is going to cost and how much we each have to pay and let me know.
+			-how much everything is going to cost | we each have to pay 
+			
+		-What are you going to do?
+		-Me? I'm going to make sure (that) you all do your jobs properly(right).
+			-what are you going to do? | I'm going to make sure you all | do your jobs properly | do your jobs right
+			
+			
+-title : 영어회화, 추가 응용 예시, 추가표현 정리, 연습가이드20, 2/2
+	-script :	
+		-Let's first decide where we're(워) going to go and what we're(워) going to do.
+		-I don't know what I'm going to do. I don't know what to do. I don't know what I have to do.(뭔가해야하는의미가있는느낌) 
+			-let's first decide | where we're going to(월간아) | what we're going to(월가나) | what to do | what I'm going to do | what I have to do 
+			
+		-Nobody knows what's going to happen(어떻게 될지는 아무도 몰라). Nobody knows how it's going to turn out. Nobody knows how things are going to turn out.(어떤결과가 나올지 아무도 몰라)
+			-nobody knows | what's going to happen | how it's going to turn out | how things are going to turn out
+
+		-Do you remember where you put it? I don't remember where I put it. 
+		-Try to remember where you saw(쏘) it last.
+		-I don't remember where I bought it. I don't remember where I took this picture.
+			-do you remember | where you put it | I don't remember | where I put it | try to remember | where you saw(쏘) it last | where I bought it | where I took this picture.
+
+		-I don't know where you heard that but it's not true. I don't know who told you that but it's not true.
+			-where you heard that | who told you that | but it's not true
+		
+		-It depends on what time we leave. It depends on how much it is. It depends on who it is.(who is it? 누구야?) It depends on how old he is.
+			-it depends on | what time we leave | how much it is | who it is | who is it? | how old he is
+		
+		-First, let's find out if there was a mistake on our part.. and if so(if there was), let's then think about what we're going to do(what to do).
+			-first, let's find out | let's first find out | if there was | on our part | and if so | let's then think about | what we're going to do | what to do
+
+
+-title : 영어회화, 연습가이드 21, 생각이나다, 생각이 들다, 생각해내다
+	-script :	
+		-Do you remember the name of that place? Do you remember what that place was called? 
+		-Do you happen to remember the name of that place? Do you by any chance rememeber the name of that place? 
+		-The restaurant that we went to last month with Kim. 
+			-the name of that place | what that place was called? | happen to remember | by any chance remember
+			-the tittle of that movie | the title of this book | the title of the TV program.
+			-the place that we went to (특정단어를 부연설명하는 방식!!) 
+			
+		-Oh~ you mean that seafood restaurant! I think it was deep blue something.. but I can't(don't) remember exactly. why? Do you want to go there again?
+			-Oh~ you mean that ... | I think it was.. | .. something | but I can't remember exactly | again? 
+		
+		-My dad's(땟쓰) sixtieth(식스띠이스) birthday is next month. 
+		-I figured we should go to a nice place. I figured I should take him to a nice place. 
+		-but I couldn't really think of anywhere(anyplace). Do you know anywhere(someplace) nice? Any recommendations?(추천있어?)
+			-my dad's sixtieth birthday is | I figured I should(해야겠다는 생각을 하다!!) | I figured we should | go to a nice place | take him to a nice place(모시다)
+			-I couldn't really think of(잘 안떠올라) | think of(떠올리다) | do you know anywhere nice | Any recommendations?
+		
+		-Yeah, I can think of a few places.(생각나는곳이 몇개 있어)
+			-I can think of(떠오르는게 있어)
+
+
+-title : 영어회화, 표현정리, 비례식 묘사 표현, part1/2, 많을수록 좋아, 작을수록 가지고 다니기 편하다
+	-script :	
+		-The more the better. the earlier the the better(시간,아침). the sooner(시점) ther better. the closer the better. the smaller the better.
+		-The smaller it is the cheaper it is(gets). the smaller it is the more expensive it is(gets). the smaller it is the more convenient it is(gets).
+			the more | the better | the earlier | the sooner | the closer | the smaller | the bigger | the cheaper | the more expensive | the more convenient | it is | it gets
+		
+		-The more functions it has(there are 일반적론적인거라면) the better it is. Because the smaller it is the less stuff you can carry in it.
+		-The smaller it is the easier it is to carry but that doesn't necessarily(네써쎄r리) mean the smaller the better.
+			-the more functions it has | the more functions there are | because the smaller it is | the less stuff | you can carry | in it(그안에)
+			-the more easier it is to | but that doesn't necessarily(네써쎄r리) mean 
+
+		-The earlier we arrive(get) there the more time we'll have to prepare. So, I think the earlier the better.
+		-The more work you finish(do) now, the less (work) there will be (for you) to do later.
+
+-title : 영어회화, 추가표현 정리, 비례식 묘사 표현, par2/2, 하면 할수록, 뒤로 갈수록, 갈수록
+	-script :	
+		-I feel like I'm getting better at it every time I do it. (감이오다)
+		-I feel like I can understand it a little better each time I see it. I feel like I can understand it a little better each time I watch it.(이해가 되다)
+		-I feel like I'm getting the hang of it each time I try it. (이해하다, 할줄알게되다)
+		-I feel like I'm getting a feel for it a little better each time I read it. (감을잡다)
+			-I feel like | get better at it | I feel like I'm getting better at it | every time I do it
+			-I feel like I can understand it | a little better | each time I read it
+			-get the hang of(이해하다) | I feel like I'm getting the hang of it | each time I try it
+			-get a feel for(감을잡다) | I feel like I'm getting a feel for it | each time I read it
+		
+		-As time goes by it's going to get better. It's going to get better as time goes by.
+		-As you gain more experience it's going to get easier. It's going to get easier as you gain more experience.
+		-As the story progresses it becomes more and more complicated. It becomes more complicated as the story progresses.
+		-As I got closer to the end it became(got) more difficult. Towards the end(투월짓 디앤) it became more difficult. (뒤로갈수록)
+			-as time goes by | it's going to get better | as(일수록, 할수록) | as you gain more | get easier | as the story progresses(프로그레씻스) | it becomes more(and more) | complicated
+			-as I got closer to the end(뒤로갈수록) | Towards the end(투월짓 디앤, 갈수록) |
+		
+		-(I feel like) It's becoming more and more difficult. (!!최단축형, 갈수록)
+		-(I feel like) The story is becoming a little strange.
+			-it's becoming | the story is becoming | a little strange 
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
+-title : 영어회화, 표현, 생황 필수 영어표현 5개, 긍정적으로 생각하기 편
+	-script :		
+		-It's not exactly what I was looking for but it's better than nothing. Hey, it's better than nothing.
+			-It's not exactly waht | I was looking for | but it's better than nothing | better late than never | better safe than sorry | at least now we know
+		
+		-It could've been (a lot) worse.(더 안좋아 질수도 있었다->그만하길 다행이야) It could be a lot worse.(많이 않조아질수도 있어->이만한게 다행이야)
+
+
+-title : 영어회화, 대화가이드 06, ..할거면 뭐하러 해?, ..라고해서 ..하면 안되는 거야?
+	-script :		
+		-Hey, let's go to BergerKing today, I saw one across the street.
+		-Hey, what's the point of coming all the way here if you are going to go to BurgerKing?
+		-Why? Just because I'm traveling I can't eat what I like?(의문사느낌, 안돼?) Why? Just because I'm traveling (it 자주생각됨) doesn't mean I can't eat what I like.(평서문느낌, 아니야~)
+		-Look, all I'm saying is you can go to BurgerKing anytime you want. I didn't come to Thailand to eat a Whopper.(투이러 와퍼)
+			-I saw one | across the street | what's the point of coming(..ing) if you are going to | all the way here | why? just because | 
+			-just because I'am traveling I can't eat what I like? | what I like | (it) doesn't mean I can't | 
+			-look, all I'm saying is | anytime you want | I didn't come to Thailand to 
+
+
+-title : 영어회화, 관계절이 회화에서 꼭 필요한 경우, 사람편, part1/3, sns에 유난히 많이 집착하는 친구들이 몇명 잇어요
+	-script :	
+		-I like people who are very passionate about what they do.
+		-I like people who are active. I don't like people who are too active. (I don't like too active people. ->잘못된 표현)
+			-I like people who are | very passionate about | about what they do | I don't like people who are | too active people
+			
+		-I don't understand people who are very obsessed with celebrities. I don't understand people who get obsessed with.. I don't understand people who become obsessed with..
+		-I have a few friends who are very sensitive about how they look.
+			-I don't understand people | who are very obsessed with | get obsessed with | become obsessed with | be obesssed about | get obsessed about | become obsessed about
+			-a few friends | very sensitive about | about how they look
+			
+		-She is the kind of person who is always very clear about what she wants.
+			-is the kind of person | is always very clear | about what  she wants 
+			
+			
+-title : 영어회화, 관계절이 회화에서 꼭 필요한 경우, 사람편, part2/3
+	-script :				
+			-I don't understand people who are always very critical of others. I don't understand people who are always very judgemental of others.
+			-I don't really like people who are always very negative about everything.
+			-I have a few friends who are particularly very obsessed with social media. I have a few friends who are especially very obsessed with social media.
+				-I don't understand | I don't really like | who are always very critical of | who are always very judgemental of | who are always very negative about everything 
+				-who are particularly very obsessed with | who are especially very obsessed with 
+			
+			-He is the kind of person who wants to do everything on his own. 
+			-He is the kind of person who likes to do everything on his own. 
+			-He is the kind of person who prefers to do everything on his own.
+				-he is the kind of person | want to do  everything | like to do everything | prefer to to everything 
+				-on my own(내가알아서) | on his own | on her own | myself(직접) | by myself(혼자)
+			
+			-I got ticket to the new Avengers movie, but I'm so busy I don't think I can go.
+			-I think I'm just going to give it to someone who hasn't seen it yet.
+			-Give it to your brother.
+			-No way man, I don't want to do that. 
+			-Why not?
+			-You don't understand, my brother is the kind of person who just takes small gifts like this, like it's nothing.
+			-I don't need to give it to someone who doesn't appreciate a goog gesture.
+			-Ok, then, find someone who really wants to watch that movie.
+				-I got tickets | tickets to  | the new Avengers movie | I don't think I can go | I think I'm just going to | someone who hasn't seen it yet 
+				-give it to | No way man | I don't want to do that(아돈워나 두댓) | why not? | you don't understand~(모르는소리마) | who just takes small gifts like this | like it's nothing
+				-I don't need to(할필요 없다 봐) | someone who doesn't appreciate | a good gesture | Ok, tehn, | find someone who | really wants to 
+			
+
+-title : 영어회화, 관계절이 회화에서 꼭 필요한 경우, 사람편, part3/3
+	-script :	
+		-He is the kind of person who you have to explain every little thing to.
+		-Well, he surely doesn't seem like the kind of person who you can learn a lot from.
+		-I don't think you should tell that to anyone who you can't fully tust.
+		-I feel like I want to meet someone who I have more in common with, (do) you know what I mean?
+		-Yeah, as your friend, he actually doesn't seem like the kind of person who you can really connect with.
+		-I'm sick and tired of working with people who I have to explain every little(single) thing to.
+			-someone who I can learn a lot from | someone who I have a lot in common with (someone who have a lot in common with me 이렇게사용안함) | someone who I can really(fully) trust
+			-someone who I can really connect with(마음이잘통하는사람) | someone who you have to explain every little(single) thing to
+			-!!well, he surely doesn't seem like the kind of person who
+			-!!!I don't think you should(안하는게좋을것같어) | anyone who you can't
+			-!!I feel like I want to | who I have more in common with | (do) you know what I mean?
+			-as your friend | !!he actually doesn't seem like the kind of person | who you can really connect with | I'm sick and tired of | who I have to explain every single thing to
+
+
+-title : 영어회화, 표현, 쟤네 왜저래?, 별것도 아닌거 가지고 싸우다, 원래 저랬어
+	-script :	
+		-Hey, what's wrong with them? Hey, what's wrong with your computer, man? Hey, what's wrong with your hair? Dude, what's wrong with your puppy, man?
+		-Whenever(every time) they are together they keep fighting over really stupid things. (over really small things, over nothing)
+		-They've always been like that. He's(has) always been like that(this). This has always been like this. it's(has) always been likt this.
+		-I've tried to stop them but they pretend like they don't even hear me. I've tried to stop them but they act like they don't even hear me.
+		-So now I just try to ignore it. So now I just try not to pay attention to it. So now I just try not to think about it.
+			-Hey what's wromg with? | what's wrong with your | ..man..? | whenever they are together | everytime they get together | they keep fighting (keep ..ing) over |
+			-really stupid things | really small things | over nothing(아무것도아닌걸로) | they've always been like that | he's(has) always been like that | it's(has) always been like this 
+			-!I've tried to(해봤다) | stop them | !they pretend like | !they act like | !they don't even hear me | so now | I just try to | I just try not to | ignore it | pay attention to it
+
+
+-title : 영어회화, 연습가이드 22, 완료형 시제, 추가 표현
+	-script : 
+		-I got(bought) this phone in january this year so it's been about 4 months now.
+		-and I've been pretty happy with it for the most part although, I do wish it had better battery life. (I'm pretty happy with it for the most part)
+		-but that's what you(I아님) get for using a smaller phone, right?
+			-I got this | I bought this | in january | this year | it's been about(됐다) | it's been like(그래왔다) | 4 months now(인제) | I've been 형용사 | I've been pretty happy with 
+			-for the most part(전반적으로) | !although, I do wish 완성형 (했으면하긴하지만) | it had better battery life 
+			-!but that's what you get for ..ing (감수해야하는 부분이다) | but that's what you get for using a smaller phone, right?
+			
+
+-title : 영어회화, 대화가이드 07, 일상적인 대화 속에서 배우는 자연스러운 영어 표현과 문장 흐름
+	-script : 
+		-I moved here in 2014 so it's been about 4 years now.
+		-I've been pretty happy with everything for the most part.
+		-although I do wish the area had been a little more developed but that's what you get for living far away from the city right?
+			-I moved here in 2014 | it's been about | ..now | I've been pretty happy with everything | for the most part | although I do wish | the area had been a little more developed
+			-but that's what you get for ..ing | far away from 
+			
+		-what do you want to do for lunch?
+		-How about that Japanese place that we went to last week.
+		-Didn't they say they were closing this week something about a repair work?
+		-If I remember correctly(as I recall, if memory serves), that's next week. Didn't they say the third week?
+		-Actually, you know what?(의문형억향, 아..아니다) I will just call them and check just to be sure(문장뒤에와야함). (let me just call them and check just to be sure.)
+		-Hey, While you are on the phone (while you are at it), ask them if we could reserve a table out on the terrace. (out on the street, out in the yard, out in the field)
+		-Oh yeah! that's a good idea.
+			-what do you want to do | for lunch | how about | waht about | that Japanese place | didn't they say they were closing(과거진행) | something about a repair work (뤼양스..)
+			-if I remember correctly | as I recall (기억하기로) | if (my) memory serves (기억이 맞다면) | that's next week | didn't they say... (그냥단어로)the third week? |
+			-Actually, you know what? | I will just call them and check (그냥할께) | let me just call them and check | just to be sure (문장의뒤에위치)
+			-While you are on the phone | while you are at it | ask them if we could .. | reserve a table | out on the terrace | out on the street | out in the yard | out in the field
+			-that' a good idea
+		
+		
+-title : 영어회화, 표현, 말실수를하다, 말을 잘못하다, 말조심하다, par 1/2
+	-script : 
+		-I think she is still mad at me but I don't know what I did wrong? (She is still angry with(at) me. She is still upset with me.)
+		-Maybe it's somthing you said.(평서문, 있겠지) Could it be somthing you said?(의문형, 있는거아냐?) Maybe it's something I said. Could it be something I said?
+		-Yeah, it could be.
+		-Yeah, you know, you tend to be a little careless with your words. You must've said something you shouldn't have, again.
+			-she is still | be mad at me | be angry with me | be upset with me | 
+			-maybe it's something(있었겠지)| could it be something(있는거아냐?) | Yeah, it could be | Yeah, you know,.. | tend to be | tend to be a little careless with | your word
+			-be careful with your words | be careful with the things you say | be careful with what you say | 
+			-you must've said(말했나보지.., 말했겠지..) | you must've pp (했겠지,했겠다,했나보지) | something you shouldn't have(하면안되는거)
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
