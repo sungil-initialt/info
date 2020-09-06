@@ -1582,13 +1582,50 @@
 			-she is still | be mad at me | be angry with me | be upset with me | 
 			-maybe it's something(있었겠지)| could it be something(있는거아냐?) | Yeah, it could be | Yeah, you know,.. | tend to be | tend to be a little careless with | your word
 			-be careful with your words | be careful with the things you say | be careful with what you say | 
-			-you must've said(말했나보지.., 말했겠지..) | you must've pp (했겠지,했겠다,했나보지) | something you shouldn't have(하면안되는거)
+			-you must've said(말했나보지.., 말했겠지..) | you must've pp (했겠지,했겠다,했나보지) | something you shouldn't have(하면안되는거) 
 		
 		
+-title : 영어회화, 표현정리, 말실수 편, part 2/2
+	-script : 		
+		-I said some things (that) I shouldn't have. I said something (that) I shouldn't have. I said a lot of things (that) I shouldn't have.
+		-He said some things to her that he really shouldn't have. 
+		-He really should've been more careful with his words. He really should've been more careful with what he said.
+			-some things that | I shouldn't have | a lot of things | .. that he really shouldn't have | should've been more careful with 
 		
+		-I think I said some things that upset her. 
+		-I really should've been more careful with my words. I really should've been more careful with what I said.
+			-.. some things that upset her | I really should've been more careful with 
+		
+		-I accidentally told her about that. I accidentally mentioned something.
+		-I made the mistake of telling him where I live. I made the mistake of giving him my phone number. I made the stupid mistake of giving him my email address.
+			-I accidentally told | I accidentally mentioned | I made the mistake of ..ing | I made the stupid mistake of giving him my email adress. | make the stupid mistake (of ..ing)
+		
+		-I'm sorry, I didn't mean that. I'm sorry, that's not waht I meant(맨트). I'm sorry, that didn't come out right. 
+		-I'm sorry, I didn't mean for that(주격) to sound like it did. (그거가 그렇하게 소리나게하다. 그런식으로 말하려던게 아니었어)
+			-I'm sorry, I didn't mean that. I'm sorry that's not what I meant(멘드). I'm sorry, that didn't come out right. I'm sorry, I didn't mean for that to sound like it did.
+		
+		
+-title : 영어회화, 표현, 시키는 대로 하다, 하라는 대로 하다, 배운 대로 하다, 지시대로 하다, part 1/2
+	-script : 
+		-How did you do this?
+		-I just followed the instructions in the menual.
+		-I did what it says in the manual. (what does it say on the cover? it says..  )
+		-I did it according to the instructions in the manual. I did it according to what you said. I did it according to what you told me.
+			-how did you do this? | I just followed | the instructions in the menual | I did what it says in the | what does it say on the cover | it syas.. | I did it according to 
+	
+		
+-title : 영어회화, 표현, 시키는 대로 하다, 계획대로 하다, 늘 하던 대로 하다, part 2/2
+	-script : 	
+		-I did exactly what he said. I did exactly what he told me to. I did exactly what you said. I did exactly what you told me to. I did everything according to what you said.
+		-I followed her instructions. I followed the instructions that my boss gave me. I followed the instructions that you gave me.
+			-여기..
+		
+		-Just remember(기억해라, 하기만해라) what you learned. Just do what I taught(톳트) you. You just need to do what you've always done.
+		-I did what I always do. I did what I've always done. I did what I'd(had) always done. I did what I've been doing.
+		-I will just do what I've always done for the past(last) 2 weeks. I will just do what I've been doing up to now(until now). 
 
-
-
+		
+		-Let's just stick to our (original) plan.(계획대로하자) Let's just do what we were originally planning(going) to do.
 
 
 
