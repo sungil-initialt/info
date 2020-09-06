@@ -3200,12 +3200,107 @@ Template Engine
 
 
 [Network]
+-Ethernet : 네트워크 구성 방식의 하나로 현재의 인터넷을 구성하는 방식이다. 네트워킹 초기 시대에는 FDDI and ATM 등 여러 형태의 네트워크 구성 방식이 있었으나 현재는 Ethernet이 지배적이다.
 -IPS(Internet Protocol Suite) : 인터넷에서 컴퓨터들이 데이트를 주고 받는데 사용하는 프로토콜 모음으로 TCP/IP 가 가장 대표적이다.
+-Network Media(Network facility, Transmission medium) : 단계별 네트워크 장비(hub, swith, bridge, not, router..)
+
+-transmission rate : host가 데이터를 전송(port out)시키는 속도
+-propogation speed : 상대호스트(net media 일수도 end host 일수도) sender가 보낸 데이터를 받는데 걸리는 시간 (케이블, 실질적 거리, 거치는 Network Media 들에 따라 달라질수 있다.)
+
+-OSI 7 Layer :
+	-7 Application Layer :
+		-관련 프로토콜 : http, ftp, smtp, 
+		-관련 장비 : L4-7-switch, web-switch, content-switch (특정 app 프로토콜에 대한 load balancing이 주 목적이다)
+		
+	-6 Presentation Layer : 
+		-Data encryption/decryption : 어떤 의미에서 하는지 잘 모르겠음, ssl은 L5에서 처리 되는듯
+		-Character/string conversion : 6레이어는 app레이어에서 내려온(또는 5레이어에서 올라온) 데이터를 사로 다른 기종간 데이터 교환이 가능하도록 standard 형식의 데이터 포맷으로 맞추는 작업을 한다.(char, integer는 몇바이트로 변환할지...등등)
+			-각 host(pc, 서버, 전화기, tv)와 network device들간에 서로 인식하는 데이터 형식이 다르기 때문
+		-Data compression : application 레벨과는 별도로 전송 효율성을 높이기 위해 standard 형식으로 변환된 데이터를 압축하여 아래 레이어로 내리거나 압축을 풀어 윗 레이어로 올린다.
+		-Graphic handling : 내용 모르겠음??
+	
+	-5 Session Layer :
+		-좀더 application 레이어에 가까운 개념으로 TCP connection establish를 setup, teardown 하는 관리적 주체 역할을 한다. (TCP connection은 좀더 하위레벨에서의 연결 상태라면 Session은 좀더 application 레벨의 프로세스급의 관리)
+			-동일한 TCP port로 들어온느 여러 end point의 데이터를 상위 레별의 개념인 세션의 개념으로(동일한 endpoin) 묶어 위 레벨로 전달해 줄 수 있다.
+			-in, out bound를 생각해 봤을때도 들어오는 나가는 데이터에 대해 동일 endpoint에 대해 session의 개념을 묶어 처리할 수 있게 해준다. (동일 세션(동일end host)에 대한 데이터의 결합등)
+			-tcp 레벨의 connection이 끊기는 상황에서 상위 레이어 차원에서 복구 및 재 동기화를 처리할수 있다.
+			-SSL(Secure Sockets Layer)은 이 레이어에서 동작하는 것으로 보임?? SSL 사용시 secure한 세션을 설정, 6레이어에서의 encryption은 어떤의미인지 정확히 모르겠음??
+	
+	-!!TCP/IP(4,3 레이어는 end host(os레벨?)에서 생성되고 관리되는 주체) -->여기부터 시작 : tcp/ip 레이어가 in/out 상황에서 어떻게 다르게 처리되는지 확인 필요
+	-4 Transport Layer :
+		-데이터 단뒤 : out->segment, in<-TCP메시지??
+		-추가 주소 : Source = requester port 번호, Destination = server port 번호
+		-관련 프로토콜 : TCP, UDP
+		-관련 장비 : L4-Switch = L4-load-balancer = L4-Router = NAT
+			-L4장비들은 여러 형태가 있을 수 있으며 그 기능은 대부분 유사하다. 하드웨어 기반의 L3에 추가적으로 port(프로토콜번호) 정보를 활용하여 여러 기능을 수행함 
+		-host간 커넥션을 맺기전의 connection less 상태의 end to end(최종 host) 연결로 실제 최종 host(pc,서버)의 OS 및 App(대부분이 OS 영역일듯)와 연결되는 layer 이다.(물론 2,3레이어의 정보도 NIC를 통해 들어오긴 함)
+			-port 번호를 근간으로 구분되며 L4에 5,6,7L 정보를 포함한다. 전송에서 발송하는 각종 에러에 대한 보정처리(데이터검증,재요청,순서재배열, 이러한 처리는 end host의 OS에서 하는듯??)를 처리한다.
+			-out bound 시나리오 : app 데이터는 tcp 레이어에서(os) segment 단위로 나뉘어서(이때순서가명시됨) IP레이어라 내려가고 ip레이어에서는 해당 데이터에 대한 ip패킷을 구성한다.(L2 레이어의 frame 싸이즈 한계 때문에??)
+			-in bound 시나리오 : ip레이어를 거쳐 tcp 레이어로 들어온 데이터는 순번을 참조하여 하나의 tcp 메시지로 조합되어(os) 상위 레이어로 올라간다. (상위 코딩 레벨에서는 조합된 메시지를 활용)
+		
+		-TCP : connection-oriented, 두 end host간 connection을 먼저 establish 한 후 데이터를 보내게 된다. 이후 리시버는 항상 수신받은 데이터에 대해 ack를 센드로 보내야하고(못받아도 못받음을 보내야함), 센더는 ack를 받아야 다음 패킷을 보냄
+			-?? ack를 받아야 센더가 다음 패킷을 보낼텐데.. 왜 tcp에서 패킷 재정렬 기능이 필요할까?? 확인 필요!!??
+				-?? 하나 하나씩이 아니라 몇개 쭉 보내고 그에대한 ack 쭉 보내고 이런식인것 같기도 함. 확인 필요!!??
+			
+			-TCP connection의 의미 : tpc방식은 실제 데이터를 보내기 전에 end 호스트간 센더는 앞으로 데이터를 보내겠다는 내용을 리시버는 보내라는 정보를 주고 받는데.. 이 관계가 끊기는 타임은 센더가 다 보냈어(complete), 리시버가 ok를 해야 한다.
+				-센더가 complete을 보내기까지 두 호스트는 연경 상태 즉 connection established 상태로 간주되는 것이다.
+				-그사이에는 주고 받는 패킷에 대해 두 end host는 ack를 수행하고 패킷 번호를 통해 순서 보정을 할수 있다.(센더는 팻킷을 순서데로 보내지만 패킷마다 실제 전달 경로(route)가 달라질수 있기 때문에 리시버는 다른 순서로 받아 질수 있다)
+				
+		-UDP : connectionless and unreliable protocol 이다. 센더는 리버의 ack를 필요로하지 않으며 end host로 일방적으로 계속 데이터를 보낸다.(시간단축의 장점)
+			-이러한 방식은 영상스트림, 게임, call 등과 같이 패킷하나하나의 데이터가 크게 중요하지 않은 경우에 사용될수 있다.
+			
+		-TCP레이어의 에러 컨트롤 이유 : 센더에 의해 세그먼트 팻킷이 잘 전달된다 하더라도 라우터등의 장비에 잠시 저장되는 과정에서(속도처리를 위한 큐잉과정) 데이터에 손상이 있을수 있기 때문이다.
+		
+	-3 Network Layer :
+		-데이터 단위 : packet(=데이터그램?)
+		-추가 주소 : Source = requester IP 주소, Destination = server IP 주소
+		-관련 프로토콜 : IP, IPX
+		-관련 장비 : IP Switch(L3 switch), NAT(Network Address Translation), Router
+		-Network Layer 는 host의 logical Address(IP 주소) 에 대한 정보를 갖으며 해당 ip 정보를 통해 라우터는 최종 목적로 가는 최단 경로로 라우팅 한다.
+			-데이터 패킷을 목적지(IP)까지 라운팅(Between inter and intra)하여 최종전달하는 역할을 한다.
+			
+	
+	-2 Data link Layer :
+		-데이터 단위 : frame (상위 레이어의 모든 데이터를 포함하여 한본에 보내지는 데이터 단위이다. 다시말해 frame안에는 TCP(http) 데이터가 포함되는 형태)
+		-추가 주소 : Source = requester MAC 주소, Destination = server MAC 주소
+		-관련 프로토콜 : IEEE 802.2
+		-관련 장비 : Bridge(두개의 LAN을 연결하는 기능과 함께 한쪽의 데이터가 불필요하게 다른쪽으로 넘어가지 않게하는 필터링 기능도 함), Switch(L2 Switch의 경우 dest Mac 주소가 명시되지않은 frame에 대해서는 연결된 전체 host로 브로드케스팅 하기도 함)
+			-L2 media의 flow control :
+				-Stop and Wait for flow control : 최종 host(pc,서버)가 ack를 보낸후에 다음 데이터 frame을 전송한다.
+				-Sliding window : 몇개의 frame을 보내고 ack를 보낼지 media와 host가 미리 결정하고 해당 frame 갯수만큼 전송후 ack를 한다(시간 및 리소스 절약)
+		-Data link Layer 는 host의 Physical Address(MAC 주소)에 대한 정보를 갖으며 에러 감지(에러수정은안함) 기능을 수행함 
+
+		
+	-1 Physical Layer : 
+		-데이터 단위  : bits
+		-관련 프로토콜 : EIA/TIA-232
+		-관련 장비 : NIC, Hub, repeaters, Ethernet cable connectors
+			-Nic, hubs, repeaters, Ethernet cable connectors등 네트워크 장비간의 통신 프로토콜이다. 
+			-hub와 같은 L1 장비의 경우 ip물론 Mac 주소 어느것도 활용하지 않는다. (일반적인 허브는 그저 데이터를 copy하여 전체 연결된 end hot로 전파만 함)
+		-NIC, 스위치 등이 서로의 상태를 확인하고 transmission rate in the form of bits per second, 기계적인 통신 방식등을 서로 결정한다.
+		-0,1과 같은 매우 row 데이타 형태의 시그널을 사용한다. 실제 데이터가 encapsulation되어 전달할수 있도록 한다.
+		-!!?? NIC 및 네트워크 장비간에만 활요되는 레이어로 NIC를 통해 OS레벨로 올라올때는 제거되어 올라오는것 같음(또는 device간에만 활용되는 프로토콜인듯), 패킷캡처시에 보이지 않음.
+		
+		
+		
+
+	
+-브릿지, 스위치 : 기능적으로 매우 유사, 둘다 L2 장비, 둘다 데이터 필터가 가능(특정 맥어드레스로만 전송가능), 
+	-일반적으로 브릿지는 네트워크를 확장(랜과 랜을 연결)시키는 목적으로 사용, 
+	-요즘 나오는 ip 스위치는 라우터(L3) 처럼 ip레벨의 필터를 처리함
+	-
+
+-브릿지 : 
+	-L2장비, 맥주소로 데이터를 필터 및 포워딩 가능, 주로 네트워크간 연장을 위해 존재(기본2포트만을 갖음), 주로 소프트웨어 방식임, 보통 store-and-forward 방식임(in data를 out하기위해 잠시 저장)
+	
+-스위치 : L2장비 또는 L3장비, 요즘의 스위치는 맥주소뿐 아니라 IP레벨의 필터 및 포워딩이 가능, 보통 많은 포트를 가지고 있음, 주로 하드웨어 방식임 store-and-forward, cut-through switching(저장안함, 빠름, 그렇치만 큰차이 없음)
+
+
 
 -(TCP)/IP(Internet Protocol) : 인터넷상에서 데이터를 주고 받는 프로토콜이다. IP는 데이터의 전달 여부(보장) 및 순서에 관여 하지 않는다 그래서 TCP 프로토콜에 실데이터를 얹고(TCP 세그먼트, TCP패킷이라 불리지만 잘못된 말) 이를 IP 프로토콜에 넣어 전송한다.
 	-http, ftp, smtp 등이 이러한 TCP/IP 레이어에 올라간 어플리케이션 프로토콜이다.
 
--TCP(Transmission Control Protocol) : 인터넷을 통해 노드간 주고 받는 데이터를 안정적으로, 순서대로, 에러없이, 가장 빠르게 교환할 수 있게 하는 Transmission Control Protocol이다 IP프로토콜위에 넣어서 동작된다.
+-TCP(Transmission Control Protocol) : 인터넷을 통해 노드간 주고 받는 데이터를 안정적으로, 순서대로, 에러없이, 가장 빠르게 교환할 수 있게 하는 Transmission Control Protocol이다 IP프로토콜에 넣어 전송 된다.
 	-unitcast :
 	
 	-options : 
@@ -3232,7 +3327,41 @@ Template Engine
 	-It’s a key performance metric for web applications and one of the main factors, along with Time to First Byte (TTFB), when measuring page load time and network latency.
 	
 
+
+[wireShark]
+-주요 filter :
+	-ip : ip.addr==192.168.0.11, ip.src==, ip.dst==
+	-프로토콜 : dns and Http, tcp and udp
+	-port : tcp.port==443, 
+	-tcp 네트워크 오류 관련 flags : tcp.analysis.flags
+	-제외 : !(arp or dns or icmp)
+	-특정 프로토콜의 팻킷을 모아 보기(하나의 세션? 정보로 모아 보기?) : 원하는 패킷 선택 후 오른쪽 버튼, follow, 스트림 선택
+	-특정 프로토콜에 포함된 단어로 필터 : tcp contains facebook, udp contains facebook
+	-http 요소로 검색 : http.request, http.response.code==200
+	-tcp 요소로 검색 : tcp.flags.syn==1, tcp.flags.reset==1
+	-기타 : sip && rtp
+	
+
 	
 	
 [Hardware]
--HSM (hardware security module) : 하드웨어적으로 암호화를 제공하는 디지터 저장 장치, 매우 중요한 인증서 및 데이터등의 경우 일반 디스크가 아니라 해당 저장장치에 저장 보관 할수 있다
+-HSM(hardware security module) : 하드웨어적으로 암호화를 제공하는 디지터 저장 장치, 매우 중요한 인증서 및 데이터등의 경우 일반 디스크가 아니라 해당 저장장치에 저장 보관 할수 있다
+-IRQ(Interrupt Request) : 컴퓨터의 보드에 연결되어 있는 주변기기들이 어떤 일이 발생하였을때 이를 CPU에 알리기위한 일련의 처리, cpu에게 알리는 일을 interrupt라고 하며 이런 line을 IRQ라고 한다.
+	-CPU는 이러한 interrupt를 받으면 우선 순위에 따라 하던 일을 중단하고 그 요청을 받아 다른 일을 처리하게 된다.
+		-주요 IRQ 역할 및 순서
+			-0 IRQ 타이머
+			-1 키보드
+			-2 IRQ 캐스 케이드 공유
+			-3 시리얼포트 2, COM2, COM4 ( 모뎀 / 마우스)
+			-4 시리얼포트 1, COM1, COM3 ( 모뎀 / 마우스)
+			-5 LPT2 병렬포트 혹은
+			-6 FDD 컨트롤러
+			-7 LPT1 병열 포트 등 혹은 사운드카드
+			-8 RTC( Real Time Clock)
+			-9 예비, 주로 미디 카드(MPU401)에서 사용 , SOUND ,VGA . USB, MPEG II
+			-10 예비 , SOUND ,VGA . USB,MPEG II,
+			-11 예비, SCSI 아답터, SOUND ,VGA . USB,MPEG II
+			-12 PS/2 마우스
+			-13 코프로세서 (수치처리보조연산자 )
+			-14 IDE 하드 컨트롤러 Primary
+			-15 IDE 하드 컨트롤러 Secondary
