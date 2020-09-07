@@ -1286,7 +1286,7 @@
 	
 -title : 영어회화, 표현, 정확히 뭐라고 하기에는 어려운데 이건 도저히 뭔가 적응이 안돼, 애매한 인상 묘사하기 
 	-script :	
-		-There's somthing a little strange about him. There's something about him that's a litter strange.
+		-There's somtehing a little strange about him. There's something about him that's a litter strange.
 		-There's something very attractive about her. There's something about her that's very attractive. 
 			-something a little strange about him | something about her that' very attractive.
 		
@@ -1618,14 +1618,79 @@
 	-script : 	
 		-I did exactly what he said. I did exactly what he told me to. I did exactly what you said. I did exactly what you told me to. I did everything according to what you said.
 		-I followed her instructions. I followed the instructions that my boss gave me. I followed the instructions that you gave me.
-			-여기..
+			-I did exactly | what he said | what he told me | what you said | what you told me | I did everything | according to the | according to what you said
+			-I followed | her instructions | I followed the instructions | that my boss gave me | that you give me
 		
 		-Just remember(기억해라, 하기만해라) what you learned. Just do what I taught(톳트) you. You just need to do what you've always done.
 		-I did what I always do. I did what I've always done. I did what I'd(had) always done. I did what I've been doing.
 		-I will just do what I've always done for the past(last) 2 weeks. I will just do what I've been doing up to now(until now). 
+			-Just remember | what you learned | just do | what I taught you | you just need to do(하기만하면돼) | what you've always done
+			-I did | what I alway do | what I've always done | what I'd alway done | what I've been doing 
+			-I will just do | for the last 2 weeks | for the past 2 weeks | up to now | until now
 
-		
 		-Let's just stick to our (original) plan.(계획대로하자) Let's just do what we were originally planning(going) to do.
+			-let's just stick to our (orginal) plan | let's just do | what we were originally(올 뤼지니널리) planning to do. 
+
+
+-title : 영어회화, 연습가이드 23, 빈도를 더 다양하게 표현하기
+	-script : 	
+		-My parents and I hardly ever exchage gifts.
+		-I sometimes write them a small card but even that's only on special occasions.
+		-Most of the time, we just go to a nice place to eat and send some time together.
+		-And when I feel like I should actually get them someting, I just give them some money, more often than anything else.
+			-I hardly ever exchange gifts | hardly ever | write them a small card | but even that's only on special occastions 
+			-most of the time | from time to time | once in a while | every now and then | we just go to | send some time together
+			-!when I feel like I should | get them something(사주다) | I just give them | some money | , more often than anything else (딴것보다 이걸 자주)
+
+
+-title : 영어회화, 연습가이드 24, par 1/2, 영화를 보고 뭐가 좋았는지 설명할 때 사용하게 되는 여러가지 기본 표현
+	-script : 
+		-It was really good. The story was good and the acting was fantastic.
+		-I really like(d) how they added some comedy here and there, otherwise, don't you think it would've felt too serious throughout the entire movie?
+		-And I think they did a really good job of casting good actors who are not too famous.
+		-Actually when you are watching a really famous star, more often than not, you see the actor or actress rather than the character.
+			-It was really good(재밌었어) | was fantastic | I really like how they | added some comedy | hear and there | otherwise, | don't you think it would've felt | too serious
+			-throughout the entire movie(전반적으로) | did really good job of casting | who are not too famous 
+			-!!when you are watching(..하는경우, 일반론적인이야기의 시작) | !!, more often then not, you see the actor aor actress rather than (instead of) the character.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
