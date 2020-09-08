@@ -3200,13 +3200,21 @@ Template Engine
 
 
 [Network]
--Ethernet : 네트워크 구성 방식의 하나로 현재의 인터넷을 구성하는 방식이다. 네트워킹 초기 시대에는 FDDI and ATM 등 여러 형태의 네트워크 구성 방식이 있었으나 현재는 Ethernet이 지배적이다.
--IPS(Internet Protocol Suite) : 인터넷에서 컴퓨터들이 데이트를 주고 받는데 사용하는 프로토콜 모음으로 TCP/IP 가 가장 대표적이다.
--Network Media(Network facility, Transmission medium) : 단계별 네트워크 장비(hub, swith, bridge, not, router..)
+-배경 : 
+	-Ethernet : 네트워크 구성 방식의 하나로 현재의 인터넷을 구성하는 방식이다. 네트워킹 초기 시대에는 FDDI and ATM 등 여러 형태의 네트워크 구성 방식이 있었으나 현재는 Ethernet이 지배적이다.
+	-IPS(Internet Protocol Suite) : 인터넷에서 컴퓨터들이 데이트를 주고 받는데 사용하는 프로토콜 모음으로 TCP/IP 가 가장 대표적이다.
+	-Network Media(Network facility, Transmission medium) : 단계별 네트워크 장비(hub, swith, bridge, not, router..)
 
--transmission rate : host가 데이터를 전송(port out)시키는 속도
--propogation speed : 상대호스트(net media 일수도 end host 일수도) sender가 보낸 데이터를 받는데 걸리는 시간 (케이블, 실질적 거리, 거치는 Network Media 들에 따라 달라질수 있다.)
+	-transmission rate : host가 데이터를 전송(port out)시키는 속도
+	-propogation speed : 상대호스트(net media 일수도 end host 일수도) sender가 보낸 데이터를 받는데 걸리는 시간 (케이블, 실질적 거리, 거치는 Network Media 들에 따라 달라질수 있다.)
 
+	-NAT(network address translation) : 컴퓨터 네트워킹에서 쓰이는 용어로서, IP 패킷의 TCP/UDP 포트 숫자와 소스 및 목적지의 IP 주소 등을 재기록하면서 라우터를 통해 네트워크 트래픽을 주고 받는 기술
+		-NAT IP : 외부로 나갈때 표출되는 ip로 보면 된다. (공인 ip를 절약하기 위해 내부의 여러 호스트들이 외부로 연결될때는 하나의 NAT ip로 나가게 된다.)
+
+	-RTT (Round-trip time) : RTT is the duration, measured in milliseconds, from when a browser sends a request to when it receives a response from a server. 
+		-It’s a key performance metric for web applications and one of the main factors, along with Time to First Byte (TTFB), when measuring page load time and network latency.
+	
+	
 -OSI 7 Layer :
 	-7 Application Layer :
 		-관련 프로토콜 : http, ftp, smtp, 
@@ -3280,51 +3288,22 @@ Template Engine
 		-NIC, 스위치 등이 서로의 상태를 확인하고 transmission rate in the form of bits per second, 기계적인 통신 방식등을 서로 결정한다.
 		-0,1과 같은 매우 row 데이타 형태의 시그널을 사용한다. 실제 데이터가 encapsulation되어 전달할수 있도록 한다.
 		-!!?? NIC 및 네트워크 장비간에만 활요되는 레이어로 NIC를 통해 OS레벨로 올라올때는 제거되어 올라오는것 같음(또는 device간에만 활용되는 프로토콜인듯), 패킷캡처시에 보이지 않음.
-		
-		
-		
-
-	
--브릿지, 스위치 : 기능적으로 매우 유사, 둘다 L2 장비, 둘다 데이터 필터가 가능(특정 맥어드레스로만 전송가능), 
-	-일반적으로 브릿지는 네트워크를 확장(랜과 랜을 연결)시키는 목적으로 사용, 
-	-요즘 나오는 ip 스위치는 라우터(L3) 처럼 ip레벨의 필터를 처리함
-	-
-
--브릿지 : 
-	-L2장비, 맥주소로 데이터를 필터 및 포워딩 가능, 주로 네트워크간 연장을 위해 존재(기본2포트만을 갖음), 주로 소프트웨어 방식임, 보통 store-and-forward 방식임(in data를 out하기위해 잠시 저장)
-	
--스위치 : L2장비 또는 L3장비, 요즘의 스위치는 맥주소뿐 아니라 IP레벨의 필터 및 포워딩이 가능, 보통 많은 포트를 가지고 있음, 주로 하드웨어 방식임 store-and-forward, cut-through switching(저장안함, 빠름, 그렇치만 큰차이 없음)
 
 
-
--(TCP)/IP(Internet Protocol) : 인터넷상에서 데이터를 주고 받는 프로토콜이다. IP는 데이터의 전달 여부(보장) 및 순서에 관여 하지 않는다 그래서 TCP 프로토콜에 실데이터를 얹고(TCP 세그먼트, TCP패킷이라 불리지만 잘못된 말) 이를 IP 프로토콜에 넣어 전송한다.
-	-http, ftp, smtp 등이 이러한 TCP/IP 레이어에 올라간 어플리케이션 프로토콜이다.
-
--TCP(Transmission Control Protocol) : 인터넷을 통해 노드간 주고 받는 데이터를 안정적으로, 순서대로, 에러없이, 가장 빠르게 교환할 수 있게 하는 Transmission Control Protocol이다 IP프로토콜에 넣어 전송 된다.
-	-unitcast :
-	
+-TCP 기타
 	-options : 
 		-connection Timeout :
 		-So Timeout :
-		
 		-TCP keepalive : TCP 레이어에서 두 노드가 서로 살아있음을 알리기 위해 주고 받는 데이터 패키 및 그 매커니즘 이다. 주 목적은 상대가 살아있지 않은데 혼자 계속하여 대기하는 상태를 제거하기 위함이다. 
-			-또한 NAT 장비의 경우 일정 시간동안 두 노드가 패킷 교환이 없는 경우 NAT 테이블에서 제거하는 하기때문에 이를 막기 위해서도 필요하다.(장시간 안쓰고 있는 커넥션에 대해서도 포트할당을 해준다면 한계가 있겠지?? 그래서 나름의 룰로 정리하겠지??)
-			
+			-또한 NAT 장비의 경우 일정 시간동안 두 노드가 패킷 교환이 없는 경우 NAT 테이블에서 제거하는 하기때문에 이를 막기 위해서도 필요하다.(장시간 안쓰고 있는 커넥션에 대해서도 포트할당을 해준다면 한계가 있겠지?? 그래서 나름의 룰로 정리하겠지??)			
 			-Keepalive time : 휴지상태에서 얼마동안 유지될경우 Keepalive를 보낼지를 정한다. 보통 2h (15분 미만으로는 설정하지 않는것을 권장)
 			-Keepalive interval : Keepalive에 대한 응답을 받지 못한경우 얼마뒤에 다시 보내 볼찌.. (tcp_rexmit_interval 값보다 작은 값을 보내서는 안된다.)
 			-Keepalive retry : Keepalive에 대한 응답이 없을때 몇번까지 보내보고 close 할지..
 	
--UDP
+-UDP 기타
 	-multicast :
 	-broadcast :
-	
 
-
--NAT(network address translation) : 컴퓨터 네트워킹에서 쓰이는 용어로서, IP 패킷의 TCP/UDP 포트 숫자와 소스 및 목적지의 IP 주소 등을 재기록하면서 라우터를 통해 네트워크 트래픽을 주고 받는 기술
-	-NAT IP : 외부로 나갈때 표출되는 ip로 보면 된다. (공인 ip를 절약하기 위해 내부의 여러 호스트들이 외부로 연결될때는 하나의 NAT ip로 나가게 된다.)
-
--RTT (Round-trip time) : RTT is the duration, measured in milliseconds, from when a browser sends a request to when it receives a response from a server. 
-	-It’s a key performance metric for web applications and one of the main factors, along with Time to First Byte (TTFB), when measuring page load time and network latency.
 	
 
 
