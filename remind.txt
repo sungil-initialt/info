@@ -518,7 +518,7 @@
 -gradle : build automation system. 빌드 스크립트(Groovy, Kotlin 언어)에 논리적 개념(프로그램 처럼)을 적용, java뿐 아니라 여러 언어 프로젝트 지원
 	-DSL : Domain Specific Language (Groovy 기반)
 		-Internal(비공개) :
-		-Incubating(실헝) :
+		-Incubating(실험) :
 		-Public(공개) :
 		-Deprecated(패지) :
 
@@ -2122,6 +2122,25 @@ Template Engine
 -svg : Scalable Vector Graphics, 확대 축소시 안깨짐
 -PNG : Portable Network Graphics, gif 파일 라이선스 문제를 해결하기 위한 대안으로 나옴
 
+-java :
+	-jar(Java Archive) : zip 포맷을 베이스로하여 class 패키지를 구성해 놓은 파일(resource, properties 파일등도 포함할 수 있다), jar 툴을 이용해 생성, META-INF 디렉토리에 해당 패키지와 관련한 메타 정보를 포함하고 있다.
+		-specificaton : https://docs.oracle.com/javase/6/docs/technotes/guides/jar/jar.html
+		
+		-META-INF 관련 파일 :
+			-MANIFEST.MF : 패키지 관련 정보 (Manifest-Version, Created-By, Signature-Version, Class-Path, Main-Class, 기타 applet패키지를 위한  attributes 정의)
+				-Manifest.txt : MANIFEST.MF 파일을 만들기위해 생성
+					-Class-Path: libs/slf4j-api-1.7.25.jar (해당 jar 내부의 class에서 참조할 다른 jar들의 위치를 잡아 줄수 있다, 단순히 실행 호스트에 해당 경로를 추가해 줄뿐 실행 호스트에 실제 파일이 존재하지 않으면 의미가 없음)
+					-Main-Class: testProject1.MyMain (실행 가능한 jar 인경우 Main 클레스를 정해 줄수 있다)				
+
+			-INDEX.LIST : applets과 같은 네트워크 프로그래밍에서 class파일 참조를 최적화 하기위한 용도로 사용됨 (더확인 필요!!)
+			-x.SF, x.DSA : 코드 싸인(검증)과 관련된 파일
+			-services(디렉토리)/ : 호스트에서 서비스로 동작하는 어플들이 자신과 관련된 interface를 모아놓을수 있는 디렉토리 (더확인 필요!!)
+					
+		-jar 패킹(jar툴 외에 eclipse에서 jar형태로 export 할수도 있음) : jar cfm testProject1.jar Manifest.txt testProject1/*.* 
+			
+	-war(Web application ARchive) : jsp, 서블릿, 자바, XML, 파일, 태그 라이브러리, 정적 웹 페이지 (HTML 관련 파일) 및 웹 애플리케이션을 함께 이루는 기타 자원을 한데 모아 배포하는데 사용되는 JAR의 일종(JDK 클레스로더에서 직접 로딩은 못함)
+	-ear(Enterprise ARchive) : 하나 이상의 모듈(war등)들은 하나의 아카이브로 묶어서 여러 모듈이 애플리케이션 서버에 동시에 일관성 있게 배치될 수 있도록 하기 위한 자바 EE에 쓰이는 파일 형식이다
+	
 
 
 
@@ -2430,13 +2449,9 @@ Template Engine
 					-등록된 url과 다른 scope의 url이 넘어올경우 400오류를 발생하는것이 좋다
 
 
-
-
-
-
-
-
 		-SAML(Security Assertion Markup Language) :
+
+
 
 
 
@@ -2970,7 +2985,7 @@ Template Engine
 	-command :
 		-node : 직접 스크립트를 작성하여 테스트 해볼수 있는 cl 환경을 제공한다.
 		-node abc.js : abc.js 파일을 실행해 준다.
--npm :
+-npm(Node Package Manager) :
 	-개념 :
 		-Node Package Manager, 리눅스의 apt와 유사한 개념으로 javascript 모듈의 완성도를 확인 하여 storege에 올리는 관리 주체로서 사용자는 cl 클라이언트를 이용하여 다운 및 인스톨이 가능하다.
 		-npm 을 통해 관리되는 패키지들은 브라우저 및 node.js 환경 (또는 그러한 개발환경)에서 사용하는 라이브러리, 컴포넌트 개념이다.
@@ -2993,6 +3008,16 @@ Template Engine
 		-npm list -g : 글로벌 패키지 구성 트리
 		-npm list -depth=0 : 1 댑스 까지만
 
+
+
+[Nexus]
+	-개요 :
+		-여러 필요 lib(jar)를 저장하고 있는 하나의 lib Repository 이다, 각 lib에 대해 버전별로 관리를 하며 각 개발 pc및 빌드서버, 서비스 서버등에서 필요시 해당 lib를 Nexus 서버로 부터 내려 받을 수 있다.
+		-
+		
+		
+		
+		
 
 
 
