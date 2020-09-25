@@ -1165,7 +1165,7 @@
 		-That's a little more of a hassle but it takes much less time and you can save some money. (and it costs less. and it doesn't cost as much.)
 		-That takes a little less time but it's a much more of a hassle and it costs more, too.
 		
-		-That costs a little less and it takes a little less time but it's definitely(부사) somewhat(부사,약간,다소) risky. (but there's definitly some risk.)
+		-That costs a little less and it takes a little less time but it's definitely(부사) somewhat(부사,약간,다소) risky. (but there's definitely some risk.)
 		
 	
 -title : 영어회화, 표현정리, 처음에는, 애초에, 먼저, ..하는게 처음이다
@@ -1651,55 +1651,251 @@
 		-Actually when you are watching a really famous star, more often than not, you see the actor or actress rather than the character.
 			-It was really good(재밌었어) | was fantastic | I really like how they | added some comedy | hear and there | otherwise, | don't you think it would've felt | too serious
 			-throughout the entire movie(전반적으로) | did really good job of casting | who are not too famous 
-			-!!when you are watching(..하는경우, 일반론적인이야기의 시작) | !!, more often then not, you see the actor aor actress rather than (instead of) the character.
+			-!!when you are watching(..하는경우, 일반론적인이야기의 시작) | !!, more often then not, you see the actor or actress rather than (instead of) the character.
 
 
+-title : 영어회화, 연습가이드 24, par 2/2, 영화에 대해서 아쉬었던 점 설명하기
+	-script : 
+		-It was terrible. It was horrible. It was awful(어ful). It was the worst. I hated it. I really hated the movie. I can't believe I paid 10 dollars to see that movie.
+		-It was OK. It was alright, but it wasn't as goog as I'd(had) hoped. I feel like the stroy wasn't very well structured.
+			-terrible | horrible | awful | the worst | I hated it | I really hated the | I can't believe I paid 10 dollars to |
+			-it was OK | it was alright | !it wasn't as goog as I'd hoped | I feel like | very well structured 
+		
+		-I mean there were a few scenes that didn't really make sense. (that didn't make much sense. that didn't make a lot of sense. that didn't make any sense.)
+		-It was confusing because of that. (They made it confusing. They made the story difficult to understand.)
+			-I mean.. | a few scenes that didn't make sence | didn't make much sense | didn't make a lot of sense | didn't make any sense 
+			-it was confusing because of that | make it confusing | make the story confusing to understand
+		
+		-I wish the ending was a little better.(좋았으면좋았을텐데->아쉽다) 
+			-I wish the ending was a litter better | I wasn't very happy with.. | I wasn't totally satisfied with.. | I was disapointed with.. | It was too bad (that)..
+			-It was shame(아쉽다,애석하다) that.. | His face burned with shame(수치) | Have you no shame(창피) | What a shame they couldn't come(아쉽,애석)
+				
+		-I don't know I just couldn't (really) relate to it.(공감이 잘 안갔다)
+			-I just couldn't relate to it
+		
+		
+-title : 영어회화, tv를 켜다, 겨놓다, 켜두다
+	-script :	leave 그냥 그상태로 두는것, keep 목적을 가지고 상태를 위지하는 것
+	
+		-Hey, should I leave(keep으로대체불가,특정의도가없는행위임으로) the TV on? Yeah, just leave it on. I accidentally(실수로) leave the TV on.
+			-should I leave | should I keep | I accidentally | the TV on | turn on the TV | turn off the TV | turn the TV(보통대명사일때 구동사 사이에 들어감) on | leave the TV on | keep the TV on
+			
+		-It really stinks(스띵스) in here. Can we keep the window open for about 5 minutes? Should I close the window? No, just leave it open.
+			-it really stinks in here | can we keep the window open | should I ..? | just leave it open
+		
+
+-title : 이 3가지 표현으로 영어를 좀더 자연스럽게 하기, definitely, noticeably, obvious, obviously
+	-script :	definitely(확실히), noticeably(눈에띄게), obvious obviously(명백히 그렇다는 느낌?!)
+	
+		-This is definitely better. This one is definitely better. This is certainly better. This is clearly better. 
+		-Yes, I think it's pretty obvious. Yes, it looks pretty obvious to me.
+			-This one | definitely better | certainly better | clearly better | pretty obvious | pretty obvious to me |
+	
+		-The meterial and the overall construction is definitely better. The meterial and the overall instruction is noticeably better.
+		-The meterial and the overall construction is obviously(어색함, 너무 명백하다는 느낌) better. Isn't it obvious?(당연한거 아냐? 뻔한거 아냐?)
+			-The meterial and the overall construction | isn't it obvious?
+	
+
+-title : 영어회화, 양보할 때 가장 기본적으로 사용하는 표현, go ahead 사용법
+	-script :	
+		-Oh, I'm sorry. Go ahead.
+		-No no no no. You go ahead.
+		-No. Really. It's OK. I'm not in a hurry or anything. You go ahead.
+			-you go ahead | No. Really. It's OK | I'm not in a hurry or anything | Hey, you guys go ahead | I'll catch up with you.
+			
+
+-title : 연습가이드 25, 어떤 선택을 하더라도, 아무리 노력해도, 싫어도 어쩔수 없이
+	-script :	regardless of, whatever, no matter (what, how, who, .. when, why, where, which ), whether
+			-no matter what(무슨일이 있더라도) | no matter how(아무리 어떻더라도)
+	
+		-Regardless of your decision there will always be people(someone) who disagree with you. (whatever you dicide, whatever you choose, no matter what you do)
+		-But that's OK, because no matter how hard you try you can't always make everybody(everyone) happy. (you can't always satisfy everybody)
+		-And that is somthing (that) you have to be able to accept whether you like it or not.
+			-regardless of | !there will always be | disagree with | whatever you decide | whatever you choose | whatever you do | no matter what you choose
+			-but that's OK because | !no matter how hard you(I) try (to) | you can't always | satisfy everybody 
+			-that is something | you have to be able to accept | whether you like it or not
 
 
+-title : 영어회화, 표현, 반드시, 꼭, 무조건, 어떻게든, 어떤 식으로든, 무슨 수를 써서라도
+	-script :	
+		-I seriously have to pass the exam this time. I have to pass the exam this time no matter what. I can't afford to fail the test this time.
+		-One way or another, we have to fish this by the end of this month. We have to finish this by the end of this month one way or another. 
+		-Everyone has to go this time. No exceptions.
+			-seriously have to | I can't afford to | fail the test
+			-no matter waht | no matter the cost | whatever it takes | one way or another(앞뒤사용가능) | no exceptions
 
 
+-title : 영어회화, 시급한 교정 07, 그래서 의 두가지 표현, 누구에게 무엇을 주다 라고 말할 때 주의 점
+	-script :	
+		-My phone ran out of battery so I couldn't call you.(그냥 그랬다의 느낌). My phone ran out of bettery. That's why I couldn't call you.(이류를 상대에게 해명하는 느낌)
+		-I hurt my hand so I went to the hospital.(그냥 그랬다의 느김) I hurt my hand. That's why I went to the hospital.(이류를 상대에게 해명하는 느낌)
+			-my phone ran out of battery | my bettery ran out | that's why I couldn't | I hurt my hand |
+			
+		-I gave my parents some money.(돈을 드렸다의 느낌, 기본형) I gave some money to my parents.(부모님께 드렸다의 느낌, 누구에게를 강조)
+		-!I gave it to my parents.(물건이 대명사인 경우 항상 먼저 표현) I gave it to them.(누가가 대명사일때도 물건이 대면사면 먼저) I gave them some money.
 
 
+-title : 영어회화, review series 001, 지금쯤이면 뭔가 소식이 있을 줄 알았는데..
+	-script :	
+		-That's weird.
+		-I thought we would've heard (something)from Kim by now. (소식 들을줄 알았어, 소식이 있을줄 알았어)
+		-we should've heard (something) from Kim by now. (소식을 들었어야 해는데)
+			-I thought we would've pp | by now | should've pp 
+		 
+		-I thought people would forget all about it by now.(다 잊을줄 알았어) 
+		-I thought people would've forgotten all about it by now. (다 잊었을줄 알았어)
+			-I thought people would've pp | 
+		
+		-It's(has) been 2 years, I thought you would be used to it by now.(적응,익숙할줄 )
+		-It's(has) been 2 years, I thought you would've gotten used to it by now.(적응,익숙해졌을줄) I thought you would've adapted by now.
+			-It's been 2 years | I thought you would be | I thought you would've pp | you would've adaped | be used to(익숙한상태) | get used to(익숙한상태가되다)
+		
+		-I thought it would've arrived by now.(도착했을줄)
+		-It should've arrived by now.(도착했어야)
+
+		
+-title : 영어회화, 연습가이드 26, 절차에 대한 설명
+	-script :			
+		-The first thing you need to do is go to the website and request a cancellation.
+		-As soon As you do that, you're going to get an email asking you to verify some basic information.
+		-Once you have replied to that email, (after you reply to that email,) you will receive(get) anthoer email within 2 or 3 days confirming your cancellation.
+			-!the first thing you need to do is | go to the website | request a cancellation | !as soon as you do that | get an email | asking you to | verify some information
+			-!once you have replied(완료형,그렇게하는게완료되면) | reply to that email | within 2 or 3 days | confirming your cancellation
+		
+
+-title : 영어회화, 시급한 영어 교정 08, 색깔, 사람의 성격, 장소의 분위기에 대해서 말할 때
+	-script :			
+		-Last week, I spent a lot of time cleaning my house. I wasted a lot of time playing computer games. 
+		-this is red. his car is blue. (blue color->coler를 붙이면 안됨)
+		-He is nice. He is kind. (His personality is nice->잘못된표현)
+		-Wow it's really nice here. (Wow, the atmosphere is really nice here.->어색한 느낌)
+			-last week, | I spent a lot of time ..ing | clean(cleaned, cleaned, 깨끗한, 정소하다, clear->맑은,선명한,분명한) my house | I wasted a lot of time ..ing 
+			-is red | is blue | he is nice | he is kind | it's really nice here
+		
+
+-title : 영어회화, 내가 하려는 말의 의미, 요점을 정리(강조)하고 싶을 때
+	-script :
+		-What's your point? Get to the point.
+			-what's your point? | get to the point
+			
+		-My point is (that) there's no such things as the perfect timing.
+		-The point (that) I'm trying to make is (that) there's no such things as the perfect timing.
+		-The point (that) I'm trying to get to is (that) no matter how much you earn, you have to learn to save money.
+			-there's no such things as | the perfect timing | no matter how much you earn 
+			-my point is | the point I'm trying to make is | the point I'm trying to get to is | the point I'm saying is | the point I'm trying to say is
+			-I guess what I'm trying to say is | what I mean is | All I'm saying is | All I'm trying to say is
+		
+		-I guess what I'm trying to say is (that) it's up to you.
+		-I guess what I'm trying to say is (that) these things take time. You (just) have to be a little patient.
+			-it's up to you | these things take time | you just have to be a little patient.
+		
+		-What I mean is (that) you don't have to come, if you don't really want to. (if you don't really want to come, you don't have to)
+			-you don't have to | if you don't really want to |
+		
+		-All I'm saying is (that) you should be careful you've only known him for a few weeks.
+		-All I'm trying to say is (that) it wouldn't hurt to try. (해봐서 나쁠건 없다)
+			-should be careful | you've only know him for a few weeks | it wouldn't hurt to try
 
 
+-title : 영어회화, 대화가이드 08, 나도 딱 그 생각 하고 있었어, 나도 딱 그 말 하려고 했어, 어쩐지 낯이 익더라
+	-script :
+		-Deesn't he look a little familiar? Deesn't he remind you of someone?
+			-doesn't he look | a little familiar  | doesn't he remind you of someone?
+			
+		-He reminds me of Harry Potter. Doesn't he (kind of) remind you of Harry Potter?
+			-he reminds me of | doesn't he kind of remind you of | kind of 
+		
+		-Yeah, I know!(나도그렇게생각해,뭔말인지알겠어,그런것같어) 
+		-I was just thinking the same thing! I was going to say. I was about to say. That's exactly what I was going to say. That's exactly what I was about to say.
+			-Yeah, I now(어..맞네) | I was just ..ing(딱뭐하는중이었어)| I was just going to(딱뭐할려는중이었어) | I was just about to(딱뭐할려는중이었어)
+			-I was just thinking | the same thing | what's exactly what I | what I was going to | waht I was about to
+		
+		-Oh, that's right!(어 맞네.., 어그렇네)
+		-No wonder(어쩐지) he looked so familiar.
+			-No wonder(어쩐지) | look so familiar
+		
+
+-title : 영어회화, 단순 미래시제의 상황에 따른 4가지 활용
+	-script :
+		-What time is the movie?
+		-It starts at 2:15 but I'm going to be there a little early. I'm having lunch with my parents nearby.
+			-!what time is the movie? | it starts at | I'm going to be there | a little early | I'm having lunch(점심먹을꺼야) | nearby
+		
+		-OK, I will be there by 2 o'clock.
+		-Do you want to meet up in front of the snackbar?
+		-Sound great. I will see you then.
+			-I will be there by | !do you want to meet up | in front of the | sound great | I'll see you then
+			
+
+-title : 영어회화, 연습가이드 27, 이유와 목적에 대해서 말하기, part1
+	-script :
+		-I don't think I can make it to the gethering. I'm having some repairs done at my place that day.
+		-There's some damage around the house due to(from) the hurricane last week.
+			-!I don't think I can | make it(해내다) | !make it to(가다) | the gethering | I'm having some repairs done | at my place | that day | some damage around the house | due to the
+		
+		-Since next week is a holiday week, I figured I should take care of it before then.
+		-The reason I didn't tell you earlier was because I wasn't sure when it was going to be.
+			-since next week is a holiday week | !I figured I should(하기로하다) | take care of it | before then(그전에) | 
+			-the reason I didn't tell you earlier | was because | I wasn't sure | !when it was going to be
+		
+		-I don't want you to cancel or anything because of me.
+		-But let me know where you're hanging out so (that) I can join you guys if the repairs (happen to) finish early.
+			-I don't want you to(하지마세요) | cancel or anything | because of me | but(그냥..만) let me know | !where you're hanging out | !so (that) I can | if the repairs happen to finish 
+		
+		
+
+-title : 영어회화, 연습가이드 27, part2, because, since, as, in order to, so that
+	-script :
+		-Hey, since we wear the same size, how about we share our clothes(크로쓰). We can share our clothes because we wear the same size.
+			-since we wear the same size | wear the same size | how about we share 
+
+		-As(임으로) this is Jane's last day, we're going to have a farewell party after work.
+			-as this is Jane's last day | have a farewell party | after work
+		
+		-I turned on my computer (in order) to check my email. I turned on my computere because I need(want) to check my email.
+			-turn on my computer | (in order) to check | because I need to check 
+
+		-In order for me to help you, I need all the information. I need all the information in order (for me) to help you. (앞의 주어와 for me 가 같으므로 생략가능)
+		-You need to give me all the information (in order) for me to help you. (!!for someone to do 의 원래 형태는 in order for me to.. 내가 뭐하기위해.. 할수 있게.., for me를 빼면 불분명 해진다.)
+		-You need to give me all the information if you want me to help you. (if you want my help)
+			-in order for me to help you(문장 앞뒤로 사용가능) | (in order ) for me to help you(문장뒤에서 생략가능) | ..해라 if you want me to (내가 하기바란다면) | if you want my help(명사형)
+		
+		-I gave her some advice so (that) she could make a good decision. I gave her some advice in order for her to make a good decision.
+			-gave her some advice | so that she can(could) | make a good decision | in order for her to make a good decision |
 
 
+-title : 영어회화, 대화가이드 09, would have pp / should have pp / could have pp
+	-script :
+		-Try this, it's good.
+		-No, I'm good. Actually I don't really eat(like) seafood.
+			-try this | it's good | No, I'm good | Actually I don't really |
+		
+		-Really? Why didn't you say anything? We would've gotten something else.
+		-No, it's really OK, I'm really enjoying everything else.
+			-why? didn't you say anything? | we could've gotten | !something else(다른거)
+		
+		-Still, you should've told us. There were tons of other things we could've ordered.
+		-I know what you mean, but honestly, I'd really prefer it if everyone just get what they want. I'm really OK. (I really don't mind. It's really not a problem.)
+			-still you should've told us | tons of other things | we could've ordered | I know what you mean | but honestly |
+			-!!I'd really prefer it if(나는..하는게 더 좋아요) everyone just get what they want | I'm really OK | I really don't mind | It's really not a problem 
 
 
+-title : 영어회화, Review series 002, 조건절, 가정법 문장 구성하기 복습
+	-script :
+		-When the weather is this hot (When it's this hot), it's better to walk your dog at night
+		-If it's hot like this for the rest of the week, it's going to be a really tough week.
+			-when the weather is this hot | is this hot | it's better to | walk your dog | at night | If it's hot like this | like this | for the rest of the week | it's going to be
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		-I wish there were a policy whrer we all get a day off when the weather is hot past(beyond) a certain point.
+		-If that were true (If they(we) had something like that), that would be awesome!
+			-I wish there were | get a day off | hot past a certain point. | if that were true(진짜그러면) | if they had something like that(그런게있으면) | that would be awesome.
+		
+		-If you had fixed the air-conditioner ealier(sooner), we wouldn't need to go through this now.. and people wouldn't be complaining about it(진작고쳤으면 고생할 필요 없었을테고 불평을 안했겠죠)
+		-If we had known there was a problem with the air-conditioner, of course we would've fixed it earlier.
+			-if you had fixed | we wouldn't need to(안해도될텐데) | go through(격다) | people wouldn't be complaining(불평하지않을꺼야)
+			-if we had known there was | a problem with | of course we would've fixed it (당연히 고쳤겠죠)
+			-I would've helped you(도와줬을텐데). I could've helped you(도와줄수도일었을텐데). I should've helped you(도와줬어야했는데)
+		
 
 
 
