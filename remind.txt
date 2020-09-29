@@ -3010,10 +3010,21 @@ Template Engine
 
 
 
-[Nexus]
-	-개요 :
-		-여러 필요 lib(jar)를 저장하고 있는 하나의 lib Repository 이다, 각 lib에 대해 버전별로 관리를 하며 각 개발 pc및 빌드서버, 서비스 서버등에서 필요시 해당 lib를 Nexus 서버로 부터 내려 받을 수 있다.
-		-
+[Central data repository]
+	-개요 : 조직이 커지고 여러 프로젝트간 의존성과 복잡성이 늘어남에 따라 쉽고 조직적인 데이터 관리가 필요하게 되어 생성됨
+		-여러 필요 lib(jar)를 저장하고 있는 하나의 lib Repository 이다, 각 lib에 대해 버전별로 관리를 하며 각 개발 pc및 빌드서버, 서비스 서버등에서 필요시 해당 lib를 중앙 repository로 부터 내려 받을 수 있다.
+		-대표 상품 : sonatype Nexus
+		
+		
+	-Nexus : maven, gradle 프로젝트 등에서 사용할 수 있는 대표 무료 repository 이다.
+		-사용 방식에 따른 구분 : 서버의 논리적 위치에 따른 구분으로 자식이 보유하고 있지 않은 데이터를 요청 받으면 상위또는 동일 다른 서버에서 끌어 올수 있다.
+			-Proxy Repository : 원격(public)에 원본 Repository를 두고(어떤 repository 상품이든) 중간 캐시 서버의 위치에 설치하여 사용하는 방식 
+			-Virtual Repository : 여러개의 Repository를 그룹으로 구성하여 하나의 URL로 서비스 하도록 구성하여 사용하는 방식
+			
+		-저장 데이터 형식에 따른 구분 :
+			-Snapshots : 조직에서 정식 릴리즈가 아닌 테스트를 위한 용도로 수시로 배포되는 데이터 저장소, 정확한 버전을 갖지 않고 snapshots 이란 명칭의 버전으로 관리된다.
+			-Release : 조직에서 정식 릴리즈를 통해 배포된 데이터가 저장되는 저장소, 각 릴리즈 버전이 명확히 구분되어 관리된다.
+			-3rd party : 제3의 벤더가 제공한 release 버전을 관리하는 저장소
 		
 		
 		
