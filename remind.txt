@@ -600,6 +600,9 @@
 		}
 		-----------
 
+	-버그 및 tip :
+		-gradle depency 업데이트 후 sts gradle dependencies에 반영이 안되는 경우 : project->sts gradle-> refresh all 해본다.
+
 
 -jenkins server : continuous integration and continuous delivery (CI/CD) server(pipeline) written in Java, Stable release	2.176.1, MIT License
 	-jenkins 설치 : java 설치 필수
