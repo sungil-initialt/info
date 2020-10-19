@@ -966,7 +966,7 @@
 		-yes, but that's not why(the reason) I was late, I left befor 2o'clock but on my way here I suddenly had to stop by somewhere. that's why it took a little long.
 			-it looked like (.. 보이던데) | came in | I'm sorry I was late | that bad | but that's not why | but that's not the reason |
 			-it's already halfway through the month | we are already halfway into the month | halfway throught | halftway into |
-			-the traffic was bad(terrible/awfull) | there was a lot of traffic | that's OK | it's OK | that's alright | it's alright | stop by | drop by | swing by | have somewhere to stop by |
+			-the traffic was bad(terrible/awful) | there was a lot of traffic | that's OK | it's OK | that's alright | it's alright | stop by | drop by | swing by | have somewhere to stop by |
 			-that's why | it took a little long |
 			
 	
@@ -1648,14 +1648,26 @@
 		-It was really good. The story was good and the acting was fantastic.
 		-I really like(d) how they added some comedy here and there, otherwise, don't you think it would've felt too serious throughout the entire movie?
 		-And I think they did a really good job of casting good actors who are not too famous.
-		-Actually when you are watching a really famous star, more often than not, you see the actor or actress rather than the character.
+		-Actually when you are watching a really famous star, more often than not, you see the actor or actress rather than(instead of) the character.
 			-It was really good(재밌었어) | was fantastic | I really like how they | added some comedy | hear and there | otherwise, | don't you think it would've felt | too serious
 			-throughout the entire movie(전반적으로) | did really good job of casting | who are not too famous 
 			-!!when you are watching(..하는경우, 일반론적인이야기의 시작) | !!, more often then not, you see the actor aor actress rather than (instead of) the character.
 
 
-
-
+-title : 영어회화, 연습가이드 24, par 2/2, 영화에 대해서 아쉬웠던 점 설명하기
+	-script : 
+		-It was terrible(awful, horrible, the worst)! I hate it. I really hated the movie. I can't believe I paid 10 dollars to see that movie.
+		-It was OK(alright) but it wasn't as good as I had hoped.
+		-I feel like the story wasn't very well-structured.(The story is very well-structured)
+		-There were a few scenes that didn't really make sense.(didn't make any sense, didn't make a lot of sense, didn't make much sense)
+		-It was confusing because of that.(They made it confusing. They made the story difficult to understand.)
+		-I wish the ending was a little better.(I wasn't very happy with.., I was disappointed with.., I wasn't totally satisfied with.., It was shame that.., It was too bad that..)
+		-I don't know,(글쎄요..) I just couldn't really relate to it. 
+			-It was terrible.(awful, horrible, the worst, OK, alright) | I hate it | I really hated.. | I can't believe I paid 10 dollars to see that movie
+			-It wasn't as good as I had hoped
+			
+		
+		
 
 
 
