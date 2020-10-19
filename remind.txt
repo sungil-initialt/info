@@ -518,7 +518,7 @@
 -gradle : build automation system. 빌드 스크립트(Groovy, Kotlin 언어)에 논리적 개념(프로그램 처럼)을 적용, java뿐 아니라 여러 언어 프로젝트 지원
 	-DSL : Domain Specific Language (Groovy 기반)
 		-Internal(비공개) :
-		-Incubating(실헝) :
+		-Incubating(실험) :
 		-Public(공개) :
 		-Deprecated(패지) :
 
@@ -599,6 +599,9 @@
 			testImplementation 'org.springframework.boot:spring-boot-starter-test'
 		}
 		-----------
+
+	-버그 및 tip :
+		-gradle depency 업데이트 후 sts gradle dependencies에 반영이 안되는 경우 : project->sts gradle-> refresh all 해본다.
 
 
 -jenkins server : continuous integration and continuous delivery (CI/CD) server(pipeline) written in Java, Stable release	2.176.1, MIT License
@@ -2122,6 +2125,25 @@ Template Engine
 -svg : Scalable Vector Graphics, 확대 축소시 안깨짐
 -PNG : Portable Network Graphics, gif 파일 라이선스 문제를 해결하기 위한 대안으로 나옴
 
+-java :
+	-jar(Java Archive) : zip 포맷을 베이스로하여 class 패키지를 구성해 놓은 파일(resource, properties 파일등도 포함할 수 있다), jar 툴을 이용해 생성, META-INF 디렉토리에 해당 패키지와 관련한 메타 정보를 포함하고 있다.
+		-specificaton : https://docs.oracle.com/javase/6/docs/technotes/guides/jar/jar.html
+		
+		-META-INF 관련 파일 :
+			-MANIFEST.MF : 패키지 관련 정보 (Manifest-Version, Created-By, Signature-Version, Class-Path, Main-Class, 기타 applet패키지를 위한  attributes 정의)
+				-Manifest.txt : MANIFEST.MF 파일을 만들기위해 생성
+					-Class-Path: libs/slf4j-api-1.7.25.jar (해당 jar 내부의 class에서 참조할 다른 jar들의 위치를 잡아 줄수 있다, 단순히 실행 호스트에 해당 경로를 추가해 줄뿐 실행 호스트에 실제 파일이 존재하지 않으면 의미가 없음)
+					-Main-Class: testProject1.MyMain (실행 가능한 jar 인경우 Main 클레스를 정해 줄수 있다)				
+
+			-INDEX.LIST : applets과 같은 네트워크 프로그래밍에서 class파일 참조를 최적화 하기위한 용도로 사용됨 (더확인 필요!!)
+			-x.SF, x.DSA : 코드 싸인(검증)과 관련된 파일
+			-services(디렉토리)/ : 호스트에서 서비스로 동작하는 어플들이 자신과 관련된 interface를 모아놓을수 있는 디렉토리 (더확인 필요!!)
+					
+		-jar 패킹(jar툴 외에 eclipse에서 jar형태로 export 할수도 있음) : jar cfm testProject1.jar Manifest.txt testProject1/*.* 
+			
+	-war(Web application ARchive) : jsp, 서블릿, 자바, XML, 파일, 태그 라이브러리, 정적 웹 페이지 (HTML 관련 파일) 및 웹 애플리케이션을 함께 이루는 기타 자원을 한데 모아 배포하는데 사용되는 JAR의 일종(JDK 클레스로더에서 직접 로딩은 못함)
+	-ear(Enterprise ARchive) : 하나 이상의 모듈(war등)들은 하나의 아카이브로 묶어서 여러 모듈이 애플리케이션 서버에 동시에 일관성 있게 배치될 수 있도록 하기 위한 자바 EE에 쓰이는 파일 형식이다
+	
 
 
 
@@ -2430,13 +2452,9 @@ Template Engine
 					-등록된 url과 다른 scope의 url이 넘어올경우 400오류를 발생하는것이 좋다
 
 
-
-
-
-
-
-
 		-SAML(Security Assertion Markup Language) :
+
+
 
 
 
@@ -2970,7 +2988,7 @@ Template Engine
 	-command :
 		-node : 직접 스크립트를 작성하여 테스트 해볼수 있는 cl 환경을 제공한다.
 		-node abc.js : abc.js 파일을 실행해 준다.
--npm :
+-npm(Node Package Manager) :
 	-개념 :
 		-Node Package Manager, 리눅스의 apt와 유사한 개념으로 javascript 모듈의 완성도를 확인 하여 storege에 올리는 관리 주체로서 사용자는 cl 클라이언트를 이용하여 다운 및 인스톨이 가능하다.
 		-npm 을 통해 관리되는 패키지들은 브라우저 및 node.js 환경 (또는 그러한 개발환경)에서 사용하는 라이브러리, 컴포넌트 개념이다.
@@ -2993,6 +3011,27 @@ Template Engine
 		-npm list -g : 글로벌 패키지 구성 트리
 		-npm list -depth=0 : 1 댑스 까지만
 
+
+
+[Central data repository]
+	-개요 : 조직이 커지고 여러 프로젝트간 의존성과 복잡성이 늘어남에 따라 쉽고 조직적인 데이터 관리가 필요하게 되어 생성됨
+		-여러 필요 lib(jar)를 저장하고 있는 하나의 lib Repository 이다, 각 lib에 대해 버전별로 관리를 하며 각 개발 pc및 빌드서버, 서비스 서버등에서 필요시 해당 lib를 중앙 repository로 부터 내려 받을 수 있다.
+		-대표 상품 : sonatype Nexus
+		
+		
+	-Nexus : maven, gradle 프로젝트 등에서 사용할 수 있는 대표 무료 repository 이다.
+		-사용 방식에 따른 구분 : 서버의 논리적 위치에 따른 구분으로 자식이 보유하고 있지 않은 데이터를 요청 받으면 상위또는 동일 다른 서버에서 끌어 올수 있다.
+			-Proxy Repository : 원격(public)에 원본 Repository를 두고(어떤 repository 상품이든) 중간 캐시 서버의 위치에 설치하여 사용하는 방식 
+			-Virtual Repository : 여러개의 Repository를 그룹으로 구성하여 하나의 URL로 서비스 하도록 구성하여 사용하는 방식
+			
+		-저장 데이터 형식에 따른 구분 :
+			-Snapshots : 조직에서 정식 릴리즈가 아닌 테스트를 위한 용도로 수시로 배포되는 데이터 저장소, 정확한 버전을 갖지 않고 snapshots 이란 명칭의 버전으로 관리된다.
+			-Release : 조직에서 정식 릴리즈를 통해 배포된 데이터가 저장되는 저장소, 각 릴리즈 버전이 명확히 구분되어 관리된다.
+			-3rd party : 제3의 벤더가 제공한 release 버전을 관리하는 저장소
+		
+		
+		
+		
 
 
 
@@ -3200,13 +3239,21 @@ Template Engine
 
 
 [Network]
--Ethernet : 네트워크 구성 방식의 하나로 현재의 인터넷을 구성하는 방식이다. 네트워킹 초기 시대에는 FDDI and ATM 등 여러 형태의 네트워크 구성 방식이 있었으나 현재는 Ethernet이 지배적이다.
--IPS(Internet Protocol Suite) : 인터넷에서 컴퓨터들이 데이트를 주고 받는데 사용하는 프로토콜 모음으로 TCP/IP 가 가장 대표적이다.
--Network Media(Network facility, Transmission medium) : 단계별 네트워크 장비(hub, swith, bridge, not, router..)
+-배경 : 
+	-Ethernet : 네트워크 구성 방식의 하나로 현재의 인터넷을 구성하는 방식이다. 네트워킹 초기 시대에는 FDDI and ATM 등 여러 형태의 네트워크 구성 방식이 있었으나 현재는 Ethernet이 지배적이다.
+	-IPS(Internet Protocol Suite) : 인터넷에서 컴퓨터들이 데이트를 주고 받는데 사용하는 프로토콜 모음으로 TCP/IP 가 가장 대표적이다.
+	-Network Media(Network facility, Transmission medium) : 단계별 네트워크 장비(hub, swith, bridge, not, router..)
 
--transmission rate : host가 데이터를 전송(port out)시키는 속도
--propogation speed : 상대호스트(net media 일수도 end host 일수도) sender가 보낸 데이터를 받는데 걸리는 시간 (케이블, 실질적 거리, 거치는 Network Media 들에 따라 달라질수 있다.)
+	-transmission rate : host가 데이터를 전송(port out)시키는 속도
+	-propogation speed : 상대호스트(net media 일수도 end host 일수도) sender가 보낸 데이터를 받는데 걸리는 시간 (케이블, 실질적 거리, 거치는 Network Media 들에 따라 달라질수 있다.)
 
+	-NAT(network address translation) : 컴퓨터 네트워킹에서 쓰이는 용어로서, IP 패킷의 TCP/UDP 포트 숫자와 소스 및 목적지의 IP 주소 등을 재기록하면서 라우터를 통해 네트워크 트래픽을 주고 받는 기술
+		-NAT IP : 외부로 나갈때 표출되는 ip로 보면 된다. (공인 ip를 절약하기 위해 내부의 여러 호스트들이 외부로 연결될때는 하나의 NAT ip로 나가게 된다.)
+
+	-RTT (Round-trip time) : RTT is the duration, measured in milliseconds, from when a browser sends a request to when it receives a response from a server. 
+		-It’s a key performance metric for web applications and one of the main factors, along with Time to First Byte (TTFB), when measuring page load time and network latency.
+	
+	
 -OSI 7 Layer :
 	-7 Application Layer :
 		-관련 프로토콜 : http, ftp, smtp, 
@@ -3280,51 +3327,22 @@ Template Engine
 		-NIC, 스위치 등이 서로의 상태를 확인하고 transmission rate in the form of bits per second, 기계적인 통신 방식등을 서로 결정한다.
 		-0,1과 같은 매우 row 데이타 형태의 시그널을 사용한다. 실제 데이터가 encapsulation되어 전달할수 있도록 한다.
 		-!!?? NIC 및 네트워크 장비간에만 활요되는 레이어로 NIC를 통해 OS레벨로 올라올때는 제거되어 올라오는것 같음(또는 device간에만 활용되는 프로토콜인듯), 패킷캡처시에 보이지 않음.
-		
-		
-		
-
-	
--브릿지, 스위치 : 기능적으로 매우 유사, 둘다 L2 장비, 둘다 데이터 필터가 가능(특정 맥어드레스로만 전송가능), 
-	-일반적으로 브릿지는 네트워크를 확장(랜과 랜을 연결)시키는 목적으로 사용, 
-	-요즘 나오는 ip 스위치는 라우터(L3) 처럼 ip레벨의 필터를 처리함
-	-
-
--브릿지 : 
-	-L2장비, 맥주소로 데이터를 필터 및 포워딩 가능, 주로 네트워크간 연장을 위해 존재(기본2포트만을 갖음), 주로 소프트웨어 방식임, 보통 store-and-forward 방식임(in data를 out하기위해 잠시 저장)
-	
--스위치 : L2장비 또는 L3장비, 요즘의 스위치는 맥주소뿐 아니라 IP레벨의 필터 및 포워딩이 가능, 보통 많은 포트를 가지고 있음, 주로 하드웨어 방식임 store-and-forward, cut-through switching(저장안함, 빠름, 그렇치만 큰차이 없음)
 
 
-
--(TCP)/IP(Internet Protocol) : 인터넷상에서 데이터를 주고 받는 프로토콜이다. IP는 데이터의 전달 여부(보장) 및 순서에 관여 하지 않는다 그래서 TCP 프로토콜에 실데이터를 얹고(TCP 세그먼트, TCP패킷이라 불리지만 잘못된 말) 이를 IP 프로토콜에 넣어 전송한다.
-	-http, ftp, smtp 등이 이러한 TCP/IP 레이어에 올라간 어플리케이션 프로토콜이다.
-
--TCP(Transmission Control Protocol) : 인터넷을 통해 노드간 주고 받는 데이터를 안정적으로, 순서대로, 에러없이, 가장 빠르게 교환할 수 있게 하는 Transmission Control Protocol이다 IP프로토콜에 넣어 전송 된다.
-	-unitcast :
-	
+-TCP 기타
 	-options : 
 		-connection Timeout :
 		-So Timeout :
-		
 		-TCP keepalive : TCP 레이어에서 두 노드가 서로 살아있음을 알리기 위해 주고 받는 데이터 패키 및 그 매커니즘 이다. 주 목적은 상대가 살아있지 않은데 혼자 계속하여 대기하는 상태를 제거하기 위함이다. 
-			-또한 NAT 장비의 경우 일정 시간동안 두 노드가 패킷 교환이 없는 경우 NAT 테이블에서 제거하는 하기때문에 이를 막기 위해서도 필요하다.(장시간 안쓰고 있는 커넥션에 대해서도 포트할당을 해준다면 한계가 있겠지?? 그래서 나름의 룰로 정리하겠지??)
-			
+			-또한 NAT 장비의 경우 일정 시간동안 두 노드가 패킷 교환이 없는 경우 NAT 테이블에서 제거하는 하기때문에 이를 막기 위해서도 필요하다.(장시간 안쓰고 있는 커넥션에 대해서도 포트할당을 해준다면 한계가 있겠지?? 그래서 나름의 룰로 정리하겠지??)			
 			-Keepalive time : 휴지상태에서 얼마동안 유지될경우 Keepalive를 보낼지를 정한다. 보통 2h (15분 미만으로는 설정하지 않는것을 권장)
 			-Keepalive interval : Keepalive에 대한 응답을 받지 못한경우 얼마뒤에 다시 보내 볼찌.. (tcp_rexmit_interval 값보다 작은 값을 보내서는 안된다.)
 			-Keepalive retry : Keepalive에 대한 응답이 없을때 몇번까지 보내보고 close 할지..
 	
--UDP
+-UDP 기타
 	-multicast :
 	-broadcast :
-	
 
-
--NAT(network address translation) : 컴퓨터 네트워킹에서 쓰이는 용어로서, IP 패킷의 TCP/UDP 포트 숫자와 소스 및 목적지의 IP 주소 등을 재기록하면서 라우터를 통해 네트워크 트래픽을 주고 받는 기술
-	-NAT IP : 외부로 나갈때 표출되는 ip로 보면 된다. (공인 ip를 절약하기 위해 내부의 여러 호스트들이 외부로 연결될때는 하나의 NAT ip로 나가게 된다.)
-
--RTT (Round-trip time) : RTT is the duration, measured in milliseconds, from when a browser sends a request to when it receives a response from a server. 
-	-It’s a key performance metric for web applications and one of the main factors, along with Time to First Byte (TTFB), when measuring page load time and network latency.
 	
 
 

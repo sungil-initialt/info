@@ -116,19 +116,117 @@ There is vagueness in this layer as is not all user-based information and the so
 		-be planted into : 심어진다.
 		-Keep it as it is : 현상태 그데로 보관해라.
 
+In the sense of being a container, there is no intent with respect to contents
+	-container라는 의미에서 contents 측면의 의도는 없다.
+	
+
+However, those are quite different beasts than in-the-sense-of-a-packaging JAR files. It's worth noting that special classloaders, that are not in the Java standard library, are needed to make use of them.
+	-different beasts(것들) than : 와 다른것들
+	-It's worth noting(note:주목하다) that : 주목할 필요가 있다.
+	
+	
+This was made possible by crop breeding in concert with other farming innovations	: 이것은 다른 농업혁신과 맞물린 경작 번식을 통해 가능해 졌다.
+	-in concert with other farming innovations : 다른 농업혁신과 맞물려
 
 
+The amount of data organizations collect and store has been rapidly increasing, creating a need for more efficient ways to manage this data : 조직에서 수집, 저장하는 데이터가 증가함에 따라, ..생겨나다.
+	-the amount of data : 데이터의 량
+	-increasing, creating : 증가함에따라 생겨나다.
 
 
+The increasing complexity of data poses a threat to quality and accuracy, making integration a necessity.
+	-increasing, making : 증가함에 따라 만들다(되다, 통합이 필수가 되다)
+	-ing, ing : 하면서(되면서), 해지다(되지다)
+	
+	
+... allows management the ability to make effective decisions and execute quickly on a consistent basis.	
+	-quickly on a consistent basis : 빠르고 일관되게 (on a consistent basis : 꾸준히)
+	
+	
 
 
+[분사구문]
+-정의 : 부사절(접속사 + 주어 + 동사)에서 접속사와 주어를 생략(주절의 주어와 동일할 경우)하고 현재분사나 과거분사를 이용하애 부사구로 바꾼것
+	-형태 :
+		-As I have no money, I can't buy the car. (평서문)
+			-Having no money, I can't buy the car.
+			
+		-As I don't have money, I can't buy the car
+			-Not(Naver) having money, I can't buy the car. (부정문)
+			
+		-As it was fine, we went on a picnic.
+			-It being fine, we went on a picnic. (주어가 서로달라 유지, 독립분사)
+			
+		-AS I have seen the accident, I know about that. (현재완료)
+			-Having seen the accident, I know about that.
+				-seen the accident, I know about that. (완료형의 having을 생략하고 과거분사 형태를 취할 수 있음??)
+			
+		-As I had not met you before, I didn't know you. (과거완료, 대과거)
+			-Not having met you before, I didn't know you. (만난적이없었기때문에 알지못했다, 주절이 과거이기 때문에 선행절이 대과거임을 짐작할수 있다)
+				-Not met you before, I didn't know you. (완료형의 having을 생략하고 과거분사 형태를 취할 수 있음??)
+		
+		-When she was recommended to drink, she gently refused to drink.
+			-Being recommended to drink, she gently refused to drink.(권유를 받아서)
+				-recommended to drink, she gently refused to drink.(수동태의 being을 생략하고 과거분사 형태를 취할 수 있음??)
+								
+		-As he was my roommate in college, he was not strange to me.
+			-Being my roommate in college, he was not strange to me.(룸메이트 여서)
+				-My roommate in college, he was not strange to me.(be동사의 beingd을 생략할 수 있다.)
+			
+		-As you are in safe place, you don't have to be nervous.
+			-Being in safe place, you don't have to be nervous.
+				In safe place, you don't have to be nervous.(be동사의 beingd을 생략할 수 있다.)
+				
+		-When he was eating lunch, he see his old friend.
+			-Being eating lunch, he see his old friend.(점심을 먹는중에)
+				-Eating lunch, he see his old friend.(진행형의 being을 생략할 수 있다.)
+		
 
-
-
-
-
-
-
+	-용법 :
+		-타임(때, 동안, 후에) : when, while, after, as
+			-Walking in the street, I met a friend. (걷다가 만났다)
+				-while I was walking in the street, I met a friend.
+				
+			-Finishing the work, we watched the TV.(끝나고 봤다)
+				-After we finished the work, we watched the TV. 
+				
+		
+		-이유(때문에,..서) : because, as
+			-Being sick, she was absent from school. (아파서 결석했어)
+				-Because she was sick, she was absent from school.
+				
+				
+		-조건(..면) : if
+			-Turning to the left there, you will find the building.(돌면 찾을꺼야)
+				-If you turn to the left there, you will find the building.
+				
+				
+		-양보?(일지라도, 이지만) : although, thoug
+			-Living next to his house, I don't know him. (살지만 모른다)
+				-Though I live next to his house, I don't know him.
+				
+				
+		-부대상황(하면서, 한채) : as
+			-Saying "good-bye", he went out of the house. (말하면서 나갔다)
+				-He went out of the house as he said "good-bye".
+				
+			-The train starts at six, arriving there at seven.(6시 출발해서 7시 도착한다, 좀안와닿음??)
+				-The train starts at six and arrives there at seven. (and를 사용할 수 있다)
+			
+	
+	-관용적 형태? :
+		-무인칭 독립분사 : 선행절의 주어가 특정된 대상이 아닌 경우 생략 가능
+			-Generally speaking, English is not easy to speak. (일반적으로 말해서)
+			-Considering his age, he sees and hears very well. (고려했을때)
+			-Judging from his accent, he seems to be an American. (판단했을때)
+			-Talking of him, here is a story for you. (그에 대해 말하자면, 너에게 해줄 얘기가 있다)
+			-Granting that you were drunk, you are responsible for your conduct. (술취했다는 것을 인정한다 하더라도)
+			-Compared with last year, prices have risen by 20 per cent. (비교했을때)
+			-Frankly speaking, I didn’t do my homework yet. (솔직히 말해서)
+			-Strictly speaking, she is not so good at math. (엄격히 말하서)
+			-Supposing it were true, what would happen? (가정했을때)
+			-His English is not bad, seeing that he has learned it for six months. (봤을때, 보자면)
+ 
 
 
 
