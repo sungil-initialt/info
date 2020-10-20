@@ -1897,8 +1897,26 @@
 			-I would've helped you(도와줬을텐데). I could've helped you(도와줄수도일었을텐데). I should've helped you(도와줬어야했는데)
 		
 
-
-
+-title : 영어회화, 더 자연스러운 영어를 위한 표현방식을 하나 익히자
+	-script :
+		-If we leave now, we can get there before 2 o'clock. If we leave now, we will be able to get there before 2. If we leave now, we're going to be able to get here before 2.
+		-You don't have to do that again.(안해도돼) You won't have to do that gain.(안해도될꺼야) You are going to have to do that again.(해야될꺼야)
+			-leave now | we can get there | will be able to | we are going to be able to | you don't have to | do that | won't have to | you are going to have to 
+			
+		
+-title : 영어로 가다와 오다를 be동사로 표현해야 하는 경우, 영어회화
+	-script :
+		-Have you been there? No,I haven't been there. No,I've naver been there.(강조) 
+		-This place looks really familiar, I think I've been here before.
+			-No, I haven't been there | No, I've naver been there | this place looks really familiar | I think I've been here before
+			
+		-I have to be there by 2. I need to be there by 2. What time do you think you will be here? What time do you think you are going to be here? 
+		-I think I can be there by two-thirty.
+			-I have to be there by | I need to be there by | what time do you think you will be here? | what time do you think you are going to be here? | I think I can be here by
+		
+		-He says he has to leave by 2. So if you're not here until then, you might miss him. (못만날쑤도, 못만날찌도)
+			-he says he has to | if you're not here | until then | you might miss
+		
 
 
 
