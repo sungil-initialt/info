@@ -1915,10 +1915,56 @@
 			-I have to be there by | I need to be there by | what time do you think you will be here? | what time do you think you are going to be here? | I think I can be here by
 		
 		-He says he has to leave by 2. So if you're not here until then, you might miss him. (못만날쑤도, 못만날찌도)
-			-he says he has to | if you're not here | until then | you might miss
+			-he says he has to | if you're not here | until then | you might miss him
 		
 
-
+-title : 영어연습 가이드 #28, can을 상황에 따라 다양한 형태로 표현하는 걸 배워보자, 영어회화
+	-script :
+		-Hey, you got(have) a robot clearer! How is it? Is it any good?
+		-Yeah, I can set up a schedule and it'll operate by itself, and it let's me remote control it using an app on my phone.
+		-Plus, it can easily reach under the sofa and the bed, so in a lot of ways, it saves me a lot of time and trouble.
+		-It simply makes it so much easier to keep the house clean.
+			-you got(have) a robot cleaner! | is it any good?(쓸만해?) | I can set up a schedule | It'll operate by itself | it let's me remote contorl it | using an app on my phone
+			-it can easily reach | under the sofa(쏘파,짧고빠르게) and the bed | in a lot of ways | it saves me a lot of time and trouble
+			-it simply makes it so much easier to | keep the house clean 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
