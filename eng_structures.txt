@@ -142,7 +142,9 @@ The increasing complexity of data poses a threat to quality and accuracy, making
 ... allows management the ability to make effective decisions and execute quickly on a consistent basis.	
 	-quickly on a consistent basis : 빠르고 일관되게 (on a consistent basis : 꾸준히)
 	
-	
+
+The proportion of cases where the infection routes were unknown fell to 13.2 percent for the past two weeks, according to the KDCA.
+		-where : (어떤, 어떠한) 감염경로가 알려지지 않은 확진자가 fell to (로 떨어지다)
 
 
 [분사구문]
