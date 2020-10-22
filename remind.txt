@@ -794,7 +794,7 @@ Git : version control system, local에서 개발자 단독으로 사용가능, D
 			-Git CMD(deprecated) : cli를 사용할수 있도록 cmd 창을 열어줌(별쓸모 없어 보이며 deprecated 됨)
 			-Git Bash : cli를 사용할수 있도록 bash 창을 열어줌 (linux command 사용해야 함)
 
-			-Cit Command
+			-git Command
 				-git 처리 단계 : working Dir(빨강글씨) $git add [fileName] -> stage/index(녹색글씨) $git commit [fileName] -> Repository
 				-git init : 새로운 git repo 생성, .git 디렉토리가 생성됨
 				-git clone repo-url : 해당 git repo-url의 repo를 복제한다. (복제한 repo는 origin repo의 모든 이력을 포함하며 원본 repo가 해당 repo의 orgin repo가 된다.), 로컬 repo도 clone 가능??
@@ -818,7 +818,30 @@ Git : version control system, local에서 개발자 단독으로 사용가능, D
 
 			(https://git-scm.com/book/ko/v2/Git%EC%9D%98-%EA%B8%B0%EC%B4%88-%EB%A6%AC%EB%AA%A8%ED%8A%B8-%EC%A0%80%EC%9E%A5%EC%86%8C)
 
-			-git pull and git merge : pull은 remote repo의 내용으로 local로 가져온다(complict이 날수 있음), git merge는 서로다른 브랜치의 코드를 합치는 작업
+			-git pull and git merge : pull은 동일한 브랜치에 대해 remote의 코드를 local로 가져온다(complict이 날수 있음), git merge는 서로다른 브랜치의 코드를 합치는 작업(complict이 날수 있음)
+
+			-git advanced Command :
+				-reset : 해당 커밋 위치로 로컬 HEAD를 옮기는 의미 (source tree에서 특정 커밋을 클릭하여 옮기는 의미와 유사)
+					-options :
+						-soft(keep all local changes) : 
+							-최상위 커밋 상태의 코드와 비교하여 옮겨질 위치의 코드와 다른 점들을 모두 staged상태에 모아 준다.
+							-결과적으로 로컬 코드는 최상위 커밋 상태와 같은 상태지만 이후에 staged에 있는 파일들을 discard를 이용하여 모두 또는 선별적으로 날려 버릴수 있다
+							-로컬에 commit 하지 않은 코드가 있는 상태에서 reset soft 시 로컬에 commit하지 않은 코드는 unstaged 상태에 있게 된다. 
+							
+						-mixed(옵션이 없을경우 default, keep working copy but reset index) :
+							-soft와 동일하나 최상위 커밋 기준 변경사항이 soft는 staged에 남는 반변 mixed는 unstaged에 남게 된다(로컬에 commit하지 않은 코드가 있었던 경우라면 파일이 섞여서 혼선이 생길수도 있을 듯)
+							
+						-hard(discard all working copy changes) :
+							-해당 커밋 위치로 로컬 HEAD를 옮기는 것만 해준다. 최상위 커밋 상태와 다른 점들은 그냥 무시된다(unstage, stage 어디에도 남겨 주지 않는다.) 또한 로컬에 commit하지 않는 코드가 있더라도 모두 날려 버린다.) 
+							-딱 그상태로 만들어주는 개념 (source tree에서 특정 커밋을 클릭하여 옮기는 의미와 거의 유사)
+												
+				-push(force 옵션) : 나의 현재 로컬 브랜치 상태로 remote 브랜치를 강제로 일치 시킨다. 
+					-리모트에 다른 commit 들이 선행되어 있는경우 pull 하기 전에 push가 불가능 하나 --force 옵션을 통해 pull하지 않고도 강제로 push 할수 있다
+					-이 경우 remote에 있는 선행 컷밋들은 모드 날라가게 된다.
+					-잘못 push한 내용이 있는경우 reset을 통해 원하는 위치로 로컬 위치를 옮긴 후 push --force를 통해 remote의 상위 commit을 강제로 날리수 있다.
+					-강제 옵션(git push --force)을 사용하기 위해서는 해단 repository에 protect 옵션 해제 또는 권한이 필요하다 (git 상품에 따라 확인 필요)
+					-!!! 만약 다른 사람이 이미 remote의 내용을 pull 해간 상태에서 내가 remote의 내용을 특정 위치로 변경(삭제)하면 다른 사람은 어떻게 해야 하지?? 다들 해당 위치로 reset을 해줘야 할까???			
+			
 
 GitLap : web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking and CI/CD pipeline features
 	-사용자 무제한 무료 (기술 서포트를 받기 위해서는 비용 지불 필요)
