@@ -1929,16 +1929,57 @@
 			-it simply makes it so much easier to | keep the house clean 
 	
 	
+-title : ~하면 어떤 기분일까?, part 1/2, 어떤 경험에 대해 궁금증을 독백 형식으로 표현하기, 영어회화
+	-script :	한다는건 어떤기분일까? (나의 관점보단 객관적 관점)
+		-I wonder what it's(feels) like to see a real ghost. I wonder what it's likt to fly. I wonder what it's like to be in a warzone(전쟁터).
+		-I wonder what it's like to get shot.(총애맞다) I wonder what it's like to be super rich. I wonder what it's like to speak 5 different languages.
+			-I wonder what it's like | I wonder what it's like to | I wonder what it feels like | I wonder what it feels like to
+			-I wonder what it's like to see a real ghost | I wonder what it feels like to fly | I wander what it's like to be in a warzone
+			-I wonder what it's like to get shot | I wonder what it feels like to be super rich | I wonder what it's like to speak 5 different languages
+			
 	
+-title : ~하면 어떤 기분일까?, part 2/2, ~했으면 어땠을까?, ~당시에는 어땟을까?, 영어회화
+	-script :	한다면 어떤 기분일까? (나의 개인적 관점), 가정법적 표현으로 will -> would, 가정법적 관점이기에 현실성이 없는 상황을 적용할때 더 자연 스러움
+		-I wonder what it's like to go out with her(일반적 관점, 그녀랑 사귄다는건 어떤걸까?, 조금 어색). 
+			-I wonder what it's like to go out with her | go out with her | 
+		
+		-I wonder what it would be like to go out with her(개인적 관점, 가정적 관점, 그녀랑 사귀면 어떨까? 좀더자연스러움).
+		-I wonder what it would be like to travel at the speed of light.
+			-I wonder what it would be like to go out with her | I wonder what it would be like to travel at the speed of light | at the speed of light(빛의속도로)
+		
+		-I wonder what it would've been like if I had studed harder(완료형, 어땠을까, 완료형이기때문에 지금(지금까지 쭉) 어땠을까라는 내포적 의미를 갖음).
+		-I wonder what it would've been like if we hadn't met three years ago. I wonder what it would've been like if we had never met.(영영 못만났으면)
+			-I wonder what it would've been like if I had studed harder | I wonder what it would've been like if we hadn't met | if we had never met
+		
+		-I wonder what it was like to live in the Roman Times(Empire). 로마시대는 어떘을까? (단순 과거형으로 그냥 그당시는 어땠을까의 의미)
+			-I wonder what it was like to | live in the Roman Times(Empire)
+			
+		-I wonder what it's going to be like there. I wonder what it will be like there. I wonder it's going to be like when we get there.(실제!! 예정중인.., 거기가면 어떨까, 단순가정은 would be)
+			-I wonder what it's going to be like there | I wonder what it will be like there | I wonder what it's going to be like when(면) we get there | get there
+		
+			-what happens, what would happen, what would've happened, what happened, what is going to happen (어떨까? -> 버러질까?)
+				-I wonder what happens if I push this button | I wonder what would happen if they find out that I lied
+		
 	
-	
-	
-	
-	
-	
-	
-	
-	
+-title : 가르치면서 거의 매일 교정하게 되는 영어 표현, 오랜만에, 예전 강의 리프레쉬
+	-script :	
+		-I hung out with my friends for the first time in a long time. I hung out with my friends for the first time in a while.
+			-I hung out with | for the first time in a long time | for the first time in a while | for the first time in days | for the first time in weeks(months, years)=>이미한일에대해서만가능
+			
+		-I really want to go to the movies, I haven't done that in such a long time. I haven't done that in a while.
+			-go to the movies | I haven't done that | in such a long time | in a while |
+			
+		-It has been (such) a long time since I went to see a movie. It has been (such) a long time since I saw my friends.
+			-It has been (such) a long time since | went to see a movie | I saw my friends
+		
+		-Hey, do you want to order a pizza? We haven't done that in a while. We haven't done that in such a long time.
+			-do you wnat to order a pizza? | we haven't done that | in a while | in such a long time
+			
+		-I'm hanging out with my friends this weekend. I haven't seen them in a while. I haven't seen them in such a long time.
+		-Hey, do you want to go that Chinese place? We haven't been there in a while. We haven't been there in such a long time.
+			-I'm hanging out with my friends this weekend | I haven't seen them in a while(in such a long time) | that Chinese place | we haven't been there in a while(in such a long time)
+
+---234	
 	
 	
 	
