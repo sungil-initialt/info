@@ -145,6 +145,10 @@ The increasing complexity of data poses a threat to quality and accuracy, making
 
 The proportion of cases where the infection routes were unknown fell to 13.2 percent for the past two weeks, according to the KDCA.
 	-where : (어떤, 어떠한) 감염경로가 알려지지 않은 확진자가 fell to (로 떨어지다)
+	
+		
+There is no need to regret a day in your life.
+	-there is no need to : 뭐뭐할 필요가 없다.(need는 명사, 필요성의 의미로 쓰임)
 
 
 Korea reported 17 imported cases. Of them, eight were identified while the individuals were under mandatory self-quarantine in Korea, with the other nine detected during the screening process at the border.
