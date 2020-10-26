@@ -1979,8 +1979,11 @@
 		-Hey, do you want to go that Chinese place? We haven't been there in a while. We haven't been there in such a long time.
 			-I'm hanging out with my friends this weekend | I haven't seen them in a while(in such a long time) | that Chinese place | we haven't been there in a while(in such a long time)
 
----234	
-	
+
+-title : 내가 걔한테 좀 심했나?, ~하려고 했던 것 뿐이데, 부모로서, 형으로서 잘하다, 내가 한 말 가지고 서운해 하더라
+	-script :	
+		-Do you think I was too hard on him?(심했나?). I was just trying to be a good friend.
+---237
 	
 	
 	
