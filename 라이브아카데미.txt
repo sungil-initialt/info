@@ -1982,8 +1982,17 @@
 
 -title : 내가 걔한테 좀 심했나?, ~하려고 했던 것 뿐이데, 부모로서, 형으로서 잘하다, 내가 한 말 가지고 서운해 하더라
 	-script :	
-		-Do you think I was too hard on him?(심했나?). I was just trying to be a good friend.
----237
+		-Do you think I was too hard on him?(말이심했나?). I was just trying to be a good friend. 
+		-Hey, I'm just trying to be a good brother, man. I understand they were just trying to be a good parents.
+		-But I don't think he took it very well. He seems to be very(pretty) upset(서운해) about what I said.
+			-Do you think I was too hard on him? | was I too har on him? | I was just trying to(했던것뿐이야) | I understand they were just trying to |
+			-I don't think he took it very well | He seems to be very upset | about what I said
+		
+		-How did you take it?(어떻게받아들였어? 어떻게대처했어?) 
+		-She told me that she is pregnant and I freaked out and I just didn't take it very well.(잘대처하지못했어)
+			-How did you take it?(어떻게대처,반응?) | She told me that she is | I freaked out | I didn't take it very well
+---240
+
 	
 	
 	
