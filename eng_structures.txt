@@ -155,6 +155,30 @@ Korea reported 17 imported cases. Of them, eight were identified while the indiv
 	-of them, eight were.. : 그들중 8명은
 	-, with the other nine.. : 다른 9명과 함께
 	
+	
+Maybe give me some examples of its usage?	
+	-maybe bive me : 혹시 줄수 있어?
+
+
+SOAP cannot make use of REST whereas REST can make use of SOAP. We could make better use of our resources
+	-make use of : 활용하다
+	-make better use of : 더 잘 활용하다.
+
+
+She had a very vivid dream in which she felt she was flying over the countryside. : 명사 + in which, 그 명사 안에서 ... 하는
+	-dream in which : 그 꿈 안에서 날라다니는 기분을 
+	
+	
+I have cherished the ideal of a democratic and free society in which all persons live together in harmony with equal opportunities. : 명사 + in which, 그 명사 안에서 ... 하는
+	-society in which :	그 사회에서 사람들이 .. 기회를 얻는
+
+Each technique has its own advantages and disadvantages. Hence, it's always good to understand in which situations each design should be used. : 동사 + in which + 명사, 그 명사 안에서 동사하다
+	-good to understand in which situations each design should be used : 어느 상황에서 각 설계가 활용하는지를 아해하는게 좋다
+
+
+
+
+
 
 [분사구문]
 -정의 : 부사절(접속사 + 주어 + 동사)에서 접속사와 주어를 생략(주절의 주어와 동일할 경우)하고 현재분사나 과거분사를 이용하애 부사구로 바꾼것
