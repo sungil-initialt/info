@@ -1991,8 +1991,22 @@
 		-How did you take it?(어떻게받아들였어? 어떻게대처했어?) 
 		-She told me that she is pregnant and I freaked out and I just didn't take it very well.(잘대처하지못했어)
 			-How did you take it?(어떻게대처,반응?) | She told me that she is | I freaked out | I didn't take it very well
----240
 
+
+-title : 영어 Tip, 언제, 얼마나 오래, 질문에 쉽고 자연스럽게 대답하는 요령, 영어회화
+	-script :	
+		-When did you move here? How long have you been living here? It has been 2 weeks. It's been a couple of months. It's been several years.
+			-When did you | move here? | How long have you been ..ing | It's been | a couple of | 
+		
+		-Hey, when did you get a new phone? It's been a couple of weeks. I didn't know you moved. When did you move?
+			-when did you | get a new phone | I didn't know you moved | 
+		
+		-How long have you been working here? It's been just over a year.
+			-It's been | just over a year
+		
+		-When did you get married? It's been about 3 years. How long have you been going out? It's only been several weeks.
+			-when did you | get married | go out | how long have you been going out | it's only been
+---243
 	
 	
 	
