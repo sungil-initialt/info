@@ -965,7 +965,7 @@
 		-No, that's ok. Don't worry about it. Was the traffic that bad?
 		-yes, but that's not why(the reason) I was late, I left befor 2o'clock but on my way here I suddenly had to stop by somewhere. that's why it took a little long.
 			-it looked like (.. 보이던데) | came in | I'm sorry I was late | that bad | but that's not why | but that's not the reason |
-			-it's already halfway through the month | we are already halfway into the month | halfway throught | halftway into |
+			-it's already halfway through the month | we are already halfway into the month | halfway through | halftway into |
 			-the traffic was bad(terrible/awful) | there was a lot of traffic | that's OK | it's OK | that's alright | it's alright | stop by | drop by | swing by | have somewhere to stop by |
 			-that's why | it took a little long |
 			
@@ -2006,12 +2006,38 @@
 		
 		-When did you get married? It's been about 3 years. How long have you been going out? It's only been several weeks.
 			-when did you | get married | go out | how long have you been going out | it's only been
----243
+			
+
+-title : 영어회화, 연습가이드 #29, 방법과 수단 설명, ~로, ~을 이용해서, ~을 함으로써, 방법을 통해서
+	-script :	with ..(도구적 의미로), by ..ing(함으로써), through..(과정을 거침으로써)
+	
+		-You can't lean a foreign language with only(just) books. You can't lean a foreign language using only books.
+		-You have to familiarize it by constantly using it and practicing.
+		-And it's also important to experience the language through a variety of ways. And no matter what anybody says, there's no sigle perfect way to lean.
+		-So you shouldn't rely(depend) on just a few methods.
+			-a foreign language | with only books | using only books | you have to familiarize it by | constantly using it and practicing | 
+			-it's also important to experience the language | through a variety of ways | no matter waht | anybody says, 
+			-there's no single perfect way to lean | you shouldn't rely on | rely on | just a few methods | you shouldn't depend on just a few methods
 	
 	
-	
-	
-	
+-title : 참고로, 그나저나, 그러고보니, 참고로 part1 of 3, 영어회화
+	-script :	
+		-Just so you know, I won't be back until Tuesday. Just so you know, this cost almost 1 million won when I bought it. (참고로 알아두라는 건데)
+		-Just so everybody knows, her grandmother just passed away. So even if she seems a little quiet today, don't make any weird jokes, Ok? 
+		-On(As) a side note, I'll be attending meeting all morning tomorrow, So if you need to reach me, you'll have to wait until I get back.(조금 포멀한 느낌)
+		-Keep in mind that you can't make any changes or corrections(정정) once the information is registered. (register 등록하다,동사)
+			-just so you know | just so everybody knows | I won't be back(안돌아오다) | I won't be here(없을꺼다) | until .. | this cost(cost-cost-cost) almost | when I bought it
+			-her grandmother just passed away | so even if | she seems a little quiet | don't make any weird jokes OK?
+			-On a side note, | As a side note, | I'll be attending meeting | attend meeting | all morning tomorrow | so if you need to reach me, | you'll have to wait until | I get back
+			-keep in mind that | you can't make any changes or corrections | make changes | make corrections | once(일단되면) | once the information is registered | is registerd
+			
+		-One other thing, 한가지더요..
+		-Oh, by the way, has anyone been in touch with Tracey recently? (아! 그나저나.. 어떤걸 얘기하다 갑자기 딴게 생각날때)
+		-Oh, speaking of Tracey,(Oh, that reminds me 그러고보니 생각난게) has anyone spoken to her today? I've been trying to get in touch with her all day.(뭐뭐 말이나와서 그런데)
+			-one other thing, | Oh, by the way, | has anyone been in touch with her recently | Oh, speaking of him, | has anyone spoken to him today? | speak to(와 얘기하다) |
+			-I've been trying to | get in touch with | all day | Oh, that reminds me,(그러고보니 생각나는데)
+---257		
+		
 	
 	
 	
