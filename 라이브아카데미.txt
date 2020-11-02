@@ -1576,7 +1576,7 @@
 -title : 영어회화, 표현, 말실수를하다, 말을 잘못하다, 말조심하다, par 1/2
 	-script : 
 		-I think she is still mad at me but I don't know what I did wrong? (She is still angry with(at) me. She is still upset with me.)
-		-Maybe it's somthing you said.(평서문, 있겠지) Could it be somthing you said?(의문형, 있는거아냐?) Maybe it's something I said. Could it be something I said?
+		-Maybe it's something you said.(평서문, 있겠지) Could it be something you said?(의문형, 있는거아냐?) Maybe it's something I said. Could it be something I said?
 		-Yeah, it could be.
 		-Yeah, you know, you tend to be a little careless with your words. You must've said something you shouldn't have, again.
 			-she is still | be mad at me | be angry with me | be upset with me | 
@@ -1710,7 +1710,7 @@
 	
 		-Regardless of your decision there will always be people(someone) who disagree with you. (whatever you dicide, whatever you choose, no matter what you do)
 		-But that's OK, because no matter how hard you try you can't always make everybody(everyone) happy. (you can't always satisfy everybody)
-		-And that is somthing (that) you have to be able to accept whether you like it or not.
+		-And that is something (that) you have to be able to accept whether you like it or not.
 			-regardless of | !there will always be | disagree with | whatever you decide | whatever you choose | whatever you do | no matter what you choose
 			-but that's OK because | !no matter how hard you(I) try (to) | you can't always | satisfy everybody 
 			-that is something | you have to be able to accept | whether you like it or not
@@ -2036,11 +2036,23 @@
 		-Oh, speaking of Tracey,(Oh, that reminds me 그러고보니 생각난게) has anyone spoken to her today? I've been trying to get in touch with her all day.(뭐뭐 말이나와서 그런데)
 			-one other thing, | Oh, by the way, | has anyone been in touch with her recently | Oh, speaking of him, | has anyone spoken to him today? | speak to(와 얘기하다) |
 			-I've been trying to | get in touch with | all day | Oh, that reminds me,(그러고보니 생각나는데)
----257		
-		
+			
+			
+-title : 참고로 part 2 of 3, FYI에 대해서 짧게 정리, 영어회화
+	-script :	
+		-This is just for your information. (참고하라고..  FYI) Hey, for your information,....
 	
 	
-	
+-title : 참고로 part 3 of 3, 참고로, 그러고보니까, 영어회화
+	-script :		 
+		-Just so you know, the next time something like this happens, just tell me first.(참고로) In case, this happens again next time, just tell me first.(..인경우)
+		-Just so you're prepared(준비하란뜻에서말하는데), Just so there's no confusion(착오가없으라말하는데), Just so there's no misunderstanding(오해가없으라말하는데), For future reference(미리알아두라고말하는데),
+			-just so you know, | just so everybody knows, | just so you're prepared, | just so there's no confusion, | just so there's no misunderstanding, | for future reference,
+			-the next time something like this happens, | in case | this happens gain | just tell me first |  
+			
+		-Please take note of the changes, they might be related to you.(주목해 주세요, 당신과 연관이 있을수 있으니) they might concern you.
+			-take note(봐주세요), | take note of changes | take note that..(알아두세요) | notice the changes(바낀것에주목하세요) | I'd like to point out (that) | I want to point out (that) |
+---262	
 	
 	
 	
