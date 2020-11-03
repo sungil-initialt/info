@@ -2052,8 +2052,20 @@
 			
 		-Please take note of the changes, they might be related to you.(주목해 주세요, 당신과 연관이 있을수 있으니) they might concern you.
 			-take note(봐주세요), | take note of changes | take note that..(알아두세요) | notice the changes(바낀것에주목하세요) | I'd like to point out (that) | I want to point out (that) |
----262	
-	
+			
+		-As a reminder(don't forget/keep in mind), another beta test has to be performed before the official test run in front of the client. (상기시키고자말하는데, 공식 테스트를 전에 베타 테스트를 해야 한다)
+			-as a reminder, | don't forget, | keep in mind, | beta test has to be performed | the official test run in front of the client
+			
+		-For those of you who came a little late and missed the introduction,... if you came a little late and missed the introduction,... (..하신분들들은..)
+			-for those of you who came a little late | came late and missed the introduction | came late
+		
+		-It just occurred to me, Tom's birthday is next week. I just realized, Tom's birthday is next week. (방금든 생각인데)
+			-It just occurred to me, | I just realized, | Tom's birthday | 
+		
+		-Come to think of it(Now that I think of it), I don't think I've ever seen a black opera singer. (지금생각해보니)
+			-come to think of it, | Now that I think of it, | I don't think I've ever seen | a black opera singer
+
+---266			
 	
 	
 	
