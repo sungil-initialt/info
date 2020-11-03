@@ -2065,9 +2065,21 @@
 		-Come to think of it(Now that I think of it), I don't think I've ever seen a black opera singer. (지금생각해보니)
 			-come to think of it, | Now that I think of it, | I don't think I've ever seen | a black opera singer
 
----266			
+
+-title : 어려운 부탁을 할 때, 어려운 부탁을 받을 때, 대화가이드 #10, 영어회화
+	-script :
+		-I need to make an appointment with Dr.Kim
+		-He's available next Monday.
+		-Is there any way I can see him this week?
+		-As long as there are no cancellations before then, Monday is the best we can do.
+		-I know it's a lot to ask, but can't you reschedule one of the others? I hate to ask, but can't you reschedule one of the others?
+		-Sorry, but I could get into a lot of trouble for that. I'll try. I'll see what I can do. I'll do whatever I can.
+		-But, I can't make any promises. But, I can't promise anything.
+			-I need to make an appointment with | make an appointment | he is available next Monday | is there any way I can | as long as there are no.. | before then |
+			-.. is the best we can do | I know it's a lot to ask, but | I hate to ask, but | can't you reschedule | one of the others
+			-I could get into a lot of trouble for that | I'll try | I'll see what I can do | I'll do whatever I can | I can't make any promises | I can't promise anything | make promises
 	
-	
+---269	
 	
 	
 	
