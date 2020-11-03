@@ -165,6 +165,7 @@ SOAP cannot make use of REST whereas REST can make use of SOAP. We could make be
 	-make better use of : 더 잘 활용하다.
 
 
+[which]
 She had a very vivid dream in which she felt she was flying over the countryside. : 명사 + in which, 그 명사 안에서 ... 하는
 	-dream in which : 그 꿈 안에서 날라다니는 기분을 
 	
@@ -172,10 +173,16 @@ She had a very vivid dream in which she felt she was flying over the countryside
 I have cherished the ideal of a democratic and free society in which all persons live together in harmony with equal opportunities. : 명사 + in which, 그 명사 안에서 ... 하는
 	-society in which :	그 사회에서 사람들이 .. 기회를 얻는
 
+
 Each technique has its own advantages and disadvantages. Hence, it's always good to understand in which situations each design should be used. : 동사 + in which + 명사, 그 명사 안에서 동사하다
 	-good to understand in which situations each design should be used : 어느 상황에서 각 설계가 활용하는지를 아해하는게 좋다
-
-
+	-hence, : 그런이유로
+	
+	
+The subway station at which I saw her. 
+	-station at which : ..한곳
+	-at which I saw her : where I saw her
+	
 
 
 
