@@ -2079,7 +2079,13 @@
 			-.. is the best we can do | I know it's a lot to ask, but | I hate to ask, but | can't you reschedule | one of the others
 			-I could get into a lot of trouble for that | I'll try | I'll see what I can do | I'll do whatever I can | I can't make any promises | I can't promise anything | make promises
 	
----269	
+
+-title : which 관계 대명사 part1, 영어회화
+	-script :
+		-I got up around 7o'clock this morning. It was a little earlier than usual. I got up around 7o'cloc this morning which was a little earlier than usual.
+		-And then I had breakfast, I don't do that very often unless I'm very hungry. And then I had breakfast, which I don't do very often unless I'm very hungry.
+	
+---270	
 	
 	
 	
