@@ -2082,13 +2082,41 @@
 
 -title : which 관계 대명사 part1, 영어회화
 	-script :
-		-I got up around 7o'clock this morning. It was a little earlier than usual. I got up around 7o'cloc this morning which was a little earlier than usual.
-		-And then I had breakfast, I don't do that very often unless I'm very hungry. And then I had breakfast, which I don't do very often unless I'm very hungry.
+		-I got up around 7o'clock this morning. It was a little earlier than usual. -> I got up around 7o'cloc this morning which was a little earlier than usual.
+		-And then I had breakfast, I don't do that very often unless I'm very hungry. -> And then I had breakfast, which I don't do very often unless I'm very hungry.
+		-I left home before 8o'clock and I took the bus. That's how I usually go to work. -> I left home before 8o'clock and I took the bus, which is how I usually go to work.
+		-There was a meeting at work in the morning. It lasted more than 2 hours. -> There was a meeting at work in the morning, which lasted more than 2 hours.
+		-I got off work around 10pm. It's pretty normal at my company. -> I got off work around 10pm, which is pretty normal at my company.
+		
 	
----270	
+-title : which 관계 대명사 part2, 영어회화
+	-script :
+		-While I was there, I saved half of what I earned. It was actually a lot easier than I thought.
+		-While I was there, I saved half of what I earned, which was actually a lot easier than I thought.
+		
+		-I wasn't sure what I wanted to do. That was in fact the main reason (that) I wanted to take (some) time off school.
+		-I wasn't sure what I wanted to do, which was in fact the main reason (that) I wanted to take (some) time off school.
+		
+		-I don't think I can go to her wedding. Oh, and by the way, it has nothing to do with the fack that we used to date.
+		-I don't think I can go to her wedding, which by the way has nothing to do with the fact that we used to date.
+		
+		-We ended up spending a lot more than we had planned. I think it could've been avoided had I been in charge.(if I had been in charge)
+		-We ended up spending much more than we had planned, which I think (it) could've been avoided had I been in charge.(if I had been in charge)
+		
+		-I started taking driving lessons. I've been meaning to do it for a while.
+		-I started taking driving lessons, which I've been meaning to to for a while.
+		
+		-We discussed several things during the meeting. Most of them were related to the upcoming event next week.
+		-We discussed several things during the meeting, most of which were related to the upcoming event next week.
+		
+		-As far as I can tell, we have 3 options. (And) None of them are very good.
+		-As far as I can tell, we have 3 options, none of which are very good.
+		
+		
+-title : which 관계 대명사 part3, in which, to which, from which, 영어회화
+	-script :
 	
-	
-	
+---284	
 	
 	
 	
