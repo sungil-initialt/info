@@ -2082,12 +2082,21 @@
 
 -title : which 관계 대명사 part1, 영어회화
 	-script :
-		-I got up around 7o'clock this morning. It was a little earlier than usual. -> I got up around 7o'cloc this morning which was a little earlier than usual.
+		-I got up around 7 o'clock this morning. It was a little earlier than usual. -> I got up around 7 o'cloc this morning, which was a little earlier than usual.
+			-got up | around 7| this morning | it was a little earlier than usual | ..., which was a little earlier than usual (주어, 그것은)
+			
 		-And then I had breakfast, I don't do that very often unless I'm very hungry. -> And then I had breakfast, which I don't do very often unless I'm very hungry.
-		-I left home before 8o'clock and I took the bus. That's how I usually go to work. -> I left home before 8o'clock and I took the bus, which is how I usually go to work.
-		-There was a meeting at work in the morning. It lasted more than 2 hours. -> There was a meeting at work in the morning, which lasted more than 2 hours.
-		-I got off work around 10pm. It's pretty normal at my company. -> I got off work around 10pm, which is pretty normal at my company.
+			-and then | I don't do that very often | unless I'm very hungry | ..., which I don't do very often (목적어, 그것은 것이다)
+			
+		-I left home before 8 o'clock and I took the bus. That's how I usually go to work. -> I left home before 8 o'clock and I took the bus, which is how I usually go to work.
+			-I left home before | took the bus | that's how | that's how I | ..., which is how I (주어, 그것이) 
 		
+		-There was a meeting at work in the morning. It lasted more than 2 hours. -> There was a meeting at work in the morning, which lasted more than 2 hours.
+			-there was a meeting at work | in the morning | it lasted more than | ..., which lasted more than (주어, 그것은)
+			
+		-I got off work around 10 pm. It's pretty normal at my company. -> I got off work around 10 pm, which is pretty normal at my company.
+			-get off work around | got off work around | it's pretty normal at my company | ..., which is pretty normal (주어, 그것은)
+
 	
 -title : which 관계 대명사 part2, 영어회화
 	-script :
@@ -2114,9 +2123,23 @@
 		
 		
 -title : which 관계 대명사 part3, in which, to which, from which, 영어회화
-	-script :
-	
----284	
+	-script : 
+		-All of These are very common topics, most of which you are deeply educated in. -> These are very common topic in which you are all deeply educated.
+			-be educated in
+		
+		-We were involved in many different kind of work in which we had absolutely no experience.
+			-have experience in 
+			
+		-She has published many articles throughout her career to which many experts have given a lot of praise.
+		-These are all the books that I've read in the last 10 years from which I've gained  so much knowledge and insight.
+		
+		-There is a possibility that he knew about it but didn't take any action, in which case, it could turn out to be a much more complicated situation.
+			-,in which case, | ,in that case, | ,in this case,
+		
+		-How do you motivate yourself to do something that seems impossible. -> How do you motivate yourself to do that which seems impossible? 
+		-That which has no direct influence in your career shouldn't be of any priority.
+		
+---289
 	
 	
 	
