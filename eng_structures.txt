@@ -163,6 +163,12 @@ Maybe give me some examples of its usage?
 SOAP cannot make use of REST whereas REST can make use of SOAP. We could make better use of our resources
 	-make use of : 활용하다
 	-make better use of : 더 잘 활용하다.
+	
+
+She turns out to be my boss. This milk turns out to be spoiled. It turns out to be false alarm. 
+Jason turns out to be a good person. It could turn out to be a much more complicated sistuation.
+	-turn out to be : 알고보니 뭐뭐 였다
+	-could turn out to be : 뭐뭐 일수 있다, 뭐뭐해질수 있다.
 
 
 [which]
