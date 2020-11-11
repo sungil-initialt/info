@@ -2102,45 +2102,68 @@
 	-script :
 		-While I was there, I saved half of what I earned. It was actually a lot easier than I thought.
 		-While I was there, I saved half of what I earned, which was actually a lot easier than I thought.
+			-while I was there | save half of what I earned | save half of what | is actually a lot easier than I thought | ... which was (주어, 그것은)
 		
 		-I wasn't sure what I wanted to do. That was in fact the main reason (that) I wanted to take (some) time off school.
 		-I wasn't sure what I wanted to do, which was in fact the main reason (that) I wanted to take (some) time off school.
+			-I wasn't sure what I | that was in fact the main reason | take (some) time off(시간을갖다) | take time off work | take time off school | take time off to (..하기위해 시간을 갖다)
 		
 		-I don't think I can go to her wedding. Oh, and by the way, it has nothing to do with the fack that we used to date.
 		-I don't think I can go to her wedding, which by the way has nothing to do with the fact that we used to date.
+			-I don't think I can | go to her wedding | it has nothing to do with | it has nothing to do with the fact that.. | we used to date | ,which by the way(주어, 그것은 근데 말이지..)
 		
 		-We ended up spending a lot more than we had planned. I think it could've been avoided had I been in charge.(if I had been in charge)
 		-We ended up spending much more than we had planned, which I think (it) could've been avoided had I been in charge.(if I had been in charge)
+			-end up ..ing | we ended up spending | a lot more than we had planned | I think it could've been avoided | if I had been in charge | ,which I think (목적어, 그소비를 내생각에는)
 		
 		-I started taking driving lessons. I've been meaning to do it for a while.
 		-I started taking driving lessons, which I've been meaning to to for a while.
+			-start ..ing | I started taking driving lessons | take lesson | I've been meaning to do it for a while | ,which I've been meaning to do (목적어, 그레슨을 계속하려던 거야)
 		
 		-We discussed several things during the meeting. Most of them were related to the upcoming event next week.
 		-We discussed several things during the meeting, most of which were related to the upcoming event next week.
+			-we discussed several things | during the meeting | most of them | were related to(와 연관있다) | upcoming event | ,most of which (주어, 그것들의 대부분은)
 		
 		-As far as I can tell, we have 3 options. (And) None of them are very good.
 		-As far as I can tell, we have 3 options, none of which are very good.
+			-as far as I can tell | we have 3 options | and(근데) | none of them are (그중에 없어!!)| ,none of which are (주어, 그것들 중에는 없어)
 		
 		
 -title : which 관계 대명사 part3, in which, to which, from which, 영어회화
 	-script : 
-		-All of These are very common topics, most of which you are deeply educated in. -> These are very common topic in which you are all deeply educated.
-			-be educated in
+		-All of these are very common topics, most of which you are deeply educated in. -> These are very common topic in which you are all deeply educated.
+			-all of these are | be educated in(교육을받다) | ,most of which you are deeply educated in.(대부분 니가 많이 교육받았던것들 이다) | in which
 		
 		-We were involved in many different kind of work in which we had absolutely no experience.
-			-have experience in 
+			-we were involved in | many different kind of work | we have experience in many different kind of work | we have sbsolutely(완전) no experience in | in which
 			
 		-She has published many articles throughout her career to which many experts have given a lot of praise.
-		-These are all the books that I've read in the last 10 years from which I've gained  so much knowledge and insight.
+			-she has published many articles | throughout her career | many experts have given | a lot of praise | to her articles | to which
+			
+		-These are all the books that I've read in the last 10 years from which I've gained so much knowledge and insight.
+			-these are all the books that | I've read(래드) | in the last 10 years(동안) | I've gained | gain so much knowledge and insight | from which
 		
 		-There is a possibility that he knew about it but didn't take any action, in which case, it could turn out to be a much more complicated situation.
-			-,in which case, | ,in that case, | ,in this case,
-		
+			-there is a possibility that ... but ... (뭐뭐지만 뭐뭐했을 수있다. 가능성이 있다) | take action(조취를하다) | didn't take any action | -,in which case, | ,in that case, | ,in this case,
+			-everything turned out well(알고보니..잘되었다) | turned out to be my boss	(알고보니..였다) | it turned out that she was a friend of my sister (알고보니) | it could turn out to be(될수있다)
+					
 		-How do you motivate yourself to do something that seems impossible. -> How do you motivate yourself to do that which seems impossible? 
+			-how do you motivate yourself to do somthing that | something that seems impossible | somthing that-> that which(격시표현)
+			
 		-That which has no direct influence in your career shouldn't be of any priority.
+			-that which-> something that | have influence | direct influence | in your career | should be of top priority(높은순위에 있게하다) | shouldn't be of any priority(순위에 있지않게하다)
+			
 		
----289
-	
+-title : 내가 생각했던거랑은 좀 달라, 난 좀더 ..한걸 생각하고 있었거든, 연습가이드 30, 영어회화
+	-script : 
+		-It's not exactly what I had in mind. But this isn't bad at all. I was thinking of something a little more modern. I was expecting something a little more modern.
+			-it's not exactly what I | what I had in mind | but this isn't bed | at all | I was thinking of something a little more | I was expecting something a little more
+			-something a little more smaller | something a little more bigger | something a little more heavier 
+			
+		-You know, something with a really simple desing. But you know what? this design is really growing on me. 
+			-you know something with(그런거있잖아) | a really simple desing | but you konw waht?(근데그거알아?) | this is growing(자란다) on me (볼수록맘에들어) | this design is really growing on me 
+		
+---294	
 	
 	
 	
