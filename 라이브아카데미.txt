@@ -373,8 +373,9 @@
 	-script : 과거의 상황을 가정하고 그에따른 과거의 결론(한탄?아쉽움?)
 			-그랬었더라면 그랬을텐데, 대과거의 형태(과거에 시작해서 과거에 끝난 얘기)
 			-if 과거완료 + 과거완료 (문법상 현재완료형이됨),
-				-would've pp (우르브), wouldn't have pp (우른 해브), would've had to, wouldn't have had to, would've needed to, wouldn't have needed to
-				-could've pp (쿠루브), couldn't have pp (쿠른 해브), might've pp (마이르브), might not've pp (마잇 낫르브)
+				-would've pp (우르브, ..쑤도), wouldn't have pp (우른 해브), would've had to, wouldn't have had to, would've needed to, wouldn't have needed to
+				-could've pp (쿠루브, ..쑤도,더좋은쪽으로), couldn't have pp (쿠른 해브)
+				-might've pp (마이르브, ..찌도), might not've pp (마잇 낫르브)
 
 		-I went to bed late yesterday. and/so it was hard to get up this morning. (낮게 잤어, 어려웠어, 오늘 아침에)
 		-If I had gone to bed earlier last night, I wouldn't have been so(그렇게) hard to get up this morning. (일찍잤떠라면, 했었으면, 어젯밤, 안그랬을을 덴데, 안그랬을 꺼야)
@@ -639,7 +640,8 @@
 		
 
 -title : 영어회화, 연습가이드 05, 일상적으로 사용하는 문맥으로 영어 말하기 훈련
-	-script :	
+	-script :	should've (했썻,그랬으면좋았을텐데의 느낌)
+			
 		-Yesterday, I went to the department store. There was a coat that I really liked.
 		-The clerk said that it was the last one. So, I could've just bought(gotten) it, right away. (바로 살수도 있었다)
 			-could've pp (할수도 있었다) |
@@ -2163,7 +2165,60 @@
 		-You know, something with a really simple desing. But you know what? this design is really growing on me. 
 			-you know something with(그런거있잖아) | a really simple desing | but you konw waht?(근데그거알아?) | this is growing(자란다) on me (볼수록맘에들어) | this design is really growing on me 
 		
----294	
+--------------------------------------
+-title : 어쩔 수 없어, ..하는 수 밖에 없어, 영어로 표현하기, 영어회화
+	-script : 
+		-It's too bad. That's too bad. (기본적으로 안됐다 이미지만 때로는 안됐지만 어쩔수 없어란 의미로도 쓰임)
+		-There's nothing we can do. There isn't much we can do.(부드러운느낌,별로없어) There's nothing else we can do.(이거외에,다른방법이없어) There's nothing more we can do.(더이상)
+		-There's nothing we can do about it.(이건어쩔수없어) There's nothing we can do about it at this point(now). At that point, there was nothing we could do.
+		
+		-There's nothing we can do but (just) wait. There's nothing we can do except wait.(except뒤는 just안씀) There's nothing we can do beside(other than) wait.
+		
+		
+-title : 생활 영어 표현 3개, keep track of, keep up with, catch up on, 영어회화
+	-script : 	
+		-The meetings are fairly(꽤) fast-paced. So until you get used to it, don't worry too much about keeping track of every little detail.(쫒아가다)
+		-Just try to keep up with the overall flow.(따라가다) And the meetings are entirely recorded, so you can catch up on anything you might've(찌도) missed, afterwords(끝나고).(노친걸,따라잡다)
+		
+			-be(stay) current on(뭣의위에현재있다?,흐름을다알고있다,잘알고있다) | catch up with 사람 | ..word ..words
+			-keep track of the date(time) | keep track of my weight | keep track of information | Keep up with class(course) | keep up with everyone else | keep up with the latest fashion
+	
+	
+---303
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
