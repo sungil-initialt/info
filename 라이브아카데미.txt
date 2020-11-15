@@ -72,7 +72,7 @@
 		-I ate dinner. I'm not going to have dinner. (저녁먹다)
 			-eat dinner | ate dinner | have dinner | had dinner
 
-		-I watch TV everyday. I wathed TV yesterday. (tv를 보다. 텔레비전을 보다. watch/watched 발음 거의 동일)
+		-I watch TV every day. I wathed TV yesterday. (tv를 보다. 텔레비전을 보다. watch/watched 발음 거의 동일)
 			-watch TV
 
 		-Are you going to go to bed? what time are you going to go to bed? What time did you going to go to bed? (잔다. 자러가다. 잘꺼다)
@@ -142,8 +142,9 @@
 
 
 -title : 영어회화, 표현, 명절을 맞이하여 기초적인 표현 몇 가지 배워보자
-	-script :
-
+	-script : for.. (기간적의미, 실질적인기간동안), during.. (상황, 어떤상황동안), while/as(시점, ..하는동안, ..하는사이) + while.., (..인반면,) + while.., (..하고싶었지만,..에도불구하고) + ..while six o'clock (=until, 까지)
+			-for the winter(겨울내내), during the winter(겨울상황인어느한시점)
+			
 		-What are you doing during the chuseok holidays? Do you have any plans? What are you going to do during the chuseok holidays? (뭐할꺼야? ..동안, 계획있어?)
 			-What ar you doing during the.. | any plans?| What are you going to do?
 
@@ -627,7 +628,7 @@
 		-This button here, this button is for adjusting the volume. (용도)
 		-I bought this notebook for taking notes. This cake is not for eating. It's for decorating.
 		-In my wallet, there's a small pocket for carrying coins.
-		-I come here everyday to study English. I get up early everyday to exercise (work out). I make these videos to help people. (목적)
+		-I come here every day to study English. I get up early every day to exercise (work out). I make these videos to help people. (목적)
 		
 		-We went to a restaurant and there were too many people, so we went to somewhere else.
 			-somewhere else | some other place | someplace else | other place(X) | another place(x) | (딴데)
@@ -1350,7 +1351,8 @@
 
 
 -title : 영어회화, 연습가이드 20, part1/2, 누가 무엇을 담당할지 정하자, 문장 속에 의문형 내용 포함시키기 연습
-	-script :
+	-script : find out(알다, 알아보다, 알게되다, find의 느낌에서 뭔가 찾아보고 알아봐서 알게되는 느낌이 있음)
+	
 		-Let's decide who will be in charge of what. Let's decide who is going to be in charge of what. 
 			-let's decide | who will be in charge of what | be in charge of | I don't care who said what to who.(누가 누구에 뭐가 하든) | who said what to who
 			
@@ -2184,15 +2186,48 @@
 			-keep track of the date(time) | keep track of my weight | keep track of information | Keep up with class(course) | keep up with everyone else | keep up with the latest fashion
 	
 	
----303
+-title : notice, realize, recognize, tell, figure, part 1 of 2, 영어회화
+	-script : 
+		-The other day, I was at the bookstore and I noticed (there was) a woman surrounding by a large crowd.
+		-It was hard to tell what was going on. So, at first, I (just) figured it was an employee handing out free stuff.
+		-but when I got a little closer, it looked like she was signing autographs and since it was a bookstore, I realized that it could be a famouse writer signing books for her fans.
+		-who was it?
+		-I don't know, I didn't recognize her. I don't think she was any writer that I know.
+			
+			-the other day(얼마전에), | I was at(갔는데, 있었는데) | I noticed | I notice there was a woman surrounding by | a large crowd |
+			-it was hart to tell | what was going on | so, at first,(첨에는) | I (just) figured(..라고 생각했어) | it was an employee handing out free stuff(과거상황!묘사, 나눠주고있는상황이라생각) 
+			-hand out | free stuff | when I got a little closer, it looked like(가서보니까) | she was signing autographs (과거진행, 하고있었어) | since it was | 
+			-I realize that it could be a famouse writer signing books (과거상황!묘사,..인상황이겠구나생각했어) | signe books | who was it? | I didn't recognize(못알아봐)
+			-I don't think(아닌것 같았어) | she was any writer that I know.
+
+
+-title : 알다 와 모르다, part 2/2, be aware of, be familiar with, find out
+	-script : I notice (..라고인식했다 -> ..라고생각했다) , he wasn't noticed (수동, 통보받다), help 사람 (to생략) 원형, (..하도록 도와주다)
 	
+		-I'm sorry I'am late, but I wasn't aware that (I didn't know) the meeting had been rescheduled. (had been pp, 되과거, 몰랐던시점보다 뒤의 일임으로)
+		-I found out just now when I got to the office. 
+		-It's OK, don't worry about it. Apparently, there was some mistake and not everybody was noticed in time. So, we understand.
+		-Okay, before we start our meeting, I want to introduce our new member. She has been transferred from Headquarters and she's familiar with what we do here.
+		-So, I'd like everyone to get to know her and help her get acquainted.(어.쿠인.티드, 적응할수 있도록)
+			
+			-I'm sorry I'm late | I wasn't aware that | the meeting had been rescheduled | I found out just now when I | when I got to the office
+			-Apparently,(어.패런.리, ..나봐, 한다나봐, 했다나봐, 있나봐, 있었나봐, 모양인가봐, 모양이었나봐) | there was some mistake and (실수가 있어서.. ...) | not everyone was noticed in time (수동, 통보받지못하다)
+			-before we start our meeting | she has been transferred from | Headquarters | she is familiar with | what we do here 
+			-I'd like everyone to | get to know her (알게되다 -> 친해지다) | help her get acquainted (help 사람 (to생략) 원형, ..하도록 도와주다)
+			
 	
-	
-	
-	
-	
-	
-	
+-title : 흔히 있는 기회가 아니야, 흔치 않은 기회야, 그럴 기회가 없었어, 영어로 기회에 대해서 말하기, 영어회화
+	-script : 
+		-It's a rare chance. It's a rare opportunity. It's not an everyday(형용사) opportunity. we don't get a chance like this every day(부사). we don't often get a chance like this.
+		-I don't get a chance to (do that). During my business trip, I really wanted to(워릿투) do some sight seeing but I didn't get a chance to.
+			-it's a rare chance | it's a rare opportunity. | everyday(형용사) opportunity | we don't get a chance like this every day | we don't often get a chance like this
+			-I don't get a chance to | During my business trip(동안), | do sight seeing | I didn't get a chance to 
+			
+		-I got to do something. I had some time left and I got to look around and take(앞쪽to에 이어져있음으로 원형) some pictures. (get to = get a chance to, could의 할수 있었다와는 다른 느낌, 기회가 있엇다)
+		-Did you get to try some local food while you were there?
+			-I got to do(기회가있었다) | I have some time left and (시간이..남아서(그래서)..) | look around | take some pictures | did you get to | try some local food | while you were there
+		
+---312
 	
 	
 	
