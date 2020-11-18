@@ -2229,10 +2229,25 @@
 			
 		-I got to do something. I had some time left and I got to look around and take(앞쪽to에 이어져있음으로 원형) some pictures. (get to = get a chance to, could의 할수 있었다와는 다른 느낌, 기회가 있엇다)
 		-Did you get to try some local food while you were there?
-			-I got to do(기회가있었다) | I have some time left and (시간이..남아서(그래서)..) | look around | take some pictures | did you get to | try some local food | while you were there
+			-I got to do(기회가있었다) | I have some time left and (시간이..남아서(그래서)..) | I got to | look around | take some pictures | did you get to | try some local food | while you were there
+
+
+-title : 도움이 되다를 영어로 표현하기, help, helpful, support, supportive
+	-script :
+		-Does it help? Did it help?
+		-Yeah, it helps(잇햅슬) a lot. It helps a(잇햅써얼) little. It really helps. It helped a(핼덥) lot. It helped a little.
+			-dose it help? | did it help? | it helps a lot(많이) | it helps a little | it really helps(정말) | it helped a lot | it helped a little
 		
----312
-	
+		-Is it helpful? Was it helpful? (햅뿔)
+		-Yeah, it is really helpful. It's very helpful. It's a lot helpful. It's a little helpful. Yes, it was very helpful, I got a lot out of it. I learned a lot out of it.
+			it it helpful? | was it helpful? | it's very helpful | it's a lot helpful | it's a little helpful | it was very helpful | I got a lot | out of it | I learned a lot
+		
+		-I had a really hard time learning Korean. But the teachers in school were very supportive of me.
+		-I had a really hard time learning Korean. But the teachers in school gave me a lot of support. But the teachers gave me a lot of extra attention.
+		-I had a really hard time learning Korean. But I got a lot of support from the teachers in school.
+			-I had a really hard time .. ing | I had a really hard time learning korean | the teachers in school
+			-were very supportive of me | gave me a lot support | gave me a lot of extra attention | I got a lot of support from the teachers​
+---315	
 	
 	
 	
