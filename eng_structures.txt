@@ -199,8 +199,21 @@ The subway station at which I saw her.
 	-at which I saw her : where I saw her
 	
 
+It's so good to catch up with you. It's been ages since we were last together.
+	-to catch up with : 누구에대해 새로운 소식을 알다
+	-It's been ages since : ..한지 오래됐다
 
 
+The question whether or not value objects should always be immutable is a subject of a dispute.
+	-The question whether or not value objects should always be immutable : value ojbect가 항상 불변해야 하는지 말지의 질문은
+	-is a subject of a dispute : 논란의 대상이다.
+	
+	
+This simple mental exercise makes immutability an intrinsic part of Value Object. If we accept value objects have a zero lifetime, meaning that they are just snapshots of some state and nothing more, then we have to admit they are allowed to represent only a single variant of that state.	
+
+For example, if we have a Teacher class that maintains a List of Students, the getStudents method could either be
+
+---------------------------------------------------------------------------------------------------------------------------------------
 
 [분사구문]
 -정의 : 부사절(접속사 + 주어 + 동사)에서 접속사와 주어를 생략(주절의 주어와 동일할 경우)하고 현재분사나 과거분사를 이용하애 부사구로 바꾼것
