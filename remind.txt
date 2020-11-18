@@ -160,6 +160,66 @@
 -class 실행 : java -cp target/classesName
 	-java : 해당 클레스를 콘솔 모드로 실행 (콘솔로그 확인 가능, 콘솔을 닫으면 종료)
 	-javaw : 해당 클레스를 윈도우 모드로 실행 (콘솔 로그를 확인 할수 없음, 콘솔을 닫아도 종료되지 않음)
+	
+
+-class & JavaBean
+	-java 코드로 작성된 클레스 파일임에서 동일하나 javaBean이 되기 위해서는 해당 클레스가 몇가지 표준을 지켜야 한다.
+		-java.io.Serializable 를 implements 하여 직렬화가 가능하도록 하여야 한다. 단순히 해달 글레스에 implements java.io.Serializable 만해주면 된다. 
+		-아규먼트가 없는 public 형태의 생성자(constructor)를 가지고 있어야 한다.
+		-모든 필드들을은 private로 구성하며 setter, getter로 접근할수 있도록 구성해야 한다.
+		-필요한 이벤트 처리 메소드를 가지고 있어야 한다.(당연한 소리겠지?)
+		
+	-그럼 왜 JavaBean으로 명명하고 위의 제약을 만들었을까?
+		-보통 jaavaBean은 특정 프레임워크(servlet engine등)등에 언쳐저서 동작하는 일종의 3rd 파티 클레스의(기능을 확정해주는 lib?) 역할을 하게 된다. 이러한 환경속에서 동작하기 위한 최소한의 규칙을 정의한것 이라고 보면 됨
+			-ex : Spring의 IoC Container(=DI Container)를 통해 해당 객체의 생성 및 관리를 맞길수 있도록 하기위해 
+		
+	
+-Data Object : 데이터를 담기위한 object로 고유의 개념적 특성 및 제약을 갖는다. 그런데 그러한 개념적 특성이 모든 상황에서 공유되기보다는(기본적으론공유되지만) 어떤 아키텍쳐 또는 방법론에서 논의 되는지에 따라 좀더 구체적인 특성 및 제약을 갖는다
+
+	-Value Object(VO) : 
+		-일반적 관점 :
+			-생성될때 값이 정해지면(생성자에의해) 변경되지 않는 객체, 생성된 값을 유지하고 있는 하나의 데이터 셋이다. setter를 갖지 않고(immutable 특성을 갖음) getter만 같는다.
+			-프로그램에서 상수의 의미처럼 해당 값을 갖는 하나의변수적(그안에는 여러값이 있을수 있다) 의미로 봐야한다. (ex: 지패VO-> 얼마짜리, 통화($,원))
+			-java의 Enum 객체와도 유사함을 갖는다, lifespan(수정되거나하지않음으로)을 갖지 않으며 변경이 필요하면 삭제하고 새로 생성한다.
+			-쉽게 복사 해서 사용할 수 있도록(값까지 동일한 해당 객체를 생성) Cloneable 인터페이스를 상속받아 구현하기도 함
+		
+		-Domain-driven design(DDD)에서의 관점 : DDD는 객체를 어떻게 나눌지가 Domain 관점에서 고려된다. 도메인은 해당 모듈의 활용?(사용자,목적)에 따라 달라진다.
+			-DDD 개념에서 주로 언급되는 객체이다. DDD에서 Entity는 identity를 갖는 객체가 대상이 되면 Entity안에 properties의 개념이 필요한 경우 VO로 정의 한다.
+				-사람(Entity: 주번(pk), name, address(VO), 갖은돈List[지패(VO)]), address(VO: 국가, zipcode등 선택할수 있는 attributes를 갖는다), 지패(VO: 얼마짜리, 통화)
+					-사람의 관점(Domain)에서 본다면 지패는 하나의 VO에 불과 하지만 자금흐름의관점(Domain)에서 본다면 지패에 일련번호(pk)가 추가되게 되고 지패가 하나의 Entity가 될수 있다.
+						-DDD에서 Entity는 pk를 정보를 포함하고 있는 Data Object로 여긴다.
+		
+		
+	-Data Transfer Object(DTO) : 
+		-일반적 관점 :
+			-아키텍쳐상 또는 object간 데이터를 주고 받기 위한 데이터 set으로 구성된 객체 이다. setter, getter을 모두 갖는다.
+			-특별한 제약 조건을 갖지 않고 명칭의 의미데로 데이터를 주고받는 용도로 활용한다.
+		
+	-Entity :
+		-일반적 관점 : 
+			-OOP에서 바라보는 객체의 관점과 유사하다, identity를 갖고 있는 대상
+		
+		-Domain-driven design(DDD)에서의 관점 :
+			-고유의 정체성을 갖은 객체가 대상이 된다. 보당 해당 대상은 고유의 값을 갖는다(pk)
+			-고유의 lifespan을 갖는다 다시말해 값을 수정하고 저장할수 있다
+			-고유의 table이 보통 존재한다.
+			-value object를 참조할 수 있다.
+			-어떤 도메인의 관점에서 보느냐에 따라 달라 질수 있다.
+			
+		-Java Persistence API(JPA)에서의 관점 :
+			-DB 테이블상의 row를 표한하는 객채이다.
+			-보통 플랫폼 상에서 @Entity 어노테이션을 사용하여 JPA가 알수 있게 하며 IoC를 위해 final로 만들어서는 안되고 no-args 생성자와 primary key를 갖어야 한다.
+		
+	-Model :
+		-일반적 관점 :
+			-application의 데이터를 담기위한 container 역할을 하는 객체
+			
+		-MVC 관점 :
+			-controller와 view 계층간 데이터를 주고 받기 위한 bridge 역할을 하는 객체 또는 레이어(추상적)
+			-Spring의 경우 controll에서 param을 통해 model 인터페이스를 상속박은 객체를 얻을 수 있고 해당 object를 통해 데이터를 남아 view 단으로 내려 줄수 있다. 
+			
+
+
 
 -jar 실행 : java -jar target/jarFileName.jar MainClassFileName (실행가능 jar파일로 패키징 되어 있어야 함)
 
@@ -377,6 +437,7 @@
 			-default : 같은 패키지의 클레스에서만 필드의 접근 및 메소드 호출이 가능하다
 			-private : 자신 클레스 내부에서만 필드의 접근 및 메소드 호출이 가능하다
 		
+	-결론 : 가능하면 defalt로 이하로만 작성한다.??
 	
 
 -Generic : 데이터의 타입(data type)을 일반화 하는것, 아직은 알수 없는 클래스 타입을 임의로 잡아놓고 처리하는것, 프레임워크 기술에서 많이 사용됨
