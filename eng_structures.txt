@@ -209,9 +209,16 @@ The question whether or not value objects should always be immutable is a subjec
 	-is a subject of a dispute : 논란의 대상이다.
 	
 	
-This simple mental exercise makes immutability an intrinsic part of Value Object. If we accept value objects have a zero lifetime, meaning that they are just snapshots of some state and nothing more, then we have to admit they are allowed to represent only a single variant of that state.	
+This simple mental exercise makes immutability an intrinsic part of Value Object. 
+If we accept value objects have a zero lifetime, meaning that they are just snapshots of some state and nothing more, 
+then we have to admit they are allowed to represent only a single variant of that state.	
+	-makes immutability an intrinsic part of value object : 불변성을 vo의 고유의 하나의 특성(부분)으로 만든다.
+	-if.. , meaning that : 의미하게 된다.
+	-and nothing more : 그 이상은 아니다.
 
-For example, if we have a Teacher class that maintains a List of Students, the getStudents method could either be
+For example, if we have a Teacher class that maintains a List of Students, the getStudents method could either be a or b
+	-could either be a or b : a이거나 b일 것이다.
+	-could be either a or b : a이거나 b일 것이다.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
