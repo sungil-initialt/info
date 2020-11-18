@@ -1736,7 +1736,7 @@
 			-my phone ran out of battery | my bettery ran out | that's why I couldn't | I hurt my hand |
 			
 		-I gave my parents some money.(돈을 드렸다의 느낌, 기본형) I gave some money to my parents.(부모님께 드렸다의 느낌, 누구에게를 강조)
-		-!I gave it to my parents.(물건이 대명사인 경우 항상 먼저 표현) I gave it to them.(누가가 대명사일때도 물건이 대면사면 먼저) I gave them some money.
+		-!I gave it to my parents.(물건이 대명사인 경우 항상 먼저 표현) I gave it to them.(누가가 대명사일때도 물건이 대명사면 물건을 먼저) I gave them some money.
 
 
 -title : 영어회화, review series 001, 지금쯤이면 뭔가 소식이 있을 줄 알았는데..
@@ -2173,8 +2173,11 @@
 		-It's too bad. That's too bad. (기본적으로 안됐다 이미지만 때로는 안됐지만 어쩔수 없어란 의미로도 쓰임)
 		-There's nothing we can do. There isn't much we can do.(부드러운느낌,별로없어) There's nothing else we can do.(이거외에,다른방법이없어) There's nothing more we can do.(더이상)
 		-There's nothing we can do about it.(이건어쩔수없어) There's nothing we can do about it at this point(now). At that point, there was nothing we could do.
+			-it's too bad | that's too bad | there's nothing we can do | there isn't much we can do | there's nothing else we can do | there's nothing more we can do
+			-there's nothing we can do about it(이건) | at this point | now | at that point, | there was nothing | we could do
 		
 		-There's nothing we can do but (just) wait. There's nothing we can do except wait.(except뒤는 just안씀) There's nothing we can do beside(other than) wait.
+			-there's nothing we can do | but just wait | except wait (just사용하면이상함) | beside wait 
 		
 		
 -title : 생활 영어 표현 3개, keep track of, keep up with, catch up on, 영어회화
@@ -2182,7 +2185,8 @@
 		-The meetings are fairly(꽤) fast-paced. So until you get used to it, don't worry too much about keeping track of every little detail.(쫒아가다)
 		-Just try to keep up with the overall flow.(따라가다) And the meetings are entirely recorded, so you can catch up on anything you might've(찌도) missed, afterwords(끝나고).(노친걸,따라잡다)
 		
-			-be(stay) current on(뭣의위에현재있다?,흐름을다알고있다,잘알고있다) | catch up with 사람 | ..word ..words
+			-The meetings | are fairly fast-paced | until you get used to it | don't worry too much about ..ing | keep track of | every little detail 
+			-I'm current on that news | I stay current on that news(흐름을잘알고있다) | catch up with 사람 | ..word ..words
 			-keep track of the date(time) | keep track of my weight | keep track of information | Keep up with class(course) | keep up with everyone else | keep up with the latest fashion
 	
 	
