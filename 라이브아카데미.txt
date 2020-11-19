@@ -2247,9 +2247,25 @@
 		-I had a really hard time learning Korean. But I got a lot of support from the teachers in school.
 			-I had a really hard time .. ing | I had a really hard time learning korean | the teachers in school
 			-were very supportive of me | gave me a lot support | gave me a lot of extra attention | I got a lot of support from the teachers​
----315	
+
+
+-title : 영향을 받다, 주다, 끼치다를 영어로 표현하기, influence, affect, effect, impact
+	-script :influence(간접적,영향을주다,미치다), affect(직접적), effect(명사), impact(명:영향,충격,충돌, 동:영향을주다(강한))
 	
-	
+		-A number of social factors influence life expatacny(기대수명). The wording of question can influence how people answer.
+		-Other musicians had a lot of influence on her and her music. (영향을 갖는다->영향을 주다)
+		-She was influenced by a lot of other musicians. (영향을받다)
+		
+		-She had spent her whole life in Korea. So when she moved overseas, it affected her a lot. She was heavily affected (by that).
+		+Your options won't affect my decision.
+		-The worsening economy is affecting everybody. Everybody is (bing) affected by worsening economy. (받는다, 받고있다)
+		
+		-Television can have positive and negative effects on children. Television has both positive and negative effects on children.
+		
+		+Her father's death impacted(had an impact) greatly on her childhood years. The company's performance was impacted by the high value of the pound.
+		
+		
+---320	
 	
 	
 	
