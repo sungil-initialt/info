@@ -2250,38 +2250,129 @@
 
 
 -title : 영향을 받다, 주다, 끼치다를 영어로 표현하기, influence, affect, effect, impact
-	-script :influence(간접적,영향을주다,미치다), affect(직접적), effect(명사), impact(명:영향,충격,충돌, 동:영향을주다(강한))
+	-script : influence(간접적,영향을주다,미치다), affect(직접적), effect(명사), impact(명:영향,충격,충돌, 동:영향을주다(강한))
 	
-		-A number of social factors influence life expatacny(기대수명). The wording of question can influence how people answer.
+		+A number of social factors influence life expectancy(기대수명). The wording of question can influence how people answer.
 		-Other musicians had a lot of influence on her and her music. (영향을 갖는다->영향을 주다)
 		-She was influenced by a lot of other musicians. (영향을받다)
+			-A number of | social factors | influence life expectancy | the wording of | can influence | how people answer.
+			-other musicians | had a lot of influence on her and her music | she was influenced by | 
 		
 		-She had spent her whole life in Korea. So when she moved overseas, it affected her a lot. She was heavily affected (by that).
-		+Your options won't affect my decision.
+		+Your option won't affect my decision.
 		-The worsening economy is affecting everybody. Everybody is (bing) affected by worsening economy. (받는다, 받고있다)
+			-she had spent her whole life in Korea | she moved overseas(부사형,해외로,그래서 to overseas가 아님) | it affected her a lot | she was heavily affected by that
+			-your option(의견) | won't affect my decision | everybody is affected by | everybody is bing affected by(받고있는중이다) | worsening economy
 		
 		-Television can have positive and negative effects on children. Television has both positive and negative effects on children.
+			-television can have | positive and negative effects on | television has both | positive and negative effects on 
 		
 		+Her father's death impacted(had an impact) greatly on her childhood years. The company's performance was impacted by the high value of the pound.
+			-Her father's death | impacted greatly on | her childhood years | her father's death had an impact on her childhood years
+			-the company's performance(실적,성과) | was impacted by | the high value of the pound (파운드 강세)
+			
 		
+-title : ..하는 경우가 많다, 대부분의 경우, 어떨때는 영어로 표현하기, 영어회화
+	-script :
+		-I usually take a really long time until I can fall asleep. But it's mostly because of my smartphone. 
+		-I mean, a lot of the time, I'm looking at my smartphone right up until I fall asleep. (and) I'm not doing anything important. Most of the time, I'm just web browsing(surfing).
+		-Of course, in some cases, if I'm planing for a trip or somthing, I might be looking for sosme information online. 
+		-But in most cases, I just have hard time staying away from my phone.(그냥 스맡트폰에서 눈을 못 떼는 거에요)
+			-I usually take a really long time | until I can fall aleep | but it's mostly because of | I mean.. a lot of the time | I'm looking at my smartphone | right up until (직전까지)
+			-I'm not doing anything important | most of the time, | I'm just web browsing | I'm just web surfing | of caurse, in some cases, if I..| 
+			-if I'm planing for a trinp or something, | I might be looking for | some information online | but in most cases, | I just have hard time ..ing | staying away from | my phone 
+	
+
+-title : 이제 막, 한동한, 당분간은, 연습가이드 #31 part 1, 영어회화
+	-script :
+		-She just had a baby so, she's going to be pretty busy for a while. 
+		-So, for the time bing, it's just you and me. (it's going to be just you and me. it's just the two of us. it's going to be just the tow of us.)
+			-she just had a baby | she's going to be | for a while,(한동한) | in the meantime,(그래서한동한,그런동안) | for the time being,(그래서한동한,그런동안) | meanwhile,(그래서한동한,그런동안)
+			-so, for the time being, | it's just you and me(둘뿐이다->둘이해야한다) | it's going to be just you and me | it's just the two of us | it's going to be just the two of us 
+			
+		-Come on~(너무그러지마..), it looks like they just opened. And you know, things are bound to be a little crazy(messy) for a while.
+		-So, in the meantime, let's just (try to) be a little patient and be cool, alright?
+			-come on~(그러지마~) | it looks like | they just opened | and you know | things are bound to be a little crazy | things tend to be a little messy | for a while
+			-so, in the meantime, | let's just be a little patient and be cool, alright? | let's just try to be a little patient and be cool, alright?
 		
----320	
+	
+-title : 영어로, 언제가는, 조만간에, 연습가이드 31/part2, 영어회화
+	-script :	one day(미래의 언젠간), someday(미래의 언젠간), some day(어떤날에, 날잡아서 어느날에), sometime(미래의 언제), anytime soon(부정적의미의 금방,바로), sometime in(in은 several, few, couple of.. 함께쓸때)
+	
+		-One day, you'll understand. Someday, you'll understand.
+		-I have to do this someday. So I'm learning this as fast as I can. It's something that I have to do some day.
+		-One of these days, I'm going to have to learn how to do this. (these days 요즘에 -> one of these days 조만간, 조만간어느날)
+		-Still, soon or later, you're going to have to tell her the truth.
+			
+			-one day, you'll understand | someday, you'll understand | I have to do this someday | I'm learning | as fast as I can | it's something that | I have to do some day(날잡아언제)
+			-the other day,(얼마전에) | these days,(요즘에) | one of these days,(조만간) 
+			-I'm going to have to | learn how to do this | still, soon or later(그래도언젠간) | you're going to have to | tell her the truth
+		
+		-I'll give you call sometime in the next couple of days(몇일칠내조만간). there's going to be another meeting sometime in the next few weeks.
+		-Let's meet up sometime(언제한번). Let's get together sometime. 
+		-Hey, let's meet up sometime soon(조만간). Let's meet up sometime this week. sometime this month. sometime in the next next several months.
+			
+			-I'll give you call | sometime in the next | couple of days | !!there's going to be | another meeting | sometime in the next few weeks 
+			-let's meet up | let's get together | sometime soon | sometime this week | sometime this month
+		
+		-It doesn't look like it's going to be taken care of anytime soon(금방,바로, 부정문장). 
+		-I'm not going to leave anytime soon. It's not going to be released anytime soon.
+			-it dosen't look like it's going to | be taken care of(해결되다, 처리되다) | anytime soon(부정적금방) | I'm not going to leave | it's not going to | be released | anytime soon
+
+	
+-title : 영어에서 완료시제는 언제 사용하는 것일까? 두서없이 떠들어봄
+	-script :	
+		-I ate lunch. I've eaten lunch.
+		-I did my homework. I've done my homework. I did my homework. And now, my homework is done.
+			-I've just eaten lunch | I've done my | .. and now(그래서지금은), | .. is done | 
+	
+		-I lived in Korea for 20 years. I've leaved in Korea for 20 years. I've been living in Korea for 20 years
+			-in Korea | I've lived in | I've been living in |
+		
+		-When I graduated 10 years ago, I had already started working. When I graduated 10 years ago, I had already been working.
+		-When I got back home last night, my parents had already gone to bed. My parents were already sleeping(과거진행). My parents were already asleep.(상태이기때문에 had been asleep안한건가??)
+			-when I graduated, I had already started working | start ..ing | started ..ing | I had been working | got back home | my parents had already gone to bed | was sleeping
 	
 	
+-title : 완료시제 연습, 연습가이드 #32, 과거완료, 현재완료 + 진행, 영어회화
+	-script :	
+			-과거완료 : 그때는(과거) 이미뭐뭐했다(더과거 had + pp)
+			-현재완료 진행 : (그후로) 계속 ..하고 있다(have + pp + ..ing)
+	
+		-About a year ago, I bought this smartphone used. I paid about 500 thousand won for it.
+		-But I soon found out that they usually went for about 300 thousand won. But by the time I found out, I had already made the purchase and there was no way to return it. 
+		-Ever since that happened,(Ever since then) I've gotten(become) much more careful(mindful 유념하는) about buying second hand products and I've been tring to avoid buying, whenever possible.
+			
+			-about a year, | I bought .. used(중고로) | I paid about 100 thousnd won for it | but I soon find out that | they usually went for about (go for .., ..에 거래되다)
+			-but by the time I found out,(그걸알았을때는) | I had already made the purchase | and(그래서) there was no way to | return it 
+			-Ever since that happened, | Ever since then, | I've gotten much more careful about buying(바잉) | I've become much more mindful(유념하는) about ..ing (become-became-become)
+			-second hand products | I've been trying to avoid buying | whenever posiible(가능하면)
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+-title : 대화가이드 #11, 그렇게는 생각 안해봤는데 그것도 말 되네, 영어회화
+	-script :
+		-I don't know(understand) why you like horror movies so much. You say that they scare you, then why do you keep watching them?
+		-I enjoy the rush. It's the same with roller coaster. People experience the same thing with roller coaster. People get scared but they enjoy it.
+		-Oh, I haven't thought of it like that(that way) but that makes sense. I've never look at it.(그렇게는보지않았다 -> 그렇게는생각못했다)
+		-Yeah, it's just like that.(그거랑같어)
+			
+			-I don't understand | why you like horror movies | so much(그렇게나) | you say that(평소,그렇게말하잖어) | they scare you(무섭게하다) | then(근데) | why do you keep watching them| keep ..ing 
+			-I enjoy the rush(스릴) | it's the same with.. (..뭐랑마찮가지야) | experience the same thing with.. (..에서같은걸경험한다) | people get scared 
+			-I haven't thought of it | like that | like that way | but that makes sense | I've never look at it(그렇게는생각못했네) | it's just like that(그거랑같은거야)
+
+
+-title : 원점으로 돌아가다, 처음부터 다 다시 하다, 전체 과정을 다시 거치다, 영어회화, 유용한 영어표현
+	-script :
+		-I'm right back where I started. I don't want to be back where I started. I don't want to go (right) back where I started. 
+		-I don't want to do this all over again. I have to do it all over again.
+		-If we're not careful, we might have to go through the whole thing again. If something goes wrong, we have to go through the entire process again.
+		
+			-I'm right back(원점) | where I started | I don't want to be back where I started | I don't want to go right back where I started
+			-I don't want to do this | all over again(첨부터모두다시) | I have to do it |
+			-if we're not careful, | we might have to | go through | whole thing again | if something goes wrong, | we have to go through | the entire process again 
+			
+---343
+			
 	
 	
 	
