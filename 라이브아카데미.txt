@@ -2371,17 +2371,29 @@
 			-I don't want to do this | all over again(첨부터모두다시) | I have to do it |
 			-if we're not careful, | we might have to | go through | whole thing again | if something goes wrong, | we have to go through | the entire process again 
 			
----343
 			
+-title : 중요하게 생각하다, 신경을 쓰다, 하지 않도록 주의하다, 꼭 ~하도록 하다, 연습가이드 #33, 영어회화, 표현
+	-script :	
+		-Pay attention to that. You should pay attention to that. I suggest that you pay attention to that.
+		-She's pretty serious about doing things by the rules. She's pretty strict about doing things by the rules.
+		-So, I would pay a little attention to that. I would be mindful of that. You should be mindful of that.
+		-Whatever it is, be careful not to do anything based on your own assumptions and just make sure to check with her before you do anything.
+			
+			-pay attention to that | you should pay attention to(주의해라 -> 신경써라) | I suggest that | you pay attention to that.
+			-she's pretty serious about | about doing things by the rules | she's pretty strict about | about doing things by the rules
+			-I would(나같으면할꺼야) | pay a little attention to that | I would be(나같으면이럴꺼야) | be mindful of | you should be(그러는게좋아) | mindful of that
+			-whatever it is,(뭐가됐든) | be careful not to | do anything | based on your own assumptions | make sure to(꼭뭐를해라) | check with(체크를받아라) her | before you do anything
 	
 	
+-title : 내 잘못도 있어, 날씨 때문인 것도 있었어, partly, part of it, 영어회화, 표현
+	-script :	fault(ㅍ폴트,책임,탓,단점,결점,잘못으로생각하면안됨!!), blame(탓하다,잘못의원인으로지목), criticize(비난하다) partly(팟r리,일부,어느정돈), part of it(그것의,일부는,어느정돈)
+	
+		-It' my fault(ㅍ폴트). It's your fault and it's also my fault.(너잘못이기도하고내잘못이기도 해) It's partly(팟r리) my fault. Part(팟) of it is my fault.
+		-It was because of the weather. It was partly because of the weather. Part of it was because of the weather.
+			-it's my fault | it's your fault and it's also my fault | it's partly my fault | part of it is my fault | it's because of | it's partly because of | part of it is because of
 	
 	
-	
-	
-	
-	
-	
+---347	
 	
 	
 	
