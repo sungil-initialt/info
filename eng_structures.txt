@@ -220,6 +220,11 @@ For example, if we have a Teacher class that maintains a List of Students, the g
 	-could either be a or b : a이거나 b일 것이다.
 	-could be either a or b : a이거나 b일 것이다.
 
+His actions were based on a false assumption. It was impossible to make assumptions about people’s reactions.
+	-be based on : 근거하고 있다, 기반을 두고 있다.
+	-false assumption : 잘못된 추정.
+	-make assumptions about : 무엇을 추정하다.
+	
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 [분사구문]
