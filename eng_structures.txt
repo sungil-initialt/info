@@ -216,15 +216,58 @@ then we have to admit they are allowed to represent only a single variant of tha
 	-if.. , meaning that : 의미하게 된다.
 	-and nothing more : 그 이상은 아니다.
 
+
 For example, if we have a Teacher class that maintains a List of Students, the getStudents method could either be a or b
 	-could either be a or b : a이거나 b일 것이다.
 	-could be either a or b : a이거나 b일 것이다.
+
 
 His actions were based on a false assumption. It was impossible to make assumptions about people’s reactions.
 	-be based on : 근거하고 있다, 기반을 두고 있다.
 	-false assumption : 잘못된 추정.
 	-make assumptions about : 무엇을 추정하다.
 	
+
+SOAP is a protocol which was designed before REST and came into the picture. 
+	-came into the picture : 등장하다, 중요해지다, 두드러지다.
+	
+	
+insecure option can be used to skip certificate verification. Alternatively, if the remote server is trusted, the remote server CA certificate can be added to the CA certificate store file.
+	-Alternatively,(알터너티블리) if ... : 그렇지 않고 ..라면
+	
+	
+A network information service enables machines to be identified by common names instead of cumbersome  numerical addresses.
+	-cumbersome  numerical addresses : 복잡한(다루기힘든, 번거러운) 숫자로된 주소 (뉴메러컬)
+	
+	
+Likewise, in order for elm and oak to communicate with pine or with each other, they must keep similar files.
+	-Likewise, : 마찬가지로, 비슷하게, 또한
+	-in order for elm and oak to communicate with pine : elm과 oak가 pine과 통신하기 위해서 
+	
+	
+This arrangement, of a server providing centralized services to clients across a network, is known as client-server computing.
+	-This arrangement, of a server providing centralized : 서버중안 제공방식의 배치는
+	
+	
+The collection of networked machines that use DNS are referred to as the DNS namespace.
+	-are referred to as the DNS namespace. : DNS namespace으로 언급되어 진다
+	
+	
+The names can be of users, computers, printers, files or other resources.	
+	-The names can be of : 이름은 users, computers, printers, files or other resources 일수 있다.
+
+The committee is said to not have elaborated on its latest decision. 
+	-The committee is said : 위원회가 ..한것으로 알려지다 (elaborated : 자세히 설명하다)
+	-The committee is said to not have elaborated on : ..에 대해 구체적으로 언급하지 않은것으로 알려지다.
+	-its latest decision : 이번 결정
+	
+In an IP network, the application queried a WINS or DNS server to turn the name of the machine it wished to communicate with into its IP address
+	-to turn (the name of the machine it wished to communicate with) into its IP address : 통신하기 위한 그 장치의 이름을 ip로 바꾸기 위해
+	
+The Java EE infrastructure is partitioned into logical containers.
+	-is partitioned into : 로직컬 컨테이너로 분리되어 있다. 
+	-The room is partitioned into three sections. : 3 영역으로 분리되어 있다
+
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 [분사구문]
