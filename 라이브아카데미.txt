@@ -2390,7 +2390,7 @@
 	
 		-It' my fault(ㅍ폴트). It's your fault and it's also my fault.(너잘못이기도하고내잘못이기도 해) It's partly(팟r리) my fault. Part(팟) of it is my fault.
 		-It was because of the weather. It was partly because of the weather. Part of it was because of the weather.
-			-it's my fault | it's your fault and it's also my fault | it's partly my fault | part of it is my fault | it's because of | it's partly because of | part of it is because of
+			-it's my fault | it's your fault and it's also my fault | it's partly my fault | part of it is my fault | it's because of | it's partly because of | part of it's because of
 	
 	
 -title : 대화가이드 #12, 어차피, 게다가, 복습, 라이브아카데미 대화가이드, 영어회화
@@ -2403,17 +2403,18 @@
 
 -title : 영어에서 사역 문장은 언제 어떻게 쓰는걸까? part1
 	-script :		
-		-I have to take care of this by tomorrow.(나는이거해야해) This needs to be taken care of by tomorrow(이건처리되야해). I need to have this taken care of by tomorrow.(처리되게해야해, 내가할건아니지만?)
+		-I have to take care of this by tomorrow.(나는처리해야해) This needs to be taken care of by tomorrow(이건처리되야해). I need to have this taken care of by tomorrow.(처리되게해야해, 내가할건아니지만?)
 		-I want to take my picture.(내가찍는느낌) I want to get my picture taken.(찍힘을받고싶다)
+			-take care of(처리하다) | by tomorrow | this needs to be taken care of | I need to | have this taken care of | take my picture | get my picture taken
 
 
 -title : 사역 문장은 언제 어떻게 쓰는걸까? part2
 	-script :		 
 		-Don't worry. This is a clean shirt. I had it dry-cleaned a couple of days ago.
-			-clean shirt | I had it try-cleaned | a couple of days ago.
+			-clean shirt | I had it dry-cleaned | a couple of days ago.
 
 		-There can't be a problem with my computer. I just had it serviced(썰비스드,점검받다).
-			-there can't be(일리가없다,있을수없다) | there can be(있을수있다) | a problem with | I just(막했다,얼전에했다) | have it seviced | had it serviced 
+			-there can't be(일리가없다,있을수없다) | there can be(있을수있다) | a problem with | I just(막했다,얼전에했다) | have it serviced | had it serviced 
 		
 		-When you're trying to buy a house, it's a good idea to have the entire house (thoroughly,또롤리,철저히) examined(이그제민드) by someone. And there are people you can hire to do that.
 			-When you're trying to(..할때는,..한다면) | it's a good idea to | have the entire house thoroughly examined | thoroughly | by someone | and there are people you can hire to do that
