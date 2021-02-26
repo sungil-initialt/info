@@ -1118,6 +1118,7 @@ Git : version control system, local에서 개발자 단독으로 사용가능, D
 		- git directory(Repository) : 수정된(새로생성된) 파일이 최종 commit 되어 해당 파일이 snapshot된 상태
 		
 	-git Graph 에서의 HEAD 의 의미 : 
+		-해당 브랜치에서 내 코드가 위치한 커밋 위치
 		-orgin/HEAD : 해당 Repository의 최초 브랜치(최상의 부모)의 현재 위치를 보여주는듯. 기본적으로 최초 브랜치가 master 임으로 항상 master 브랜치와 같이 움직이지만 최초 브랜치가 master가 아닌경우를 위해 origin/HEAD 를 표기해주는 걸까???
 		
 		-(그냥)HEAD : 
@@ -1180,28 +1181,34 @@ Git : version control system, local에서 개발자 단독으로 사용가능, D
 
 			-git pull and git merge : pull은 동일한 브랜치에 대해 remote의 코드를 local로 가져온다(complict이 날수 있음), git merge는 서로다른 브랜치의 코드를 합치는 작업(complict이 날수 있음)
 
-			-git advanced Command :
-				-reset : 해당 커밋 위치로 로컬 HEAD를 옮기는 의미 (source tree에서 특정 커밋을 클릭하여 옮기는 의미와 유사)
-					-options :
-						-soft(keep all local changes) : 
-							-최상위 커밋 상태의 코드와 비교하여 옮겨질 위치의 코드와 다른 점들을 모두 staged상태에 모아 준다.
-							-결과적으로 로컬 코드는 최상위 커밋 상태와 같은 상태지만 이후에 staged에 있는 파일들을 discard를 이용하여 모두 또는 선별적으로 날려 버릴수 있다
-							-로컬에 commit 하지 않은 코드가 있는 상태에서 reset soft 시 로컬에 commit하지 않은 코드는 unstaged 상태에 있게 된다. 
-							
-						-mixed(옵션이 없을경우 default, keep working copy but reset index) :
-							-soft와 동일하나 최상위 커밋 기준 변경사항이 soft는 staged에 남는 반변 mixed는 unstaged에 남게 된다(로컬에 commit하지 않은 코드가 있었던 경우라면 파일이 섞여서 혼선이 생길수도 있을 듯)
-							
-						-hard(discard all working copy changes) :
-							-해당 커밋 위치로 로컬 HEAD를 옮기는 것만 해준다. 최상위 커밋 상태와 다른 점들은 그냥 무시된다(unstage, stage 어디에도 남겨 주지 않는다.) 또한 로컬에 commit하지 않는 코드가 있더라도 모두 날려 버린다.) 
-							-딱 그상태로 만들어주는 개념 (source tree에서 특정 커밋을 클릭하여 옮기는 의미와 거의 유사)
-												
-				-push(force 옵션) : 나의 현재 로컬 브랜치 상태로 remote 브랜치를 강제로 일치 시킨다. 
-					-리모트에 다른 commit 들이 선행되어 있는경우 pull 하기 전에 push가 불가능 하나 --force 옵션을 통해 pull하지 않고도 강제로 push 할수 있다
-					-이 경우 remote에 있는 선행 컷밋들은 모드 날라가게 된다.
-					-잘못 push한 내용이 있는경우 reset을 통해 원하는 위치로 로컬 위치를 옮긴 후 push --force를 통해 remote의 상위 commit을 강제로 날리수 있다.
-					-강제 옵션(git push --force)을 사용하기 위해서는 해단 repository에 protect 옵션 해제 또는 권한이 필요하다 (git 상품에 따라 확인 필요)
-					-!!! 만약 다른 사람이 이미 remote의 내용을 pull 해간 상태에서 내가 remote의 내용을 특정 위치로 변경(삭제)하면 다른 사람은 어떻게 해야 하지?? 다들 해당 위치로 reset을 해줘야 할까???			
+			-git advanced Command : 문제 해결 
 			
+				-reset : 해당 커밋 위치로 로컬 HEAD를 옮기는 의미 (source tree에서 특정 커밋을 클릭하여 옮기는 의미와 유사)
+				
+					-git fetch --all  이후 git reset --hard origin/브랜치name
+						-options :
+							-soft(keep all local changes) : 
+								-최상위 커밋 상태의 코드와 비교하여 옮겨질 위치의 코드와 다른 점들을 모두 staged상태에 모아 준다.
+								-결과적으로 로컬 코드는 최상위 커밋 상태와 같은 상태지만 이후에 staged에 있는 파일들을 discard를 이용하여 모두 또는 선별적으로 날려 버릴수 있다
+								-로컬에 commit 하지 않은 코드가 있는 상태에서 reset soft 시 로컬에 commit하지 않은 코드는 unstaged 상태에 있게 된다. 
+								
+							-mixed(옵션이 없을경우 default, keep working copy but reset index) :
+								-soft와 동일하나 최상위 커밋 기준 변경사항이 soft는 staged에 남는 반변 mixed는 unstaged에 남게 된다(로컬에 commit하지 않은 코드가 있었던 경우라면 파일이 섞여서 혼선이 생길수도 있을 듯)
+								
+							-hard(discard all working copy changes) :
+								-해당 커밋 위치로 로컬 HEAD를 옮기는 것만 해준다. 최상위 커밋 상태와 다른 점들은 그냥 무시된다(unstage, stage 어디에도 남겨 주지 않는다.) 또한 로컬에 commit하지 않는 코드가 있더라도 모두 날려 버린다.) 
+								-딱 그상태로 만들어주는 개념 (source tree에서 특정 커밋을 클릭하여 옮기는 의미와 거의 유사)
+												
+				-push(force 옵션) : 나의 현재 로컬 브랜치 상태로(해당 브렌치의 HEAD 위치로) remote 브랜치를 강제로 일치 시킨다.
+					-git push -f origin master(브랜치명)
+						-리모트에 다른 commit 들이 선행되어 있는경우 pull 하기 전에 push가 불가능 하나 --force 옵션을 통해 pull하지 않고도 강제로 push 할수 있다
+						-이 경우 remote에 있는 선행 컷밋들은 모드 날라가게 된다.
+						-잘못 push한 내용이 있는경우 reset을 통해 원하는 위치로 로컬 위치를 옮긴 후 push --force를 통해 remote의 상위 commit을 강제로 날리수 있다.
+						-강제 옵션(git push --force)을 사용하기 위해서는 해단 repository에 protect 옵션 해제 또는 권한이 필요하다 (git 상품에 따라 확인 필요)
+						-!!! 만약 다른 사람이 이미 remote의 내용을 pull 해간 상태에서 내가 remote의 내용을 특정 위치로 변경(삭제)하면 다른 사람은 어떻게 해야 하지?? 다들 해당 위치로 reset을 해줘야 할까???			
+			
+				-머지한 커밋을 원복한다(merge revert) :
+					-git revert 머지커밋번호(7자) -m 1
 
 GitLap : web-based DevOps lifecycle tool that provides a Git-repository manager providing wiki, issue-tracking and CI/CD pipeline features
 	-사용자 무제한 무료 (기술 서포트를 받기 위해서는 비용 지불 필요)
@@ -1241,8 +1248,6 @@ GitLap : web-based DevOps lifecycle tool that provides a Git-repository manager 
 Github :
 BitBucket :
 
-Git command :
-	-merge revert : git revert 머지커밋번호(7자) -m 1
 
 Sourcetree : GIT 클라이언트 툴
 	-repository 만들기 : 상단 + 탭을 이용하여 생성
@@ -1266,13 +1271,43 @@ Sourcetree : GIT 클라이언트 툴
 
 
 
+[Web Service]
+-웹서비스 구성 : web server(Apache HTTP Server, IIS, Nginx, Lighttpd..) + was server(Apache Tomcat Server, .Net, Zend Server(PHP)..) + etc(DB..)
+
+	-Web서버(static 서버) : 클라이언트(브라우저)로 부터 http를 통해 요청되는 request를 받아서 서버에 준비되어 있는 컨텐츠를 http를 통해 !!그대로 내려주는 역할을 한다.
+		-초창기 web 서비스의 경우는 서버에 있는 컨텐츠를 에이전트로 그대로 내려주는 역할만을 했다(이때는 이걸로도 만족). 서버는 서버의 자원을 조작하지 않고 저장된 정적 파일(html문서, js파일, 이미지파일)을 그대로 내려 준다.
+		-현시대에는 위 static한 역할만 하는 서버는 무용지물인데 왜 계속하여 사용 할까? was를 통해 dynamic하게 처리된 최종 결과 html을 생성하여 내려주면(결국은 text) 브라우저는 해당 document를 읽으며 그에 관련된 static 파일(js, 이미지 파일등)을 다시 요청하게 된다. 이럴때 web 서버를 두면 static한 처리와 dynamic한 처리를 구분지어 처리하게 할수 있음으로 부하 분산의 효가가 있다.
+			-was 서버또한 web 서버가 하는 static한 파일을 내려주는 역할을 다 할 수 있지만 부하 측면에서 두 서버간 역할을 구분하는 것은 좋은 방법이다. 또한 일반적으로 web 서버가 static한 파일을 처리하는데 훨씬 가볍고 빠르게 동작한다.
+			-부가적인 이점으로 web 서버를 앞에 둠으로 해서 중요한 자원과 코드를 뒤쪽 was에 둠으로서 보안적 측면에 이점이 있다. 또한 web 서버에 연결할 was 서버를 선택적으로 설정하여 무중단 패치등도 가능하다.
+		
+	-Was서버(dynamic 서버) : 클라이언트(브라우저에서 직접 또는 web서버를 거쳐 들어온 요청)로 부터 요청을 받아 처리된 결과물을 dynamic하게 생성하여 요청한 클라이언트로 내려 줄수 있다.
+		-was 대표 구성 요건 :
+			-web server connectors : http web 서버의 연결을 받기 위한 connector.
+			-programming languages : dynamic한 처리 결과를 만들어 내기 위해 제공된 lib를 이용하여 개발할수 있는 언어를 제공해야 함
+			-runtime libraries : 여러 주요 부가기능(보안, 트랜젝션, 편의기능)을 lib를 통해 서버들이 제공해 주고 있다.
+			-database connector : DB를 연결할수 있는 수단을 제공함
+			-administration code : deploy, configure, manage를 위한 부가 요소
+			
+		-was 서버에서의 특징 : 
+			-IoC(Inversion of Control) 개념이 커짐, 프레임워크의 성향을 띄기에 개발자가 전체 프로그램의 흐름을 주도하는 것이 아니라 적제적소에 필요한 코드를 넣어 주는 개념(AOP)이 강해짐(전체적인 흐림과 주요공통 기능에 대해 서버에 일임)
+			-was + spring 또는 EJB 서버의 경우 IoC 개념이 더욱더 커지개 되었다 (was+spring 형태는 EJB 서버의 기능 구성과 유사한듯..)
+			
+	
+	
+-대표 WAS 서버 : 
+	-apache Tomcat : 
+	
+	-EJB서버들(weblogic, Webspere, Jboss..)
+		
+
+
 
 
 
 [Spring & Spring boot]
 -Spring Framework : 아래와 같은 주요 기능(Main Features)을 Dependency Injection 해줌
 	-Spring JDBC
-	-Spring MVC : 브라우저->DispatcherServlet->HandlerMapping->Controller(Bean,Model,Service,DAO,DB 이용)->DispatcherServlet->ViewResolver->View->DispatcherServlet->브라우저
+	-Spring MVC : 브라우저->Filter->DispatcherServlet->HandlerMapping->Controller(Bean,Model,Service,DAO,DB 이용)->DispatcherServlet->ViewResolver->View->DispatcherServlet->Filter->브라우저
 	-Spring Security
 	-Spring AOP (aspect oriented programing) : 개발자가 핵심 로직에만 집중할수 있도록 공통 기능을 framework 에서 지원 (filter 처럼 선/후 처리를 지원하는 class 지정 가능)
 	-Spring ORM (object relational mapping) : 하이버네이트, JPA 등을 이용해서 DAO 레이어를 구축하는 방식
@@ -3018,7 +3053,7 @@ Template Engine
 		-공통점 : 어느 cookie든 해당 url에 대한 request 시 자동으로 모두 request 해더에 포함되어 올라감
 
 	-keep-alive : Http는 state less 프로토콜의 한계를 극복하기 위해서 http(application layer) 하위 래벨인 TCP Sockek 단에서(Transfer Layer) 단에서 약간의 connection 위지를 할수 있게 해준다.
-		-HTTP 해더의 Keep-Alive 값이다, 서버의 설정을 통해 적용가능하다, 완전한 표준이 아니라서 서버에 따라 보여줄수도 안보여 줄수도 있다 (apach의 경우 설정하면 보여주고 nginX의 경우 response에 표기하지 않는다.)
+		-HTTP 해더의 Keep-Alive 값이다, 서버의 설정을 통해 적용가능하다, 완전한 표준이 아니라서 서버에 따라 보여줄수도 안보여 줄수도 있다 (apache의 경우 설정하면 보여주고 nginX의 경우 response에 표기하지 않는다.)
 		-서버가 내려주는 response 해더를 통해 서버 설정을 확인할 수 있다.
 			-Connection: Keep-Alive (사용중)
 			-Keep-Alive: timeout=5, max=100 (5초간 socket 연결을 유지하여 같은 client에서 들어오는 rquest를 같은 tcp 세션으로 유지할수 있다. max는 해당 세션으로 100번까지만 연장할수 있다는 의미)
@@ -3136,12 +3171,67 @@ Template Engine
 
 	-비대칭형 알고리즘: RSA(SSL, TLS), Rabin..
 		장단점 : 상대적으로 속도가 느리다, 그래서 짧은 데이터를 암호화 하는데 유리, 비밀키가 쌍(public, private) 으로 존해함 그래서 전달된 public 키가 노출되어도 복호화 되지 않고 private 키를 갖은 서버만 가능
-			-정확히는 public키로 암호화된 값은 private키로 복호되며 반대로 private키로 암호화된 값은 public 키로 복호된다.(하지만 보통 이렇게 private 키로 오픈하지는 않는다.)
+			-정확히는 public키로 암호화된 값은 private키로 복호되며 반대로 private키로 암호화된 값은 public 키로 복호된다.(하지만 보통 이렇게 private 키로 암호화 하진 않는다.)
 		코드 : KeyPair 클레스를 이용하여 한상의 키를 만들어 낸다. 암호화할때는 public키로 하고 복호화할때는 private 키를 이용한다. 암호화된 데이터를 Base64인코딩(디코딩)하여 리턴(웹에서 주로 사용해서 그런가??)
 			RSA : KeyPair keyPair = gen.genKeyPair();
 
 
 
+[CGI]
+ -CGI : Common Gateway Interface, 웹서버가(apache)가 동적 결과를 만들어내지 못하는 점을 보안하기 위해 웹 서버 프로그램과 외부 프로그램과의 연계법을 정한 것이 CGI이다 (웹서비스 초기 시대의 방식?)
+  -CGI는 어디까지나 인터페이스이며, 특정 플랫폼에 의존하지 않고, 웹 서버 등으로부터 외부 프로그램을 호출하는 조합을 가리킨다.(CGI를 경유해 실행되는 프로그램을 CGI 프로그램이라고 부른다.)
+	-기본적으로 개발 언어의 구분없이 사용이 가능하나 주로 펄, 파이선, 루비 등이 사용 된다
+	-요즘?의 추세는 웹서버의 프로세스로서 인터프리터를 상주시킴으로써, CGI로부터 프로그램을 호출해 부하를 줄임으로써 성능을 개선한 자바 서블릿이나 mod_perl, mod_php, mod_python, FastCGI 등도 공개되었다. 
+		-mod_xx(modification) 방식은 웹서버에 해당 언어를 직접 처리할수 있는 인터프리터 모듈을 추가하는 방식이다.(그냥 CGI의 경우, 파이썬의 경우.. 웹서에 xx.py 파일이 있을때 이 파일에 대한 처리는 별도 설치된 파이썬 인터프리터가 처리)
+	
+	-CGI 동작 방식 및 흐름 :
+		-클라이언트 http request 요청, get 데이터는 CGI 프로그램의 환경변수로 활용하고 post 데이터는 CGI 프로그램의 표준입력으로 활용하는 것이 CGI 표준의 핵심? 이다.
+				-ex : uri = http.xxx.com/companyInfo?nation=korea&companyName=xxCompany... (body : id=xxId, pw=xxpw, ....)
+				
+			-웹서버는 들어온 request에 대해 companyInfo에 해당하는 CGI가 있는지 확인해서 해당 CGI를 통해 CGI 프로그램을 실행함 (입력된 nation=korea&companyName=xxCompany 쿼리 스트링은 해당 CGI를 실행할때 param으로 작용됨)
+				-CGI 프로그램이 쿼리 스트링값을 참조하여 실행되면 이후 body 값을 입력값으로 받아 들여 그에 따른 결과를 반환한다.
+					-당시? 대부분의 클라이던트 프로그램이 브라우저 이었기 때문에 CGI 프로그램이 반환하는 결과값은 보통 html 내용이었다. (이미지데이터가 바로 내려가는 경우도 있을 수 있음)
+						-Pear ex: (해더)print "Content-type: text/html\r\n";... (body)print "<html>..<body><h1>xxCompany 회사 정보</h1><br>블라블라.. </body>..</html>" 
+			
+			-웹서버는 CGI 프로그램이 반환한 결과를 거의 그대로(http status 정도의 변형) 클라이언트 쪽으로 내려 준다.
+		-클라이언트는 내려받은 html 문서를 브라우징 하여 사용자에 보여 준다.
+
+	-fastCGI : 상호 작용 프로그램을 웹 서버와 통신하기 위한 바이너리 프로토콜이다. FastCGI는 초기 공용 게이트웨이 인터페이스(CGI)의 변형이다. 
+		-FastCGI의 주 목적은 웹 서버와 CGI 프로그램 간 통신 시 발생되는 부하를 줄임으로써 서버가 한 번에 더 많은 웹 페이지
+ 
+
+
+
+
+[Directory Service (Name Service)]
+	-개념 : 
+
+
+
+
+
+ 
+[Apache WEB Server]
+-개념 : Http 통신을 지원하는 web 서버
+
+-명칭 : 적용 운영체제에 따라 httpd(http deamon, RHEL 6.2) 또는 apache2(Ubuntu)라는 이름으로 설치 된다. (apache2가 좀더 세로운 버전 인듯?? 기본설정의 편리함, 디테일한 추가 옵션등?)
+-상품 점유율 : apache, enginX, google Web, IIS...
+	-enginX : 최근 아파치 다음으로 가장 많이 사용되는 web 서버로 아파치가 초대규모 트래픽을 지원하지 못하는데 비해 enginX는 초대규모 트래픽을 감당할 수 있다. (아파치와 enginX을 함께 사용하는 추세)
+	
+-주요 features :
+	-Handling of static files, index files, auto-indexing, and content negotiation : static 파일들을 client에 제공한다.(기본적인 web 서버 기능)
+	-.htaccess per-directory configuration support :
+	-Perl, PHP and Lua scripts are already build :
+	-Loadable Dynamic Modules :
+	-Apache is compatible with IPv6 : 
+	-Apache Server supports HTTP/2 :
+	-gzip compression and decompression :
+	-FTP connections are possible with proper module :
+	
+-기타 :
+	-apache 웹 루트의 폴더는 보통 public_html 또는 www 로 네임한다.
+	-hotlinking : 타 사이트의 리소스(이미지, css, js 등)를 링크를 통해 바로 끌고 가는 형태의 링크(타 사이트의 서버 및 트레픽 리소스를 사용하게 됨으로 옳지 않음)
+	
 
 
 [tomcat]
@@ -3152,86 +3242,124 @@ Template Engine
 	-application-xxx.yml : 기본이 되는 yml 파일로 해당 프로파일에서 특정 프로퍼티 벨류를 못 찾을 경우 application.yml 파일에서 찾게 되있다.
 		-ex : env 가 stg 일경우 
 			-application-stg.yml에서 환경 프로퍼티를 찾게 되있음 만약 해당 yml에서 찾을 수 없는 값이 있는 경우 기본 파일인 application.yml 에서 찾게 됨
+			
+-server.xml 과 web.xml의 관계
+	-server.xml은 서버 전체의 큰틀(?)에서의 설정을 담당하고 web.xml은 해당 web어플리케이션(WAR)의 동작과 관련한 설정(description)을 담당한다. 
+		-그래서 server.xml은 tomcat 내부 conf 디렉토리에 위치하고 web.xml은 각각의 war파일에 존재한다 (war로 배포하지 않는경우 각 웹app 의 webapp/WEB_INF 내부 있음)
+
+-Apache + mo_jk(Apache-Tomcat Connector Module) + tomcat 구성 :
+	-배경 :	
+		-Apache : 오직 정적인 컨텐츠(파일형태, html, img, js, css 등)만을 내려주도록 설계된 웹서버로 초창기 웹서비스 시절에는 이것만으로 충분했기 때문, 
+			-이후 다이나믹한 컨텐츠를 내려주기 위해 tomcat과 더블어 사용됨, 여전히 static한 컨텐츠를 내려줘야하는 부분이 있고 이를 부하분산 차원해서 지원, 또 보안상 tomcat을 뒤에 둘수 있고 mo_jk등을 통해 여러 형태의 로드벨런싱도 가능하게 함
+			
+		-mo_jk : 아파치 파운데이션에서 제공하는 아파치와 톰겟을 연결하게 해주는 커넥터 역할, .so 파일로 apache 내부에 블러그인 형태로 넣어 주면 됨(추가적인 config는 필요)
+		
+		-tomcat : 아파치가 단순히 static한 컨텐츠를 내려주는 서버라면 tomcat은 서블릿로직을 이용하여 다양한 결과를 실시간으로 만들어 내 내려 줄수 있다. 아파치가 없더라도 static한 컨텐츠도 내려줄수 있음(apache가 이부분에서는 더 잘하지만..)
+			-servlet(java servlet) : tomcat이 제공하는(정확히는 java EE 스펙의 일부) tomcat에서 다이나믹한 웹 기능을 구축하기 위한 APIs 이다(CGI,PHP등이같은맥락). 그래서 tomcat을 Servlet container 라고도 함
+			-jsp : HTML 내에 자바 코드를 삽입하여 동적 웹페이지를 생성할수 서버 사이드 스크립트 언어이다 (servlet과 마찮가지로 java EE 스펙이며, ASP, PHP, .Net과 같은 맥락)
+				-실제 jsp의 동작을 보면 실행시 jsp 코드를 java Servlet으로 변형하여 동작한다.(html과 섞어 쓰기 편하도록 만들어진 스크립트 언어정도의 역할이다)
+			
+			-JSTL(JavaServer Pages Standard Tag Library): JSP를 모를더라도 JSTL 태크를 이용하여 동적 페이지를 만들수 있게 해준다(view단에서).
+				-대규모 프로젝트에서는 view의 양이 많고 view단을 처리하기 위해 모두가 java 개발자일 필요가 없기 때문에 view 단만을 제어할수 있는 간단한 문법의 JSTL이 유용하며 MVC 모델의 분업화에도 용이함. 
+				-이러한 view 테그라이브러리 컴포넌트드들은 보통 기본적인 if문과 반복문, 국제화, 지역화 기능을 제공한다.
+			
+	-Step : https://www3.ntu.edu.sg/home/ehchua/programming/howto/ApachePlusTomcat_HowTo.html
+		-1. Install Apache HTTP Server (run on port 7000)
+		-2. Install Tomcat (run on port 8080) + 예시를 위해 server.xml 에 /examples 와 /ws 두개의 컨텍스트 추가
+		-3. Download the Apache-Tomcat Connector Module : apache와 tomcat을 연결하기 위한 adapter 모듈이다. 이 모듈은 TCP 바이너리 프로토콜인 AJP1.3(tomcat쪽에 해당 포트가 8009가 오픈되있어야 한다)을 사용한다.
+			-다운받은 mod_jk.so 모듈은 아파치쪽 ..\apache\modules 에 저장되야 한다.
+			-mod_proxy : ???
+		
+		-4. Configure Apache : mod_jk가 로딩되고 초기화 될수 있도록 아파치 설정이 필요
+			-
+
+		
 
 
--config :
-	-server.xml : 톰켓 동작 전반에 대한 설정으로 기타 초기값 및 서비스 구성에 대해 정의 한다. https://tomcat.apache.org/tomcat-5.5-doc/config/engine.html
-		-Server : 가장 최상위, 서버를 정지시키는 명령어와 명령을 받기 위한 포트를 구성할 수 있다 (ex: port="8005" shutdown="SHUTDOWN" ), 클래스를 추가하여 shutdown을 위한 특정 클래스 구성 가능
-			-Listeners :
-			-Global Naming Resources :
-				-Resources :
 
-		-Service : 논리적인(사람이 인식하는) 서비스 단위를 구성한다. (ex: 네이버 메일, 네이버 메모, 네이버 웹튼..), 톰캣의 전체 로그에서 서비스 명으로 구분되어 진다.
-			-Connectors : 여러개의 커넥터를 갖을수 있다. 해당 커넥터의 포트로 들어온 request를 해당 Engine으로 전달해 준다. http, ajp 두 커넥터를 동시에 사용 할 수 있다.
-				-HTTP Connector : http 기본 커넥터로 보통 8080, 아파치와의 연동을 위해 ajp 포트를 쓴다면 사용하지 안하도 됨, 많은 추가 attr를 갖는다(ex: maxHttpHeaderSize)
-				-AJP Connector : apach 연동을 통해 들어오는 request를 받기위한 커넥터, 아파치 연동이 없으면 사용하지 않아도 됨,
-					-AJP (Apache JServ Protocol) : Web 과 WAS 를 연결하기 위한 바이너리 타입의 프로토콜이다. AJP 프로토콜을 모든 WEB나 WAS에서 지원하는 것은 아니지만 많이 지원하며 apach와 tomcat이 대표이다. (오랜된 만큼 안정적)
+-server.xml : 톰켓 동작 전반에 대한 설정으로 기타 초기값 및 서비스 구성에 대해 정의 한다. https://tomcat.apache.org/tomcat-5.5-doc/config/engine.html
+	-Server : 가장 최상위, 서버를 정지시키는 명령어와 명령을 받기 위한 포트를 구성할 수 있다 (ex: port="8005" shutdown="SHUTDOWN" ), 클래스를 추가하여 shutdown을 위한 특정 클래스 구성 가능
+		-Listeners :
+		-Global Naming Resources :
+			-Resources :
 
-				-SSL Connector : ssl/tls를 사용하는 request를 위해 구성할 수 있다. 인증서 정보등의 attr를 갖고 있다.
-				-!! HTTP, AJP에 있는 redirectPort는?? : ssl/tls로 들어오는 요청이 있는경우 리라이렉트 해주는 포트, SSL Connector가 살아 있어야 잘 되겠지??
+	-Service : 논리적인(사람이 인식하는) 서비스 단위를 구성한다. (ex: 네이버 메일, 네이버 메모, 네이버 웹튼..)
+			-Service 내부에 connectors를 통해 서비스 가능한 port 번호가 정의 됨으로 별도의 웹서버 없이 바로 was로 연결되는 서비스의 경우 80포트를 사용하기 위해서는 service가 하나만 존재해야 한다.
+			-톰캣의 전체 로그에서 서비스 명으로 구분되어 진다. (물리적으로 동일한 서버를 사용하지만 각각의 독립된 서비스로 구분되어지는 단위? 실제로는 서비스를 여러개 두기보단 tomcat 자체를 분리하여(독립된server.xml) 사용하는듯..)
+			
+		-Connectors : 여러개의 커넥터를 갖을수 있다. 해당 커넥터의 포트로 들어온 request를 해당 Engine으로 전달해 준다. http(http1, http2), ajp(web서버를 통해 들어오는 요청) 두 커넥터를 동시에 사용 할 수 있다.
+			-HTTP Connector : tomcat은 servlet container의 역할을 매인으로 하지만(서블릿을통한 다이나믹한 결과를 제공) http connector를 통해 브라우저로 부터 들어오는 http 요청에 대한 응답도 처리할 수 있다.
+				-http 기본 커넥터로 보통 8080, 아파치와의 연동을 위해 ajp 포트를 쓴다면 사용하지 안하도 됨, 많은 추가 attr를 갖는다(ex: maxHttpHeaderSize)
+				-보통은 앞단에 아파치서버를 두고 static한 컨테츠에 대한 처리를 담당하고 아파치가 proxy 역할을 담당하여 다이나믹한 요청에 대해 tomcat의 AJP 포트로 요청을 한다.(각각의 부하 분산의 의미도 갖는다)
+			
+			-AJP(Apache JServ Protocol) Connector : apache 연동을 통해 들어오는 request를 받기위한 커넥터, 아파치 연동이 없으면 사용하지 않아도 됨,
+				-AJP (Apache JServ Protocol) : Web 과 WAS 를 연결하기 위한 바이너리 타입의 프로토콜이다. AJP 프로토콜을 모든 WEB나 WAS에서 지원하는 것은 아니지만 많이 지원하며 apach와 tomcat이 대표이다. (오랜된 만큼 안정적)
 
-			-Engine : 실제 request(Engine은 request의 header를 사용하는 듯?) 처리를 진행하는 진입점으로 적절한(주어진) host(virtual, 실제 리소스가 있는)와 함께 처리를 진행 한다.
-					-attr : defaultHost=request를 처리하기 위한 기본 host 네임(아래 호스트 엘레먼트 이름과 연결됨), name=로깅을 위한 식별자, jvmRoute=로드벨런싱처리시 session 생성 관련
-				-Cluster : 서비스 2중화 구성을 위한 요소로 리소스 및 session 에 대한 이중화 처리 설정으로 복잡성이 높으며 보통 기본값 사용을 권장함
-				-Realm : ???서버를 JDBC, JNDI(LDAP)과 같이 다른 서비스와 연결하기 위한 요소???
+			-SSL Connector : ssl/tls를 사용하는 request를 위해 구성할 수 있다. 인증서 정보등의 attr를 갖고 있다.
+			-!! HTTP, AJP에 있는 redirectPort는?? : ssl/tls로 들어오는 요청이 있는경우 리라이렉트 해주는 포트, SSL Connector가 살아 있어야 잘 되겠지??
 
-				-Host :	도메인과 맞물리는 하나의 가상 호스트를 생성하는 개념이다.
-						-attr인 name으로 들어온 도메인에 대해서 내가 (webApp,실제서비스코드)가 담당하겠다는 의미, Engine이 request의 해더까진 분석할수 있기 때문에 적적할 호스트로 줄수 있겠지??
-						-Engine 엘레먼트의 defaultHost로 지정 호스트는 반드시 존재 해야함.
-						-Alias 엘레먼트를 통해서 하나의 host(virtual)에 여러 도메인을 연결할 수도 있다.
-						-<host name="xxx.com" : xxx.com으로 들어온 요청인 경우 해당 호스트에서 처리하겠다는 의미 (호스명은 대소문자 구분하지 않음)
-						-local PC에서 호스트 파일을 수정후 브라우저에 가상 도메인을 입력하여 테스트 해볼수 있다.
+		-Engine : 실제 request(Engine은 request의 header를 사용하는 듯?) 처리를 진행하는 진입점으로 적절한(주어진) host(virtual, 실제 리소스가 있는)와 함께 처리를 진행 한다.
+				-attr : defaultHost=request를 처리하기 위한 기본 host 네임(아래 호스트 엘레먼트 이름과 연결됨), name=로깅을 위한 식별자, jvmRoute=로드벨런싱처리시 session 생성 관련
+			-Cluster : 서비스 2중화 구성을 위한 요소로 리소스 및 session 에 대한 이중화 처리 설정으로 복잡성이 높으며 보통 기본값 사용을 권장함
+			-Realm : ???서버를 JDBC, JNDI(LDAP)과 같이 다른 서비스와 연결하기 위한 요소???
 
-						-attr인 appBase : 해당 호스트가 사용할 웹어플리케이션들(!!여러개의 war들)의 위치를 알려 준다. 절대 경로 사용가능, 상대 경로인 경우 $CATALINA_BASE 부터 시작
-							-!!다시말해 하나의 Engine은 여러개의 호스트를 갖을 수 있고 또한 여러개의 war파일들로 동작할 수도 있다.
+			-Host :	도메인과 맞물리는 하나의 가상 호스트를 생성하는 개념이다.
+					-attr인 name으로 들어온 도메인에 대해서 내가 (webApp,실제서비스코드)가 담당하겠다는 의미, Engine이 request의 해더까진 분석할수 있기 때문에 적적할 호스트로 줄수 있겠지??
+					-Engine 엘레먼트의 defaultHost로 지정 호스트는 반드시 존재 해야함.
+					-Alias 엘레먼트를 통해서 하나의 host(virtual)에 여러 도메인을 연결할 수도 있다.
+					-<host name="xxx.com" : xxx.com으로 들어온 요청인 경우 해당 호스트에서 처리하겠다는 의미 (호스명은 대소문자 구분하지 않음)
+					-local PC에서 호스트 파일을 수정후 브라우저에 가상 도메인을 입력하여 테스트 해볼수 있다.
 
-						-attr인 unpackWARs : true면 war파일이 생기면 war를 풀어서 사용, false면 war파일을 풀지 않고 사용(풀지 않고도 사용 가능 한듯??...)
-						-attr인 autoDeploy : 통캣이 실행중인 경우 재시작 여부로 true면 새로운 변경이 발생시 자동 재시작, false면 자동으로 재시작 하지 않음
+					-attr인 appBase : 해당 호스트가 사용할 웹어플리케이션!들!(!!여러개의 war들)의 위치를 알려 준다. 절대 경로 사용가능, 상대 경로인 경우 $CATALINA_BASE 부터 시작
+						-!!다시말해 하나의 Engine은 여러개의 호스트를 갖을 수 있고 또한 여러개의 war파일들로 동작할 수도 있다.
 
-					-Context : Host로 들어온 특정 url 패턴에 대해서 어떤 war가 처리할지를 정한다. 하나의 Host에 여러 contex가 존재할 수 있다.
-						-!! context가 여럿인 경우 server.xml에 정의 하지 말고 별도 파일로 정의하라고 권하는것 같음(server.xml에 정의해도 동작 함)
-						-$CATALINA_HOME/conf/context.xml 에 작성한 경우 모든 webApp들이 로드(사용?)할 수 있다.
-						-$CATALINA_HOME/conf/[enginename]/[hostname]/context.xml.default 로 작성하면 해당 호스트에 속하는 webApp들이 로드(사용?)할 수 있다.
-						-$CATALINA_HOME/conf/[enginename]/[hostname]/foo#bar.xml 로 작성하면 context path가 /foo/bar 인 애들의 것이다.(???) (/에 대한 파일은 ROOT.xml)
-						-webApp가 war로 배포되고 /META-INF/context.xml 가 존재하면 $CATALINA_HOME/conf/[enginename]/[hostname]/로 카피하고 context에 맞게 이름을 변경한다.
-							-서버쪽 $CATALINA_HOME/conf/[enginename]/[hostname]/ 에 이미 파일이 존재하는 경우는 옮기지 않는듯??? 좀더 확인 필요
-							-/META-INF/ 정채가 뭐지??
+					-attr인 unpackWARs : true면 war파일이 생기면 war를 풀어서 사용, false면 war파일을 풀지 않고 사용(풀지 않고도 사용 가능 한듯??...)
+					-attr인 autoDeploy : 통캣이 실행중인 경우 재시작 여부로 true면 새로운 변경이 발생시 자동 재시작, false면 자동으로 재시작 하지 않음
 
-						-attr인 path는 uri를 통해 진입하는 path의 시작점이다.
-							-<Context path="/" docBase="ROOT" : xx.com/로 진입시 처리해 주는 webApp(war)정의, 상대 경로의 경우 appBase 하위에서 찾는다.
-							-<Context path="/myApp" docBase="D:/html/myApp" : xx.com/myApp/로 진입시 처리해 주는 webApp(war)정의, 절대 경로도 사용할 수 있다.
-							-!! Spring Boot에서 yml 환경 설정을 통해 정의 할수도 있다.
-								-server:
-									-port: 8080 //서버 포트
-									-context-path: /kr/ko //컨텍스트 페스
-									
-						-attr인 reloadable가 ture인 경우 /WEB-INF/classes/ 와 /WEB-INF/lib 의 변경을 실시간으로 감지하여 반영해 준다. (상용에서는 사용 비권장)
-						-attr인 privileged ture인 경우 해당 context에서 다른 context의 servlet을 로딩할수 있다???
+				-Context : Host로 들어온 특정 url 패턴에 대해서 어떤 war가 처리할지를 정한다. 하나의 Host에 여러 contex가 존재할 수 있다.
+					-!! context가 여럿인 경우 server.xml에 정의 하지 말고 별도 파일로 정의하라고 권하는것 같음(server.xml에 정의해도 동작 함)
+					-$CATALINA_HOME/conf/context.xml 에 작성한 경우 모든 webApp들이 로드(사용?)할 수 있다.
+					-$CATALINA_HOME/conf/[enginename]/[hostname]/context.xml.default 로 작성하면 해당 호스트에 속하는 webApp들이 로드(사용?)할 수 있다.
+					-$CATALINA_HOME/conf/[enginename]/[hostname]/foo#bar.xml 로 작성하면 context path가 /foo/bar 인 애들의 것이다.(???) (/에 대한 파일은 ROOT.xml)
+					-webApp가 war로 배포되고 /META-INF/context.xml 가 존재하면 $CATALINA_HOME/conf/[enginename]/[hostname]/로 카피하고 context에 맞게 이름을 변경한다.
+						-서버쪽 $CATALINA_HOME/conf/[enginename]/[hostname]/ 에 이미 파일이 존재하는 경우는 옮기지 않는듯??? 좀더 확인 필요
+						-/META-INF/ 정채가 뭐지??
 
-						-Resource : !!!???
+					-attr인 path는 uri를 통해 진입하는 path의 시작점이다.
+						-<Context path="/" docBase="ROOT" : xx.com/로 진입시 처리해 주는 webApp(war)정의, 상대 경로의 경우 appBase 하위에서 찾는다.
+						-<Context path="/myApp" docBase="D:/html/myApp" : xx.com/myApp/로 진입시 처리해 주는 webApp(war)정의, 절대 경로도 사용할 수 있다.
+						-!! Spring Boot에서 yml 환경 설정을 통해 정의 할수도 있다.
+							-server:
+								-port: 8080 //서버 포트
+								-context-path: /kr/ko //컨텍스트 페스
+								
+					-attr인 reloadable가 ture인 경우 /WEB-INF/classes/ 와 /WEB-INF/lib 의 변경을 실시간으로 감지하여 반영해 준다. (상용에서는 사용 비권장)
+					-attr인 privileged ture인 경우 해당 context에서 다른 context의 servlet을 로딩할수 있다???
+
+					-Resource : !!!???
 
 
-					-Valve : Host나 Context 또는 Engine 영역의 request processing pipeline 단에서 특정 작업을 처리하는 component들에 대한 설정을 명시한다. (파이프라인에서 동작하는 벨브??)
-						-여러 Valve가 존재하며 각각의 역할이 있다. (사용하고 싶은 것들에 대해서만 정의 하면 된다, 상대 경로가 필요할 경우 $CATALINA_HOME = $CATALINA_BASE 사용 가능)
-							-Access Log : 엑세스 로그와 관련된 설정
-							-Remote Address : request를 보내는 ip에 대한 필터링을 처리할 수 있다.
-							-Remote Host Filter : request 도메인에 대한 필터링을 처리할 수 있다. (레퍼럴을 보고 판단하나?)
-							-Request Dumper : 디버깅을 위해 request 처리에 대한 상세한 정보를 남기나 문제가 있어 deprecated 됨
-							-Single Sign On : ??? tomcat이 자체적으로 가지고 있는 인증기능(conf/tomcat-users.xml을 통한?)이 있는데
-									-이것들은 기본적으로 host 내의 각각의 context 마다 별도 인증됨
-									-Single Sign On 통해 같은 호스트상의 서로 다른 context 끼리도 인증을 연결해 주기위한 처리???
-									-!!어떤 내용인지 realm 과 session의 동작과 더블어 좀더 확인이 필요!!!
+				-Valve : Host나 Context 또는 Engine 영역의 request processing pipeline 단에서 특정 작업을 처리하는 component들에 대한 설정을 명시한다. (파이프라인에서 동작하는 벨브??)
+					-여러 Valve가 존재하며 각각의 역할이 있다. (사용하고 싶은 것들에 대해서만 정의 하면 된다, 상대 경로가 필요할 경우 $CATALINA_HOME = $CATALINA_BASE 사용 가능)
+						-Access Log : 엑세스 로그와 관련된 설정
+						-Remote Address : request를 보내는 ip에 대한 필터링을 처리할 수 있다.
+						-Remote Host Filter : request 도메인에 대한 필터링을 처리할 수 있다. (레퍼럴을 보고 판단하나?)
+						-Request Dumper : 디버깅을 위해 request 처리에 대한 상세한 정보를 남기나 문제가 있어 deprecated 됨
+						-Single Sign On : ??? tomcat이 자체적으로 가지고 있는 인증기능(conf/tomcat-users.xml을 통한?)이 있는데
+								-이것들은 기본적으로 host 내의 각각의 context 마다 별도 인증됨
+								-Single Sign On 통해 같은 호스트상의 서로 다른 context 끼리도 인증을 연결해 주기위한 처리???
+								-!!어떤 내용인지 realm 과 session의 동작과 더블어 좀더 확인이 필요!!!
 
-							-Basic Authenticator : tomcat이 제공하는 기본 인증 기능(Basic Authenticator)에 대한 설정, 설정안해도 기본제공됨, 기본 셋팅에서 수정 필요시 재 정의
-								-Basic Authenticator 설정 기본 : conf/tomcat-users.xml에 Role과 User/PW를 설정하여 사용가능
-								-보통 Tomcat 관리 페이지(기본으로 제공되는 ROOT war 기능)를 이용할때 tomcat-users.xml를 이용할 수 있다.
-								-?? http의 Basic Authentication 과 session 그리고 Role, User의 매칭, 그에따른 크리덴셜 관리가 실제 어떻게 이루어 지는지 좀더 살펴 봐야 함
+						-Basic Authenticator : tomcat이 제공하는 기본 인증 기능(Basic Authenticator)에 대한 설정, 설정안해도 기본제공됨, 기본 셋팅에서 수정 필요시 재 정의
+							-Basic Authenticator 설정 기본 : conf/tomcat-users.xml에 Role과 User/PW를 설정하여 사용가능
+							-보통 Tomcat 관리 페이지(기본으로 제공되는 ROOT war 기능)를 이용할때 tomcat-users.xml를 이용할 수 있다.
+							-?? http의 Basic Authentication 과 session 그리고 Role, User의 매칭, 그에따른 크리덴셜 관리가 실제 어떻게 이루어 지는지 좀더 살펴 봐야 함
 
-							-Digest Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)
-							-Form Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)
-							-SSL Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)
+						-Digest Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)
+						-Form Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)
+						-SSL Authenticator : Basic Authenticator과 마찮가지로 tomcat이 제공하는 기본 인증과 관련된 기능(설정안해도 기본 제공)
 
-		-GlobalNamingResources : ????
+	-GlobalNamingResources : ????
 
 
 	-환경 변수 :
@@ -3257,16 +3385,12 @@ Template Engine
 		
 -Proxy와 GateWay 의 의미상의 차이 :
 	-Proxy는 보안 및 관리적 측면에서 by pass를 할지 말지, 로드벨런싱 및 장애 회피를 어찌 할지 에 대한 처리 및 cache 기능이 강한 반면 (간혹 gateway 처럼 데이터의 변형을 가하는 경우도 있다.)
-	-GateWay는 사로 다른(프로토콜이 맞지 않는?) 서버를 연계할때 어답터의 역할처럼 데이터를 변형하여(?) 서로 이해하는 형태로 변형하기 위한 역할적 측면이 크다.
+	-GateWay는 서로 다른(프로토콜이 맞지 않는?) 서버를 연계할때 어답터의 역할처럼 데이터를 변형하여(?) 서로 이해하는 형태로 변형하기 위한 역할적 측면이 크다.
 	
 
 
 
-[Apache WEB Server]
--개념 : Http 를 지원하는 web 서버
 
--명칭 : 적용 운영체제에 따라 httpd(http deamon, RHEL 6.2) 또는 apache2(Ubuntu)라는 이름으로 설치 된다. (apache2가 좀더 세로운 버전 인듯?? 기본설정의 편리함, 디테일한 추가 옵션등?)
--점유율 : apache, enginX, google Web, IIS...
 
 
 
@@ -3619,7 +3743,7 @@ Template Engine
 		
 		-??? http는 state less 프로토콜로 request 마다 새로운 connection이 생기는데 그럼 매 request마다 SSL의 handshake 과정을 거치나???
 			-그래서 Http는 state less 프로토콜의 한계를 극복하기 위해서 http(application layer) 하위 래벨인 TCP Sockek 단에서(Transfer Layer) 단에서 약간의 connection 위지를 할수 있게 해준다.
-				-HTTP 해더의 Keep-Alive 값이다, 서버의 설정을 통해 적용가능하다, 완전한 표준이 아니라서 서버에 따라 보여줄수도 안보여 줄수도 있다 (apach의 경우 설정하면 보여주고 nginX의 경우 response에 표기하지 않는다.)
+				-HTTP 해더의 Keep-Alive 값이다, 서버의 설정을 통해 적용가능하다, 완전한 표준이 아니라서 서버에 따라 보여줄수도 안보여 줄수도 있다 (apache의 경우 설정하면 보여주고 nginX의 경우 response에 표기하지 않는다.)
 				-서버가 내려주는 response 해더를 통해 서버 설정을 확인할 수 있다.
 					-Connection: Keep-Alive (사용중)
 					-Keep-Alive: timeout=5, max=100 (5초간 socket 연결을 유지하여 같은 client에서 들어오는 rquest를 같은 tcp 세션으로 유지할수 있다. max는 해당 세션으로 100번까지만 연장할수 있다는 의미)
