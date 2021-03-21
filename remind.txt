@@ -164,7 +164,7 @@
 
 -class & JavaBean
 	-java 코드로 작성된 클레스 파일임에서 동일하나 javaBean이 되기 위해서는 해당 클레스가 몇가지 표준을 지켜야 한다.
-		-java.io.Serializable 를 implements 하여 직렬화가 가능하도록 하여야 한다. 단순히 해달 글레스에 implements java.io.Serializable 만해주면 된다. 
+		-java.io.Serializable 를 implements 하여 직렬화가 가능하도록 하여야 한다.(단순히 해당 글레스에 implements java.io.Serializable 만해주면 됨)
 		-아규먼트가 없는 public 형태의 생성자(constructor)를 가지고 있어야 한다.
 		-모든 필드들을은 private로 구성하며 setter, getter로 접근할수 있도록 구성해야 한다.
 		-필요한 이벤트 처리 메소드를 가지고 있어야 한다.(당연한 소리겠지?)
@@ -444,6 +444,31 @@ Markup language and DOM :
 	- InheritableThreadLocal : 하위 Thread에서 변수를 공유하기 위해서는 InheritableThreadLocal 로 생성해야 함
 
 
+-Instance initializer block(IIB) : 클레스 내부에 {}으로 처리된 영역, 생성자와 유사한 의미를 갖으며 여러 생상자가 있는경우(param 값이 다른) 각 생성자에서 공통으로 처리되는 내용을 넣을때 활용될 수 있다.
+	------
+	class A{  
+		A(){System.out.println("parent");}  
+	}  
+		
+	class B3 extends A{  
+		B3(){super(); System.out.println("child with 1");}  
+			
+		B3(int a){super(); System.out.println("child with " + a);}  
+			
+		{System.out.println("IIB");} //IIB 블럭은 각 생성자가 실행될때 super(); 문구 다음 순서로 처리된다. (내부적으로는 컴파일시 IIB 블럭이 생성자 않으로 들어가서 컴파일 되는듯)
+			
+		public static void main(String args[]){  
+			B3 b1=new B3();  
+			B3 b2=new B3(2);  
+		}  
+	}  
+	---------
+	결과 : 
+		parent, IIB, child 1 
+		parent, IIB, child 2 
+	---------
+
+
 -this and this() :
 	-this : 자신의 클레스 변수를 의미
 		-----------
@@ -606,14 +631,24 @@ Markup language and DOM :
 		-다른 변수(class 변수)들은 해당 클레스의 실제 데이터가 저장된 위치의 시작 주소가 들어감. 그래서 이러한 클레스를 생성할때는 ClassXX classXX = new ClassXX(); 처럼 new를 사용하여 실제 공간을 생성하고 new는 해당 공간의 시작 주소를 리턴하게 된다.
 		-그러나 기본 변수들은 정해진 크기의 영역으로 해당 변수에 해당 데이터의 주소가 들어가는것이 아니라 실제 데이터 값(literal)이 들어가기 때문에 new 를 사용하지 않고 int int intVal = 10; 이렇게 할당 할수 있는 거임
 		
-		-String의 경우는 조금 특별한 케이스로 String stValr = "aaa"; 라고 했을때 String이라는 객체는 이미 시스템이 존재해 있고 그 객체의 String pool 에 해당 값을 넣는 형태임(물론 해당 공용? String 객체는 Thread 별로 존재함)
+		-String의 경우는 조금 특별한 케이스로 String stValr = "aaa"; 라고 했을때 String이라는 객체는 이미 시스템에 존재해 있고 그 객체의 String pool 에 해당 값을 넣는 형태임(물론 해당 공용? String 객체는 Thread 별로 존재함)
 			-string pool에는 동일한 값이 있는 경우는 추가로 추가되지 않고 pool에 있는 동일한 주소를 바라봄 그래서 Strig a = "abc"; String b = "abc"; if(a==b) 했을때 true가 됨(==는 주소값을 비교), spring pool은 일종의 상수목록 처럼 동작
 			-그래서 String a = new String("abc"); String b = new String("abc"); if(a==b) 하면 false가 됨, 이경우는 공용 String pool을 사용한것이 아니라 별도의 String 객체를 생성하여 pool에 넣었기 때문에 주소가 서로 달라지는 것
+			-이렇게 동작하는 이유는 String의 경우 그 value 값이 매우 길어질수도 짧아질수 하는 등의 가변적이기 때문에 특정 싸이즈의 메모리 공간을 바로 할당 할수 없기 때문으로 보임(시스템 리소를 아끼는 측면과 더블어..)
 			-유사한 케이스로 Integer.parseInt("1"); 과 같이 기본 변수형 클레스의 메소드를 static하게 불러 쓸수 있는데 이또한 공용 String 객체가 있는것 같이 공요 Integer 클레스가 존재하기 때문임, int.parseInt("1"); 이렇게는 불가
-				
+			
+
+		-Wrapper class :  8개의 기본 타입에 해당하는 데이터를 객체로 포장해 주는 클래스를 래퍼 클래스를 말한다. (이것의 이점은 해당 기본 자료형과 관련해 필요한 부가 메서드들을 사용할 수 있게 해준다.)
+			----
+			Integer num1 = new Integer(7); //박싱
+			int int1 = num1.intValue(); // 언박싱
+			----
+		
 	-new의 의미 : new는 기본 자료형(literal 형태)이 아닌 클레스를 생성(클레스가 들어갈 메모리 공간을 확보하여)하여 해당 메모리 공간의 시작 주소를 리턴해 준다.
 		-!!! 그럼 int a = 10; int b = a; 코드에서 a안에는 실제값인 10이 들어 있는데 그럼 b=a 할때 시스템은 a의 메모리 위치를 어떻게 찾아 a안의 실제값을 b에 어떻게 널까?? (사실 XXclass xxClass = new XXclass(); 형태도 마찮가지임)
 			-!!! 코딩 로직상에서 변수 안에 데이터값(literal) 또는 클레스 주소가 들어가는 문제와 실제 시스템이 b=a 했을경우 a의 메모리 위치를 찾는 부분은 전혀 다른 의미이다. 그건 코딩 영역을 떠난 VM 또는 시스템 상의 처리가 있을 것이다.)
+			-!!! 다시말해 xxClass xc; 이렇게 클레스 변수가 선언되면 해당 클래스의 인스턴스의 주소(인스턴스의 구성에따라 여러 주소를 갖을수 있겠지?)를 담을수 있는 공간이 할당되고 이 공간에 대한 주소는 아마도 VM 또는 시스템이 관리할듯
+			-!!! VM이 관리를 하는것 같고 그 영역은 Code 영역의 메모리일것 같다.(Code 영역이란게 실제 text 형태가 아니라... 연산비트와 주소비트들의 내용일 것으로 생각되기 때문)
 	
 	
 -java(사실 모든 언어 공통 사항 일듯)의 메모리 관리 형식 :
@@ -644,7 +679,38 @@ Markup language and DOM :
 		
 	-결론 : 가능하면 defalt로 이하로만 작성한다.??
 	
+-JAVA Variables : 변수의 종류에 대한 명칭 정리
+	-instance variable : 해당 class가 생성될때 생성 및 할당
+	-static variable : 해당 class가 생성될때 할당, 동일 클레스가 여러개 생성되더라도 해당 변수는 오직 한개만 생성됨
+	-local variable : 해당 메쏘드가 호출될때 생성, 메소드가 종료되면 사라짐 (stack 영역에 생성)
+		-----------
+		class A{  
+			int data=50;//instance variable
+			static int m=100;//static variable 
+			void method(){  
+			int n=90;//local variable
+			}  
+		}
+		-----------
 	
+	
+-JAVA static 키워드 정리 : static 키워드는 해당 클래스의 인스턴스(new)와 무관하게 해당 클레스가 로딩되는 시점에 해당 영역이 생성된다.(로딩시점이기 때문에 딱 한번이겠지..)
+
+	-static variable : 변수를 static으로 선언 : 해당 변수는 해당 클래스가 여럿 생성되더라도 모두 하나의 메모리를 참조 하게됨(공통으로 확인되야할 변수 또는 어차피 모두 동일함 값을 갖게될 변수의 경우 메모리 절약 차원에서 활용될수 있음)
+		-static 변수는 static, nonStatic 메쏘드 모두에서 값을 확인(?)할수 있지만 static 변수값의 변경은 static 메쏘드에서만 가능함
+		
+	-static method : static 메쏘드는 해당 인스턴스(object) 종속된다기 보단 해당 class에 종속되어 있음 그래서 해당 class를 인스턴스 생성(new)하지 않고도 사용할 수 있음(ex:ClassName.classMetho()) 
+		-static 변수의 변경을 위해 사용할 수 있다 (!!! 만약 nonStaic 메쏘드에서 변경이 가능하게 했다면 인스턴스마다 static변수를 바꾸려 할때 예상치 못한 문제가 발생 했겠지??)
+		
+	-static block : 코드상에 static{...} 처리된 블럭을 말한다.
+		-IIB와 유사함, IIB는 클래스의 인스턴스가 생성(new)시 매번(갖고있는 모든 생성자에 앞서 시행(공통역역?)) 실행되지만 static block은 해당 클래스가 로딩되는 시점에(클레스가 생성이 아님) 딱 한번 실행된다.
+		-해당 클레스와 관련해서 유일하게 한번만 처리되야 하는 코드가 들어갈수 있다. 또한 static 블럭으로 되어 있어 static 변수를 초기화 하는 용도로도 사용 할수 있다.
+
+
+-JAVA class Loader : -->여기
+
+
+
 -field vs variable
 	-field : class 내부에 선언된 멤버, 혹자는 private로 선언된 member로 한정 하기도 하지만 딱히 올아 보이지 않음, property와 attribute를 모두 아우르는 단어?
 	-variable : 좀더 프로그램적 관점에서 설명한 field의 의미? 다시말해 member를 할당한 변수
@@ -1276,13 +1342,225 @@ Sourcetree : GIT 클라이언트 툴
 
 	-Web서버(static 서버) : 클라이언트(브라우저)로 부터 http를 통해 요청되는 request를 받아서 서버에 준비되어 있는 컨텐츠를 http를 통해 !!그대로 내려주는 역할을 한다.
 		-초창기 web 서비스의 경우는 서버에 있는 컨텐츠를 에이전트로 그대로 내려주는 역할만을 했다(이때는 이걸로도 만족). 서버는 서버의 자원을 조작하지 않고 저장된 정적 파일(html문서, js파일, 이미지파일)을 그대로 내려 준다.
-		-현시대에는 위 static한 역할만 하는 서버는 무용지물인데 왜 계속하여 사용 할까? was를 통해 dynamic하게 처리된 최종 결과 html을 생성하여 내려주면(결국은 text) 브라우저는 해당 document를 읽으며 그에 관련된 static 파일(js, 이미지 파일등)을 다시 요청하게 된다. 이럴때 web 서버를 두면 static한 처리와 dynamic한 처리를 구분지어 처리하게 할수 있음으로 부하 분산의 효가가 있다.
+		-현시대에는 위 static한 역할만 하는 서버는 무용지물인데 왜 계속하여 사용 할까? 
+			-was를 통해 dynamic하게 처리된 최종 결과 html을 생성하여 내려주면(결국은 text) 브라우저는 해당 document를 읽으며 그에 관련된 static 파일(js, 이미지 파일등)을 다시 요청하게 된다. 
+			-이럴때 web 서버를 두면 static한 처리와 dynamic한 처리를 구분지어 처리하게 할수 있음으로 부하 분산의 효가가 있다.
 			-was 서버또한 web 서버가 하는 static한 파일을 내려주는 역할을 다 할 수 있지만 부하 측면에서 두 서버간 역할을 구분하는 것은 좋은 방법이다. 또한 일반적으로 web 서버가 static한 파일을 처리하는데 훨씬 가볍고 빠르게 동작한다.
 			-부가적인 이점으로 web 서버를 앞에 둠으로 해서 중요한 자원과 코드를 뒤쪽 was에 둠으로서 보안적 측면에 이점이 있다. 또한 web 서버에 연결할 was 서버를 선택적으로 설정하여 무중단 패치등도 가능하다.
 		
+		-웹서버 주요 기능 및 설정 (웹서버의 종류에 따라 설정 파일명이 다를수 있다)
+			-웹서버 기능 설정을 위한 configuration 파일	
+				-httpd.conf : 아파치 서버 전체에 대한 설정 파일이다, 개별 설정인 .htaccess 파일을 활성/비활성 하게 할수 있다.<Directory ...>AllowOverride (all->none으로 변경)</Directory ...> 
+					-설정 항목을 별도의 conf파일로 분리 작성 후 해당 파일을 include 하여 동작하게도 할 수 있다, 웹서버가 start 또는 reload 될때 한번만 로딩한다.
+					
+				-.htaccess(hypertext access) : httpd.conf 파일의 설정을 무시하고 해당 디렉토리 전용 설정을 할수 있게 해줌, 그래서 호스팅 서버의 경우 각 사용자 디렉토리별로 서로 다른 설정이 가능함
+					-해당 설정은 자신 디렉토리와 함께 하위 디렉토리에 모두 적용됨, 하위디렉토에 새로운 .htacess 파일이 존재하면 설정이 새로 적용됨
+					-매 request 마다 해당 파일을 읽기 때문에 request가 많은 서버의 경우 비효율적인 문제가 있음 (실제 설정 내용이 없더라도 .htaccess 파일 옵션을 enabled 하는것 많으로도 부하를 높이기 때문에 사용 옵션을 끄는것이 좋다)
+					-.(쩜)으로 시작되는 파일은 보통 시스템에서 숨긴처리가 됨으로 .htaccess 파일이 보이지 않을수 있음(숨김처리되어)
+		
+			-웹서버 주요 기능 (httpd.conf와 .htaccess가 기본적으로 동일? 한것으로 보고 .htaccess 기준으로 설명), https://www.whoishostingthis.com/resources/htaccess/
+				-static 파일들에 대한 웹서비스를 제공하는 웹 루트를 제공함 (public_html or www 디렉토리)
+				-.htaccess 파일을 통한 서비스 제약 설정 가능(.htaccess 파일 생성은 vi같은 에디터 프로그램으로 직접 만들수도 또는 만들어진 파일을 FTP로 올리수도 있음
+					
+					-접속제한(권한) : .htaccess 파일의 가장 기본적인 목적은 특정 사용자만 접속할수 있도록 하기위한 목적이었다(하나의 web 서버를 여러사용자가 사용하는 형태 였기 때문에)
+						-.htpasswd 파일과 .htaccess 파일의 설정을 통해 구현 가능
+						-.htpasswd 파일 생성
+							-htpasswd -c /usr/local/etc/ .htpasswd johnsmith (-c:생성하겠다는 옵션 -b옵션을 통해 비번 암호화 알고리즘을 선택 할 수도 있다, 이미 .htpasswd 파일이 존재하는 경우 라인이 추가된다.(여러명 한파일에 가능))
+							-위 명령어 입력시 비밀번호를 입력하는 프롬프트가 나온다, 비빌번호를 추가로 입력하면 해당 파일 생성이 완료됨
+							-.htpasswd 파일은 웹에 오픈된 디렉토리에 두면 안되고 /usr/local/etc/ 등 웹과 연결되지 않은 위치에 둘것!
+								------
+								johnsmith:F418zSM0k6tGI (이러 내용의 파일이 생성됨, 뒤 내용은 암호화된 비빌번호 값(기본으로 md5로 적용됨)
+								------
+							-.htpasswd 파일을 .htaccess 파일과 연결
+								------
+								AuthUserFile /usr/local/etc/.htpasswd   (.htpasswd 파일 위치)
+								AuthName "Name of Secure Area" (!!그냥 네이밍에 불과, 큰의미 없음)
+								AuthType Basic
+								
+								<Limit GET POST>
+								require valid-user  (!!.htpasswd 에 올려진 모든 사용자가 접속가능, 물론 psw 가 일치해야 함)
+								</Limit>
+								
+								<Limit GET POST>
+								require user johnsmith (!!.htpasswd 에 올려진 사용자 중에서도 특정 사용자만 접속가능, 역시 psw 가 일치해야 함)
+								require user janedoe
+								</Limit>
+								------
+								
+								(그룹파일을 생성하여 해당 그룹에 속한 사람에게만 권한을 주게 할수도 있다)
+								.htgroups  파일 생성		
+								------
+								admin: johnsmith janedoe
+								staff: jackdoe cindysmith
+								------
+								(.htpasswd 와 .htgroup 을 .htaccess 파일과 연경해서 사용 가능함)
+								------
+								AuthUserFile /usr/local/etc/.htpasswd
+								AuthGroupFile /usr/local/etc/.htgroup
+								AuthName "Admin Area"
+								AuthType Basic
+								<Limit GET POST>
+								require group admin
+								</Limit>
+								------
+						
+					-에러코드 핸들링 : 웹서버나 was 서버가 자체적으로 판단해 오류코드를 발생(response http status 코드와 body에 내용을 담을듯)하는 경우와 was 서버가 오류를 Exception 처리하여 코드를 내리는 경우로 볼수 있다.
+						-4XX(Client Request Error) : 요청에 잘못이 있을때 발생 (없는 리소스를 요청하거나 요청권한이 없는것을 요청하는등) 
+						-5XX(Server Error) : 서버에 내부 오류가 발생했을 경우 발생, 또는 내부 인프라의 오류 등, 보통 WAS와 연결된 경우 was쪽에서 발생하는 에러들일 것이다. (개발자의 의도에 따라 4XX에러로 얼마든지 내릴수 있다)
+						-서버 자체 판단에 의해 내려간 에러 코드나 개발자가 Exception 처리를 통해 발생시킨 에러코드든 response의 http status 코드에 따라 최종 response가 나가는 시점에 특정페이를 랜딩해줄 수 있다(에러페이지 등)
+							-.htaccess 파일을 아래와 같이 적용하여 처리 가능 (해당 .htaccess 파일의 하위 디렉토리부터 발생한 에러 코드에 대해 적용됨)
+								--------
+								ErrorDocument 400 /errors/bad-request.html
+								ErrorDocument 401 /errors/auth-reqd.html 등등..
+								--------
+								
+					-Server Side Includes (SSI) 기능 활성화 : html에 해더 html 또는 풋터 html을 붙일수 있는 <!--#include file="header.html" --> 스크립트를 서버가 인지할수 있도록 해준다.
+						-요즘?의 Layout Template Engines 인 Tiles 또는 Sitemesh 가 처리하는 기능을 수행하기 위한 초기?의 기능과 같은것 인듯? (지금은 별로 사용될일이 없어 보임)
+							-------(대충 이런식)
+							AddType text/html .shtml
+							AddHandler server-parsed .shtml
+							Options Indexes FollowSymLinks Includes
+							-------
+							
+					-IP 접근 제어 (IP Blacklisting and IP Whitelisting) : 특정 ip만 접근하게 또는 특정 ip만 접근 못하게
+						-Blacklisting by IP : 특정 ip만 차단
+							--------
+							order allow,deny
+							deny from 111.22.3.4
+							deny from 789.56.4. (ip 영역으로 지정 가능)
+							allow from all
+							--------
+						
+						-Whitelisting by IP : 특정 ip만 허용
+							--------
+							order deny,allow
+							deny from all
+							allow from 111.22.3.4
+							allow from 789.56.4. (ip 영역으로 지정 가능)
+							--------						
+						
+						-Blacklisting by Domain or referrer : 특정 도메인(정확히는 DNS가 내려주는 해당 도메인의 IP를 차단하는 개념임)과 핫링크가 걸려있는 경우에 대한 방어로 reffer 값을 통해 차단 가능
+							--------
+							order allow,deny
+							deny from example.com (DNS에 질의하여 example.com 의 ip와 같은 경우 차단됨)
+							allow from all
+							--------	
+							
+						-핫링크로 자신의 서버 리소스를 땡겨가는 경우를 차단하기 위해 
+							--------
+							RewriteEngine on (해당 기능 on, mod_rewrite 모듈이 설치되어 있어야 함)
+							RewriteCond % ^http://.*example.com [NC,OR] (NC=대소문자 구분 없음, OR=아래 다른조건도 적용된다는 의미)
+							RewriteCond % ^http://.*anotherexample.com [NC,OR]
+							RewriteCond % ^http://.*onemoreexample.com [NC]
+							RewriteRule .* - [F] (해당 referr에서 요청이 왔을경우 403 Forbidden 을 주라는 의미)
+							--------
+			
+					-디렉토리 디폴트 페이지(index) 지정 :
+						------
+						DirectoryIndex index.php index.shtml index.html (여러 형태의 디폴트 파일을 지정할수 있다. 순서대로 확인함)
+						------
+						
+					-페이지 이동 (URL Redirects and URL Rewriting) : 요즘은 web서버 차원이 아닌 was의 servlet 내부에서 코드를 통해서 처리하는 경우도 많음
+						-Redirects : 301(Permanently Moved) 또는 302(Temporarily Moved) 코드와 함께 이동할 주소를 응답해 주면 응답받은 브라우저가(사용자의 간여없이) 새 url로 다시 request를 하는 방식
+								-반드시 그런것은 아니지만 보통 다른 도메인으로 이동되는 경우에 사용됨 (같은 서버 내의 다른 path로 이동시킬수도 있음)
+								
+							-응답코드 차이 : 301, 302는 SEO(searching engin optimization)와 브라우저의 동작에 있어서 차이가 있을 수 있다.
+								-301 : origin url에서 new url로 영속적으로 변경된 것으로 판단하여 보통의 검색 엔진은 갖고 있던 origin url에 대한 정보를 new url 정보로 변경 처리한다. (origin url에 대한 평가 점수도 그대로 new로 이동)
+									-브라우저가 갖고 있던 북마크 정보에서 origin url 정보가 있으면 new url 정보로 변경처리 (브라우저에 따라 동작은 다를 수 있다)
+						
+								-302 : origin url 이 new url로 임시적으로 올겨졌다고 판단하여 검색엔진이나 브라우저가 특별한 처리를 하지 않음(브라우저가 단순히 new url로 다시 request만 보냄)
+							
+							-------
+							Redirect 301 /relative-url.html http://example.com/full-url.html (/relative-url.html 요청을 http://example.com/full-url.html 으로 재 접속하게 만듬)
+							-------
+							Redirect 301 /old-directory http://example.com/new-directory (특정 디렉토리 내의 요청을 특정 디렉토리 내의 요청으로 모두 적용가능)
+							-------
+							Redirect 301 / http://newurl.com (모든 요청을 새 도메인으로 요청하도록 적용 가능, 특정 서브도메인 예를들어 www 이 붙은 경우 www이 안붙은 도메인으로 처리할수도 있음)
+							-------
+						-rewriteing : 아파치 웹서버가 같고 있는 하나의 기능? 으로 servlet의 forwarding과 유사?하게 동작함, 브라우저에서 new url로 재 접속하는 것이 아니라 ruquest를 받은 서버거 new url로 request를 넘겨줌
+								-origin url과 new url이 동일한 request를 공유함, 그렇기 때문에 보통 같은 서버의 다른 path로 이동되는 경우에 사용되고 서버단에서 일어나는 동작임으로 브라우저는 별도의 처리나 url 창에 변화가 없음
+								-301 또는 302 등의 response 코드를 사용하지 않는다.
+								-해당 기능을 사용하기 위해서는 mod_rewrite 가 서버에 플러그인 되어 있어야 함
+									
+									-redirect와 forward의 차이점!!
+										-redirect는 HttPServletResponse에 선엔된 메서드로 response 해더를 통해 301or302 status와 location 값을 이용하여 브라우저가 직접 new Url로 이동하도록 유도하는것(주로 타서버로 이동시 사용됨)
+										-forward는 RequestDispatcher에 선언된 메서드로 최초 들어온 request를 container(was)가 주간하여 타 리소스(uri) request를 넘겨주는것이다.(동일서버에서만 넘길수 있음, 동일 request가 공유됨)
+					
+					-특정 파일 deny 처리 : 특정 중요 파일이 web public 폴더 내에 있더라도 access deny 되도록 처리 할 수 있다.(예를 들면 .htaccess 파일 같이 보안과 관련한 중요한 설정에 대한 파일들)
+						--------
+						<Files .htaccess> (.htaccess 파일에 대한 엑세스 불과 처리)
+						order allow,deny
+						deny from all
+						</Files>
+						--------
+						
+					-MIME Type 설정 : Multipurpose Internet Mail Extensions의 뜻으로 그 기원?은 메일처리를 위한것에서 출발하였으나 지금은 해당 서버가 처리할수 있는 파일 타입을 정의하는 의미로 보면됨
+						-mime type 설정에 빠져 있는 데이터를 요청시 서버는 해당 request에 대해서 fail을 내려 준다.
+						-해당 서버가 처리할 수 있는 파일 타입을 선언하는 의미와 동시에 특정 파일의 경우 브라우저에서 직접보여주는 것이 아니라 download 될수 있도록 설정해 줄수 있다.
+						-보통 인터넷에 돌아다니는 List of File Extensions and MIME Types 목록을 가져다 그냥 모두 때려 넣어 사용하면 됨(일일이 정리하기에 너무 많음)
+							------
+							AddType text/richtext rtx  (텍스트 형태의 richtext 파일로 rtx 확장자를 사용하고 있는것이란 선언)
+							AddType image/jpeg jpeg jpg jpe JPG (이미지 파일로 jpeg 파일로 jpg, jpe, JPG 확장자를 쓸수 있다고 선언)
+							AddType application/octet-stream pdf doc docx rtf (application/octet-stream 사용을 통해 pdf doc docx rtf 확장자의 파일을 요청 받으면 브라우저에서 보이지 말고 다운로드 하도록 할수 있음)
+							------
+					
+					-핫링크 방지(Block Hotlinking) : 다른 서버가 내 서버의 리소스를 무단으로 연경하여 사용하는 것을 방지 (복사해가는 것이 아니라 실제 나의 서버로 request 하는 경우를 말하며 이럴경우 나의 서버에 부하를 주게 된다)
+						------
+						<img src="http://yourdomain.com/image.jpg"> (이런식으로 타 서버가 내 서버로 이미지나 js, css 등을 요청하는 경우에 대한 방지
+						------
+						RewriteEngine on (mod_rewrite 모듈을 사용하여 처리)
+						RewriteCond % !^$
+						RewriteCond % !^http://(www.)?example.com/.*$ [NC] (내 도메인이 아닌 곳에서 요청이 올경우)
+						RewriteRule .(gif|jpg|jpeg|png|js|css)$ - [F] (gif,jpg... 에 대한 요청이면 Fail를 내려라)
+						------
+						RewriteEngine on
+						RewriteCond % !^$
+						RewriteCond % !^http://(www.)?example.com/.*$ [NC]
+						RewriteRule .(gif|jpg)$ http://www.example.com/no-hotlinking.jpg [R,L] (gif, jpg 요청이 오면 no-hotlinking.jpg 이미지로 대체해서 내려줘라(엿먹이는??))
+					
+					-디렉토리 indexing 기능에 대한 처리 : 웹서버로 특정 파일에 대한 요청이 아니라 특정 디렉토리까지 path가 지정되어 요청되었을때 웹서버는 해당 디렉토리내의 파일 목록을 보여줄수도(특정파일은 빼고 보여줄수도 있다) 안보여줄수도 있다
+						-------
+						Options -Indexes (디렉토리 내 파일 목록을 보여주지 않는다, 보안상 좋음)
+						-------
+						Options +Indexes (디렉토리 내 파일 목록을 보여준다)
+						IndexIgnore *.gif *.jpg (gif, jpg 확장자 파일은 제외하고 보여준다)
+						IndexIgnore secret.txt (특정 파일명을 지목하여 안보여주게 할수 있다)
+						-------
+						
+					-CGI 디렉토리 변경 : Common Gateway Interface은 perl 또는 SSI 스크립트를 통해 웹페이지안에 html 이 아닌 스크립트를 넣어 서버가(적절한) 동작을 할수 있게 해준다.
+						-일반적으로 CGI 스크립트는 웹서버의 /cgi-bin/에 자리하는데 "-"를 url에 표기할때의 문제, 큰 사이트의 경우 많은 cgi 리소스가 같은 폴더에 보관되는게 관리에 어려움이 있을수 있다. 
+						-이때 cgi 리소스의 위치를 /cgi-bin/로 한정하지 않고 사용할 수 있는 방법을 제공해 준다.
+							-------
+							AddHandler cgi-script .cgi (확장자 .cgi는 cgi 스크립트로 인식하여 처리하게 해준다)
+							Options +ExecCGI 
+							-------
+					
+					-스크립트 및 코드를 텍스트로 인식하게 처리 : 특정 웹 디렉토리 내의 코드를 실행인 아닌 text로 인식하여 화면에 보여줄수 있는 기능을 제공한다. (Git과 같이 코드관리 사이트의 경우를 말함)
+						-------
+						RemoveHandler cgi-script .pl .cgi .php .py (해당 확장자에 대해 cgi 실행을 차단한다)
+						AddType text/plain .pl .cgi .php .py  (해당 확장자를 plan 텍스트로 받아드려 브러우저에 보여주게 한다)
+						-------
+						RemoveHandler cgi-script .pl .cgi .php .py (해당 확장자에 대해 cgi 실행을 차단한다)
+						AddType application/octet-stream .pl .cgi .php .py (해당 확장자를 application으로 인식하게 하여 브라우저가 다운로드 하도록 처리한다)
+						-------
+						
+					-PHP 관련 설정 : 상세 설정은 php.ini 에서 처리하지만 .htaccess파일에서 일부 설정을 적용할수 있다(웹호스팅의 경우 한 사용자가 전체 php에 영향을 주는 php.ini 파일을 수정할수 있게 하지 않기 때문에)
+						-php 설정값 셋팅 : php의 모든 설정 변수를 셋팅할 수 있는 것은 아니다.
+							-------
+							php_value upload_max_filesize  10M (php의 upload_max_filesize 설정값을 10M로 셋팅)
+							php_value date.timezone 'Asia/Seoul' (php 에서 사용할 타임 기준을 정할 수 있음)
+							-------
+						
+						-기타 php 관련 include 파일 및 ini 파일들에 대한 엑세스 제한 기능도 제공하고 있다.
+					
+					
+			
+			
+			
+		
 	-Was서버(dynamic 서버) : 클라이언트(브라우저에서 직접 또는 web서버를 거쳐 들어온 요청)로 부터 요청을 받아 처리된 결과물을 dynamic하게 생성하여 요청한 클라이언트로 내려 줄수 있다.
 		-was 대표 구성 요건 :
-			-web server connectors : http web 서버의 연결을 받기 위한 connector.
+			-web server connectors : http web서버(apache같은)의 연결을 받기 위한 connector.
 			-programming languages : dynamic한 처리 결과를 만들어 내기 위해 제공된 lib를 이용하여 개발할수 있는 언어를 제공해야 함
 			-runtime libraries : 여러 주요 부가기능(보안, 트랜젝션, 편의기능)을 lib를 통해 서버들이 제공해 주고 있다.
 			-database connector : DB를 연결할수 있는 수단을 제공함
@@ -1793,10 +2071,7 @@ Sourcetree : GIT 클라이언트 툴
 	-@ExceptionHandler : ???
 
 
-
-
-
-	-기타
+	-기타 어노테이션
 		-@EnableJpaAuditing : JPA Audditing을 활성화 한다. ??
 		-@MappedSuperclass : JPA Entity 클래스들이 BaseTimeEntity을 상속할 경우 필드들(createdDate, modifiedDate)도 컬럼으로 인식하도록 한다 ??
 		-@EntityListeners(AuditingEntityListener.class) : BaseTimeEntity 클래스에 Auditing 기능을 포함한다.
@@ -1928,6 +2203,8 @@ Sourcetree : GIT 클라이언트 툴
 					port: 8080 //서버포트 지정
 					context-path: /kr/ko //서버 context path 지정
 			-----------
+			
+---
 
 [DB]
 -DBMS :
@@ -2234,43 +2511,72 @@ Sourcetree : GIT 클라이언트 툴
 
 -Spring View Resolver : Controller 와 view 간의 바인딩 역할을 수행한다. View Resolver의 설정을 통해 동작할 Template Engines(JstlView, Thymeleaf)이 선택 된다.
 
--Text Template Engines :
-	-JSP : Java Server Page
-	-Freemarker :
-	-JSTL : html(jsp)에 포함되어 로직을 구성할수 있게해주는 표기법(기술)
+-Template Engines : 
+	-Text Template Engines :
+		-JSP : Java Server Page로 servlet의 확장된 기능으로 java코드(jsp코드, 거의유사)와 html 코드를 혼영해서 사용할수 있게 해준다. !!Java EE 스펙 중 일부로 웹 애플리케이션 서버에서 동작한다.
+			-servlet(JSP container?) container가 읽어드려 동적인 view 페이지를 만들어 낼수 있게하기위한 코드(언어)?이다 
+			-container는 서버 요청시 해당 jsp 파일을 모두 java 파일로 변경하여 컴파일해(이미컴파일되어 있으면 재컴파일 않함) 기존 sevlet과 동일하게 실행시켜준다 (jsp->java->class->실행됨)
+			-jsp란 결국 동적으로 html 결과를 만들어내기 위한 방법으로 해당 기능을 java로 짜기위해서는 다소 불편한 부분이 있어 이를 개선한 코드(랭귀지)?라고 생각된다. .jsp 파일로 만들며 내부에는 html 태그와 혼용되서 구성된다. 
+			
+			-JSP Directive : jsp파일은 3종류의 지시자를 갖을 수 있다. j
+				-page : 해당 jsp 페이지와 관련된 기본적인 정보를 container에게 알려준다. key=value 형태로 여러 attibute 를 갖는다. (ex: <%@ page language="java" contentType="text/html; charset=UTF-8" %>)
+				-include : 해당 파일에 다른 파일을 include하여 컴파일하게 해준다. (ex: <%@ include file="file_url"%> 또는 <jsp:directive.include file="file_url"/> )
+				-taglib : jsp 페이지가 사용할 태그라이브러리가 있을경우 지정하게 해준다. 
+					-(ex: <%@ taglib url="tag_library_url" prefix="tag_prefix" %> 또는 <jsp:directive.taglib url="tag_library_url" prefix="tag_prefix" />
+		
+		-JSTL : jsp기능을 확장하기 위해 사용될 수 있는 커스텀 태그를 모아놓은 것을 말한다. (JSP에 비해 더 쉽고 간결하게 사용할수게 하기위한 목적이다. 직접 추가적인 커스텀 테그를 만들수도 있지만 쉽지 않고 JSTL에 있는것만으로도 보통은 충분)
+			-코드는 jsp 파일 내부에 작성되며 jsp가 그러하듯 html, jsp 코드와 혼영하여 뷰단 로직을 구성할수 있게해주는 표기법(기술)
+			-JSP를 잘 모를더라도 JSTL 태크를 이용하여 동적 페이지를 만들수 있게 해준다
+			-대규모 프로젝트에서는 view의 양이 많고 view단을 처리하기 위해 모두가 java, jsp에 능숙한 개발자일 필요가 없기 때문에 view 단만을 제어할수 있는 간단한 문법의 JSTL이 유용하며 MVC 모델의 분업화에도 용이함. 
+			-이러한 view 테그라이브러리 컴포넌트드들은 보통 기본적인 if문과 반복문, 국제화, 지역화 기능을 제공한다.
+				----------------
+				<%@ page language="java" contentType="text/html; charset=UTF-8" %> (jsp page 디렉티브)
+				<%@ taglib uri="/WEB-INF/tld/c-rt.tld" prefix="c-rt" %> (jsp page 디렉티브) (jsp taglib 디렉티브)
+				<html>
+				<head>
+						<title>Java Code Geeks Snippets - Simple JSTL in JSP Page</title>
+				</head>
+				<body>
+						<c-rt:if test='<%= request.getParameter("myparam") != null %>'> (jstl 코드)
+								<%= request.getParameter("myparam") %>
+						</c-rt:if>
+				</body>
+				----------------
 
-	-Thymeleaf : MVC based web application에서 view 레이어에 해당, servlet에서 xml, html의 template engine으로 동작함 (JSP를 대체함)
-		-----------
-		<dependency>
+		-Freemarker :
+
+		-Thymeleaf : MVC based web application에서 view 레이어에 해당, servlet에서 xml, html의 template engine으로 동작함 (JSP를 대체함)
+			-----------
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+			</dependency>
+			<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		-----------
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			</dependency>
+			-----------
 
-		controller 클래스
-		-----------
-		@GetMapping("/") //@RequestMapping(value="/", method = RequestMethod.GET) 동일
-		public String main(Model model) {
-			model.addAttribute("message", message);
-			model.addAttribute("tasks", tasks);
+			controller 클래스
+			-----------
+			@GetMapping("/") //@RequestMapping(value="/", method = RequestMethod.GET) 동일
+			public String main(Model model) {
+				model.addAttribute("message", message);
+				model.addAttribute("tasks", tasks);
 
-			//Model object의 내용을 갖고 해당 view로 return 됨
-			return "welcome"; //view (thymeleaf가 적용된 html 명)
-		}
-		-----------
+				//Model object의 내용을 갖고 해당 view로 return 됨
+				return "welcome"; //view (thymeleaf가 적용된 html 명)
+			}
+			-----------
 
-		thymeleaf 적용된 html 파일, EL표기법과 유사 (보통 src/main/resources/templates/ 에 위치)
-		-----------
-		<h2><span th:text="'Hello, ' + ${message}"></span></h2>
-		-----------
+			thymeleaf 적용된 html 파일, EL표기법과 유사 (보통 src/main/resources/templates/ 에 위치)
+			-----------
+			<h2><span th:text="'Hello, ' + ${message}"></span></h2>
+			-----------
 
--Layout Template Engines :
-	-Tiles :
-	-Sitemesh :
+	-Layout Template Engines :
+		-Tiles :
+		-Sitemesh :
 
 
 [Cloud]
@@ -3080,8 +3386,115 @@ Template Engine
 					-XFF는 완전한 표준은 아니기 때문에 거쳐오는 proxy(ex. WebLogic Coonector)에 따라서 해당 규칙을 지키지 않고 다른 이름의 해더를 사용하는 경우가 있다. 그럼으로 아래의 해더를 모두 참조하는 것이 좋다.
 						-X-Forwarded-For, Proxy-Client-IP, WL-Proxy-Client-IP, HTTP_CLIENT_IP, HTTP_X_FORWARDED_FOR
 
+	-Set-Cookie: response 해더를 통해 전달되며 전달된 쿠키값과 옵션에 맞게 해당 브라우저에 쿠키가 저장된다.
+		----------
+		Set-Cookie: JSESSIONID=4a0bdcf2-7cec-42a5-9e39-0a192e8f83d9; Path=/kr/ko/; Secure; HttpOnly (쿠키명=갑; 해당쿠키의 기타 옵션들)
+		Set-Cookie: _xm_webid_1_=-1615420287; Max-Age=7776000; Expires=Thu, 10-Jun-2021 07:33:44 GMT; Path=/ (두번째 쿠키정보.. 하나의 response에 여러개의 cookie가 동시에 내려와도 상관없음)
+		----------
+		-브라우저에 저장되있던 쿠키값은 동일 path(지정된도메인+path)로 request가 발생했을때 자동으로 해당 서버로 올라간다.(사람이관여하지않음, 브라우저스펙상 무조건 올라감) 
+			-쿠키가 서버로 올라가는 방식 : request 헤더에 가지고 있는 쿠키의 key=value;.. 들이 올라간다. (옵션값은 안올라감)
+				--------
+				Cookie: JSESSIONID=4a0bdcf2-7cec-42a5-9e39-0a192e8f83d9; _xm_webid_1_=-1615420287; ....
+				--------
+		
+		
+		
 
 -참고 :
+	-Servlet: Java EE 스펙 중 일부로 웹 애플리케이션 서버에서 동작한다.(ver 4.0부터 http/2 지원?)
+		-지금은 spring과 같은 여러 프레임워크 및 그에 따른 라이브러리들을 통해 구현방식이 다른 여러 형태가 존재함(예를 들면 @annotation 을 사용하여 기존 web.xml에서 설정하는 부분들을 대체 하는 등)
+		-javax.servlet.Servlet(가장 원형 형태의 서블릿 !인터페이스) : java(디폴트?) 스팩에 정의된  인터페이스를 구현해야 한다
+			-Servlet은 서블릿 컨테이너(WAS)가 서블릿에 대해 호출하는 메소드 init(), service(), destroy(), getServiceConfig(), getServiceInfo()를 정의한 인터페이스이다.
+				-------------
+				public class FirstServlet implements javax.servlet.Servlet {
+					ServletConfig servletConfig;			
+
+					@Override //container가 해당 서블릿 생성시 호출해 주며 web.xml에 작성된 해당 서블릿의 <init-param> 값들을 ServletConfig 형태로 전달해 준다.
+					public void init(ServletConfig config) throws ServletException { 
+						this.servletConfig = config;
+					}
+					
+					@Override
+					public ServletConfig getServletConfig() {
+						return this.servletConfig;
+					}	
+									
+					@Override // 클라이언트가 요청할 때마다 호출되는 메소드(실질적인 서비스 작업을 수행)로 container가 호출해 주면서 기본적으로 req 와 res를 전달해 준다. 
+					public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+						System.out.println("driver : " + servletConfig.getInitParameter("driver")); //web.xml에 정의된 해당 서블릿의 init-param값을 가져와 필요한 곳에 사용 할 수 있다.
+					}
+					
+					@Override
+					public void destroy() {
+						System.out.println("destroy() called");
+					}
+
+					@Override
+					public String getServletInfo() {
+						return "version=1.0;author=butterfield;copyright=butterfield 2020";
+					}
+				}
+				
+		-GenericServlet : Servlet 인터페이스를 상속하여 C/S 환경에서 서버단의 Application으로서 필요한 기능을 구현한 추상 클래스 (기본 Servlet 클래스를 보완함, 사용은 유사함)
+		-HttpServlet : GenericServlet을 상속하여 service()메서드에 HTTP 프로토콜에 알맞는 동작을 수행하도록 구현한 클래스이다. (GenericServlet 클래스를 보완함, 사용은 유사함)
+		
+		-관련 web.xml : 작성한 servlet 클레스를 container가 인식하여 사용할수 있게 처리하는 config 이다.
+			-------------
+			<!-- 서블릿 선언 -->
+			<servlet> (작성한 서블릿을 container에게 알려주는 의미)
+				<servlet-name>FirstServlet</servlet-name>
+				<servlet-class>atoz_develop.com.FirstServlet</servlet-class> 
+				
+				<init-param> (해당 서블릿의 init메서드 호출시 해당 값들이 ServletConfig 를 통해 전달된다.)
+						<param-name>driver</param-name>
+						<param-value>com.mysql.cj.jdbc.Driver</param-value>
+				</init-param>
+				<init-param>
+						<param-name>url</param-name>
+						<param-value>jdbc:mysql://localhost:3307/knou</param-value>
+				</init-param>
+				<init-param>
+						<param-name>username</param-name>
+						<param-value>user</param-value>
+				</init-param>
+				<init-param>
+						<param-name>password</param-name>
+						<param-value>****</param-value>
+				</init-param>
+			</servlet>
+			
+			<!-- 서블릿을 URI과 연결 -->
+			<servlet-mapping> (어느 서브릿이 어느 url에 매핑되는지를 알려주는 의미, 크라이언트가 container 설정에 없는 url을 요청시 본인이 처리하지 못하는 케이스임으로 404를 내리게 된다.)
+				<servlet-name>FirstServlet</servlet-name>
+				<url-pattern>/FirstServlet</url-pattern>
+			</servlet-mapping>
+			-------------
+	
+	-Handler : Spring 환경에서 보통 핸들러라 명칭하는 것은 컨트롤러를 의미하는 경우가 많으며 Handler 메쏘드로 명칭하여 실제 request와 response를 담당하는 컨트럴러내 url 매칭이 되어 있는 메서드를 칭하는 경우가 많음
+		-xxxlHandlerMapping 클래스 : 서버가 reuest를 받아(서버적 처리를 이후) spring 영역으로 request를 
+	
+	-SESSION: 보통 말하는 세션은 쿠키의 SESSIONID와 매칭되는 사용자 정보를 저장하기 위한 HttpSession 이다.
+		-서버(WAS, Serverlet Container)가 접속한 브라우저를 구분하기 위해 내려오는 랜덤 값으로, cookie를 통해 내려온다. tomcat 기본 키값은 JSESSIONID이며 SpringSession을 이용할경우 보통 SESSION으로 내려옴
+		-SESSIONID 쿠키가 내려오는 시점 : 서버에 HttpSession이 생성되는 시점에 내려온다. 생성된 HttpSession 객체와 쿠키로 내려가는 SESSIONID값이 매핑되는 형태이다.
+			-그럼 HttpSession이 servlet Container에 생성되는 시점은 언제일까? (기본적으로 session은 servlet container의 메모리에 생성되는 값이며 같은 container 내에서도 servlet context를 넘어 공유되지 않는다)
+				-생성 시점은 세션 관련 메소드 request.getSession() 또는 request.getSession(true) 가 호출되는 시점이다. (이 메쏘드 호출 시점에 SESSIONID가 쿠키로 내려오며 실제 session 객체도 서버에 생성된다)
+					-----
+					HttpSession session=request.getSession(); 해당 request에서 session 객체를 가져온다.(만들어진 세션이 없는 상태라면 새로 만든다)
+					String sessionId = session.getId(); 해당 세션의 sessionId(쿠키로 넘어논)값을 확인한다.
+					session.setAttribute("attName", xxObject);  해당 세션 객체에 특정 object를 저장한다.
+					xxObject = session.getAttribute("attName"); 해당 세션 객체에서 특정 object를 가져온다.
+					----
+		
+		-세션과 유사하게 사용할수 있는 메모리 공유 방식
+			-ServletContext: 웹 어플리케이션 전역에서 사용할 공동의 자원을 미리 바인딩하여 서블릿들이 이를 공유할 수 있도록 한다. 톰캣 컨테이너가 실행되면 웹 어플리케이션(war)에 한 개씩 Context 객체를 생성한다.
+			-ServletConfig: ServletContext는 범위를 application으로 한다면, ServletConfig는 servlet 내부로 한정된다.
+			-ThreadLocal : servlet container와 상관없는 JAVA에서 제공하는 기능으로 동일한 스레드에서만 공유되는 일종의 전역적 변수이다. 그
+				-그러나 웹 서비스에서 Request는 스레드기반이므로(쓰레드풀) 동일 쓰레드를 이용하여 들어온 요청에 대해서는 동일한 ThreadLocal 변수를 참조할 수 있습니다.(재사용시 반드시 remove를 통해 초기화 필요)
+	
+		
+
+
+		
 	-cookie :
 		-RFC 기준 에이전트의 cookie 처리
 			-At least 4096 bytes per cookie (as measured by the sum of the length of the cookie's name, value, and attributes).
@@ -3255,13 +3668,12 @@ Template Engine
 		-mo_jk : 아파치 파운데이션에서 제공하는 아파치와 톰겟을 연결하게 해주는 커넥터 역할, .so 파일로 apache 내부에 블러그인 형태로 넣어 주면 됨(추가적인 config는 필요)
 		
 		-tomcat : 아파치가 단순히 static한 컨텐츠를 내려주는 서버라면 tomcat은 서블릿로직을 이용하여 다양한 결과를 실시간으로 만들어 내 내려 줄수 있다. 아파치가 없더라도 static한 컨텐츠도 내려줄수 있음(apache가 이부분에서는 더 잘하지만..)
-			-servlet(java servlet) : tomcat이 제공하는(정확히는 java EE 스펙의 일부) tomcat에서 다이나믹한 웹 기능을 구축하기 위한 APIs 이다(CGI,PHP등이같은맥락). 그래서 tomcat을 Servlet container 라고도 함
+			-servlet(java servlet) : tomcat이 제공하는(정확히는 java EE 스펙의 일부) tomcat에서 다이나믹한 웹 기능을 구축하기 위한 APIs 또는 그들을 이용해 만든 클래스(=Controller) 이다(CGI,PHP등이같은맥락). 
+				-그래서 tomcat을 Servlet container 라고도 함
 			-jsp : HTML 내에 자바 코드를 삽입하여 동적 웹페이지를 생성할수 서버 사이드 스크립트 언어이다 (servlet과 마찮가지로 java EE 스펙이며, ASP, PHP, .Net과 같은 맥락)
 				-실제 jsp의 동작을 보면 실행시 jsp 코드를 java Servlet으로 변형하여 동작한다.(html과 섞어 쓰기 편하도록 만들어진 스크립트 언어정도의 역할이다)
 			
-			-JSTL(JavaServer Pages Standard Tag Library): JSP를 모를더라도 JSTL 태크를 이용하여 동적 페이지를 만들수 있게 해준다(view단에서).
-				-대규모 프로젝트에서는 view의 양이 많고 view단을 처리하기 위해 모두가 java 개발자일 필요가 없기 때문에 view 단만을 제어할수 있는 간단한 문법의 JSTL이 유용하며 MVC 모델의 분업화에도 용이함. 
-				-이러한 view 테그라이브러리 컴포넌트드들은 보통 기본적인 if문과 반복문, 국제화, 지역화 기능을 제공한다.
+			-JSTL(JavaServer Pages Standard Tag Library): 
 			
 	-Step : https://www3.ntu.edu.sg/home/ehchua/programming/howto/ApachePlusTomcat_HowTo.html
 		-1. Install Apache HTTP Server (run on port 7000)
@@ -4035,3 +4447,7 @@ Template Engine
 			-13 코프로세서 (수치처리보조연산자 )
 			-14 IDE 하드 컨트롤러 Primary
 			-15 IDE 하드 컨트롤러 Secondary
+			
+			
+
+
