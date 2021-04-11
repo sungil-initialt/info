@@ -2459,7 +2459,6 @@
 			-I'll check your order and have some bring your product to you right away | I'll send someone right away with your product | could you have your guy call me | when he arrives
 
 
-
 -title : 제발 ~하나만 있어라, 설마 ~해야 되는거야?
 	-script :	제발 ~하나만.., 뭐뭐 해야한다 하지말아줘, ..하면 안되겠지? 빨리.. 안하면 ..할꺼야 
 		-Please let there be a spot. Don't tell me I gotta wait. (아니라고 해줘~ == 해야하는거 아냐??)
@@ -2470,16 +2469,24 @@
 			-you could be | be finded | for that (그것때문에) | we better find .... soon or ... | I'm going to starve to death
 
 
-----2번 367
--title : 
+-title : 이거면 되겠다, 이정도면 충분해  
 	-script :	
+		-This will do for now(이정도면 되겠어). Are you sure? Isn't it too weak? No, This is good enough for now.
+			-This will do for now | Are you sure? Isn't it too weak? | No, This is good enough for now
 
 
-
--title : 
+-title : ~나 다름없어, 하고 다니는거 보면 결혼한 사이나 다름없어 
 	-script :	
-
-
+		-It's practiclly unusable. These are the same -> These are practically(pretty much) the same. There are some minor improvements but they are practically(pretty much) the same.
+			-it's practically unusable | these are the same | these are practically the same | there are some minor improvements | but they are practicall the same | pretty much the same
+			
+		-They're married. They're a married couple. When you see how they are together, they're practically married. when you see how they are together, they're practically a married couple.	
+			-they are married | they are a married couple | when you see how | they are together | they're practically married | they're practicall a married couple
+			
+		-I was there to help him but I did practically everything for him (그대신)
+			I was there to | help him | I did practically everything | for him 
+			
+-->2번 375		
 
 -title : 
 	-script :	
