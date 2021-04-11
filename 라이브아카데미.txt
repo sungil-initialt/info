@@ -2424,7 +2424,96 @@
 			-my package arrived(택배가오다) | it wasn't the one | (that) I ordered | I had it sent back | send it back | I had to wait (for안씀) almost another week | get the right one 
 
 
----354
+-title : 사역 형식의 문장은 언제 어떻게 쓰는걸까? part3
+	-script :	
+		-When I was a little girl, I had my hair brushed by my mother.(잘못된표현, by 전문가?) When I was a little girl, my mother used to brush my hair (for me).
+		-When I was in high school, I used to have my mother wake me up every morning.
+		-There's something wrong with my computer. I think it's broken. 
+		-I'll ask my brother to stop by and take a look at it. == Don't worry. I'll have my brother stop by and take a look at it.
+		-I just had my computer seviced a couple of days ago, but it's acting up agin. Don't worry. I'll have my brother stop by and take a look at it.
+			
+			-my mother used to brush my hair | when I was in high school | I used to | my mother wake me up | there's something wrong with | I think it's broken | I'll ask my brother to
+			-stop by and take a look at it | I'll have my brother stop by and take a look at it. | I just had my computer serviced | a couple of days ago | it's acting up agin 
+		
+
+-title : 영어에서 사역 형식은 언제 어떻게 쓰는걸까? part4
+	-script : get ST pp(일상적인 일), have ST pp(사람시켜했다라는 느낌), have SO 원형(하게하다)
+	
+		-I proof-read my report at least 3 times. I had my report proof-read(과거,[레드]) at least 3 times.
+		-she didn't seem to be very familiar with the area, So I told her to wait there. (, So I just had her wait there)
+		-I got my phone fixed. I got it delivered. I got my hair cut. She got her nails done. They got their car washed. (get something pp, 결과적(했어, 받았어, 졌어), 기본적으로 보통 이루어지는 일상적 내용)
+		-I recently found some ants in my house, so I think I need to call someone and have my house checked. (have something pp, 과정적(하게하다, 하게했어), 조금 귀찮은? 사람시켜하는 하는 내용?)
+
+			-I proof-read my report | at least 3 times | I had my report proof-read | she didn't seem to be very familiar with | I told her to wait there | I had her wait there
+			-I got my phone fixed | I (just) got it delivered | I got my hair cut | She got her nails done | They got their car washed
+			-I think I need to call someone and (사람불러 뭐뭐하게 해야할것 같아)| have my house checked
+			
+
+-title : 사역 part5
+	-script :	
+		-I just got my order delivered. But I think there's(has) been a mistake. It's not what I ordered. 
+		-It must've gotten mixed up with something else. I'm sorry. I'll check your order and have someone bring your product to you right away.(I'll send someone right away with ur product)
+		-Is tomorrow morning OK? Yes, tomorrow morning is fine. Could you have your guy call me when he arrives?
+		
+			-I just got my order delivered | I think there's been a mistake | it's not what I ordered | it must've | gotten mixed up with | be mixed up with | something else 
+			-I'll check your order and have some bring your product to you right away | I'll send someone right away with your product | could you have your guy call me | when he arrives
+
+
+
+-title : 제발 ~하나만 있어라, 설마 ~해야 되는거야?
+	-script :	제발 ~하나만.., 뭐뭐 해야한다 하지말아줘, ..하면 안되겠지? 빨리.. 안하면 ..할꺼야 
+		-Please let there be a spot. Don't tell me I gotta wait. (아니라고 해줘~ == 해야하는거 아냐??)
+		-Hey, you don't think I could just park in one of the handicap spots, do you? ( Hey, you don't suppose I could just park in the handicap spot, do you?) 내가 그냥 해도 된다고 생각않치?
+		-You could be(get) finded for that(그러다 벌금 문다). Well.. We better find a spot soon or I'm going to starve to death.
+			
+			-please let there be | a spot | Don't tell me I gotta | wait | Hey, you don't think I could just park.. do you? | Hey, you don't suppose I could just park.. do you?
+			-you could be | be finded | for that (그것때문에) | we better find .... soon or ... | I'm going to starve to death
+
+
+----2번 367
+-title : 
+	-script :	
+
+
+
+-title : 
+	-script :	
+
+
+
+-title : 
+	-script :	
+
+
+
+-title : 
+	-script :	
+
+
+-title : 
+	-script :	
+
+
+-title : 
+	-script :	
+
+-title : 
+	-script :	
+
+-title : 
+	-script :	
+
+-title : 
+	-script :	
+
+-title : 
+	-script :	
+
+-title : 
+	-script :	
+
+-title : 
+	-script :	
 
 
 
