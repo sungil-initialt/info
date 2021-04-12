@@ -411,7 +411,7 @@
 
 		-If I hadn't saved enough money, I would've had to be(stay) here for another year. (돈을 모아, 충분한 돈, 여기 있다. 여기 있어야해, 한해 더, 일년 더, 일년동안)
 		-If she hadn't passed the exam, she would've had to prepare another year for the test. / prepare for the test for another year. (시험 합격, 시험 통과, 준비해야해, 시험 준비)
-		-If you had told me a litter earlier, I wouldn't have had to wait this long! (일찍 말해줘, 좀더 일찍, 안기다려도 됐잖어, 이렇게 오래, 오래 기다리다.)
+		-If you had told me a little earlier, I wouldn't have had to wait this long! (일찍 말해줘, 좀더 일찍, 안기다려도 됐잖어, 이렇게 오래, 오래 기다리다.)
 			-save enough money | to be here | to stay here | for another year | pass the exam | prepare another year | prepare for the test | a little earlier | wait this long
 
 		-If I hadn't made that mistake, We wouldn't have had to do this again. We wouldn't have needed to do this again. (실수를 하다. 다시해야해, 해야해, 할필요가 없어)
@@ -1289,7 +1289,7 @@
 	
 -title : 영어회화, 표현, 정확히 뭐라고 하기에는 어려운데 이건 도저히 뭔가 적응이 안돼, 애매한 인상 묘사하기 
 	-script :	
-		-There's somtehing a little strange about him. There's something about him that's a litter strange.
+		-There's somtehing a little strange about him. There's something about him that's a little strange.
 		-There's something very attractive about her. There's something about her that's very attractive. 
 			-something a little strange about him | something about her that' very attractive.
 		
@@ -1671,7 +1671,7 @@
 			-it was confusing because of that | make it confusing | make the story confusing to understand
 		
 		-I wish the ending was a little better.(좋았으면좋았을텐데->아쉽다) 
-			-I wish the ending was a litter better | I wasn't very happy with.. | I wasn't totally satisfied with.. | I was disapointed with.. | It was too bad (that)..
+			-I wish the ending was a little better | I wasn't very happy with.. | I wasn't totally satisfied with.. | I was disapointed with.. | It was too bad (that)..
 			-It was shame(아쉽다,애석하다) that.. | His face burned with shame(수치) | Have you no shame(창피) | What a shame they couldn't come(아쉽,애석)
 				
 		-I don't know I just couldn't (really) relate to it.(공감이 잘 안갔다)
@@ -2485,39 +2485,65 @@
 			
 		-I was there to help him but I did practically everything for him (그대신)
 			I was there to | help him | I did practically everything | for him 
+		
+
+-title : I wish I could, I hope I can, 중요한 구분 
+	-script :	I wish I could/과거 (가능성없는.. , 약간의 빈말, 인사치례?), I hope I can/현재 (가능성있는, 작은소망?)
+	
+		-I wish I could be like you.(너처럼할수있으면좋겠다.너같으면좋겠다) I wish I could quit my job and (just) travel for the rest of my life. I wish I didn't have to go back. I wish I was a little taller.
+		-I hope I can do a good job(잘해낼수있으면좋겠다) I hope I can finish this in time. I hope I don't have to work late tomorrow.
 			
--->2번 375		
+			-I wish I could | be like you | quit my job | and travel | for the rest of my life | I wish I didn't have to | go back | I wish I was | a little taller
+			-I hope I can | do a good job | finish this in time | I hope I don't have to | work late 
+
+
+-title : ~을 잘 활용하다, 써먹다
+	-script :	
+		-We just made use of what we had and it turned out OK. You have to make good use of your time. The deadline is next week, so we have to make good use of our time.(use ur time wisely)
+		-Let's try to make the most out of this opportunity. Come on, we only have an hour left. So, let's make the most out of it.
+			
+			-make use of | make good use of | make better use of | we just made use of | what we had | and it turned out Ok | you have to make good use of | use your time wisely
+			-make the most out of | let's try to | make the most out of this opportunity | we only have an hour left | let's make the most out of it
+
+
+-title : 벌써 그렇게 됐나? 몇달 밖에 안된 것 같은데
+	-script :	
+		-Wow, (there's) something (that) I just realized I've already been doing this for over a year. Really? Has it been that long? It feels like it's only been several months.
+			-something I just realized | I've already been doing this | for over a year | has it been that long? | it feels like it.. | it feels like it's only been several months
+		
+
+-title : 생활 필수 영어 어휘, deserve
+	-script :	
+		-I worked really hard this semester and I think I deserve a little break.(I think I deserve to take a little break) 
+		-He is being so unreasonable. You don't deserve that kind of treatment(그런취급). You don't deserve to be treated like that(that way).
+		-Some people say she deserves a second chance. But I honestly(어니어슬리) think she deserves to be put in jail. I got what I deserved(난 내 댓가를 치뤘어..보통 부정적인 내용)
+			
+			-I worked really hard | this semester | I think I deserve | a little break | I think I deserve to | take a break | he is being so unreasonable | 
+			-you don't reserve(넌그런대접을받으면안된다) | that kind of treatment | you don't deserve to be treated | like that way(그런식으로) 
+			-some people say | she deserves | a second chance | I honestly think | she deserves to | be put in jail | I got what I deserved
+		
+	
+--->2번 385
 
 -title : 
 	-script :	
-
-
-
--title : 
-	-script :	
-
+	
 
 -title : 
 	-script :	
-
-
--title : 
-	-script :	
+	
 
 -title : 
 	-script :	
+	
 
 -title : 
 	-script :	
+	
 
 -title : 
 	-script :	
-
--title : 
-	-script :	
-
--title : 
-	-script :	
+	
 
 -title : 
 	-script :	
