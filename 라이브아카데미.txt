@@ -2522,12 +2522,21 @@
 			-you don't reserve(넌그런대접을받으면안된다) | that kind of treatment | you don't deserve to be treated | like that way(그런식으로) 
 			-some people say | she deserves | a second chance | I honestly think | she deserves to | be put in jail | I got what I deserved
 		
-	
---->2번 385
 
--title : 
+-title : 제대로 공부모드인 사람을 위한 하드코어 연습모드 
 	-script :	
-	
+		-I think for those of us who have jobs and have been working for some time have this habit of telling ourselves that we deserve to take the money that we earn and spend it
+			on things that we like, whether it's shopping or booking a flight for our next trip. Isn't that how we reward ourselves for putting up with our difficult jobs?
+			And for many of us, this becomes more or less a habit - something that we do unconsciously and also kind of like an addiction because, let's face it, 
+			spending money feels good right? It provides us with instant satisfaction.
+			
+			-I think for those of us | for those of us(사람들이, 사람들은, 사람들에게 있어, 나를포함한, 주격형느낌) | who have been working | for some time(어느정도오래) | have this habit of telling ourselves that
+			-this habit of ..ing(..하는 이런습관) | take money that we earn and spend it on something we like, whether it's shoping or booking a flight | take ST and DO | spend ST on ST
+			-something whether it's ST or ST | book a flight for our next trip | isn't that how we....(그런식으로 하지 않나요?)| reward ourselves for ST (누구에게 뭐에대한 보상을 하다) | putting up with(..을견디다) 
+			-And for many of us(많은사람들이, 많은사람들은, 많은사람들에게 있어, 나를포함한, 주격형느낌) | this becomes more or less a habit (더도덜도않고습관처럼) | ..추상적인ST - somthing that | we do unconsciously 
+			-and also kind of like ST (..처럼) | because, let's face it, (왜냐하면솔찍히말해서..) | ..ing feels good(..하는건 기분이좋다) | it provides us with..(우리에게 ..를제공한다) | instant satisfaction
+			
+			-->2번 388
 
 -title : 
 	-script :	
