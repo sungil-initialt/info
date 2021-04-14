@@ -12,7 +12,8 @@
 	-by default : 기본적으로 
 	
 Man-in-the-middle attackers can manipulate networks to serve their own keys, thereby compromising any communication.
-
+	-thereby : 
+	
 
 Publicly-trusted PKIs, which are trusted by the browsers, must conform to RFC 5280, which requires the use of the X.509 v3 format. X.509 v3 allows certificates to include additional data, such as usage constraints or policy information, as extensions. 
 
