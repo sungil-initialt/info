@@ -2536,12 +2536,19 @@
 			-And for many of us(많은사람들이, 많은사람들은, 많은사람들에게 있어, 나를포함한, 주격형느낌) | this becomes more or less a habit (더도덜도않고습관처럼) | ..추상적인ST - somthing that | we do unconsciously 
 			-and also kind of like ST (..처럼) | because, let's face it, (왜냐하면솔찍히말해서..) | ..ing feels good(..하는건 기분이좋다) | it provides us with..(우리에게 ..를제공한다) | instant satisfaction
 			
-			-->2번 388
 
--title : 
+-title : 극단적인 주장, 뒷받침해주는 관점 제시, 주장의 타당성 강조
 	-script :	
+		-I think people who have children and become parents should be required to go through some kind of parent training for at least a couple of weeks, or even months.
+		-I know it can sound quite demanding and somewhat unrealistic, but think about how important person's childhood is and how much impact it has throughout their lives.
+		-I'm actually (quite) surprised that we don't already have such a thing.
+		
+			-people who have children and become parents | should be required to | go through(겪다, 교육같은것을 받다) | some kind of parents training 
+			-for at least a couple of weeks or even months | I know it can sound | it sound quite demanding(무리한) | somewhat unrealistic(비현실적인) | but think about | how important it is
+			-but think about how important person's childhood is | and how much impact it has | throughout their lives(삶전반에걸쳐) | 
+			-I'm actually quite surprised that we don't already have such a thing | quite surprised that | we don't arealdy have(지체의느낌, 아직..아니) | we don't have .. yet | such a thing(그런거, 이런거)
 	
-
+---2번 392
 -title : 
 	-script :	
 	
