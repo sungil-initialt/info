@@ -610,6 +610,56 @@ Markup language and DOM :
 		-----------
 
 
+-Static Import : 자주 사용하게될 static 클레스에 대해 import를 static하게 하면 사용할때마다 매번 모든 경로를 쓰지 않아도 된다.
+	---
+	import static java.lang.System.*; ->static import해 논는다.
+	class StaticImportExample{  
+		public static void main(String args[]){  
+			 
+		 out.println("Hello"); //매번 System.out하지 않아도 된다.
+		 out.println("Java");  
+		
+	 }   
+	} 	
+
+
+-Varargs (Variable Argument) : 메소드의 파람을 가변적(0개부터 n개)으로 받아들일수 있는 구조이다
+	---
+	void display(String... values){ ->타입에 ...을 표기하여 적용한다, 기존에도 void display(String[] args) 이렇게 유사히 할수 있었지만..훨씬 개선? 된듯.
+		for(String s:values){  ->내부에서는 Enhanced For Loop를 이용해서 활면 하면 된다.
+			System.out.println(s);  
+		}
+	}
+	
+	display(); ->파람이 있던 없던 모두 동일한 메소드를 호출한다.
+	display("1");
+	display("1", "2"); 
+	
+	-기본룰: 가변변수는 메소드에 하나만 존재해야 하며 반드시 마지막 파람에만 적용 가능하다.
+		---
+		void display(Aclass aclass, int intvalue, String... values){} ->aclass, intvalue는 고정된 파람이며 마지막 values만 가변 변수이다.
+
+	
+-Enhanced For Loop : []array 및 collection 객체에 대해 loop를 쉽게 처리하게 해준다.
+	-기본형태 : for(data_type variable : array | collection){ ... }
+	-[](array) : int arr[] = {12,13,14,44};  for(int i:arr){ ... }
+	-collection류 : ArrayList<String> list = new ArrayList<String>(); ... for(String s:list){ ... }
+	
+	
+-Assertion : 간단한 테스트를 하기 위한 목적으로 사용되는 구문?이다.(자바 기본 문법이라 보긴 이상함) 
+	-기본형식 : assert 조건 : 에러 메시지;
+	-기본 예 : assert Myvalue>=18:" Not valid";  ->assert를 따로 생성하고 하는것이 없음, 값이 19면 Exception in thread "main" java.lang.AssertionError: Not valid 에러를 발생 시킨다.
+	-기본 룰 : 
+		-퍼블리 메소드의 아규먼트를 체크하는 용도로는 사용하지 말것을 권고? (아규먼트에서 에러가 나는것은 원래 해당 runtime에러로 처리하는게 맞다는 의미로 보임)
+		-런타임시에도 해당 구문을 동작시키기 위해서는 java -ea Myclass 와 같이 -ea 또는 -enableassertions 옵션을 주고 실행해야함 (원래 목적이 테스트임으로 기본 런타임에서는 실행하지 않는게 맞다고 보는 듯)
+		
+		
+Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않게) 긴숫자에 , 찍듯이 _ 구분자를 쓸수 있게 하고 있다. 약간의 룰이 있기는 한데 특별히 중요해 보이진 않음
+	-int a = 1_000_000; ->1000000 과 같음
+	-float b = 10.5_123f; ->10.5123 과 같음
+	
+-->여기가지
+
 -call by value & reference
 	-call by value : 기본 type(int, long, String..), 값만 복사해서 넘어감
 	-call by reference : 기본 타입이 아닌 클래스, 해당 클레스의 "주소변수"를 복사해서 새로운 "주소변수"를 넘김(두개의 "주소변수"에서 "가리키는" 실제값의 주소는 동일함)
@@ -819,30 +869,213 @@ Markup language and DOM :
 		-attribute : 
 			-생성자를 통해 특정 property 와 동일한 이름으로 셋팅되는 경우도 있으나 주로 필요에 의해 setter, getter에 의해 변경되는 필드?
 			
-	
-	
 
--Generic : 데이터의 타입(data type)을 일반화 하는것, 아직은 알수 없는 클래스 타입을 임의로 잡아놓고 처리하는것, 프레임워크 기술에서 많이 사용됨
-	- 이전에는 모든 클래스를 대표하는 object 클래스를 사용하였으나, 실제 사용에서 다시 타입 케스팅을 하는등 오류가 여지가 많았음. (J2SE 5 부터 generic 지원)
-		-----------
-		class My3Lists<T1, T2, T3> { //클래스 이름옆에 임의의 타입을 적는다.
-			ArrayList<T1> al = new ArrayList<T1>(); //필요한 위치에 아직 알수 없는 임이의 타입을 이용한다.
-			ArrayList<T2> a2 = new ArrayList<T2>();
-			ArrayList<T3> a3 = new ArrayList<T3>();
+-Generic : 데이터의 타입(data type)을 일반화하여 선언 하는것으로 컴파일 단계에서는 아직은 알수 없는 클래스 타입을 임의로 잡아놓고 처리하는것, 프레임워크 기술에서 많이 사용됨
+	-전에는 모든 클래스를 대표하는 object 클래스를 사용하였으나, 실제 사용에서 다시 타입 케스팅을 하는등 오류가 여지가 많았음. (J2SE 5 부터 generic 지원)
+	-예전처럼 object로 대처하는 방식에서는 실제 클레스를 넣는 사람과 사용하는 쪽에서 알아서 잘 넗고 알아서 잘 타입케스팅을 해서 사용했다. 그러다 보니 개발중 또는 컴파일 시에는 오류가 나지 않던것이 런타임시 발생하는 문제들이 있었음
+		---	
+			List list = new ArrayList();
+			list.add(10); list.add("10");  //서로 다른(int, string) 타입을 넣어도 컴파일시 에러가 나지 않았음			  
+		---
+			List<Integer> list = new ArrayList<Integer뒷쪽은생략가능!!>();
+			list.add(10); list.add("10");  //서로 다른(int, string) 다른 타입을 넣으면 컴파일시 에러가 발생함(런타임 확율을 줄여준다)
+		---
+			List list = new ArrayList();    
+			list.add("hello");    
+			String s = (String) list.get(0); //사용하는 측면에서 항상 알맞은 타입케스팅이 필요함(넣는 쪽과 사용하는 쪽이 다르다면 이를 확실히 하기가 어려울 수 있음)			
+		---
+			List<String> list = new ArrayList();    
+			list.add("hello");    
+			String s = list.get(0); //사용시 타입 케스팅 불필요함
 
-			void metho1(T1 element) {...
+	-사용가능 방식(위치)
+		-제네릭 클레스를 생성하는 과정:
+			-List<String> list = new ArrayList<String>();  
+			-Map<Integer,String> map=new HashMap<Integer,String>();  
+			-List<? super MyClass> list = new ArrayList(); //이 경우 super 클레스가 명확하지 않음으로 사용시 타입케스팅이 필요함(MyClass mc = (MyClass)list.get(0); 또는 MyClassSub 형태의 상속받은 클레스로 케스팅)
+			-List<? extends MyClass> list = new ArrayList(); //??? 될것 같은데.. extend 키워드 사용은 에러는 안나지만 사용시 add할때 에러가남. 확인필요!!
+			
+		-클레스를 정의하는 과정: 해당 T라는 키워드를 해당 클레스 내에서 클레스의 타입으로 활요할 수 있다. 클레스명 옆에 작성, 이러한 형태의 경우 set/get 또는 기본적인 object 메소드를 사용하여 메소드를 만드는거외 특별히 할수있는게 없는듯??
+			-class MyGen<T>{...} 
+			
+		-클레스의 메서드를 정의하는 과정: 해당 E라는 키워드를 해당 메스드 내에서 클레스의 타입으로 활용할 수 있다. (리턴정의 앞쪽에 위치하며 static, non static 메서드 모드에서 사용 가능)
+			-public static <E> void myMethod(E[] elements) {...}
+			-public static <E extends MyClass> void myMethod(E[] elements) {} 
+				-파람 E[]는 내부에서 for문을 통해 처리가능 (ex: for ( T element : elements){...})
+				-특정 클레스를 상속받은 형태만 받을수 있도록 처리함으로써 프레임워크를 개발하는등에 가장 많이 사용 될수 있을것 같음, 특정화된 클레스는 아니지만 MyClass를 상속받은건 확실함으로 타입케스팅 없이 MyClass의 메소드를 내부적으로 사용 가능
+				
+			-public static <E super MyClass> void myMethod(E[] elements) {...} //??? 될것 같은데.. extend 키워드 사용은 에러는 안나지만 사용시 add할때 에러가남. 확인필요!!
+			
+		-메서드의 아규먼트를 정의하는 과정:
+			-private static void myMethod(ArrayList<Integer> al) {...}
+			-private static void myMethod(ArrayList<? extends MyClass> al) {...}
+			-private static void myMethod(ArrayList<? super MyClass> al) {...}
+			-private static void myMethod(ArrayList<?> al) {...}
+			
+	-제네릭 파라미터 컨벤션 : 특별한 의미는 없다, 말그데로 켄벤션이며 해당 타입이 어떤 항목인지를 사용자가 감?이 오게 도와줄 뿐이다.
+		-T - Type
+		-E - Element
+		-K - Key
+		-N - Number
+		-V - Value
+		
+
+-Anotaions : java 어노테이션은 클레스, 인터페이스, 메쏘드, 필드등에 붙여 사용할수 있는 Tag 로써 붙어 있는 해당 항목에 대한 부가적인 정보를 compiler 또는 JVM에 제공한다.(물론 이 정보를 개발자가 사용가능)
+	-어노테이션은 사실 특별한게 아니라 특정인터페이스, 클레스, 필드 등에 어떤 어노테이션이 달려(달려있는지와 설정값또한) 있는지를 컴파일러, JVM(개발자 활용가능)에 알려주고 그에따른 정해진 처리를 할수 있게 도와주는 용도 이다.
+	-어노테이션은 일반 개발자는 직접 개발할 경우가 거의 없고 보통 프레임워크 환경에서 implementation provider가 만들어논 어노테이션을 활용?하는 정도로 사용되고 있다.
+	
+	-Built-In Java Annotations : 자바 자체가 가지고 있는 내장 어노테이션으로 기본? 어노테이션이 정도로 볼수 있다 (기본이란 말은 사용자가 어노테이션을 직접 만들어 낼수도 있다는 의미)
+		-개발자가 코드내에서 사용하는 어노테이션 :
+			-@Override : 메소드에 테그하여 해당 메소드는 상속받아 override 하는 것임을 나타낸다. (개발자가 참고적의미로 도움이 될수도 있고 컴파일러도 참고하여 super 클레스에 해당 메소드가 없다면 오류를 내주는 등의 역할을 할수 있게 해준다)
+			-@SuppressWarnings : 해당 메소드에 Warning이 있더라도 컴파일시 무시하도록 해준다. (운영 편의적 느낌?)
+			-@Deprecated : 해당 메소드가 또는 필드가 없어 질수 있음으로 사용하지 않도록 개발 또는 컴파일시 어닝을 제공한다.(당장의 사용은 가능하다)			
+			-@SafeVarargs : 제너릭 같은 가변인자 매개변수를 사용할 때 경고를 무시합니다. (자바7 이상), 좀더확인 필요!
+			-@FunctionalInterface : 람다 함수등을 위한 인터페이스를 지정합니다. 메소드가 없거나 두개 이상 되면 컴파일 오류가 납니다. 좀더확인 필요!
+			
+		-Meta Annotation : 어노테이션을 만들때 만들어질 어노테이션의 특성?을 정의 하기 위한 어노테이션 이다.
+			-@Target : 해당 어노테이션을 어느 어느 항목에 태깅할수 있는지를 정의한다. (ElementTypes = TYPE, FIELD, METHOD, CONSTRUCTOR, LOCAL_VARIABLE, ANNOTATION_TYPE, PARAMETER)
+				-한개일경우 : @Target(ElementType.TYPE)  -> 인터페이스나 클레스에만 붙일수 있는 어노테이션
+				-다수일경우 : @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) ->인터페이스나 클레스, 변수(필수), 메소드에도 붙일수 있는 어노테이션
+				
+			-@Retention : 어노테이션의 기능?이 언제까지 유효한지에 대한 정의 이다. (RetentionPolicy = SOURCE(개발과정에만적용), CLASS(컴파일러까지적용), RUNTIME(JVM,실행환경에도적용))			
+				-@Retention(RetentionPolicy.RUNTIME)  ->해당 어노테이션은 JVM까지 적용되어 실행환경에서도 역할을 한다.
+			
+			-@Inherited : 기본적으로 어노테이션은 상속되지 않지만 해당 어노테이션을 태깅하여 만들어지 어노테이션은 해당어노테이션이 붙은 클레스를 상속받아 반들어진 클레스에게 까지 영향을 준다.				
+			-@Documented : 해당 어노테이션을 태깅하여 만든 어노테이션을 사용하는 클레스를 사용할때 java Doc(설명)에 관련 내용이 나타난다고 하는데.. 잘 사용하지 않는듯 하고.. 이부분은 java 도큐먼트부분과 함께 다시 봐야할듯?
+			-@Repeatable : 반복적으로 어노테이션을 선언할 수 있게 한다. 좀더확인 필요!
+			
+	-Custom Annotations : 개발자는 직접 어노테이션을 만들어 사용할 수 있다.(실제 그럴일은 별로 없지만..)
+		-어노테이션 타입 :
+			-Marker Annotation : 단순히 해당 항목(인터페이스, 클레스, 필드)에 어노테이션이 붙어 있는지 없는지만 확인하는 용도
+				-생성 : 
+					---
+					@Retention(RetentionPolicy.RUNTIME)  ->런타임시까지 적용됨
+					@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) ->인터페이스, 클레스, 필드, 메소드에 해당 어노테이션 적용이 가능하게 됨
+					public @interface MyAnnotation{}  
+				-활용 :
+					---
+					@MyAnnotation  ->클레스에 어노테이션 적용
+					public class Myclass {
+						@MyAnnotation ->메소드에 어노테이션 적용
+							public void myMethod {
+									...
+							}					
+					}
+							
+			-Single-Value Annotation : 어노테이션 여부와 하나의 설정값을 갖을수 있는 어노테이션
+				-생성 :
+					---
+					@Retention(RetentionPolicy.RUNTIME) ->런타임시까지 적용됨
+					@Target(ElementType.FIELD) ->필드에 해당 어노테이션 적용이 가능하게 됨					
+					public @interface MyAnnotation {
+							String value() default "This is StringInjector."; ->value라는 String 타입의 설정값을 하나 갖을수 있고 디폴트값이 지정됨
+					}
+				-활용 :
+					---
+					public class Myclass {
+						@MyAnnotation("My name is X") ->name 필드에 어노테이션이 지정되었고 
+						private String name;
+						...
+					}
+			
+			-Multi-Value Annotation : 어노테이션 여부와 다수의 설정값을 갖을수 있는 어노테이션
+				-생성 :
+					---
+					@Retention(RetentionPolicy.RUNTIME) ->런타임시까지 적용됨
+					@Target(ElementType.FIELD) ->필드에 해당 어노테이션 적용이 가능하게 됨					
+					public @interface MyAnnotation {
+							String value1() default "This is StringInjector."; ->value라는 String 타입의 설정값을 하나 갖을수 있고 디폴트값이 지정됨, String, enum 및 기본타입으로 만들수 있으면 기본타입의 []배열 형태도 가능
+							int value2() default 0;
+					}
+				-활용 :
+					---
+					public class Myclass {
+						@MyAnnotation(value1="My name is X", value2=10) ->name 필드에 어노테이션이 지정되었고 두개의 설정값을 셋팅해 줬다.
+						private String name;
+						...
+					}
+					
+	-어노테이션 활용 
+		-간단 버전 :
+			---
+			class Hello{  
+			@MyAnnotation(value=10)  ->메소드에 어노테이션 적용 및 10 설정(어노테이션은 만들었다 치고..)
+			public void sayHello(){System.out.println("hello annotation");}  
+			}  
+  
+			---
+			class TestCustomAnnotation1{  
+			public static void main(String args[])throws Exception{  
+				
+			Hello h=new Hello();  
+			Method m=h.getClass().getMethod("sayHello");  				
+			MyAnnotation manno=m.getAnnotation(MyAnnotation.class); ->특정 클레스의 메소드에 해당 어노테이션이 적용되어있는지 확인(설정값도포함)
+			
+			System.out.println("value is: "+manno.value());  
+			}}  		
+
+		-어드벤스 버전:
+			---
+			@Target(ElementType.FIELD)
+			@Retention(RetentionPolicy.RUNTIME)
+			public @interface StringInjector { ->String 멤버를 갖는 어노테이션 생성
+					String value() default "This is StringInjector.";
 			}
-		}
-		-----------
-		//다향한 조합의 리스트를 갖은 클래스로 생성해 낼수 있다.
-		My3Lists<Integer, Integer, Integer> myList1 = new My3Lists<>();
-		My3Lists<String, String, String> myList2 = new My3Lists<>();
-		My3Lists<Integer, String, Long> myList3 = new My3Lists<>();
-		-----------
+			
+			---
+			public class MyObject {
+				@StringInjector("My name is JDM.") ->어노테이션적용, 값설정
+				private String name;
 
--Reflection : java.lang.reflect.*패키지를 이용하여 주어진 특정 객체(클래스)의 정보를 분석(확인)할 수 있는 기술, https://www.geeksforgeeks.org/reflection-in-java/
+				@StringInjector ->어노테이션 적용
+				private String defaultValue;
+
+				@StringInjector ->어노테이션 적용
+				private Integer invalidType;
+
+				public String getName() {return name;}
+				public String getDefaultValue() {return defaultValue;}
+				public Integer getInvalidType() {return invalidType;}
+			}		
+			
+			--- : Spring의 DI(dependency injection) 처럼 특정 객체의 초기값을 설정하여 대리 생성해 주는 모듈
+			public class MyContextContainer {
+					public MyContextContainer(){}
+					private <T> T invokeAnnonations(T instance) throws IllegalAccessException {
+							Field [] fields = instance.getClass().getDeclaredFields();
+							for( Field field : fields ){
+									StringInjector annotation = field.getAnnotation(StringInjector.class);
+									if( annotation != null && field.getType() == String.class ){ 
+											field.setAccessible(true);
+											field.set(instance, annotation.value());
+									}
+							}
+							return instance;
+					}
+
+					public <T> T get(Class clazz) throws IllegalAccessException, InstantiationException {
+							T instance = (T) clazz.newInstance();
+							instance = invokeAnnonations(instance);
+							return instance;
+					}
+			}
+			
+			--- : 실행
+			public class AnnotationDemo {
+					public static void main(String[] args) throws IllegalAccessException, InstantiationException {
+							MyContextContainer demo = new MyContextContainer();
+							MyObject obj = demo.get(MyObject.class);
+
+							System.out.println(obj.getName()); // print is "My name is JDM."
+							System.out.println(obj.getDefaultValue()); // print is "This is StringInjector."
+							System.out.println(obj.getInvalidType()); // print is "null".
+					}
+			}
+		
+
+-Reflection : java.lang.reflect.*패키지를 이용하여 주어진 특정 객체(클래스)의 메타 정보를 런타임시 확인, 사용할 수 있는 기술, https://www.geeksforgeeks.org/reflection-in-java/
 	-해당 객체가 어떤 메소드, 어떤 필드를 갖고 있는지 알수 있다.
-	-스트링을 값을 통해 해당 이름의 메소드 및 필드에 호출(접근)할 수 있다. 다시말해 메소드 및 필드 접근을 컴파일 이후 실시간으로 처리할 수 있다(획기적인?)
+	-스트링을 값을 통해 해당 이름의 메소드 및 필드에 호출(접근)할 수 있다. 다시말해 메소드 및 필드 접근을 컴파일 이후 실시간으로 처리할 수 있다(획기적인데?!!)
 	-주로 프레임워크 기술 또는 개발툴, 디버깅툴 개발 기술에 활용 된다.
 
 
@@ -1119,7 +1352,7 @@ Markup language and DOM :
 		-----------
 
 	-버그 및 tip :
-		-gradle depency 업데이트 후 sts gradle dependencies에 반영이 안되는 경우 : project->sts gradle-> refresh all 해본다.
+		-gradle dependency 업데이트 후 sts gradle dependencies에 반영이 안되는 경우 : project->sts gradle-> refresh all 해본다.
 
 
 -jenkins server : continuous integration and continuous delivery (CI/CD) server(pipeline) written in Java, Stable release	2.176.1, MIT License
@@ -4107,7 +4340,7 @@ Template Engine
 	-package-lock.json : 패키지의 내부 dependency(그 dependency 마다 내부에 또 있구..) 마다 버전들이 있는데 그 하위 버전들까지 최상이 패키지는 알기 어렵다,
 		-그리고 그 버전도 특정 버전이 아니고 범위로 지정되는 경우도 많아서 현재 나의 패키지를 위해 하위 패키지들이 어떤 버전으로 설치되어 있는지 알기 어려움,
 		-그러한 일련의 모든 패키지 디펜던시 트리를 제공해 주는 역할을 한다. package.json 파일이 변경되는 시점에 변경된 내용을 기반으로 현재 설치된 정보를 재 정리 하게됨
-		-depency 모듈을 함게 배포하지 않는 경우 반드시 해당 파일도 같이 배포되야 해야 안정적임, (package-lock.json 파일도 git을 통해 관리 할것)
+		-dependency 모듈을 함게 배포하지 않는 경우 반드시 해당 파일도 같이 배포되야 해야 안정적임, (package-lock.json 파일도 git을 통해 관리 할것)
 
 	-command :
 		-npm init -y : 해당 폴더에 package.json을 생성해줘서 패키지를 구성할 수 있는 토대를 만들어 줌. 추가로 패키지를 인스톨하게 되면 node_modules(설치된 추가 패키지 저장 폴더) 및 package-lock가 생성
