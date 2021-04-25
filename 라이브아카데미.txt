@@ -2548,41 +2548,91 @@
 			-but think about how important person's childhood is | and how much impact it has | throughout their lives(삶전반에걸쳐) | 
 			-I'm actually quite surprised that we don't already have such a thing | quite surprised that | we don't arealdy have(지체의느낌, 아직..아니) | we don't have .. yet | such a thing(그런거, 이런거) 
 	
----2번 392
--title : 
+
+-title : appropriate, proper, collect, right 맞게, 알맞은, 적합한, 잘못된, 제대로
 	-script :	
-	
+		-I don't know if I'm doing it right. 
+		-Why don't you talk to a professional trainer? There are so many different types of exercises and it's important to know which ones are appropriate for you. And not only that, 
+		-there's a proper way of doing any exercise and(but) a lot of people get injured because they don't do them in the collect(right) posture and they don't properly pace their workout.
 
--title : 
+			-I don't know if I'am doing it right | why don't you talk to(누구랑 얘기/상담해 보지그래) | there are so many different types of exercises | it's important to | it's important to know
+			-which ones are appropriate for you | and not only that,(그거말고도) | there's a proper way of doing any.. | a lot of people get injured 
+			-because they don't do them | in the collect(right) pospure | they don't properly pace their workout (페이스조절을 올바르게 못한다.)
+			-the proper way to use chopsticks | an appropriate class for your level
+
+
+-title : 네? 어디요? 어디를 가봤냐고요? 그런 곳이 있다고는 들어봤어요
 	-script :	
-	
+		-Have you been to Dancing Clown (by any chance)? What?(네?) Sorry where?(어디요?) Have I been (to) where? Dancing Clown!
+		-Oh~ no, I haven't. But I think I've heard of it(that place). Isn't that the place where they offer you a free dinner if you go on a stage and sing in front of everybody?
+			-Have you been to | what? | sorry, where? | have I been to where? | I haven't | I've heard of it(that place) | isn't that the place where | if you og on a stage | sing in front of
 
--title : 
+
+-title : 이해가 됐을지 모르겠네요, 제가 맞게 이해한 거라면, ..라는건가요?
 	-script :	
-	
+		-You can only get discount if you have the coupon downloaded throug our website. And you need to be signed up as a member to do that. I hope that makes sense.
+		-Oh, Ok. So, if I understood you correctly, all I need to do is go to your website and download a coupon?
+		-That's right. But to download the coupon, you first need to sign up as a member.
+		-Oh, I see. Dose that mean I can do that right now on my phone and get the discount?
+		-That's right!
+			
+			-get discount | you can only .. if .. (..만하면 ..할수있다) | you can only get discount | you have the coupon downloaded (hv pp, 하게만하면의 느낌?) | through our website 
+			-you need to | be signed up as a member | to do that | I hope that makes sense | Oh, Ok. so..(아,그러니깐..) | if I understood you correctly, | all I need to do is |
+			-download a coupon | But to..(근데..하기위서는) | But to download the coupon | you first need to(뭐먼저해야해) | sign up as a member | Oh, I see. Dose that mean I can.. | right now
 
--title : 
+
+-title : 강아지 옷 사주기
 	-script :	
+		-Well, it's definitely Winter. And While many of us like to stay inside when it's cold, especially when it's snowing outside, dogs alway seem to prefer going out.
+		-These are my dogs, The big one is Amber. She's a Golden Retriver. And the small one is Brodi. He's an Italian Greyhound.
+		-Amber never seem to mind the cold. She even sleeps on the bathroom flor sometimes because the living room is too warm for her. 
+		-But Brodi, on the other hand.. Well, let's just say that Winter is not his favorite season. 
+		-I realized that I need to get somthing warm that he can wear. You know, for when we go out. 
+		-I did a quick search online and I found this website where they had a bunch of different types of clothes made just for Italian Greyhound, and they all looked pretty nice.
+		-I noticed that they had chat support on their website. And I wanted to ask if they had any offline stores in Korea. 
+		-And this is what I aked. "Hi. I'd like to know if you guys have an offline store in South Korea that I can visit and purchase products."
+		-After a while, I got a reply and it's Korean! Turns out, it's actually a Korean company. And that's fine. 
+		-Thta's actually better because it makes it easier for me to have a long term buyer-and-seller relationship, (do) you know what I mean?
+		-Anyway, they told me that they didn't have any offline stores. But, with their help, I was able to give them some precise size measurements of my dog Brodi.
+		-And I was able to put in an order for a really nice coat for him. And it was good timing, too, because they are having a Christmas sale now and I think I got a pretty good deal.
+			
+			-Well, it's definitely Winter | While many of us ... , ...(..하는반면 ..한다) | like to stay inside | especially when it's snowing outside | dogs always seem to | prefer going out 
+			-the big one is | the small one is | Amber never seem to mind | the cold | she even sleep on the bathroom flor | the living room is too warm for her |
+			-But Brodi, on the other hand.. | well, let's just say that.. | is not his favorate season | I realized that I need to | get something warm that he can wear | for when we go out
+			-I did a quick search online | I found this website where | they had a bunch of different types of | clothes made just for Italian Greyhoud | they all looked | pretty nice
+			-I noticed that | they had chat support on their website | I wanted to ask if they had any offline stores | this is what I asked 
+			-I'd like to know if you |  guys had an offline store | that I can visit and purchase products (방문해서 살수 있는) | after a while, | I got a reply and it.. 
+			-Turns out, it's ...(대화체느낌, 알고보니까..) | that's actually better because | it makes it easier for me to | have a long term buyer-and-seller relationship | 
+			-But, with their help, | I was able to give them some precise size measurements of my dog Brodi | I was able to | put in an order for | a really nice coat for him
+			-and it was good timing, too, because | they are having a Christmas sale now | I think I got a pretty good deal
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-title : 영어 다이어리, New Coat
+	-script :	
+		-One thing that was missing from my last video diary, as many of you pointed out, was Brodi actually wearing his new coat. (지난 일기에서 하나빼먹은게, 많은 사람들이 지적했듯, 브로디이다+새콧트를 입은)
+		-I guess I should've mentioned that it hadn't yet arrived at the time I posted that video. 
+		-But today, I'm happy to tell you that it finally came in yesterday and MAN! Was it a satisfying experience! (도착했는데.. 얼마나 기분이 좋던지!)
+		-I mean, of course there's nothing more important than the product itself but I just couldn't get over how awesome the packing was! (상품자체보다 중요한건 없지만, 잊어내다(넘어가다, 극복하다))
+		-As sad as it may sound, for a moment, I had totally forgotten whose gift we were opening. (짠하게 들릴수도 있겠지만, 한동안은 잠시동안은, (우리가 풀고있는게 누구의 선물인지)를 완전 있고 있었다(있었다에서 과거완료형 느낌!)
+		-And I think Amber might still think it's hers. (hers=소유대명사, 그녕의 것, mine=나의것)
+		-Don't worry Amber, you'll get one for Christmas. And Besides, you already have the most beautiful coat in the world.
+		-This is actually Brodi's first Winter as an adult. So he had naver worn a coat like this before. (입은적이 없었다, 없었다에서 과거완료형 느낌!)
+		-And Knowing how easily he scares, we did our best to ease him into it. (겁을 먹는지 알기에, ease + into, forwords.. (조심히 ..하다))
+		-I was actually a little worried that it might take some time for him get to get used to the coat, but he soon started dozing off in it. So we took that as a good sign.
+		-Anyway, so, Brodi, I really hope you like your new coat and now let's think about what to get your sister for Christmas.
+		
+			-One thing that | was missing from my last video diary, | as many of you point out | was Brodi | actually wearing his new coat
+			-I guess I should've mentioned that | it hadn'd yet arrived at the time | I posted that video 
+			-I'm happy to tell you that | it finally came in yesterday | was it a satisfying experience!
+			-there's nothing more important than the product itself | I just couldn't get over how | how awesome the package was!
+			-as sad as it may sound(에즈셋에즈, 잇메이싸운드) | for a moment(한동안은,잠시동안은) | I had totally forgotten whose gift | we were opening 
+			-I think Amber might still think it's hers(소유대명사,그녀의것) | Don't worry Amber, you will get one for Christmas | you'll get one | And besides, | the most beautiful coat
+			-as an adult | he had naver worn | a coat like this before | Knowing how easily | he scares | to ease him into it (조심히 넣다?)
+			-a little worried that | it might take some time | for him | to get used to | the coat | he soon started dozing off in it | started ..ing | he had a doze on the train
+			-I really hope you like .. | let's think about | what to get | your sister for Christmas
+		
+		--->2번, 421
+		
 
 
 
