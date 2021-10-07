@@ -153,6 +153,23 @@
 
 
 [JAVA]
+-compiler :
+	-기본 흐름 :
+		-java code -> 
+			-byte code(java 컴파일러가 생성, class파일로 변환) -> 
+				-기계어(jit코드 또는 어셈블리어? 라 불림, JVM JIT(just-in-time compilation)컴파일러가 생성, 서비스 서버의 CPU에 최적화 해줌, 메소드가 첨 호출되는 시점에 실시간 컴파일하며 이후는 케시되어 사용됨)
+					-jit 컴파일은 필수 사항이 아님, 좀더 최적화하여 속도를 높이기 위한 용도임 (최근 jvm은 java 컴파일러가 생성한 byte코드를 보통은 jit 컴파일하여 속도를 향상 시켜 주고 있음)
+					-jit 컴파일의 경우 java 컴파일을 한 JVM 버전과 서비스 서버의 JVM 버전 또는 H/W 스펙이 다른경우 간혹 오류를 발생시킬수 있다. (젠킨스에서 class 파일을 만들고 서비스 서버와 스펙이 다른 경우 문제가 될수도 있음)
+					
+
+-java(JVM) crash 로그 : java 프로그램이 어떤한 이유에서 전체가 망가질때 JVM이 그때의 상태(H/W, S/W, JVM, process, thread 정보등)에 대해 남겨주는 로그이다. (이유를 알수없이 프로그램이나 tomcat이 죽을때 확인해 볼만 하다)
+	-일반적인 파일명은 hs_err_pid20929.log 형태로 구성 (뒤 숫자는 프로세스ID)
+	-tomcat의 경우 일반적인 저장 위치 : ..../bin
+	-참고할 내용: 
+		-설치된 JVM, JRE 의 상세 버전을 보여줌 : ex> JRE version: OpenJDK Runtime Environment (8.0_222-b10) (build 1.8.0_222-b10)
+		-문제가 발생한 위치를 Current XXXXXX 형태로 알려주는것 같긴한데 확인 필요 : ex> Current thread.... , Current CompileTask.... 
+			-위 xxxx 내용에 대해 google 검색을 통해 원인 분석을 해보는것도 문제 해결의 방법이 될수 있다.	
+					
 -error :
 	-compile error : 언어 syntat상 오류 및 코딩 중 잘못된 구문에 의해 발생하는 에러(서로 다른 타입의 케스팅 및 어싸인 등)로 보통 개발 tool에 의해 컴파일 전 에러가 걸러 진다.
 	-runtime error : 실행중간에 논리적 오류에 의해 발생 (아직 null인 상태의 객체의 메서드를 사용하거나 하는 등)
@@ -171,6 +188,7 @@
 		
 	-그럼 왜 JavaBean으로 명명하고 위의 제약을 만들었을까?
 		-보통 jaavaBean은 특정 프레임워크(servlet engine등)등에 언쳐저서 동작하는 일종의 3rd 파티 클레스의(기능을 확정해주는 lib?) 역할을 하게 된다. 이러한 환경속에서 동작하기 위한 최소한의 규칙을 정의한것 이라고 보면 됨
+		-Spring 에서의 Bean의 개념은 spring 컨테이너에서 관린하는 Object의 개념으로 보기도 한다(물론 해당 object는 위 javaBean의 요건을 충족해야함)
 			-ex : Spring의 IoC Container(=DI Container)를 통해 해당 객체의 생성 및 관리를 맞길수 있도록 하기위해 
 		
 	
@@ -496,13 +514,13 @@ Markup language and DOM :
 -Thread and Runable : Thread를 만들기 위한 class and implement
 	-----------
 	class MyThread extends Thread{
-		public void run(){ //overwirte
+		public void run(){ //overriding
 			for(int i=0; i<1-; i++) System.out.println(i);
 		}
 	}
 
 	class MyRunable implements Runable{
-		public void run(){ //overwirte
+		public void run(){ //overriding
 			for(int i=0; i<1-; i++) system.out.println(i);
 		}
 	}
@@ -523,7 +541,7 @@ Markup language and DOM :
 	}
 	-----------
 	-Runable 장점 : Thread에 비해 장점을 갖음
-		-extends 하지 않으므로 extends가 필요한 경우 사용할수 있다.
+		-extends 하지 않으므로 다른 클레스를 extends해야 할 경우 유용하다.
 		-Thread 객체와 동작 메소드(run)를 구분하여 클래스를 생성 할수 있다. 이경우 메서드를 여러게 만든다면 runalble 객체를 재활용(공유)하여 사용할수 있다. (메모리 이점이 생긴다)
 		-일회성 클래스의 경우 람다 또는 instance class를 생성하여 코드 작성을 간단히 할수 있다.
 
@@ -610,15 +628,14 @@ Markup language and DOM :
 		-----------
 
 
--Static Import : 자주 사용하게될 static 클레스에 대해 import를 static하게 하면 사용할때마다 매번 모든 경로를 쓰지 않아도 된다.
+-Static Import : 자주 사용하게될 static 클레스(!!패키지 경로가 아니라.. 실제 클래스를 설정하는 것이다)에 대해 import를 static하게 하면 사용할때마다 매번 모든 경로를 쓰지 않아도 된다.
 	---
 	import static java.lang.System.*; ->static import해 논는다.
 	class StaticImportExample{  
 		public static void main(String args[]){  
 			 
 		 out.println("Hello"); //매번 System.out하지 않아도 된다.
-		 out.println("Java");  
-		
+		 out.println("Java");  		
 	 }   
 	} 	
 
@@ -626,53 +643,117 @@ Markup language and DOM :
 -Varargs (Variable Argument) : 메소드의 파람을 가변적(0개부터 n개)으로 받아들일수 있는 구조이다
 	---
 	void display(String... values){ ->타입에 ...을 표기하여 적용한다, 기존에도 void display(String[] args) 이렇게 유사히 할수 있었지만..훨씬 개선? 된듯.
-		for(String s:values){  ->내부에서는 Enhanced For Loop를 이용해서 활면 하면 된다.
+		for(String s: values){  ->내부에서는 Enhanced For Loop를 이용해서 활면 하면 된다.
 			System.out.println(s);  
 		}
 	}
 	
-	display(); ->파람이 있던 없던 모두 동일한 메소드를 호출한다.
-	display("1");
-	display("1", "2"); 
-	
-	-기본룰: 가변변수는 메소드에 하나만 존재해야 하며 반드시 마지막 파람에만 적용 가능하다.
+	-기본룰: 가변변수는 메소드의 파람들중 마지막 파람 하나에만 적용 가능하다. (메서드 파람이 가변변수 하나만 존재할 경우 호출자 입장에서 파람을 안줘도 해당 메서드가 호출된다, myCall(int... ints)는 myCall()로도 호출됨)
 		---
 		void display(Aclass aclass, int intvalue, String... values){} ->aclass, intvalue는 고정된 파람이며 마지막 values만 가변 변수이다.
 
 	
 -Enhanced For Loop : []array 및 collection 객체에 대해 loop를 쉽게 처리하게 해준다.
-	-기본형태 : for(data_type variable : array | collection){ ... }
+	-기본형태 : for(ClasType valName : array 또는 collection류){ ... }
 	-[](array) : int arr[] = {12,13,14,44};  for(int i:arr){ ... }
 	-collection류 : ArrayList<String> list = new ArrayList<String>(); ... for(String s:list){ ... }
 	
 	
 -Assertion : 간단한 테스트를 하기 위한 목적으로 사용되는 구문?이다.(자바 기본 문법이라 보긴 이상함) 
 	-기본형식 : assert 조건 : 에러 메시지;
-	-기본 예 : assert Myvalue>=18:" Not valid";  ->assert를 따로 생성하고 하는것이 없음, 값이 19면 Exception in thread "main" java.lang.AssertionError: Not valid 에러를 발생 시킨다.
+	-기본 예 : assert Myvalue>=18:" Not valid(ex메시지로 활용)";  ->assert를 따로 생성하고 하는것이 없음, 값이 19면 Exception in thread "main" java.lang.AssertionError:(메시지) 가 발생됨
 	-기본 룰 : 
 		-퍼블리 메소드의 아규먼트를 체크하는 용도로는 사용하지 말것을 권고? (아규먼트에서 에러가 나는것은 원래 해당 runtime에러로 처리하는게 맞다는 의미로 보임)
 		-런타임시에도 해당 구문을 동작시키기 위해서는 java -ea Myclass 와 같이 -ea 또는 -enableassertions 옵션을 주고 실행해야함 (원래 목적이 테스트임으로 기본 런타임에서는 실행하지 않는게 맞다고 보는 듯)
 		
 		
-Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않게) 긴숫자에 , 찍듯이 _ 구분자를 쓸수 있게 하고 있다. 약간의 룰이 있기는 한데 특별히 중요해 보이진 않음
-	-int a = 1_000_000; ->1000000 과 같음
-	-float b = 10.5_123f; ->10.5123 과 같음
-	
--->여기가지
+-Numeric Literals : 특별한 의미는 없고.. 해당 데이터를 의미?를 좀더 명확하게 하기위해 사용함
+	-자릿수 표기 리터럴 (Underscore 리터럴) : 우리가 읽기 쉬우라고(헷갈리지않게) 긴숫자에 , 찍듯이 _ 구분자를 쓸수 있게 하고 있다. 약간의 룰이 있기는 한데 특별히 중요해 보이진 않음, 타입 리터럴 또는 표기 방식 리터럴과 동시 사용이 가능함
+		-int a = 1_000_000; ->1000000 과 같음
+		-float b = 10.5_123f; ->10.5123 과 같음
+		
+	-타입 리터럴 : L, F, D, e숫자
+		-long long1 = 333L; 해당 데이터가 Long 타입임을 나타냄 (안써도 상관 없음)
+		-float float1 = 333.333F; 해당 데이터가 float 타입임을 나타냄 (double 형과의 구분을 위해 반드시 표기해야함)
+		-double double1 = 333.333D; 해당 데이터가 double 타입임을 나타냄 (소수점에 리터럴리 없는 경우 기본적으로 double형으로 판단하기 때문에 안써도 상관없음)
+			-부동소수점 방식의 float과 double은 자기가 처리할수 있는 소숫점 자리수를 넘어가면 마지막 자리를 올림 처리함.
+			-dobule 및 float 타입의 부동 소수점 자리는 F나 D리터럴 말고 e 리터럴을 사용하여 지수? 방식으로 표기할수도 있다.
+				-float float1 = 3.33333e2F; ->333.333과 동일 (e뒤에 붙는 숫자만큼 소숫점 앞자리부터 뒤로 이동됨)
+				-double double1 = 3.33333e2D; ->333.333과 동일 (수숫점은 디폴트로 더불형을 갖으므로 마지막 D는 생략 가능)
+			
+	-표기 방식 리터럴 : 0x, 0b, 
+		-10진수 : 타입(byte, short, int, long) value = 10; ->특별한 표기가 필요 없다.
+		-16진수 : 타입(byte, short, int, long) value = 0xA ->10과 동일, 0x로 표기한다.
+		-2진수  : 타입(byte, short, int, long) value = 0b1010 ->10과 동일, 0b로 표기한다. 
+		
+
+-Try-with-resources : java가 시스템 리소스(파일같은..)를 사용하는 경우 적절한 try/catch/finally이 필요한데 이에 대한 처리를 쉽게 할수 있게 변경되었다.
+	-파일 리소스에 대한 예 :
+		-싱글 리소스 :
+			---
+			try(FileOutputStream fileOutputStream =newFileOutputStream("/java7-new-features/src/abc.txt"))
+			{      
+				String msg = "Welcome to javaTpoint!";      
+				byte byteArray[] = msg.getBytes(); //converting string into byte array      
+				fileOutputStream.write(byteArray);  
+				System.out.println("Message written to file successfuly!");      
+			
+			}catch(Exception exception){  				
+				//리소스와 관련한 특별한 처리를 직접하지 않아도 된다.
+			}finally{
+				//리소스와 관련한 특별한 처리를 직접하지 않아도 된다.
+			}
+		
+		-멀티 리소스 :
+			---
+			try(    // Using multiple resources  
+        FileOutputStream fileOutputStream =new FileOutputStream("/java7-new-features/src/abc.txt");  
+        InputStream input = new FileInputStream("/java7-new-features/src/abc.txt"))
+			{ ...}  
+				
+
+-Catching Multiple Exception : 각각의 Exception 처리를 한번에 하게해 줌으로써 불필요한 코드를 제거해 준다.				
+        try{    
+            int array[] = newint[10];    
+            array[10] = 30/0;    
+        }    
+        catch(Exception | ArithmeticException | ArrayIndexOutOfBoundsException e){  ->동시에 여러 Exception에 대한 catch를 구성할 수 있다
+            System.out.println(e.getMessage());  
+        }				
+
+
+-String in Switch Statement : String에 대한 Switch 구문을 쉽게 처리해 준다 (if문을 사용하는것 보다 훨씬 간단할 듯)
+	---
+	String game = "Card-Games";  
+	switch(game){  
+	case "Hockey": 
+			System.out.println("This is a outdoor game");  
+			break;  
+			
+	case "Chess": case "Card-Games": case "Puzzles":
+			System.out.println("This is a indoor game");  
+			break;  
+			
+	default:   
+			System.out.println("What game it is?");  
+	}  
+				
 
 -call by value & reference
-	-call by value : 기본 type(int, long, String..), 값만 복사해서 넘어감
-	-call by reference : 기본 타입이 아닌 클래스, 해당 클레스의 "주소변수"를 복사해서 새로운 "주소변수"를 넘김(두개의 "주소변수"에서 "가리키는" 실제값의 주소는 동일함)
+	-call by value : Primitive type(byte, short, int, long and String(string은 privitive 타입은 아니지만 new해서 생성하지 않음으로 포함))을 아규먼트로 넘낄때는 그 값이 복사되어 값이 직접 넘어감
+	-call by reference : Primitive 타입이 아닌 보통의 클래스들은 해당 클레스의 "주소변수"를 복사해서 복사된 새로운 "주소변수"를 넘김(두개의 "주소변수"에서 "가리키는" 실제 오브젝트(인스턴스)는 하나의 동일 오브젝트임)
 
-		-----------
+		-1----------
 		String a = "a", b = "b";
 		public void mytest1(String c, String d) { //내부에서 하는 어떤 행위도 origin 값에 영향을 못준다.
-		-----------
+		
+		-2----------
 		Myclass c = new Myclass()
 		Myclass d = new Myclass()
-		public void mytest1(Myclass c, Myclass d) { //위의 c,d 와 메소드 네의 c,d는 동일한 실제값의 주소를 가리키지만 해당 4개의 주소 변수는 모두 각각임
-			c.setName(d.getName); //주소를 통해 실제 object의 값을 변경했으므로 origin 값이 바뀐다.
-			c = d;                //메소드 내의 c는 메소드 밖의 c와 다른 변수임으로(실제값의 같은 주소를 보기하지만) 메소드내의 c의 주소값을 변경해도 메소드 밖의 c에 주소값에는 영향이 없다
+		public void mytest1(Myclass c, Myclass d) { //원본 c,d 변수와 메소드 파람 c,d 변수는 동일한 오브젝트(인스턴트) 가리키고 있지만 원본c 와 파람c, 원본d와 파람d는 각각의 변수 공간이다.
+			c.setName(d.getName); //원본c와 파람c는 각각의 변수 이지만 동일한 오브젝트(인스턴트)를 가리키고 있기 때문에 파람c를 통해 오브젝트를 변경하면 원본C가 가리키는 오브젝트도 변경된다(정확히는 변경되는게 아니라 애당초 동일한 오브젝트임)
+			c = d;                //파람c에 파람d의 주소를 복사했기 때문에 메소드 내에서 파람c는 더이상 원본 c와 같은 오브젝트를 바라보진 않는다. 하지만 주소 변소가 가리키는 오브젝트가 변경된 것일뿐 여전히 원본 오브젝트는 존재하며 원본c가 가리키고 있다.
+			c.setName("xxx");     //파람c는 이제 파람d의 오브젝트를 가리키기 때문에 원본d 및 파람d가 가리키는 오브젝트에 영향을 미친다.(애초에 동일한 하나의 오브젝트) 하지만 원본 c에는 아무 변화가 없다
 		-----------
 		
 		
@@ -691,47 +772,41 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 		-Wrapper class :  8개의 기본 타입에 해당하는 데이터를 객체로 포장해 주는 클래스를 래퍼 클래스를 말한다. (이것의 이점은 해당 기본 자료형과 관련해 필요한 부가 메서드들을 사용할 수 있게 해준다.)
 			----
 			Integer num1 = new Integer(7); //박싱
-			int int1 = num1.intValue(); // 언박싱
+			int int1 = num1.intValue(); // 언박싱			
 			----
+			
+			-Wrapper 클레스를 사용하는 이유 : 
+				-primitive 타입의 변수를 사용하면 해당 값만 같고 있는 메모리 변수에 불가하기 때문에 해당 값에 대한 여러 부가 메소드를 사용할 수 없는데 Wrapper 클레스를 사용하면 이런 부가 메소드를 사용할 수 있다. (ex : Integer의 경우 compareTo, hashCode, longValue...)
 		
-	-new의 의미 : new는 기본 자료형(literal 형태)이 아닌 클레스를 생성(클레스가 들어갈 메모리 공간을 확보하여)하여 해당 메모리 공간의 시작 주소를 리턴해 준다.
+	-new의 의미 : new는 기본 자료형(Primitive)이 아닌 클레스를 생성(클레스가 들어갈 메모리 공간을 확보하여)하여 해당 메모리 공간의 시작 주소를 리턴해 준다.
 		-!!! 그럼 int a = 10; int b = a; 코드에서 a안에는 실제값인 10이 들어 있는데 그럼 b=a 할때 시스템은 a의 메모리 위치를 어떻게 찾아 a안의 실제값을 b에 어떻게 널까?? (사실 XXclass xxClass = new XXclass(); 형태도 마찮가지임)
 			-!!! 코딩 로직상에서 변수 안에 데이터값(literal) 또는 클레스 주소가 들어가는 문제와 실제 시스템이 b=a 했을경우 a의 메모리 위치를 찾는 부분은 전혀 다른 의미이다. 그건 코딩 영역을 떠난 VM 또는 시스템 상의 처리가 있을 것이다.)
 			-!!! 다시말해 xxClass xc; 이렇게 클레스 변수가 선언되면 해당 클래스의 인스턴스의 주소(인스턴스의 구성에따라 여러 주소를 갖을수 있겠지?)를 담을수 있는 공간이 할당되고 이 공간에 대한 주소는 아마도 VM 또는 시스템이 관리할듯
 			-!!! VM이 관리를 하는것 같고 그 영역은 Code 영역의 메모리일것 같다.(Code 영역이란게 실제 text 형태가 아니라... 연산비트와 주소비트들의 내용일 것으로 생각되기 때문)
 				-!!constant poll : ??
-				-!!Runtime Constant Pool : 위에 각 변수 및 인스턴트들을 참조하는 영역으로 보여짐, 변수?와 물리적 주소의 메핑 테이블 형태로 보임
+				-!!Runtime Constant Pool : 위에 각 변수 및 인스턴트들을 참조하는 영역으로 보여짐, 변수?와 물리적 주소의 메핑 테이블 형태로 보임		
 	
 	
 -java(사실 모든 언어 공통 사항 일듯)의 메모리 관리 형식 :
-	-Code 영역 : 개발자가 작성한 소스코드가 로딩되는 영역으로 텍스트 영역이라고도 함, 프로그램의 함수내용, 제어문, 상수(변화지않는 값임으로 code 취급 되는듯) 데이터가 저장된다.
+	-Code 영역 : 개발자가 작성한 소스코드가 로딩되는 영역으로 텍스트 영역이라고도 함, 프로그램의 함수 내용, 제어문, 상수(변화지않는 값임으로 code 취급 되는듯) 데이터가 저장된다.
 	-Data 영역 : 코드상의 전역변수 및 static변수가 저장되는 영역, 프로그램 종료시 소멸된다.
 	-Stack 영역 : 프로그램이 동작하며 로직상의 처리과정에서 발생되는 데이터를 저장하는 임시 메모리 영역이다, 코드의 흐름(사용자의동작)에 따라 동적으로 추가되고 소멸되고를 반복한다. 
 		-쓰레드를 시작으로 하나의 스텍이 생기고 거기서 함수 호출시 해당 스텍안에 하나의 스텍이 추가됨(하이라키한 구조가됨), 해당 함수에서 사용되는 지역변수 및 매개변수가 저장되는 영역이며 함수가 종료(return) 되면 소멸된다.
 		
-	-Heap 영역 : 클레스가 생성되었을때 해당 클레스의 실제 데이터 영역이다. 해당 클레스의 주소를 갖는 변수는 Data영역, Stack영역에 생성되겠지만 그 주소가 가리키는 실제 데이터의 영역은 Heap 영역에 존재한다.
+	-Heap 영역 : 클레스가 생성(new)되었을때 해당 클레스의 실제 데이터 영역이다. 해당 클레스의 주소를 갖는 변수는 Data영역, Stack영역에 생성되겠지만 그 주소가 가리키는 실제 데이터의 영역은 Heap 영역에 존재한다.
 		-프로그램이 동작하면서 동적으로 늘어다 줄었다 하게 된다.(java에서는 해당 메모리를 명시적으로 릴리즈 해주지 않기 때문에 GC가 해당 주소를 어떤 변수도 참조하고 있지 않은 경우 알아서 가비지컬렉션을 해준다)
 		
 	-!!! Stack 및 Heap 영역의 크기는 VM 또는 시스템이 정하게 되는데(셋팅도 가능하겠지?) 연속된 메모리상에 존재하기 때문에 너무 많은 데이터를 요구하는 상황에서 오류가 발생될 수 있다.
 		-Heap Over Flow (out of memory) : 정해진 heap 메모리 영역이 초과되는 경우 발생, Heap의 용도에서 예측 할수 있듯 너무 많은 객체가 생성되거나 너무 큰 자료(file, 이미지등)등이 로딩된 경우에 발생 함.
 		-Stack Over Flow : 정해진 stack 메모리 영역이 초과되는 경우 발생, Stack의 용도에서 예측 할수 있듯 너무 많은 함수 호출이 일어나는 경우에 발생 함.(무한 루프에 빠져 콜스텍이 무한 늘어나는 경우) 
 				
+
+-클레스들의 변수 생성과 타입 케스팅(Type Casting) 고찰
+	-클레스의 변수를 선언했을때의 메모리 구조(추측해봄)
 	
--access Modifiers (access specifiers or access visibility) : public > protected > default > private
-	-Top level access modifiers : classes, interfaces, enums, annotations
-		-public : 어느 패키지의 클레스에서나 생성, 접근이 가능하다 (제약이 없음)
-		-default : 같은 패키지의 클레스에서만 생성되고 접근이 가능하다 , 상속도 같은 패키지에서만 가능 하다.
-		
-	-Member level access modifiers : fields(변수), constructors, methods 
-		-!!! 위 Top level access modifier가 default이면 내부의 public, protected는 의미가 없음(에러는 안남) 		
-			-public : 어느 패키지의 클레스에서나 필드의 접근 및 메소드 호출이 가능하다 (제약이 없음)
-			-protected : 같은 패키지의 클레스에서만 필드의 접근 및 메소드 호출이 가능하다, 다만 다른 패키지에서는 해당 클레스를 상속 받아서 direct한 방식(super.xxx) 으로는 접근 가능(default보단 느슨함)
-			-default : 같은 패키지의 클레스에서만 필드의 접근 및 메소드 호출이 가능하다
-			-private : 자신 클레스 내부에서만 필드의 접근 및 메소드 호출이 가능하다
-		
-	-결론 : 가능하면 defalt로 이하로만 작성한다.??
 	
--variables (java 변수 종류) : 변수의 종류에 대한 명칭 정리
+
+-variables (java 변수 종류) : 변수의 종류에 대한 명칭 정리 및 생성 시점
 	-instance variable : 해당 class가 생성될때 생성 및 할당
 	-static variable : 해당 class가 생성될때 할당, 동일 클레스가 여러개 생성되더라도 해당 변수는 오직 한개만 생성됨
 	-local variable : 해당 메쏘드가 호출될때 생성, 메소드가 종료되면 사라짐 (stack 영역에 생성)
@@ -744,6 +819,34 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 			}  
 		}
 		-----------
+		
+
+-access Modifiers (access specifiers or access visibility) : public > protected > default > private
+	-Top level access modifiers : classes, interfaces, enums, annotations
+		-public : 어느 패키지의 클레스에서나 생성, 접근이 가능하다 (제약이 없음)
+		-default : 같은 패키지의 클레스에서만 생성되고 접근이 가능하다 , 상속도 같은 패키지에서만 가능 하다.
+		
+	-Member level access modifiers : fields(변수), constructors, methods 
+		-!!! 위 Top level access modifier가 default이면 내부의 public, protected는 의미가 없음(에러는 안남) 		
+			-public : 어느 패키지의 클레스에서나 필드의 접근 및 메소드 호출이 가능하다 (제약이 없음)
+			-protected : 같은 패키지의 클레스에서만 필드의 접근 및 메소드 호출이 가능하다, 다만 다른 패키지에서는 해당 클레스를 상속 받아서 direct한 방식(super.xxx) 으로는 접근 가능(default보단 느슨함)
+			-default : 같은 패키지의 클레스에서만 필드의 접근 및 메소드 호출이 가능하다
+			-private : 자신 클레스 내부에서만 필드의 접근 및 메소드 호출이 가능하다
+			
+			-final : access modifier(해당 변수 또는 메소드를 어디에서 !호출가능 하냐)와는 개념이 조금 다르다. final은 해당 변수, 메소드, 클레스를 값 수정 또는 overriding 할수 있냐의 문제다. (재정의 할수 없도록 하기 위한 조치이다)
+				-final 변수 :
+					-final int i = 100; : 변수 선언과 동시에 값이 할당되면 다시는 값을 변경할 수 없다.
+				
+				-final 메소드 :
+					-final void myRun(){} : 해당 메소드는 다른 클레스에 상속되어서 재정의(overriding) 될수 없다. 다만 해당 클레스를 상속하여 final 메소드를 수정하지 않고 그데로 사용(호출)하는 것은 상관 없음
+					
+				-final 클레스 :
+					-final class Bike{..} : 해당 클레스는 다른 클레스에 상속되지 못한다.(class myClass extends Bike{...}, extends 자체가 불가함)
+					
+		
+	-결론 : 가능하면 defalt 이하로만 작성한다.??
+	
+
 	
 	
 -static 키워드 정리 : static 키워드는 해당 클래스의 인스턴스(new)와 무관하게 해당 클레스가 로딩되는 시점에 해당 영역이 생성된다.(로딩시점이기 때문에 딱 한번이겠지..)
@@ -775,14 +878,94 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 				-synchronize param은 클래스 변수? 어느것이나 상관없음(null은 안되며 String, this 나 모두 그저 하나의 synchronized 위한 플레그 변수로 참조되는 듯 하다.. 그래서 관용적으로 this를 사용하는 듯)
 				-this가 관용적 변수이기는 하나 synchronized 블락이 여러곳에 있을때 모두 this를 사용하게 되면 한곳이 선점되면 모두 대기 상태가 됨으로 적절히 변수를 분할해서 사용해야 할 것이다
 			
-	-!!! 공유된 인스턴스의 국한하여 메쏘드 또는 블럭을 synchronized하는 것이 아니라 해당 클래스를 사용하는 모든 인스턴스에 대해서도 synchronized를 구현 할 수 있다.
+	-!!! 공유된 인스턴스에 국한하여 메쏘드 또는 블럭을 synchronized하는 것이 아니라 해당 클래스를 사용하는 모든 인스턴스에 대해서도 synchronized를 구현 할 수 있다.
 		-synchronized 메소드의 경우는 public static synchronized int myAdd(){ 형태로 해당 synchronized 메쏘드를 static으로 구성하는 방법이 있다.
 		-synchronized 블럭의 경우는 myTotal(){ synchronized(MyClass.flagV) {..}} 형태로 param 클레스를 static 변수로 생성하여 할당하는 방법이 있다.
 			-??? 그런데 막상 테스트 해보면 this의 경우는 공유된 인스턴스에만 씽크가 되는것 같고 일반 클래스 파람의 경우 static이 아니더라도 해당 클레스의 모든 인스턴스에서 씽크되는것 같기도 함... 애매함, 좀더 확인 필요?
 
+-Object & Class & interface: 
+	-Object : (ex) Pen is an object. Its name is Reynolds; color is white, known as its state. It is used to write, so writing is its behavior.
+		-An object is a real-world entity. An object is a runtime entity. The object is an entity which has state and behavior. The object is an instance of a class.
+		
+	-Class : An object is an instance of a class. A class is a template or blueprint from which objects are created. So, an object is the instance(result) of a class.
+		-구성요소 : Fields. Methods. Constructors. Blocks. Nested class and interface
+			-class 에서 알아야할 overriding 개념 : overriding은 메소드를 재정의(abstract 메쏘드 또는 interface 메소드의 경우는 최초 정의 겠지만)하는 것으로 extends한 클레스(보통의 클레스도 extend 하면 orverriding이 가능)의 메소드에 대해서 할수 있다(물론 해당 메소드가 final 또는 static인 경우는 안되겠지만)			
+			
+		-inner class (= nested class = regular inner class) : 다른 클레스 내부에 존재하는 클레스, nested class 라고도 부른다. static nested class 와는 단지 해당 클레스에 static이 붙었는지 여부다)
+			-목적 : 주로 관련있는 클레스를 하나의 클레스 내부로 몰아 넣어서 관리적 측면에서 편의를 취하기 위한 목적이 커보임, 또한 해당 클레스 또는 매소드에서만 사용할 VO 클레스들은 별도의 파일로 빼기 뭐할때 사용 함
+			-종류 : 
+				-1. member inner class : 클레스 내부에서도 클레스 본문에 선언된 클레스 (자신을 감싸고 있는 클레스의 다른 필드나 메소드를 사용할 수 있음, 해당 멤버가 private 일찌라도)이다. 생성 방식에 일반적인 방식가 약간의 차이가 있음!!		
+					----------
+						OuterClass out = new OuterClass();  
+						OuterClass.InnerClass in = out.new InnerClass();  --> out.new 형태로 new의 사용 방식이 조금 다름
+						in.msg();  
+					----------
+				
+				-2. local inner class : 클레스 내부에서도 메소드 내부에 선언된 클레스, 어떤 경우는 for문과 같이 {} 사이에 생성할 수도 있음.(자신을 감싸고 있는 메소드 또는 블럭{}의 다른 필드를 사용할 수 있음)
+
+				-3. anonymous inner class : 추상 클레스나 interface를 상속(extends)하지 않고 생성하면서 바로 overriding 하면서 생성하는 방식의 클레스를 말한다.
+					----------
+						AbsClass abs = new AbsClass(){ --> 추상 클레스 또는 interface 를 상속이 아닌 바로 생성하면서 추상메소드를 overriding 하면서 클레스를 생성하는 방식
+							int absMethod(){
+								return 1;
+							}
+						};
+						
+						int r = abs.absMethod(); --> 바로 사용 가능
+					----------
+			
+				-4. static nested class : 일반적인 regular inner class 와 동일한것인데.. 단지 해당 class가 static으로 되어 있는것, 일반적인 static Top level class 가 갖는 제약을 그데로 갖음
+					-static 제약 : outer 클레스의 static 멤버만 사용할 수 있다든지.. 등등
+					-참고 : top level class 는 일반적을 java 파일 하나에 하나의 클레스를 지정하여 (파일명과 클레스명을 같게해서) 생성한 클레스를 의미한데.. 이름을 왜 그렇게 부른건지는 좀 이상함..
+					
+				-5. nested interface : 클레스의 내부나 interface의 내부에 interface를 선언한 방식 (인너클레스에서 class 선언했다면 여기선 interface를 선언한 차이임)
+					-특별한 기술적 이유 보다는 관련한 interface를 모아서 하나의 클레스로 관리하고자 하는 측면에서 사용하는 듯 함		
+				
+			
+	-AbstractClass : 내부 구현은 다르지만 특정 규격을 미리 마추기 위한(코드도 빌드가 되도록) 기술적 방법이 된다. 그러나 일반 메쏘드를 허용하고 이에 대한 overriding까지 허용하고 있음으로 완벽한? 규격 통제?를 하지 않는듯 하다(interface에 비해)
+		-일반 class와 거의 유사하나 추상 메소드가 존재한다. 해당 클레스를 extends 할 경우 존재하는 추상 클레스는 모두 구현해 줘야 한다.(내용을 비워둘 수는 있겠지만), 
+		-extends는 오직 한개의 추상 메소만 할수 있다(여러개의 추상 클레스가 extends 가능하게 된다면 혹시 동일한 이름의 메소드가 있을경우 어느 클레스에서 호출 또는 어느 클레스의 추상메소드를 overriding한 것인지 모호해 지기 때문이다.)		
+		
+		-이에 반해 interface의 경우는 implements를 통해 여러 interface를 상속할 수 있는데.. 이유는 어차피 interface는 추상 메소드만 갖게 되고 개발자가 직접 구현해야 함으로 어느 것의 호출이든 개발자가 작성한 코드가 실행된다는 의미에서 모호하지 않기 때문이다.
+		-!!! 그런데 이게 java8 이후 부터 interface도 추상클레스가 아닌 default 메소드와 static 메소드를 갖을 수 있게 함으로서 마찮가지로 모호함이 생기긴 했다,(static 메소드의 경우는 그래도 static 방식(클레스네임.메소드)으로 호출되기 때문에 문제는 없다. 테스트 해보면 여러 interface를 implements 했을때 중복되는 default 메소드가 있으면 컴파일 에러가 난다)
+		
+		-extends 하지 않고 추상 메소드를 바로 작성하는 방식으로 new로 생성해서 사용 할수도 있다.
+			-------
+			absClss abs = new absClss() {					
+				@Override
+				public void absM() {
+					// TODO Auto-generated method stub						
+				}
+			};
+			-------
+		
+		-보통의 class 처럼 constructor, field, 추상메소드, 일반메소드를 갖을수 있으며 일반메쏘드의 경우는 overriding도 가능하다.
+		-extends를 통해 상속하는 클레스가(일반클레스든 추상클레스든) constructor(생성자)를 가지고 있을때의 처리 : 상속한 클레스의 constructor에서 상위 클레스의 constructor를 호출해 줘야 한다.
+			-------		
+			public class Implement1 extends AbClass1{
+				Implement1() { //생성자는 public void 이런거 없다.
+					super("param");
+					//todo
+				}
+				...
+			}
+			-------			
+	
+		
+	-interface : 내용상 추상 클레스와 거의 동일하나.. 내부에 모든 메소드가 추상 메소드여야 한다는 점에서 더 엄격한 제약을 두기위한 방법으로 보임. 근데 이게또 java8 이후에는 default와 static 메소드 그리고 static final 필드를 허용함으로써 느슨해지긴 했음, 하지만 default, static 메소드 및 static final 변수의 경우는 overriding 및 변수값 변경이 불가능 함으로 여전희 추상 클레스보다는 좀더 제약을 주기 위한 방법으로 보임		
+		-인터페이스의 필드(변수)는 코드상 명시하지 않아도 컴파일시 public, static, final이 붙게 되며 메소드의 경우 public이 붙게된다. (그래서 public static final을 치지 않아도 에러가 나지는 않음, 하지만 public static final로 동작함)
+		-당연한것이 인터페이스에 필드를 명시한다는 것은 표준적 의미에서? 픽스하기 위함이기 때문일것임으로 수정이 불가하게 하는 것이고 public은 당연히 인터페이스는 누군가가 구현하여 사용하게 하는 목적임으로 public이 아니면 의미가 없기 때문이다.
+		-! 종종 인터페이스가 인터페이스명(파일)만 존재하고 어떤 필드나 어떤 추상 메소드도 포함하지 않고 있는 경우가 있다(body가 비어있음). 예를 들면 자바의 기본 패키지의 클레스 중 Serializable, Cloneable 인터페이스 같은 케이스다.
+			-아무런 추상 메소드도 존재하지 않는데(상속받은 클레스가 overriding 할께 없음) 해당 클레스를 상속받은 클레스들이 실제로 Serializable의 역할이 수행되는 경우를 볼수 있다 이는 어떤 인터페이스의 경우는 단지 Marker 또는 Flag 의 역할을 하기 때문이다 
+			-JVM이 동작하면서 Serializable을 implement한 클레스인지 확인(단순 marker, flag역할)하여 내부 적으로 동작해 주기 때문이다.
+		
+				
+	
+
+		
 
 -JAVA Collection (java collections framework) : JCF는 java가 제공하는 데이터를 담을수 있는 객체?(structures)와 그 활용에 사용되는 유용한 메서드?를 제공하는 class와 interface의 모음이다.
-	-collections는 말그데로 데이터(오브젝트)?를 모아서 관리하는 클레스!로 프레임워크라 명명되지만 실제 활용되는 방식은 하나의 라이브러리와 같다(초기 자바는 collections를 제공하지 않았기 때문에 이 역할을 하는 외부 lib를 사용하곤 했다)
+	-collections는 말그데로 데이터(오브젝트)?를 모아서 관리하는 클레스!로 프레임워크라 명명되지만 실제 활용되는 방식은 하나의 라이브러리와 같다.(초기 자바는 collections를 제공하지 않았기 때문에 이 역할을 하는 외부 lib를 사용하곤 했다)
 	-자바 초기에는 collections라곤 할순 없는 data structure 클레스(array, vector, hashtable)를 제공했다 
 		-특히 array의 경우 해당 object 크기에 맞게 생성시 정해진 싸이즈의 메모리를 확보하여 넣어주는 역할만 했고 vector, hashtable 또한 표준 인터페이스가 없었기 때문에 확장이 쉽지 않았다
 	
@@ -840,9 +1023,8 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 			------
 		
 		
-		
-
 -class Loader : -->여기
+
 
 -Java Regex([레게스, 레귤러익스프레션]): 자바 정규식, string 의 특정 문자(문자열)을 검색하거나 조정하기 위한 API 이다.
 	-특정 문자열에 있어 특정 문자 패턴을 확인하거나 input 값에 대한 vaildation을 처리하기 위한 용도로 활용 할수 있다.
@@ -850,12 +1032,6 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 		-Matcher:
 		-Pattern:
 		-Regex Character classes(Metacharacters): [abc], [^abc], [a-zA-Z], [a-d[m-p]] ....
-
-			
-
--field vs variable
-	-field : class 내부에 선언된 멤버, 혹자는 private로 선언된 member로 한정 하기도 하지만 딱히 올아 보이지 않음, property와 attribute를 모두 아우르는 단어?
-	-variable : 좀더 프로그램적 관점에서 설명한 field의 의미? 다시말해 member를 할당한 변수
 
 
 -property vs attribute
@@ -870,57 +1046,124 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 			-생성자를 통해 특정 property 와 동일한 이름으로 셋팅되는 경우도 있으나 주로 필요에 의해 setter, getter에 의해 변경되는 필드?
 			
 
--Generic : 데이터의 타입(data type)을 일반화하여 선언 하는것으로 컴파일 단계에서는 아직은 알수 없는 클래스 타입을 임의로 잡아놓고 처리하는것, 프레임워크 기술에서 많이 사용됨
-	-전에는 모든 클래스를 대표하는 object 클래스를 사용하였으나, 실제 사용에서 다시 타입 케스팅을 하는등 오류가 여지가 많았음. (J2SE 5 부터 generic 지원)
-	-예전처럼 object로 대처하는 방식에서는 실제 클레스를 넣는 사람과 사용하는 쪽에서 알아서 잘 넗고 알아서 잘 타입케스팅을 해서 사용했다. 그러다 보니 개발중 또는 컴파일 시에는 오류가 나지 않던것이 런타임시 발생하는 문제들이 있었음
-		---	
-			List list = new ArrayList();
-			list.add(10); list.add("10");  //서로 다른(int, string) 타입을 넣어도 컴파일시 에러가 나지 않았음			  
-		---
-			List<Integer> list = new ArrayList<Integer뒷쪽은생략가능!!>();
-			list.add(10); list.add("10");  //서로 다른(int, string) 다른 타입을 넣으면 컴파일시 에러가 발생함(런타임 확율을 줄여준다)
-		---
-			List list = new ArrayList();    
-			list.add("hello");    
-			String s = (String) list.get(0); //사용하는 측면에서 항상 알맞은 타입케스팅이 필요함(넣는 쪽과 사용하는 쪽이 다르다면 이를 확실히 하기가 어려울 수 있음)			
-		---
-			List<String> list = new ArrayList();    
-			list.add("hello");    
-			String s = list.get(0); //사용시 타입 케스팅 불필요함
+-field vs variable
+	-field : class 내부에 선언된 멤버, 혹자는 private로 선언된 member로 한정 하기도 하지만 딱히 옳아 보이지 않음, property와 attribute를 모두 아우르는 단어?
+	-variable : 좀더 프로그램적 관점에서 설명한 field의 의미? 다시말해 member를 할당한 변수
+
+
+-parameter vs argument 
+	-Parameter is variable in the declaration of function.
+	-Argument is the actual value of this variable that gets passed to function.
+		
+
+-Generic : 
+	-정의 : 
+		-java5 부터 추가된 항목으로 어떤 클레스나 인터페이스를 만들때(또는 그 내부의 메소드를 만들때) 그 내부에서 사용할 클레스 타입을 특정한 것으로 미리 지정하는 것이 아니라 추상?화 해서 해당 클레스의 이용자가 그때 그때 정해서 사용할 수 있게 하는 프로그래밍 기술?
+		-단순히 generic 이 뭐냐라고 한다면 이러한 기술적 프로그램 방식?이라 말해야 할듯 하고 일반적으로는 어떤 클레스(또는 메소드가)가 이러한 방식으로 구성되었을때 해당 클레스를 generic 클레스(또는 메소드)라고 말할수 있겠고 그러한 타입을 제네릭 타입으로 선언되었다 말한다.
+		-Generic 이전에도 이러한 동작을 위해 모든 클레스의 super 클레스인 object 타입으로 선언하고 활용하는 부분에서 개발자가 알아서 실제 클레스로 타입 케스팅을 한후 사용할수는 있었으나 이경우 input으로 넣은 클레스와 사용하는 쪽의 타입 케스팅이 미스날경우 런타임시 에러가 발생하는 불안전성이 존재했다. 
+			-컴파일러는 넣는쪽 코드와 쓰는쪽 코드에서 타입케스팅이 서로 적절한지는 판단하지 않고 그저 문법에 맞는지만을 확인, 하지만 제네릭을 사용하게되면 어떤 클레스가 될진 모르지만 문법상 input쪽과 활용쪽에서 동일한 타입으로 전체해야 한다는 문법적 체크를 해줄 수 있다는 것이다.
+			-컴파일러 내부적으로는 generic이 사용되었을때 실제 input 된 클레스 타입을 확인하여 사용하는 측면에 동일한 클레스 타입으로 타입케스팅 처리한 후 컴파일 하는 것으로 보인다(부정확)
+		
+	-활용시 이득 :
+		-최상위 클레스인 object 클레스를 활용하여 명시적으로 타입케스팅하여 사용하던 예전 방식의 문제점인 미스 케스팅으로 인한 런타임 에러 확율을 줄여준다.
+		-제네릭 방식은 특정 미상의 타입 하나로만 정의하는 것이 아니라 특정 클레스(인터페이스포함)를 상속받은 클레스타입들 또는 특정 클레스의 부모 클레스타입, 이런 식으로 대상이 될수 있는 클레스타입에 범위를 줄수 있다
+		-내부적으로 동일한 동작을 하는 메소드를 만들어야 할때 그 인풋 및 리턴 타입이 다른 다른 이유로 중복 코딩해야한는 경우가 있다 이런 경우에 각각을 일일이 구현하지 않고 제네릭 타입으로 선언 하면 코드의 관리 및 개발 편의를 높일 수 있다.
+		-!! 프레임워크가 개발에 중요한 요소가 되면서 프레임워크 내부로 개발자가 생성한 클레스를 인젝션 하는 케이스가 늘어났는데.. 이런 경우에 제네릭 방식의 처리가 매우 효율적으로 활용되고 있다.
+
+	-활용적 측면 :
+		-어떤 클레스가 들어올찌 전혀 예측할 수 없는 상황에서는 사실 활용할수 있는 측면은 크지 않다. 들어온 클레스를 저장했다 내주는(set,get)과 정렬(정렬도 사실 기준이 있어야 하기에 완전모른 상황에선 불가능하기도 함) 정도이다.
+			-!! 어떤 타입의 클레스가 들어올지 모르지만.. 가지고 있다가 내주는 역할은 할수 있다(set, get을 만들더라도 input과 return 타입을 알아야 코드를 만들수 있기 때문에 임의의 타입(generic) 선언이 필요한 것이다.)
+			-!! 또한 어떤 타입이 들어올지 모르기 때문에 할수있는 것이 많이 없지만 그럼에도 instanceof 를 통해 특정 타입일 경우에 대한 처리는 해줄 수 있다.
+				-------
+				public <T> setObj(X obj){
+					if(x instanceof String){...} else {...}
+				}
+				
+				-!!! 만약 클레스의 구조가 child > mother > grandMother 일때 아래와 같음은 주의 해야 한다
+				-child instanceof child : true
+				-child instanceof mother : true
+				-child instanceof grandMother : true
+				
+				-mother instanceof child : fase
+				-mother instanceof mother : true
+				-mother instanceof grandMother : true
+				-------
+		
+		-!!! 그러나 위 내용처럼 단순히 모든타입을 받아주는것을 벗어나 특정 클레스(인터페이스포함)를 상속받은 클레스 또는 특정 클레스의 부모클레스 이런식으로 범위를 주게 되면 그 역할은 훨씬 커질수 있다.
+			-어떤 클레스일지는 모르지만 특정 클레스를 상속받아야 하는 제약이 있다면 그에 따라 그 메소드에 대한 overriding 이 구현되어 있다는 전제로 처리할 수 있는 일이 많아 지기 때문이다.
+				-ex:은행별 업무 처리 클레스를 메인모듈로(프레임워크) 인젝션 받는다 했을때 해당 제네릭 타입을 T extend BankWorkable 형태로 지정하고 BankWorkable 인터페이스에서 은행별 기본 업무에 대한 추상 메소드를 정의 한다면
+					T가 은행별로 고유의 추가 기능들을 갖고 있다하더라도 BankWorkable를 모두 구현했다는 전제이기 때문에 메인모듈(프레임워크)에서 여러 형태의 T를 주입받아 나름의 작업에 활용할 수 있는 범위가 커지게 된다.(이율이 제일큰 은행 클레스를 반환 한다든지..)
+			
+	-제네릭 파라미터 컨벤션 : 특별한 의미는 없다, 말그데로 켄벤션이며 해당 타입이 어떤 항목인지를 사용자가 감?이 오게 도와줄 뿐이다.
+		-T : Reference Type을 의미하며 다시말해 primitive type(ex:int, double, char..)이 아닌 일반적인 클레스타입을 말함(Integer는 primitive int와 다른것임), 보통 생성자나 set,get을 통해 오브젝트를 주고 받기 위한 코드에서 param, return 의 타입을 정의하기 위해 사용될 수 있다
+		-E : Element을 의미하며 보통 Collection(array, list..) 류의 요소로 들어가는 일반적인 객체를 의미하는 듯 함,
+		-N : Number를 의미하며 해당 오브젝트는 Number클레스를 상속받은 객체 즉 int, float, double 형태여야 함을 암시함
+		-K : Key을 의미하며 일반적인 key,value 항목에서 key 의 형태로 활용될 것을 암시함
+		-V : value를 의미하며 일반적인 key,value 항목에서 value 의 형태로 활용될 것을 암시함	
+		-R : Return 타입을 의미하며 generic 메소드에서 표기되는 듯함
+		
+		-제네릭 타입의 상속 관계 및 wildcard(?)의 사용 : extends, super 플 사용하여 제네릭 타입의 범위를 지정할수 있고 이점이 제네릭의 활용성을 높여주는 역할을 한다.
+			-상속관계 : ChildClass -> ParentClass -> GrandParentClass 형태의 상속 관계일때
+			
+			-extends :
+				-class ClassName <XXX extends GrandParentClass> {} : 라고 선언하면 XXX로 올수 있는 클레스는 GrandParentClass(자기자신포함), ParentClass, ChildClass 이다
+		
+			-super :
+				-class ClassName <XXX super ChildClass> {} : 라고 선언하면 XXX로 올수 있는 클레스는 ChildClass(자기자신포함), ParentClass, GrandParentClass 이다
+				
+			-extends 및 super 키워드는 제네릭 타입을 선언하는 두 시점(클레스에 선언부와 메소드 선어부)과 Collection(Java Collections Framework: list, ArrayList, Set, Que, Map(맵은 Collections로 안보는 관점도 있지만..) 클레스의 선언부에 사용할 수 있다.
+					-클레스 제네릭 선언부 : class ClassName <T1, T2, T3 extends MyClass, T4 super MyClass> {...}
+					-메소드 제네릭 선언부 : --
+					-컬렉션 클레스의 선언부 :
+					
+					
+				
+				
+		
+	-제네릭 클레스 및 메소드 생성 방법 : 제네릭 클레스를 생성한다 함은 결국 해당 클레스에서 어떤 파람을 받을때 특정 형으로 고정하지 않고 입력 받을수 있도록 처리 하는 것으로 제네릭 타입을 클레스 선언 역역에 선언하거나 특정 메소드 영역에 선언하거나 할수 있다
+		-클레스 : 제네릭 타입을 클레스 영역에 선언하게 되면 해당 클레스 내부에서 범용적으로 사용 할 수 있다.(단 static 메소드에서는 사용 할수 없다), 하지만 클레스 생성 시점에 해당 타입을 모두 지정해 줘야 하기 때문에 범용적으로 꼭 필요한 부분에 대해서만 정의하고 실제 동작과 관련된 타입은 메소드 영역에서 선언하는게 좋아 보임.
+			----
+			class MyGenClass<T1, T2, E1, N1, K1, V1, R, E2 extends MyAbstractOrInterface, T3 super MyClass>{ //파람 컨벤션의 의미에 맞게 모두 열거해 놓고 생성시 특정 타입으로 받아 올수 있다(컨벤션은 그저 권장일뿐).
+				
+				...
+			}
+			
+		-메소드 : 제네릭 타입을 메소드 영역에 선언하게 되면 해당 메소드 내에서만 사용 할수 있다. 
+				-그럼 클레스에 선언하는게 무조건 좋지 않나 생각될수 있지만 그럴경우 해당 클래스 생성시 너무많은 제네릭 타입을 입력해줘야 할수도 있고 특히 static  메소드를 만드는 경우는 클레스 영역에 선언한 타입을 사용할수 없다. (static 메소드는 클레스가 생성되기 전에 미리 생성되기 때문) 
+	
 
 	-사용가능 방식(위치)
-		-제네릭 클레스를 생성하는 과정:
+		-제네릭 클레스 인스턴스를 생성하는 과정:
 			-List<String> list = new ArrayList<String>();  
 			-Map<Integer,String> map=new HashMap<Integer,String>();  
 			-List<? super MyClass> list = new ArrayList(); //이 경우 super 클레스가 명확하지 않음으로 사용시 타입케스팅이 필요함(MyClass mc = (MyClass)list.get(0); 또는 MyClassSub 형태의 상속받은 클레스로 케스팅)
-			-List<? extends MyClass> list = new ArrayList(); //??? 될것 같은데.. extend 키워드 사용은 에러는 안나지만 사용시 add할때 에러가남. 확인필요!!
+				-List<? extends MyClass> list = new ArrayList(); //??? 될것 같은데.. extend 키워드 사용은 에러는 안나지만 사용시 add할때 에러가남. 확인필요!!
 			
 		-클레스를 정의하는 과정: 해당 T라는 키워드를 해당 클레스 내에서 클레스의 타입으로 활요할 수 있다. 클레스명 옆에 작성, 이러한 형태의 경우 set/get 또는 기본적인 object 메소드를 사용하여 메소드를 만드는거외 특별히 할수있는게 없는듯??
 			-class MyGen<T>{...} 
 			
 		-클레스의 메서드를 정의하는 과정: 해당 E라는 키워드를 해당 메스드 내에서 클레스의 타입으로 활용할 수 있다. (리턴정의 앞쪽에 위치하며 static, non static 메서드 모드에서 사용 가능)
+		
 			-public static <E> void myMethod(E[] elements) {...}
 			-public static <E extends MyClass> void myMethod(E[] elements) {} 
 				-파람 E[]는 내부에서 for문을 통해 처리가능 (ex: for ( T element : elements){...})
 				-특정 클레스를 상속받은 형태만 받을수 있도록 처리함으로써 프레임워크를 개발하는등에 가장 많이 사용 될수 있을것 같음, 특정화된 클레스는 아니지만 MyClass를 상속받은건 확실함으로 타입케스팅 없이 MyClass의 메소드를 내부적으로 사용 가능
-				
-			-public static <E super MyClass> void myMethod(E[] elements) {...} //??? 될것 같은데.. extend 키워드 사용은 에러는 안나지만 사용시 add할때 에러가남. 확인필요!!
+				-public static <E super MyClass> void myMethod(E[] elements) {...} //??? 될것 같은데.. super 키워드 사용은 에러는 안나지만 사용시 add할때 에러가남. 확인필요!!
 			
-		-메서드의 아규먼트를 정의하는 과정:
+			-public <T1, T2> T2 convertValue(T1 fromClass, T2 toValueType) throws IllegalArgumentException { //리턴값이 있는 경우의 형태
+				return toValueType;
+			} 
+			
 			-private static void myMethod(ArrayList<Integer> al) {...}
 			-private static void myMethod(ArrayList<? extends MyClass> al) {...}
 			-private static void myMethod(ArrayList<? super MyClass> al) {...}
 			-private static void myMethod(ArrayList<?> al) {...}
 			
-	-제네릭 파라미터 컨벤션 : 특별한 의미는 없다, 말그데로 켄벤션이며 해당 타입이 어떤 항목인지를 사용자가 감?이 오게 도와줄 뿐이다.
-		-T - Type
-		-E - Element
-		-K - Key
-		-N - Number
-		-V - Value
+
+	
 		
 
--Anotaions : java 어노테이션은 클레스, 인터페이스, 메쏘드, 필드등에 붙여 사용할수 있는 Tag 로써 붙어 있는 해당 항목에 대한 부가적인 정보를 compiler 또는 JVM에 제공한다.(물론 이 정보를 개발자가 사용가능)
+-Anotaions(주석) : java 어노테이션은 클레스, 인터페이스, 메쏘드, 필드 등에 붙여 사용할수 있는 Tag 로써 붙어 있는 해당 항목에 대한 부가적인 정보를 compiler 또는 JVM에 제공한다.(물론 이 정보를 개발자가 사용가능)
 	-어노테이션은 사실 특별한게 아니라 특정인터페이스, 클레스, 필드 등에 어떤 어노테이션이 달려(달려있는지와 설정값또한) 있는지를 컴파일러, JVM(개발자 활용가능)에 알려주고 그에따른 정해진 처리를 할수 있게 도와주는 용도 이다.
 	-어노테이션은 일반 개발자는 직접 개발할 경우가 거의 없고 보통 프레임워크 환경에서 implementation provider가 만들어논 어노테이션을 활용?하는 정도로 사용되고 있다.
 	
@@ -933,18 +1176,18 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 			-@FunctionalInterface : 람다 함수등을 위한 인터페이스를 지정합니다. 메소드가 없거나 두개 이상 되면 컴파일 오류가 납니다. 좀더확인 필요!
 			
 		-Meta Annotation : 어노테이션을 만들때 만들어질 어노테이션의 특성?을 정의 하기 위한 어노테이션 이다.
-			-@Target : 해당 어노테이션을 어느 어느 항목에 태깅할수 있는지를 정의한다. (ElementTypes = TYPE, FIELD, METHOD, CONSTRUCTOR, LOCAL_VARIABLE, ANNOTATION_TYPE, PARAMETER)
-				-한개일경우 : @Target(ElementType.TYPE)  -> 인터페이스나 클레스에만 붙일수 있는 어노테이션
-				-다수일경우 : @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) ->인터페이스나 클레스, 변수(필수), 메소드에도 붙일수 있는 어노테이션
+			-@Target : 해당 어노테이션을 어느 어느 항목에 태깅할수(사용할수) 있는지를 정의한다. (ElementTypes = TYPE, FIELD, METHOD, CONSTRUCTOR, LOCAL_VARIABLE, ANNOTATION_TYPE, PARAMETER)
+				-한개일경우 : @Target(ElementType.TYPE)  -> 인터페이스나 클레스에만 붙일수(사용할수) 있는 어노테이션
+				-다수일경우 : @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) ->인터페이스나 클레스, 변수(필수), 메소드에도 붙일수(사용할수) 있는 어노테이션
 				
 			-@Retention : 어노테이션의 기능?이 언제까지 유효한지에 대한 정의 이다. (RetentionPolicy = SOURCE(개발과정에만적용), CLASS(컴파일러까지적용), RUNTIME(JVM,실행환경에도적용))			
 				-@Retention(RetentionPolicy.RUNTIME)  ->해당 어노테이션은 JVM까지 적용되어 실행환경에서도 역할을 한다.
 			
-			-@Inherited : 기본적으로 어노테이션은 상속되지 않지만 해당 어노테이션을 태깅하여 만들어지 어노테이션은 해당어노테이션이 붙은 클레스를 상속받아 반들어진 클레스에게 까지 영향을 준다.				
-			-@Documented : 해당 어노테이션을 태깅하여 만든 어노테이션을 사용하는 클레스를 사용할때 java Doc(설명)에 관련 내용이 나타난다고 하는데.. 잘 사용하지 않는듯 하고.. 이부분은 java 도큐먼트부분과 함께 다시 봐야할듯?
-			-@Repeatable : 반복적으로 어노테이션을 선언할 수 있게 한다. 좀더확인 필요!
+			-@Inherited : 기본적으로 어노테이션은 상속되지 않지만 해당 어노테이션을 태깅하여 만들어진 어노테이션은 해당 어노테이션이 붙은 클레스를 상속받아 만들어진 클레스에게 까지 영향을 준다.				
+			-@Documented : 해당 어노테이션을 태깅하여 만든 어노테이션을 사용하는 클레스를 사용할때 java Doc(설명)에 관련 내용이 나타난다고 하는데.. 잘 사용하지 않는듯 하고.. java 도큐먼트부분과 함께 다시 봐야할듯?
+			-@Repeatable : 동일한 어노페이션을 여러번 사용할수 있게 해준다.(array 형태로 갖을수 있도록)
 			
-	-Custom Annotations : 개발자는 직접 어노테이션을 만들어 사용할 수 있다.(실제 그럴일은 별로 없지만..)
+	-Custom Annotations : 개발자는 직접 어노테이션을 만들어 사용할 수 있다.(그럴일은 현실에선 별로 없지만..)
 		-어노테이션 타입 :
 			-Marker Annotation : 단순히 해당 항목(인터페이스, 클레스, 필드)에 어노테이션이 붙어 있는지 없는지만 확인하는 용도
 				-생성 : 
@@ -952,7 +1195,8 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 					@Retention(RetentionPolicy.RUNTIME)  ->런타임시까지 적용됨
 					@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD}) ->인터페이스, 클레스, 필드, 메소드에 해당 어노테이션 적용이 가능하게 됨
 					public @interface MyAnnotation{}  
-				-활용 :
+					
+				-적용 :
 					---
 					@MyAnnotation  ->클레스에 어노테이션 적용
 					public class Myclass {
@@ -968,9 +1212,10 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 					@Retention(RetentionPolicy.RUNTIME) ->런타임시까지 적용됨
 					@Target(ElementType.FIELD) ->필드에 해당 어노테이션 적용이 가능하게 됨					
 					public @interface MyAnnotation {
-							String value() default "This is StringInjector."; ->value라는 String 타입의 설정값을 하나 갖을수 있고 디폴트값이 지정됨
+							String value() default "This is StringInjector."; ->value 라는 String 타입의 설정값을 하나 갖을수 있고 디폴트값이 지정됨
 					}
-				-활용 :
+					
+				-적용 :
 					---
 					public class Myclass {
 						@MyAnnotation("My name is X") ->name 필드에 어노테이션이 지정되었고 
@@ -987,61 +1232,110 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 							String value1() default "This is StringInjector."; ->value라는 String 타입의 설정값을 하나 갖을수 있고 디폴트값이 지정됨, String, enum 및 기본타입으로 만들수 있으면 기본타입의 []배열 형태도 가능
 							int value2() default 0;
 					}
-				-활용 :
+					
+				-적용 :
 					---
 					public class Myclass {
 						@MyAnnotation(value1="My name is X", value2=10) ->name 필드에 어노테이션이 지정되었고 두개의 설정값을 셋팅해 줬다.
 						private String name;
 						...
 					}
+			
+			-Type Annotations : java8에서 추가, 이전 어노테이션은 클레스 또는 메소드의 선언부에서만 사용 가능했으나 이제는 클래스 내부의 필드에도 아래와 같이 적용할 수 있게됨 (필드값에도 제약을 주는데 활용 가능)
+				---
+				@NonNull String str;  
+				@NonNull List<String>  
+				List<@NonNull String> str  
+				@Encrypted File file  
+				@Open Connection connection  
+				---			
 					
-	-어노테이션 활용 
-		-간단 버전 :
-			---
-			class Hello{  
-			@MyAnnotation(value=10)  ->메소드에 어노테이션 적용 및 10 설정(어노테이션은 만들었다 치고..)
-			public void sayHello(){System.out.println("hello annotation");}  
-			}  
-  
-			---
-			class TestCustomAnnotation1{  
-			public static void main(String args[])throws Exception{  
-				
-			Hello h=new Hello();  
-			Method m=h.getClass().getMethod("sayHello");  				
-			MyAnnotation manno=m.getAnnotation(MyAnnotation.class); ->특정 클레스의 메소드에 해당 어노테이션이 적용되어있는지 확인(설정값도포함)
+			-Repeatable Annotation : java8에서 추가, 동일한 어노테이션을 멤버값을 다르게 여러번 적용가능하게 해준다(어떤 어노테이션이 적용되어 있고 그 값이 어떤, 어떤 일때만 뭔가를 처리하고 싶을때 사용하면 된다)
+				-생성 : 
+					---
+					@Retention(RetentionPolicy.RUNTIME) 
+					@Repeatable(value = Colors.class) -> 의 의미는 해당 어노테이션(Color)이 활용되는 시점에 중복해서 적용되는 경우 Colors라는 이름의 어노테이션으로 검색되어 진다는 의미이다
+					public @interface Color { -> 전형적인 싱글 벨류 어노테이션
+							String value();
+					}
+
+					@Retention(RetentionPolicy.RUNTIME)
+					public @interface Colors { -> Color 어노테이션의 []을 제공
+							Color[] value();
+					}
+					
+				-적용 :
+					---
+				@Color("green") 
+				@Color("blue")
+				@Color("red")
+				public class RGBColor {} 
+					->위 경우 Color 어노테이션이 필드값을 달리해 중복 적용되어 있다. Color 어노테이션 생성시 @Repeatable(value = Colors.class)임으로 이경우 Colors어노테이션으로 검색되어 진다.
+					---
+					
+				@Color("green")
+				public class GreenColor {} -> 일반적인 형태로 하나의 어노테이션만 적용된 모습
+					---
+					
+				-활용 : 어떻게 활용 할지가 가장 중요하겠지!!
+					-케이스1 : 특정 클레스에 특정 어노테이션이 적용되어 있는지 확인하고 있을경우 해당 어노테이션의 필드값을 가져오는 케이스
+					---	
+					public static void main(String args[])throws Exception{  
+						RGBColor rgbColor = new RGBColor();
+						GreenColor greenColor = new GreenColor();
+						
+						Colors colors = rgbColor.getClass().getAnnotation(Colors.class); 
+						-> rgbColor는 Color 어노테이션이 중복적용되어 있으므로 어노테이션 생성 정의에 따라 Colors로도 검색되며 Color[]를 갖고 있는 하나의 Colors object로 반환된다.
+						
+						Color[] rgbColorArray = rgbColor.getClass().getAnnotationsByType(Color.class); 
+						-> 위와 같이 Color[]를 갖고 있는 하나의 Colors object로 받을수도 있지만 Color object Array이로 분리하여 반환 받을수도 있다.(어노테이션이 한번만 적용된 경우 1개짜리 [] 줌)
+
+						Colors greenColors = greenColor.getClass().getAnnotation(Colors.class); -> greenColors는 Color 어노테이션이 중복 정용되지 않았기 때문에 Colors.class로는 찾아지지 않음
+						Color[] greenColorArray = greenColor.getClass().getAnnotationsByType(Color.class); 어노테이션이 한번만 적용되었기 때문에 1개짜리 [] 로 넘겨줌
+					}				 
+					---
+					
+					-케이스2 : 특정 클레스의 특정 메소드에 특정 어노테이션이 적용되어 있는지 확인하고 있을경우 해당 어노테이션의 필드값을 가져오는 케이스 (어노테이션의 생성과 적용은 되어 있다고 치고..)
+					---
+					public static void main(String args[])throws Exception{  						
+						Myclass myClass = new Myclass();  
+						Method method = myClass.getClass().getMethod("myMethod");  				
+						
+						MyAnnotation myAnnotation = method.getAnnotation(MyAnnotation.class); 												
+						System.out.println("value is: " + myAnnotation.value());  
+					}}  		
+					---
+					
+					-케이스3 : Spring의 DI(dependency injection) 처럼 특정 객체의 초기값을 설정하여 대리 생성해 주는 모듈의 동작
+					---
+					@Target(ElementType.FIELD)
+					@Retention(RetentionPolicy.RUNTIME)
+					public @interface StringInjector { -> String 멤버를 갖는 어노테이션 생성
+						String value() default "default";
+					}
 			
-			System.out.println("value is: "+manno.value());  
-			}}  		
+					---
+					public class MyModel {					
+						@StringInjector("mySetValue") -> string 필드에 어노테이션적용 및 어노테이션 필드 값 설정
+						private String value1;
 
-		-어드벤스 버전:
-			---
-			@Target(ElementType.FIELD)
-			@Retention(RetentionPolicy.RUNTIME)
-			public @interface StringInjector { ->String 멤버를 갖는 어노테이션 생성
-					String value() default "This is StringInjector.";
-			}
+						@StringInjector -> string 필드에 어노테이션만 적용
+						private String value2;
+
+						@StringInjector -> integer 필드에 어노테이션(String) 적용
+						private Integer value3;
+						
+						private String value4; ->어노테이션이 적용되지 않은 String 필드
+
+						public String getValue1() {return value1;}
+						public String getValue2() {return value2;}
+						public Integer getValue3() {return value3;}
+						public String getValue4() {return value4;}
+					}		
 			
-			---
-			public class MyObject {
-				@StringInjector("My name is JDM.") ->어노테이션적용, 값설정
-				private String name;
-
-				@StringInjector ->어노테이션 적용
-				private String defaultValue;
-
-				@StringInjector ->어노테이션 적용
-				private Integer invalidType;
-
-				public String getName() {return name;}
-				public String getDefaultValue() {return defaultValue;}
-				public Integer getInvalidType() {return invalidType;}
-			}		
-			
-			--- : Spring의 DI(dependency injection) 처럼 특정 객체의 초기값을 설정하여 대리 생성해 주는 모듈
-			public class MyContextContainer {
-					public MyContextContainer(){}
-					private <T> T invokeAnnonations(T instance) throws IllegalAccessException {
+					---
+					public class MyStringInjector { -> DI(dependency injection) 처럼 동작하는 모듈					
+						private <T> T invokeAnnonations(T instance) throws IllegalAccessException {
 							Field [] fields = instance.getClass().getDeclaredFields();
 							for( Field field : fields ){
 									StringInjector annotation = field.getAnnotation(StringInjector.class);
@@ -1051,33 +1345,173 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 									}
 							}
 							return instance;
-					}
+						}
 
-					public <T> T get(Class clazz) throws IllegalAccessException, InstantiationException {
+						public <T> T get(Class clazz) throws IllegalAccessException, InstantiationException {
 							T instance = (T) clazz.newInstance();
 							instance = invokeAnnonations(instance);
 							return instance;
+						}
 					}
-			}
 			
-			--- : 실행
-			public class AnnotationDemo {
-					public static void main(String[] args) throws IllegalAccessException, InstantiationException {
-							MyContextContainer demo = new MyContextContainer();
-							MyObject obj = demo.get(MyObject.class);
+					---
+					public class MyMain {
+						public static void main(String[] args) throws IllegalAccessException, InstantiationException {
+							MyStringInjector myStringInjector = new MyStringInjector();
+							MyModel myModel = myStringInjector.get(MyModel.class);
 
-							System.out.println(obj.getName()); // print is "My name is JDM."
-							System.out.println(obj.getDefaultValue()); // print is "This is StringInjector."
-							System.out.println(obj.getInvalidType()); // print is "null".
+							System.out.println(myModel.getValue1()); -> mySetValue
+							System.out.println(myModel.getValue2()); -> default
+							System.out.println(myModel.getValue3()); -> null (필드가 String이 아님으로)
+							System.out.println(myModel.getValue4()); -> null (필드에 어노테이션이 없었음으로)
+						}
 					}
-			}
 		
+
+-Optional Class : java8 부터 제공, NullPointerException을 관리할 수 있는 일종의 유틸(?)성 클레스 정도?
+	-활용 형태 :
+		---
+		String[] str = new String[10];        
+		str[5] = "JAVA OPTIONAL CLASS EXAMPLE";// Setting value for 5th index  
+		Optional<String> checkNull = Optional.ofNullable(str[5]);  
+		if(checkNull.isPresent()){  // It Checks, value is present or not  
+
+		---
+		String[] str = new String[10];        
+		str[5] = "JAVA OPTIONAL CLASS EXAMPLE";  // Setting value for 5th index  
+		Optional<String> checkNull = Optional.ofNullable(str[5]);  
+		checkNull.ifPresent(System.out::println);   // printing value by using method reference  
+		System.out.println(checkNull.get());    // printing value by using get method  
+		System.out.println(str[5].toLowerCase());     
+
+
+-StringJoiner : 콤마같은 특정 키워드로 스트링값을 구분짓게하여 스트링을 생성할 수 있다 (스트링 앞뒤로 특정 값도 추가 할수 있다), String 생성에 유효한 유틸 클레스 정도이며 java.util package에 포함된다.
+	-활용 형태 :
+		---
+		StringJoiner joinNames = new StringJoiner(","); 					
+		joinNames.add("Rahul");  joinNames.add("Raju");  joinNames.add("Peter");  joinNames.add("Raheem");  							
+		System.out.println(joinNames); -> Rahul,Raju,Peter,Raheem
+		
+		---
+    StringJoiner joinNames = new StringJoiner(",", "[", "]");
+    joinNames.add("Rahul");  joinNames.add("Raju");  joinNames.add("Peter");  joinNames.add("Raheem");  
+		System.out.println(joinNames); -> [Rahul,Raju,Peter,Raheem]
+				
 
 -Reflection : java.lang.reflect.*패키지를 이용하여 주어진 특정 객체(클래스)의 메타 정보를 런타임시 확인, 사용할 수 있는 기술, https://www.geeksforgeeks.org/reflection-in-java/
 	-해당 객체가 어떤 메소드, 어떤 필드를 갖고 있는지 알수 있다.
 	-스트링을 값을 통해 해당 이름의 메소드 및 필드에 호출(접근)할 수 있다. 다시말해 메소드 및 필드 접근을 컴파일 이후 실시간으로 처리할 수 있다(획기적인데?!!)
 	-주로 프레임워크 기술 또는 개발툴, 디버깅툴 개발 기술에 활용 된다.
+	
+	
+-Method Parameter Reflection : 기존 Reflection 과 유사한 개념으로 기존에는 메소드의 파람 네임 정보는 알수 없었으나 java8 부터 특정 옵션으로 컴파일시 클레스의 내부 메소드의 파라미터명 까지 확인할 수 있다.
+	---
+	public class Calculate {  
+    int add(int no1ForAdd, int no2ForAdd){  
+        return (no1ForAdd + no2ForAdd);  
+    }  
+    int mul(int no1ForMul, int no1ForMu2){  
+        return (no1ForMul * no1ForMu2);  
+    }  
+	}
+	---
+	-컴파일 옵션 : javac -parameters Calculate.java , parameters 옵션을 주고 컴파일 되어 있어야 함
+	
+	---
+	public static void main(String[] args) {  
+		Calculate calculate = new Calculate();    
+		Class cls = calculate.getClass();  
 
+		Method[] method = cls.getDeclaredMethods(); ->선언된 메소드를 가져온다.
+		for (Method method2 : method) {  
+				System.out.print(method2.getName()); ->메서드명 확인
+
+				Parameter parameter[] = method2.getParameters(); ->메서드에서 파라미터 정보를 가져온다.
+				for (Parameter parameter2 : parameter) {  
+						System.out.print(""+parameter2.getParameterizedType()); ->메서드 파라미터 타입 확인
+						System.out.print(""+parameter2.getName()); ->메서드 파라미터 실제명칭 확인
+				}  
+		}
+	}
+
+	
+-Java Nashorn(javaScript engine) : Nashorn JVM 의 공식 javascript 엔진 이다. (ECMAScript 5.1 스펙을 구현하였으며 google V8엔진과 경쟁?하는 스펙이다.)
+	-Nashorn은 런타임에 js을 java 바이트코드로 컴파일 한다.
+	
+	-ci 툴을 이용한 js 실행 : 커맨트 창을 통해서 jjs myJs.js 형태로 js 파일을 실행할 수 있다.
+	-java 코드 안에서 js 파일 실행 : 
+		---
+		ScriptEngine ee = new ScriptEngineManager().getEngineByName("Nashorn"); ->js 엔진 생성
+    ee.eval(new FileReader("js/hello.js")); -> js 파일을 찾아서 실행 (print->stdout으로 출력됨, 브라우저의 다른 기능에 대한 js 코드는 어떻게 실행될까?? 확인 필요)
+		---
+	
+	-java 코드 안에서 js 코드 실행 :
+		---
+		ScriptEngine ee = new ScriptEngineManager().getEngineByName("Nashorn");  
+		ee.eval("print('Hello Nashorn');"); -> js print의 경우 java의 stdout 으로 출력되지만 브라우저 디펜던시가 있는 코드는 어떻게 될까?
+		---
+		
+	-java 코드 안에서 js 파일로 variable(param) 값을 넘기며 실행 : 정확히는 function에 param을 넘기는 것이 아니라 동일한 이름의 변수에 값을 넘기는 방식
+		---
+		ScriptEngine ee = new ScriptEngineManager().getEngineByName("Nashorn");  
+		Bindings bind = ee.getBindings(ScriptContext.ENGINE_SCOPE); -> 어떤 의미인지 확인 필요!!
+		bind.put("name", "MyName"); -> js 파일에 name이란 param의 값으로 "MyName" 값을 전달
+		ee.eval(new FileReader("js/hello.js")); -> js 파일 실행
+		---
+		
+	-jjs로 js를 실행시 js에서 java 객체를 사용 하며 실행 :
+		---
+		print(java.lang.Math.sqrt(4)); -> java의 java.lang.Math.sqrt(int)를 직접 호출 가능, 이러한 방식으로 내가 만든 java function을 js에서 호출해서 사용하는 방법도 괜찮을듯.. 근데 딱히 필요한 이유를 모르겠음!?
+		
+		---
+		var importFile = new JavaImporter(java.util); -> java.util 패키지 import
+		var a = new importFile.ArrayList(); ->java.util.ArrayList 생성
+		a.add(12);  
+		---
+
+	-java 코드에서 js 파일의 function을 호출(param도 넘길수 있다) 하며 실행 : 변경성이 많은 function을 js로 빼놓고 수시로 변경하여 사용가능하게 할수 있는 장점?은 있는듯.. (전체 빌드를 하지 않아도 되니깐 조금 좋은 순 있을듯)
+		---
+		var functionDemo1 = function(){  -> js 파일에 functionDemo1 생성
+			print("This is JavaScript function");  
+		}  
+		var functionDemo2 = function(message){  -> js 파일에 functionDemo 생성(param 포함)
+				print("Hello "+message);  
+		} 
+		
+		---
+		ScriptEngine ee = new ScriptEngineManager().getEngineByName("Nashorn"); -> js 엔진 생성
+		ee.eval(new FileReader("js/hello.js")); -> js 파일 로딩? 
+		Invocable invocable = (Invocable)ee;        
+		invocable.invokeFunction("functionDemo1"); -> functionDemo1 호출
+		invocable.invokeFunction("functionDemo2","Nashorn"); -> functionDemo2 호출 with 파라미터
+		--- 
+				
+				
+-Java loop문 : 다양한 형태의 loop문을 제공하고 있다.
+	-arry([]) 또는 List 형 :
+		-for (int i : intArr) -> 대상이 array([])
+			---
+			int[] arr = {5,8,1,0,6,9};  
+			for (int i : arr) {  
+				System.out.print(i+" ");  
+			} 
+			---
+			
+		-for (Myclass myclass : myclassList) -> 대상이 List
+			---
+			-if(!list.isEmpty()){  
+					list.forEach(System.out::println);  
+			---
+	
+	-iterator 형 :
+		---
+		Iterator<String> itr=list.iterator();  
+		while(itr.hasNext()){  
+			System.out.println(itr.next());  
+		} 
+		---
+		
+	
 
 -Callback & listener & handler : 본질적으로 유사하다, 개발자 측면에서 다른점은 callback은 상황이 될때 이걸 호출해줘(처리할코드를포함), listener은 특정 상황이 될때 이걸 호출할께 여길 구현해놔, handler는 이것좀 처리해줘(메시지를 보낸다) 요청하면 처리른 main(?) 프로세스에서
 	-callback : callback interface를 구현한 클레스를 main(?) 프로세스에 넘겨주는 형태로 구현하며 main은 특점 시점에 넘겨받은 callback 클레스의 특정 메소드를 호출한다.
@@ -1088,7 +1522,7 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 -Exception : 
 	-throw : 임의로 특정 Exception을 발생 시키는 방식, throw를 통해 임의로 Exception을 발생했을 경우 해당 catch문을 구성하거나 throws 통해 호출자에서 처리하도록 구성해야 한다.
 	-throws : 해당 메소드에서 발생한 Exception을 자신을 사용하는 상위 스택에서 처리하도록 하는 방식, 특정 Exception을 넘길수도 있고 특정화 할수 없는 경우 최상위 Exception을 그대로 throws 하면 된다.
-		-!!! throws 를 하지 않더라도 해당 메소드에서 처리하지 못한 Exception이 발생하면 호출자로 넘어간다. 
+		-!!! throws 를 하지 않더라도 해당 메소드에서 처리하지 못한 Exception이 발생하면 호출자로 넘어간다. (또는 catch문에서 처리를 하다가 다시 새로운 exception이 발생되면 상위 콜스택으로 넘어간다)
 		-!!! 그럼에도 throws를 하는 의미는 throws 하게 되면 throw 또는 특정 try를 강제로 해줘야 하는 코드에 대해 해당 메소드 내에서 처리를 하지 않더라도 컴파일시 에러를 내지 않도록 처리해 준다. 
 		-!!! 또한 throws한 메소드를 사용한 호출자에게 해당 Exception에 대한 처리를 하지않으면 컴파일 에러가 나도록 강제해 주는 처리를 해준다.
 		
@@ -1402,9 +1836,6 @@ Numeric Literals with Underscore : 우리가 읽기 쉬우라고(헷갈리지않
 		-비밀번호 변경 : passwd
 
 
-
-
-
 [VM/Hypervisor, Container]
 -VirtualBox : oracle
 	-take(snapshot) : 메모리 상태등을 포함한 현재 서버를 프리징(특정 서버 상태로 돌아갈수 있다)
@@ -1499,33 +1930,47 @@ SVN : Apache, Apache License 2.0, Central VCS 방식
 Git : version control system, local에서 개발자 단독으로 사용가능, Distributed VCS 방식, 2005년 Linus Torvalds가 개발
 	-빠른속도, 단순한 구조, 비선형적인 개발(수천개의 브랜치 동시 개발 가능), 완벽한 분산, 대형 프로젝트에서 검증(안정성)
 	-SVN이 버전별 모든 소스코들 가지고 있다면 Git은 Base 버전과의 차이만을 가지고 있어 매우 가볍고 빠르다.
-	-Git은 Github와 연동하기 전까진 많은 부분 local에서 개발자 본인을 위한 VCS 기능에 충실한 역할을 한다.
+	-Git은 Github와 연동하기 전까진 많은 부분 local에서 개발자 본인을 위한 VCS(Version control system) 기능에 충실한 역할을 한다.
 	-소스코드의 각 상태에 대한 스냅샷의 개념
-	-repository에 들어간(commit) 데이터는 어떤한 경우에도 임의로 변경할수 없다 (SHA-1 해시를 사용하여 체크섬값을 갖는다.)
+	-repository에 들어간(commit) 데이터는 어떤한 경우에도 임의로 변경할수 없다 (SHA-1 해시를 사용하여 체크섬값을 갖는다, 커밋을 삭제할수는 있으나 관리자 관한이 필요하고 이미 누군가가 pull한 경우 문제가 있음)
 
 	-local에서의 코드 상태
 		- working Directory : 실제 작업 디렉토리(수정되면 해당파일은 modified 상태가 됨)
-		- staging Area(가상의 공간으로 index라고 부름) :
+		- staging Area(가상의 공간으로 index라고 부름) : 수정된 파일들 커밋하기 전까지 unStaging 역역에 구분되어 표기된다. 여러 파일이 수정 되었더라도 커밋을 분리하여 처리하고 싶을 수 있다. 
+			-unStaging 영역의 파일을 Staging 영역으로 이동할수 있는데(왔다갔다가능) 이 Staging 영역의 파일들의 하나의 커밋으로 묶여서 처리 되게 된다.(하나의 커밋이 되는 변경된 파일들의 목록이라 보면 된다)			
 		- git directory(Repository) : 수정된(새로생성된) 파일이 최종 commit 되어 해당 파일이 snapshot된 상태
 		
 	-git Graph 에서의 HEAD 의 의미 : 
 		-해당 브랜치에서 내 코드가 위치한 커밋 위치
 		-orgin/HEAD : 해당 Repository의 최초 브랜치(최상의 부모)의 현재 위치를 보여주는듯. 기본적으로 최초 브랜치가 master 임으로 항상 master 브랜치와 같이 움직이지만 최초 브랜치가 master가 아닌경우를 위해 origin/HEAD 를 표기해주는 걸까???
 		
-		-(그냥)HEAD : 
+		-(그냥, local)HEAD : 
 			-개념적 : 
-				-현재 내 로컬 디렉토리의 코드가 위치한 위치. 기본적으로 현재 브랜치의 최상단이 HEAD가 되겠지만 그래프상(sourcetree) 딱히 HEAD라 표기해 주지 않음.
+				-현재 내 로컬 디렉토리의 코드가 위치한 위치. 기본적으로 현재 내가 특정 로컬 브랜치에서 작업 중이라면 해당 브랜치의 최상단이 HEAD가 되겠지만 이경우 그래프상(sourcetree) 딱히 HEAD라 표기해 주지 않음.
 				-특정 브랜치에서 커밋하지 않은 코드 수정이 있는 경우 Uncommited changes라고 표기해 주는데 이 유치가 현재 코드의 위치이고(커밋은 안했지만) 다시말해 HEAD의 의미와 동일함
 				
-			-활용적 :
-				-특정 브랜치로 체크아웃하는 것이 아니라 특정브랜치의 특정 시점으로 체크아웃 하는 개념(코드 트리에서 특정 위치를 클릭하여 체크아웃 가능)
-				-이 경우 로컬 코드가 특정 브랜치의 특정 위치에 있기때문에 해당 브랜치로 체크아웃 했다고 보여주기 애매함(보통 브랜치로 체크아웃하면 해당 브랜치의 최상단에 위치하기 때문), 그래서 현재 로컬의 그 위치를 표기하기 위해 HEAD라는 것으로 표시해줌(일종의 임시 브랜치)
+			-HEAD 관련 케이스 :
+				-특정 브랜치로 체크아웃하는 것이 아니라 특정브랜치(local이든 remote든)의 특정 시점으로 체크아웃 하는 개념(소스트리에서 특정 위치를 클릭하여 이동 가능)
+					-이 경우 로컬 코드가 특정 브랜치의 최상단이 아니기때문에 체크아웃 했다고 말하기 애매함(보통 브랜치로 체크아웃하면 해당 브랜치의 최상단에 위치하기 때문) 그래서 현재 로컬의 그 위치를 표기하기 위해 HEAD라 하는듯
+					-리모트 브랜치의 특정위치로 가는 경우도 local 브랜치의 특정 위치로 가는것과 다를 바 없다. (어차피 브랜치로 생성하기 전까지 그냥 임시 저장 공간에 존제할 뿐이다.)					
+				
 				-그럼, 이 특정위치에서 코드를 수정하고 commit이 가능 할까? 가능함, commit시 HEAD(임시브랜치)에 반영되며 기존 브랜치에서 갈래로 빠져 나온다(origin 브랜치가 없기 때문에 push는 당연히 불가)
+					-push는 같은 이름?의 origin 브랜치에만 가능한것 같기도 함..(소스트리만의 제약일수도 있음)
+					
 				-그럼 다시 다른 브랜치로 체크아웃 하거나 다른 코드 위치로 옮기게 되면 HEAD는 어떻게 될까? 모두 날라감, 임시브랜치의 개념처럼 다른 위치로 옮기게 되면 이미 commit한 기록을 포함하여 모두 소멸됨
+					-소멸 시키고 싶지 않다면 다른 곳으로 이동하기 전해 해당 HEAD를 정식 브랜치로 생성해 놓고 이동하면 됨
+					
 				-그럼 이게 왜 필요할까? 코드의 특정위치로 쉽게 쉽게 옮겨 다니며 이전 코드를 확인해 보거나 해당 시점 코드로 로컬 서버를 돌려보는 용도로 활용할 수 있다.
-				-특정 시점의 코드에서 수정을 해보고 싶은 경우 하면되고 맘에 들면 commit(임시적)도 해서 관리할수 있다. 그러다가 해당 시점의 코드에서 뭔가 재대로 해보고 싶은 경우는 HEAD(임시브랜치)를 새로운 정식 브랜치로 만들면 된다(그냥 옮기면 모두 소멸)
-				-딱히 더이상 할게 없는 경우는 다시 다른 브랜치로 옮기면 깔끔히 모두 소멸 됨
-
+					-특정 시점의 코드에서 수정을 해보고 싶은 경우 하면되고 맘에 들면 commit(임시적)도 해서 관리할수 있다. 
+					-그러다가 해당 시점의 코드에서 뭔가 재대로 해보고 싶은 경우는 HEAD(임시브랜치)를 새로운 정식 브랜치로 만들면 된다(그냥 코드 위치를 옮기면 HEAD에서 커밋한 내용은 모두 소멸된다)
+					-딱히 더이상 할게 없는 경우는 다시 다른 브랜치로 옮기면 깔끔히 모두 소멸 됨
+					
+			-체크아웃 관련 케이스 : 브랜치의 특정 위치로 이동하는 HEAD 케이스도 포함)
+				-커밋을 하지 않고 소스 위치를 변경하면 어떻게 될까?
+					-추가된 파일(새로생성)들은 아무 제약 없이 이동한 코드 위치에서도 새로운 파일 형태로 남아 있는다(커밋을 안해도 이동에 아무 문제가 없다)
+					-기존 파일을 변경하고 커밋을 않하고 이동하려 하면?
+						-이동하려는 위치를 기준으로 그 이후에 해당 파일이 양쪽다 변경한 내용이 없었다면 변경된 내용을 그대로 갖고 해당 위치로 이동 가능하다
+							-옮기려는 시점 이후로는 지금 변경을 빼곤 아무런 작업이 없었어야 함, 작업이 있었더라도 conflict가 나지 않을 상황이면 그대로 갖고 이동할수 있을것도 같은데.. 그렇진 않음, 이유를 생각해볼 필요가 있겠음!!
 
 	-git 설치
 		-ubuntu : sudo apt install git-all, Source Code를 다운받아 설치도 가능(기능 수정이 필요하거나 특정 플러그인의 추가 삭제가 필요한 특별한 경우에 함)
@@ -1549,7 +1994,7 @@ Git : version control system, local에서 개발자 단독으로 사용가능, D
 			-git Command
 				-git 처리 단계 : working Dir(빨강글씨) $git add [fileName] -> stage/index(녹색글씨) $git commit [fileName] -> Repository
 				-git init : 새로운 git repo 생성, .git 디렉토리가 생성됨
-				-git clone repo-url : 해당 git repo-url의 repo를 복제한다. (복제한 repo는 origin repo의 모든 이력을 포함하며 원본 repo가 해당 repo의 orgin repo가 된다.), 로컬 repo도 clone 가능??
+				-git clone repo-url : 해당 git repo-url의 repo를 복제한다. (복제한 repo는 origin repo의 모든 이력을 포함하며 원본 repo가 해당 repo의 orgin repo가 된다.), 로컬 repo도 clone 가능?? (git clone은 svn의 체크아웃 개념으로 개발자가 git 연결해 작업하는 가장 일반적인 방법)
 				-git status [-s] : 해당 repo의 코드 상태 확인 (Untracked files>>새파일, modified>>수정, deleted:삭제파일)
 				-git add [fileName] : 새파일 또는 변경된 파일을 stage/index 단계로 올려 준다
 				-git commit [fileName] [-a(working 상태 모두)] [-m commitMessage] : stage/index 단계의 파일을 repo에 commit
@@ -2529,7 +2974,10 @@ Sourcetree : GIT 클라이언트 툴
 					context-path: /kr/ko //서버 context path 지정
 			-----------
 			
----
+
+
+
+
 
 [DB]
 -DBMS :
@@ -3637,6 +4085,7 @@ Template Engine
 						-Post 방식일때 Response의 Content-type은 application/x-www-form-unlencoded, multipart/form-data, text/plain 만 가능
 						-응답 해더에 Access-Control-Allow-Origin:* 포함 (이것을 보고 브라우저가 판단하여 해당 response를 차단 하지 않는다. *대신 요청한 도메인을 넣어 준다)
 							-API 서버가 Access-Control-Allow-Origin:* 를 항상 내려 주게 설정되어 있다면 이것이 브라우저 사용자의 보안 문제를 해결하기 위한 조치로 볼수 있을까???
+								-실제 처리의 경우 access-control-allow-credentials:true , access-control-allow-origin:* 을 내려줌 (코드상에서 처리할수도 있고 인프라단에서 proxy 서버에서 처리도 가능한듯)
 
 					-Preflight Request : 예비 요청과 본 요청으로 나뉘어서 처리 (프로그램으로 절차를 만드는 것이 아니라 Header 값 조정을 통해 처리)
 					-Request with Credential :
@@ -3667,7 +4116,7 @@ Template Engine
 	-CSRF 방지를 위한 Anti-Forgery Tokens (CSRF Token) : CSRF 방지를 위하여 서버는 페이지를 내려줄때 CSRF 방지 토큰을 함께 내려준다.
 		-개념적 절차 :
 			-해당값은 세션 생성시 랜덤한 값으로 발급하며, session에 저장하고 session의 라이프사이클과 동일하게 관리됨 (보통 로그아웃시 세션이 바뀌겠지??)
-			-CSRF 토큰값은 브라우저의 cookie에 저장 되거나 매 페이지마다 hidden 값으로 내려온다.(둘다 갖고 있을 수도 있다)
+			-CSRF 토큰값은 브라우저의 cookie에 저장 되거나 매 페이지마다 hidden값(페이지의 body 내용중 하나의 값으로)으로 내려온다.(둘다 갖고 있을 수도 있다)
 			-해당 페이지가 POST, PUT, DELETE 등 중요한 request를 전송하는 경우 해당 CSRF 토큰값을 request 해더(Option필드??)에 넣어 함께 전송 (쿠키에도 있을경우 함께 올라감)
 			-서버는 올라온 토큰값이 해당하는 서버쪽 세션의 값과 일치하지 않으면(둘다 있는 경우 cookie, 헤더나 모두 일치해야함) 403 Forbidden 에러를 내려 준다.
 
@@ -3675,14 +4124,31 @@ Template Engine
 			-해커는 숨켜진 스크립트를 통해서 특정 값과 특정인의 cookie값을 특정 서버로 보낼수 있지만 헤더로 올라오는 CSRF 값까지는 알수 없기 때문에 403을 받게 될 것이다.
 				-네이버에 로그인된 session 값이 살아있는 사용자가 같은 브라우저로 해커의 사이트에 들어 갔을때
 				-헤커가 사용자 모르게 스크립트로 네이버쪽의 비밀번호 변경페이지로 request를 날릴수 있다 이때 네이버 세션이 살아 있기 때문에 새 비밀번호변경 양식과 동일하게 구현해서 날린다면 변경이 가능할수 있다(예시)
-				-session값은 cookie로 자동 넘어가니 어쩔수 없지만 사용자가 사용했던 CSTR Token을 알수 없기에 전달 불가 결과적으로 403을 받는다.
+				-(j)session값은 cookie로 자동 넘어가니 어쩔수 없지만 사용자가 사용했던 CSTR Token을 알수 없기에 전달 불가 결과적으로 403을 받는다.
 
 		-실제 적용 예시 :
 			-서버쪽 :
 				-Spring Security에서 CSRF 토큰 적용을 할지를 정할수 있다(WebSecurityConfigurerAdapter??)
 					-특정 url 패턴으로 예외 케이스를 적용할수도 있다.
 
-			-클라이언트 코드 : 서버로 POST, PUT, DELETE 메소드 호출시 서버가 내려준 CSRF 토큰값이 request 해데에 포함되서 올라갈수 있도록 script 구성이 필요함 (submit, Ajax 포함)
+			-클라이언트쪽 : 서버로 POST, PUT, DELETE, PATCH 메소드 호출시(GET은 사용안함) 서버가 내려준 CSRF 토큰값이 같이 올라 갈수 있도록 처리해야 한다.
+				-웹 form  방식 : 웹방식으로 post가 요청된다면 요청 form에 hidden 값으로 토큰을 올려 주면 된다. 
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+				
+				-웹 json 또는 restfull json 방식 : form 데이터를 넣어 주는 것이 아니기 때문에 request 해더에 옵션값으로 토큰을 추가해 주면 된다.
+					---
+					//페이지를 받아오면 토큰을 저장해 뒀다가..
+					<meta name="_csrf" content="${_csrf.token}"/>
+					<meta name="_csrf_header" content="${_csrf.headerName}"/>
+				
+					//ajax로 request 해주면서 해당 값을 request 해더 옵션에 넣어 주도록 처리해 준다.
+					var token = $("meta[name='_csrf']").attr("content");
+					var header = $("meta[name='_csrf_header']").attr("content");
+
+					$(document).ajaxSend(function(e, xhr, options) {
+							xhr.setRequestHeader(header, token);
+					});
+					
 
 	-TabNabbing : 유명 사이트에 피싱 사이트가 팝업으로 뜨는 링크를 만든 후 피싱싸이트가 원래의 유명 사이트(opener/parent)의 주소로 유명사이트와 유사한 피싱사이트로 옮기게 해 정보를 탈취하는 방식이다.			
 		-피싱방식 : 로그인 상태 네이버에서 -> 팝업으로 피싱 사이트가 열리게 처리 -> 피싱사이트가 자신의 창을 열어준 opener 객체(네이버)를 이용하여 네이버 페이지와 유사한 화면으로 앞에 열려있던 실제 네이버 페이지의 url을 옮긴다(사용자모르게) 
@@ -3872,6 +4338,8 @@ Template Engine
 		-단일 쿠키의 최대 허용치 4k를 넘으면 발생 할 수 있음
 		-http의 header의 최대 크기(서버에서 제한하는, 보통 8k)를 넘어서는 경우 발생 할수 있음, 해더크기는 cookie 및 기타 헤어 옵션, url 파람등 모든 값의 합산으로 정해짐.
 
+	-http HEAD method : http 메소드 중 head 는 Get 했을때와 동일한 결과를 내려주나 차이는 HEAD의 경우 response의 Body를 내려 주지 않는다, 해당 request의 메타정보(header)만 확인해 보기 위한 용도다.
+		-활용 : 브라우저가 메타 정보를 확인할 필요가 있을때 사용되며 Get request 전 해당 request의 cache 가 유효한지를 확인하여 재활용하기 위한 용도로 사용된다.(이전과 달라진게 없으면 새 request 않하고 cache 사용)
 
 
 
@@ -4060,6 +4528,9 @@ Template Engine
 			-톰캣의 전체 로그에서 서비스 명으로 구분되어 진다. (물리적으로 동일한 서버를 사용하지만 각각의 독립된 서비스로 구분되어지는 단위? 실제로는 서비스를 여러개 두기보단 tomcat 자체를 분리하여(독립된server.xml) 사용하는듯..)
 			
 		-Connectors : 여러개의 커넥터를 갖을수 있다. 해당 커넥터의 포트로 들어온 request를 해당 Engine으로 전달해 준다. http(http1, http2), ajp(web서버를 통해 들어오는 요청) 두 커넥터를 동시에 사용 할 수 있다.
+			-->여기까지
+		
+		
 			-HTTP Connector : tomcat은 servlet container의 역할을 매인으로 하지만(서블릿을통한 다이나믹한 결과를 제공) http connector를 통해 브라우저로 부터 들어오는 http 요청에 대한 응답도 처리할 수 있다.
 				-http 기본 커넥터로 보통 8080, 아파치와의 연동을 위해 ajp 포트를 쓴다면 사용하지 안하도 됨, 많은 추가 attr를 갖는다(ex: maxHttpHeaderSize)
 				-보통은 앞단에 아파치서버를 두고 static한 컨테츠에 대한 처리를 담당하고 아파치가 proxy 역할을 담당하여 다이나믹한 요청에 대해 tomcat의 AJP 포트로 요청을 한다.(각각의 부하 분산의 의미도 갖는다)
@@ -4371,34 +4842,35 @@ Template Engine
 			-3rd party : 제3의 벤더가 제공한 release 버전을 관리하는 저장소
 		
 		
-		
-		
-
-
 
 [프로젝트 관리 툴]
 -jira : 아틀라시안 에서 만든 프로젝트 관리 툴로 이슈 및 버그 추적, 칸반 보드등을 지원 한다.
-	-구성요소 :
-		-프로젝트 :
-			-데이터 형식 :
-				-이슈 :
+	-데이터 구성 요소(단위) :
+		-프로젝트 : 가장 큰 단위의 구성 요소 (ex: ap몰, 설화수, QA등(QA를 프로젝트의 컴포넌트로 널수도 있겠지... 하기 나름)
+			-컴포넌트(구성요소) : 프로젝트 하위 단위로 내부적으로 구분이 필요한 요소, (ex: PC, android, ios, API, FE..)
+				-이슈 : 해당 프로젝에서 해야할 일을 의미하며 실질적인 작업의 단위이다.
+					-이슈 생성시 주요 구성요 :
+						-이슈 유형 : 큰틀, 버그, 테스트.. 등등 여러 형태를 만들어서 선택 할 수 있는듯, (큰틀은 여러 이슈로 쪼개질수 밖에 없는 경우 그것을 하나의 그룹으로 묶어 관리하기 위한 이슈? 인듯)
+						-Epic Link :
+						-구성요소 : 해당 이슈가 해당 프로젝트의 어느 컴포넌트에 대한것인지를 구분..(컴포넌트중에서 선택 가능한듯)
+						-Sprint : 해당 이슈가 어느 스프린터에서 개선되어 질것인지를 미리 넣을수 있다 (사전에 스프린터가 등록되어 있어야 겠지?)
+						-담당자 및 기타 등등 :
+						
 
-			-뷰여 형식 :
-				-백로그 :
-				-작업중인 스프린트 :
-				-배포 :
-				-보고서 :
-				-이슈 :
-				-컴포넌트
-				-WBS Gantt-Chart :
+	-뷰여 형식 :
+		-이슈 : 해당 프로젝트에 생성된 모든 이슈를 보여 준다 (필터를 통해 컴포넌트 및 담당자를 지정해서 그때 그때 필터링해 볼수는 있다)
+		-배포 : 확인 필요
+		-보고서 :
+		-컴포넌트 :
+		-WBS Gantt-Chart
+		
+		보드 : 프로젝트를 관리하기 위한 편의적 구성을 만들어논 틀? (용도에 따라 스크럼 보드를 만들수도 있고 칸반보드를 만들수도 있다, 한 프로젝트에 대해 한하는 보드를 여러게 만들수도 있고 한보드에 여러 프로젝트를 널수도 있다)
+			-백로그 : 해당 보드에서 관리 대상이 되는 이슈의 목록이다. 보드를 만들때 질의를 통해 해당 보드가 관리할 이슈를 선별해 가져오는 형식이다.
+			-작업중인 스프린트 : 스크럼보드의 경우 스프린트를 만들어 해당 보드의 백로그의 일감들을 특정 주기로(일정) 관리하게 해준다.
+			-배포 : 확인필요
+			-보고서 : 확인필요
 
-		-보드 : 프로젝트의 뷰어 형식의 구성 요소 이기도 하면서 프로젝트를 초월하여 구성도 가능하다.
-			-대시보드 :
-				-시스템 대시보드 : 기본으로 제공되는 대시보드로 프로젝트 목록 및 나에게 할된된 이슈등을 보여준다.
-				-개인 대시보드 : 대시보도 관리를 위해 본인이 원하는 항목으로 구성된 대시보드를 만들 수 있다.
-			-개인보드 : 직접 구성한 보드
-
-			-WBS Gantt-Chart :
+		-WBS Gantt-Chart : 확인 필요
 
 	-용어 :
 		-scrum :
@@ -4672,17 +5144,77 @@ Template Engine
 	-options : 
 		-connection Timeout :
 		-So Timeout :
-		-TCP keepalive : TCP 레이어에서 두 노드가 서로 살아있음을 알리기 위해 주고 받는 데이터 패키 및 그 매커니즘 이다. 주 목적은 상대가 살아있지 않은데 혼자 계속하여 대기하는 상태를 제거하기 위함이다. 
+		-TCP keep Alive : TCP 레이어에서 두 노드가 서로 살아있음을 알리기 위해 주고 받는 데이터 패키 및 그 매커니즘 이다. 주 목적은 상대가 살아있지 않은데 혼자 계속하여 대기하는 상태를 제거하기 위함이다. 
 			-또한 NAT 장비의 경우 일정 시간동안 두 노드가 패킷 교환이 없는 경우 NAT 테이블에서 제거하는 하기때문에 이를 막기 위해서도 필요하다.(장시간 안쓰고 있는 커넥션에 대해서도 포트할당을 해준다면 한계가 있겠지?? 그래서 나름의 룰로 정리하겠지??)			
-			-Keepalive time : 휴지상태에서 얼마동안 유지될경우 Keepalive를 보낼지를 정한다. 보통 2h (15분 미만으로는 설정하지 않는것을 권장)
+			-Keepalive time : 휴지상태에서 얼마동안 유지될 경우 Keepalive를 보낼지를 정한다. 보통 2h (15분 미만으로는 설정하지 않는것을 권장)
 			-Keepalive interval : Keepalive에 대한 응답을 받지 못한경우 얼마뒤에 다시 보내 볼찌.. (tcp_rexmit_interval 값보다 작은 값을 보내서는 안된다.)
 			-Keepalive retry : Keepalive에 대한 응답이 없을때 몇번까지 보내보고 close 할지..
 	
+
 -UDP 기타
 	-multicast :
 	-broadcast :
-
 	
+	
+-Socket : 
+	-추상적인 개념으로 특정 시스템이나 언어에 국한되어 언급되는 것이 아니다. socket은 두개의 다른 프로세스간에(같은 머신이든 다른 머신이든) 데이터를 주고 받기 위한 방식을 제공해 주는 메커니즘 이다.
+	-기본적으로 표준 unix file descriptor 를 이용한다. (socket은 시스템에서 file을 다루는 방식과 유사하다. 파일에 쓰고, 읽듯 해당 file descriptor에 쓰고 읽는 방식이며 내부 하위 처리는 보통 추상화 되어 있다.)
+	-그래서 socket 프로그램을 보면 보통 write, read, close 이름의 메소드가 있는것 같음(파일을 다루는것과 같은 메서드)
+	
+	-socket type :
+		-stream socket : tcp 에서 사용되는 socket으로 데이터의 순서를 보장해 준다 (순서 및 오류를 보정해 주는 메커니즘이 포함되어 있는 것이다.)
+		-datagram socket : udp 에서 사용되는 socket으로 데이터의 순서를 보장해 주진 않지만.. 그만큼 빠른 속도를 보인다.
+		-raw socket : 나중에 확인??
+		-sequenced packet socket : 나중에 확인??
+
+	-java 측면에서 socket :
+		-관련 옵션 :
+			-connection timeout : 클라이언트쪽에만 해당됨, 클라이언트가 서버에 접속(실제 데이터를 주고받는 단계가 아니라 tcp 커넥션을 만드는것 까지임!!) 하려는 시도를 할수 있는 최대 시간 
+				-특정 값을 설정하지 않아도 vm 또는 os 단의 기본 값이 있다, 기본적으로 connection refuse 가 발생하는 시간보다 길다(connection refuse가 먼저 발생하면 timeout은 발생하지 않음)
+					-windows os레벨의 connection timeout : 6s, 12s, 24s, total 42s(3번의 시도를 해보고 Ex발생)
+					-rinux os레벨의 connection timeout : 10s, 20s, 40s, total 70s(3번의 시도를 해보고 Ex발생)
+				
+			-connection refuse : 클라이언트의 접속!이 결과적으로 안되었을때 발생, 연결하려는 포트가 해당 컴퓨터에서 서비스 되고 있지 않거나 커넥션이 full(지연)인 경우 또는 중간의 방화벽/프록시가 연결할수 없음을 통보했을때
+				-ip를 통해 해당 서버(또는 방화벽, 기타 프록시 서버) 까지는 확인된 경우라 상대적으로 timeout에 비해 좀더 빠르게 발생된다.
+				
+			-so timeout (Socket timeout) : 
+				-ServerSocket : 해당 서버로 tcp 커넥션이 맺어질때까지 대기하는 최대 시간이다. 
+					-해당 시간이 지낫는데도  tcp 연결이 안되면 accept Exception 이 떨어진다. Exception이 발생해도 연결이 안되는 것은 아니다. 처리하기 나름이다. 해당 socket은 다시 accept대기로 들어갈 수 있다.
+				
+				-Socket(client) : 연결된 client socket에서(client socket이라 표현했지만 Server쪽 Client쪽 모두 생성되는 socket 이다) inputStream을 통해 데이터를 read하기 위해 대기하는 최대 시간이다.
+
+				-코드 예시 : 
+					-server :
+						---
+						serverSocket = new ServerSocket(3333); -> 3333 포트로 서버 소켓 생성
+						serverSocket.setSoTimeout(3000); -> 해당 소켓으로 클라이언트가 접속(tcp접속)하도록 기다리는 최대 시간(해당 시간이 지나면 socket accept Exception 이 발생, socket이 죽는건 아님!!)
+								
+						-> 클라이언트의 tcp 접속(데이터 통신이 아님!)이 이루지기를 기다린다, 접속시 연결된 socket을 반환. 위 serverSocket.setSoTimeout 값만큼 기다리다 접속이 없으면 Ex 발생
+						serverClientSocket = serverSocket.accept(); 
+						serverClientSocket.setSoTimeout(3000); -> tcp가 연결된 socket에 soTimeout을 설정(연결된 socket에서 inputStream을 통해 데이터를 읽기위해 대기하는 시점의 최대 대기시간이다)
+
+						->위 socket의 setTimeout 값 만큼 getInputStream()에서 대기함, 시간 초과시 readTime Ex가 발생함(socket이 죽는건 아님!!, 에러로 봤을때 java에서는 soTimeout과 readTime은 같은 개념??)
+						BufferedReader inputReader = new BufferedReader(new InputStreamReader(serverClientSocket.getInputStream())); ->inputStream을 얻기위해 soTimeout 값 만큼 대기함
+						receivedMsg = inputReader.readLine();
+			
+					-client :
+						---
+						SocketAddress socketAddress = new InetSocketAddress("localhost", 3333);
+						socket = new Socket(); 
+						
+						-> TCP 커넥션을 맺기위해 시도함(대기), 3초까지 시도하고 실패지 connectionTimeoutEX를 발생시킴(socket이 죽는건 아님!!), 값이 길고 서버가 죽었다면 connectionRefuseEX가 먼저 발생할 수도 있음
+						socket.connect(socketAddress, 3000); 
+
+						socket.setSoTimeout(3000); -> tcp가 연결된 socket에 soTimeout을 설정(연결된 socket에서 inputStream을 통해 데이터를 읽기위해 대기하는 시점의 최대 대기시간이다, 서버쪽이랑 같은 내용)
+						BufferedReader inputReader = new BufferedReader(new InputStreamReader(socket.getInputStream())); ->inputStream을 얻기위해 soTimeout 값 만큼 대기함
+						String receivedMsg = inputReader.readLine();
+
+						PrintWriter outWriter = new PrintWriter(socket.getOutputStream(), false); ->tcp 접속된 socket에서 outputStream을 생성하여 메시지 출력에 이용함
+						outWriter.println("Hello Mr. Server!"); ->outputStream에 메시지를 얹는다.
+						outWriter.flush(); ->outputStream에 올려진 메시지를 socket을 통해 전송
+						
+		-참고 : Tomcat server.xml 의 connector 속성 중 connectionTimeout : TCP 연결된 후, 실제 요청이 수신될 때까지 대기하는 시간이다. HTTP 기본값은 20000ms 이다.
+
 	
 [CODE SET]
 -Encoding type : 
@@ -4813,3 +5345,20 @@ Template Engine
 			
 
 
+[웹 서비스]
+-자동로그인 :	 
+	-pc 웹에서는 보통 보안상의 이유로 해당 기능을 만들지 않는다. (보통 핸드폰을 이용하는 모바일 웹페이지에 적용 가능 함)
+	-로그인 페이지에서 자동 로그인 체크박스를 둔다. 자동로그인 선택후 로그인을 하게 되면 서버는 로그인 처리와 더블어 자동로그인을 할수 있는 토큰값을 클라이언트에 cookie로 내려준다.
+	-일반적인 로그인 사용자 정보는 jsessionid 쿠키값에 매핑되어 서버 세션에 저장 되겠지만 이겠지만 jsessionid 쿠키는 보통 유효시간이 session(브라우저살아있는동안)인 경우가 많다. 
+	-그러나 자동로그인 토큰값은 서버가 정해서 길게 내려주게 한다(30일?)
+	-이후 jsessionid expire 되어 사라지더라도 자동로그인 토큰값이 쿠키로 자동으로 서버로 올라가면서 해당 토큰값을 사용하여 사용자 정보를 조회 후 그 사용자 정보를 새 jsessionID값에 저장해 로그인 처리해줄 수 있다.
+		-그럼 모바일의 경우 jsessionid의 유효기간을 길게 하면 되지 않겠나 생각할 수 있지만 그럴경우 해당 사용자 정보가 jsessionid와 매핑하여 기간동안 서버 세션에 계속 살아 있어야 한다.(리소스 낭비)
+		-그러나 자동로그인 토큰의 경우 DB등으로 관리하여 단순히 어느 사용자 인지 매핑할수 있는 키로만 활용하고 그 키를 이용해서 필요시 사용정 정보를 다시 읽어드려 새롭게 서버 세션에 로딩하는 방식이다.
+		
+		
+		
+		
+[source]
+https://www.baeldung.com/spring-slash-character-in-url :
+happens because Spring Security normalizes the URLs and replaces any double-slash with a single one.
+Spring also normalizes other sequences in URLs, such as path traversals. It takes these precautions to prevent malicious URLs from bypassing the defined security constraints, as explained in the official Spring Security documentation.
