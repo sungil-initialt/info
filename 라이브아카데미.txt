@@ -1257,7 +1257,7 @@
 -title : 영어회화, 대화가이드 04, part1/2, 저란사람 처음봐, 저렇게 고집센 사람은 처음봐, 일상적으로 사용하는 극단적인 표현
 	-script :		
 		-Wow unbelievable(언 빌리 버블). No way. That's impossible.
-		-I've never seen anyone so stubborn (about..). I've naver seen such a stubborn person (about.. 불가능!)
+		-I've never seen anyone so stubborn (about..). I've never seen such a stubborn person (about.. 불가능!)
 		
 		-Yeah, I don't think I've ever seen anyone like that(저런). I've never seen that person(저사람).
 		
@@ -1265,7 +1265,7 @@
 		
 		-Right, I don't think I've ever been under so much stress just having a conversation with someone.
 			-I've never seen anyone | I don't think I've ever seen anyone | so stubborn(저렇게) | anyone like that(저런사람) | such a(이렇게, 이런) | have hard time ..ing 
-			-have hard time ..ing | I've naver had such a hard time ..ing | talking to someone 
+			-have hard time ..ing | I've never had such a hard time ..ing | talking to someone 
 			-be stressed | get stressed | be under stress | I've never been under so much stress ..ing | have a conversation with someone 
 			
 		-I'm under a lot of stress these days. I'm very stressed these days.
@@ -1274,16 +1274,16 @@
 	
 -title : 영어회화, 대화가이드 04, part2/2, 일상적으로 사용하는 극단적인 표현 추가 정리
 	-script :			
-		-I've naver had pasta this good (as good as this) before.
+		-I've never had pasta this good (as good as this) before.
 		-This is the best pasta I've ever had his year. This is the best movie I've ever seen in years(몇년만에).
 		-This has to be the best pasta I've ever had . This must be the best pasta I've ever had. This has got to be the best pasta I've ever had.
-			-I've naver had | this good | the best pasta I've ever had | in years | this year | the best movie I've ever seen | 
+			-I've never had | this good | the best pasta I've ever had | in years | this year | the best movie I've ever seen | 
 			-this has to be the best.. | this must be the best | this has got to be the best
 		
-		-I've naver seen anyone eat(drink/sleep) so much. I've naver seen anyone eat as much as you. I've naver seen anyone eat as much as him.
+		-I've never seen anyone eat(drink/sleep) so much. I've never seen anyone eat as much as you. I've never seen anyone eat as much as him.
 		-I don't think I've ever seen anyone eat so much. I don't think I've ever seen anyone eat as much as you. I don't think I've ever seen anyone eat as much as him.		
-		-I've naver seen anyone curse so much. I've naver seen anyone curse as much as him.
-		-I've naver seen anyone work so hard. I've naver seen anyone work as hard as him.
+		-I've never seen anyone curse so much. I've never seen anyone curse as much as him.
+		-I've never seen anyone work so hard. I've never seen anyone work as hard as him.
 			-anyone eat so much | anyone eat as much as you | anyone eat as much as him | anyone curse(욕하다) so much | anyone work so hard
 	
 	
@@ -1910,9 +1910,9 @@
 		
 -title : 영어로 가다와 오다를 be동사로 표현해야 하는 경우, 영어회화
 	-script :
-		-Have you been there? No,I haven't been there. No,I've naver been there.(강조) 
+		-Have you been there? No,I haven't been there. No,I've never been there.(강조) 
 		-This place looks really familiar, I think I've been here before.
-			-No, I haven't been there | No, I've naver been there | this place looks really familiar | I think I've been here before
+			-No, I haven't been there | No, I've never been there | this place looks really familiar | I think I've been here before
 			
 		-I have to be there by 2. I need to be there by 2. What time do you think you will be here? What time do you think you are going to be here? 
 		-I think I can be there by two-thirty.
@@ -2521,20 +2521,6 @@
 			-I worked really hard | this semester | I think I deserve | a little break | I think I deserve to | take a break | he is being so unreasonable | 
 			-you don't reserve(넌그런대접을받으면안된다) | that kind of treatment | you don't deserve to be treated | like that way(그런식으로) 
 			-some people say | she deserves | a second chance | I honestly think | she deserves to | be put in jail | I got what I deserved
-		
-
--title : 제대로 공부모드인 사람을 위한 하드코어 연습모드 
-	-script :	
-		-I think for those of us who have jobs and have been working for some time have this habit of telling ourselves that we deserve to take the money that we earn and spend it
-			on things that we like, whether it's shopping or booking a flight for our next trip. Isn't that how we reward ourselves for putting up with our difficult jobs?
-			And for many of us, this becomes more or less a habit - something that we do unconsciously and also kind of like an addiction because, let's face it, 
-			spending money feels good right? It provides us with instant satisfaction.
-			
-			-I think for those of us | for those of us(사람들이, 사람들은, 사람들에게 있어, 나를포함한, 주격형느낌) | who have been working | for some time(어느정도오래) | have this habit of telling ourselves that
-			-this habit of ..ing(..하는 이런습관) | take money that we earn and spend it on something we like, whether it's shoping or booking a flight | take ST and DO | spend ST on ST
-			-something whether it's ST or ST | book a flight for our next trip | isn't that how we....(그런식으로 하지 않나요?)| reward ourselves for ST (누구에게 뭐에대한 보상을 하다) | putting up with(..을견디다) 
-			-And for many of us(많은사람들이, 많은사람들은, 많은사람들에게 있어, 나를포함한, 주격형느낌) | this becomes more or less a habit (더도덜도않고습관처럼) | ..추상적인ST - somthing that | we do unconsciously 
-			-and also kind of like ST (..처럼) | because, let's face it, (왜냐하면솔찍히말해서..) | ..ing feels good(..하는건 기분이좋다) | it provides us with..(우리에게 ..를제공한다) | instant satisfaction
 			
 
 -title : 극단적인 주장, 뒷받침해주는 관점 제시, 주장의 타당성 강조
@@ -2548,56 +2534,332 @@
 			-but think about how important person's childhood is | and how much impact it has | throughout their lives(삶전반에걸쳐) | 
 			-I'm actually quite surprised that we don't already have such a thing | quite surprised that | we don't arealdy have(지체의느낌, 아직..아니) | we don't have .. yet | such a thing(그런거, 이런거) 
 	
----2번 392
--title : 
+
+-title : appropriate, proper, collect, right 맞게, 알맞은, 적합한, 잘못된, 제대로
 	-script :	
-	
+		-I don't know if I'm doing it right. 
+		-Why don't you talk to a professional trainer? There are so many different types of exercises and it's important to know which ones are appropriate for you. And not only that, 
+		-there's a proper way of doing any exercise and(but) a lot of people get injured because they don't do them in the collect(right) posture and they don't properly pace their workout.
 
--title : 
+			-I don't know if I'am doing it right | why don't you talk to(누구랑 얘기/상담해 보지그래) | there are so many different types of exercises | it's important to | it's important to know
+			-which ones are appropriate for you | and not only that,(그거말고도) | there's a proper way of doing any.. | a lot of people get injured 
+			-because they don't do them | in the collect(right) pospure | they don't properly pace their workout (페이스조절을 올바르게 못한다.)
+			-the proper way to use chopsticks | an appropriate class for your level
+
+
+-title : 네? 어디요? 어디를 가봤냐고요? 그런 곳이 있다고는 들어봤어요
 	-script :	
-	
+		-Have you been to Dancing Clown (by any chance)? What?(네?) Sorry where?(어디요?) Have I been (to) where? Dancing Clown!
+		-Oh~ no, I haven't. But I think I've heard of it(that place). Isn't that the place where they offer you a free dinner if you go on a stage and sing in front of everybody?
+			-Have you been to | what? | sorry, where? | have I been to where? | I haven't | I've heard of it(that place) | isn't that the place where | if you og on a stage | sing in front of
 
--title : 
+
+-title : 이해가 됐을지 모르겠네요, 제가 맞게 이해한 거라면, ..라는건가요?
 	-script :	
-	
+		-You can only get discount if you have the coupon downloaded throug our website. And you need to be signed up as a member to do that. I hope that makes sense.
+		-Oh, Ok. So, if I understood you correctly, all I need to do is go to your website and download a coupon?
+		-That's right. But to download the coupon, you first need to sign up as a member.
+		-Oh, I see. Dose that mean I can do that right now on my phone and get the discount?
+		-That's right!
+			
+			-get discount | you can only .. if .. (..만하면 ..할수있다) | you can only get discount | you have the coupon downloaded (hv pp, 하게만하면의 느낌?) | through our website 
+			-you need to | be signed up as a member | to do that | I hope that makes sense | Oh, Ok. so..(아,그러니깐..) | if I understood you correctly, | all I need to do is |
+			-download a coupon | But to..(근데..하기위서는) | But to download the coupon | you first need to(뭐먼저해야해) | sign up as a member | Oh, I see. Dose that mean I can.. | right now
 
--title : 
+
+-title : 강아지 옷 사주기
 	-script :	
+		-Well, it's definitely Winter. And While many of us like to stay inside when it's cold, especially when it's snowing outside, dogs alway seem to prefer going out.
+		-These are my dogs, The big one is Amber. She's a Golden Retriver. And the small one is Brodi. He's an Italian Greyhound.
+		-Amber never seem to mind the cold. She even sleeps on the bathroom flor sometimes because the living room is too warm for her. 
+		-But Brodi, on the other hand.. Well, let's just say that Winter is not his favorite season. 
+		-I realized that I need to get somthing warm that he can wear. You know, for when we go out. 
+		-I did a quick search online and I found this website where they had a bunch of different types of clothes made just for Italian Greyhound, and they all looked pretty nice.
+		-I noticed that they had chat support on their website. And I wanted to ask if they had any offline stores in Korea. 
+		-And this is what I aked. "Hi. I'd like to know if you guys have an offline store in South Korea that I can visit and purchase products."
+		-After a while, I got a reply and it's Korean! Turns out, it's actually a Korean company. And that's fine. 
+		-Thta's actually better because it makes it easier for me to have a long term buyer-and-seller relationship, (do) you know what I mean?
+		-Anyway, they told me that they didn't have any offline stores. But, with their help, I was able to give them some precise size measurements of my dog Brodi.
+		-And I was able to put in an order for a really nice coat for him. And it was good timing, too, because they are having a Christmas sale now and I think I got a pretty good deal.
+			
+			-Well, it's definitely Winter | While many of us ... , ...(..하는반면 ..한다) | like to stay inside | especially when it's snowing outside | dogs always seem to | prefer going out 
+			-the big one is | the small one is | Amber never seem to mind | the cold | she even sleep on the bathroom flor | the living room is too warm for her |
+			-But Brodi, on the other hand.. | well, let's just say that.. | is not his favorate season | I realized that I need to | get something warm that he can wear | for when we go out
+			-I did a quick search online | I found this website where | they had a bunch of different types of | clothes made just for Italian Greyhoud | they all looked | pretty nice
+			-I noticed that | they had chat support on their website | I wanted to ask if they had any offline stores | this is what I asked 
+			-I'd like to know if you |  guys had an offline store | that I can visit and purchase products (방문해서 살수 있는) | after a while, | I got a reply and it.. 
+			-Turns out, it's ...(대화체느낌, 알고보니까..) | that's actually better because | it makes it easier for me to | have a long term buyer-and-seller relationship | 
+			-But, with their help, | I was able to give them some precise size measurements of my dog Brodi | I was able to | put in an order for | a really nice coat for him
+			-and it was good timing, too, because | they are having a Christmas sale now | I think I got a pretty good deal
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-title : 영어 다이어리, New Coat
+	-script :	
+		-One thing that was missing from my last video diary, as many of you pointed out, was Brodi actually wearing his new coat. (지난 일기에서 하나빼먹은게, 많은 사람들이 지적했듯, 브로디이다+새콧트를 입은)
+		-I guess I should've mentioned that it hadn't yet arrived at the time I posted that video. 
+		-But today, I'm happy to tell you that it finally came in yesterday and MAN! Was it a satisfying experience! (도착했는데.. 얼마나 기분이 좋던지!)
+		-I mean, of course there's nothing more important than the product itself but I just couldn't get over how awesome the packing was! (상품자체보다 중요한건 없지만, 잊어내다(넘어가다, 극복하다))
+		-As sad as it may sound, for a moment, I had totally forgotten whose gift we were opening. (짠하게 들릴수도 있겠지만, 한동안은 잠시동안은, (우리가 풀고있는게 누구의 선물인지)를 완전 있고 있었다(있었다에서 과거완료형 느낌!)
+		-And I think Amber might still think it's hers. (hers=소유대명사, 그녕의 것, mine=나의것)
+		-Don't worry Amber, you'll get one for Christmas. And Besides, you already have the most beautiful coat in the world.
+		-This is actually Brodi's first Winter as an adult. So he had never worn a coat like this before. (입은적이 없었다, 없었다에서 과거완료형 느낌!)
+		-And Knowing how easily he scares, we did our best to ease him into it. (겁을 먹는지 알기에, ease + into, forwords.. (조심히 ..하다))
+		-I was actually a little worried that it might take some time for him get to get used to the coat, but he soon started dozing off in it. So we took that as a good sign.
+		-Anyway, so, Brodi, I really hope you like your new coat and now let's think about what to get your sister for Christmas.
+		
+			-One thing that | was missing from my last video diary, | as many of you point out | was Brodi | actually wearing his new coat
+			-I guess I should've mentioned that | it hadn'd yet arrived at the time | I posted that video 
+			-I'm happy to tell you that | it finally came in yesterday | was it a satisfying experience!
+			-there's nothing more important than the product itself | I just couldn't get over how | how awesome the package was!
+			-as sad as it may sound(에즈셋에즈, 잇메이싸운드) | for a moment(한동안은,잠시동안은) | I had totally forgotten whose gift | we were opening 
+			-I think Amber might still think it's hers(소유대명사,그녀의것) | Don't worry Amber, you will get one for Christmas | you'll get one | And besides, | the most beautiful coat
+			-as an adult | he had never worn | a coat like this before | Knowing how easily | he scares | to ease him into it (조심히 넣다?)
+			-a little worried that | it might take some time | for him | to get used to | the coat | he soon started dozing off in it | started ..ing | he had a doze on the train
+			-I really hope you like .. | let's think about | what to get | your sister for Christmas
+		
+		
+-title : The benefits of getting up early
+	-script :	
+		-People often talk about the benefits of getting up and starting your day early in the morning. 
+		-But it's not simply about getting yourself more time to get more work done. It's more about getting yourselft a few hours to really focus on yourself. (이건단순히이런얘기가아니라.. 이란거다)
+		-Early mornings are pretty quiet. People tend to do and say less, so that means less texting, less phone calls and less activity on social media. 
+		
+		-And I think we can really benefit a lot from that, by using that time to go over some really important things about ourselves like our long term goals and things that
+		-we've been procrastinating[프로 크라스 틴 네이링] on and things that we'd like to improve and stuff like that.
+		
+		-The point is, we are constantly distracted by news and communication... and we are always struggling to keep up with others... and we forget to communicate with ourselves...
+		-and so we sometimes lose sight of who we are, what we want and waht we need.
+			
+			-people offten talk about | the benefit of | getting up and starting your day | early in the morning | but it's not simply about | getting yourself more time
+			-to get more work done | it's more about | getting yourself a few hours | to really focus on yourself | early mornings(복수,일반화) are pretty quiet
+			
+			-it's not simply about... it's more about... (단순히 그런게 아니라 더 그런거다) | people tend to do[텐투두] and say less | that means | less texting, less phone call and less activity 
+			-on social media | we can really benefit a lot from that | by using that time(함으로써) | to go over(살펴보다,검토하다) | some really important things about | ourselves(대명사,우리자신)
+			-like our long term goals and | things that we've been procrastinating[프로 크라스 틴 네이링] on | and things that we'd like to | improve | and stuff like that(뭐그런거)
+			
+			-the point is, ... | we are constantly distracted by | be distracted by | we are always struggling to | keep up with others | forget to communicate with | ourselves(대명사)
+			-lose sight of(식각을잃는다) | who we are | what we want | what we need 
 	
+		
+-title : 적당하다, 적절하다, 알맞다
+	-script :
+		-This is good enough.(충분해,적당해) Hey, go easy. Hey, take it easy. Hey, don't get carried away.(셤셤해, 적당히해, 무리하지마)
+		-Hey pace yourself.(속도조절좀해) You got to take a break once in a while. Working hard will only get you so far.(열심히 일한다고 좋은게 아니야) so far(어느정도만, I trust him only so far 어느정도만믿는다)
+		-We have a lot of people. It's going to be hard to find a good place.
+
+		-I think our timing was really good. I think our timing was just right. 
+		-They were not familiar with the work yet, so it would've been hard for them to take appropriate action. (it would've been hard for them to properly deal with it.)
+		
+		-She wasn't wrong about what she said, it's just that the way she expressd herself was a little inappropriate.
+		
+		-I think this is suited[쑤릿] for using at home.
+		-Think about what you are mainly going to use it for(전치사가살아야함) and get the one that is most suited[쑤릿] for that. You don't have to get the latest and greatest.
+		
+		
+			-this is good enough | go easy |  take it easy | don't get carried away | got carried away(무리했어) | pace yourself | you got to | take a break | once in a while
+			-working hard | will only(하게될뿐이다) | get you so far(한계가있을뿐야) | I trust him only so far(어느정도만) | we have a lot of people | it's going to be hard to | find a good place
+			-timing was really good | timing was just right | they were not familiar with the work yet | it would've been hard(였을꺼야) | for them | to take appropriate action 
+			-to properly deal with it
+			
+			-she wasn't wrong about | what she said | it's just that(그냥쫌..) | the way she expressd herself | was a little inappropriate
+			-this is suited[쑤릿] for | using at home | think about | what you are mainly going to use it for(살아있는전치사) | get the one | that's most suited for that
+			-you don't have to get the latest and greatest | 
+			
+			-choose a computer | to suit[쓧](적합한것) |your particular needs | Bule suits you(파랑이잘어울려) | this hot weather doesn't suit me(나한테안맞어)
+
+
+-title : the benefit of starting your day early in the morning
+	-script :
+		-I usually try to get to work a little earlier than I have to just so (that) I can get some extra work done before the day starts.
+		-There's always some construction on going in this area and the noise just makes it impossible to get any work done.
+		-Oh, I'm sorry I'm late. Have you been waiting long? No, it's OK. I was just going over some things we're going to talk about today.
+		
+			-get work done | get my phone fixed | get my hair cut | get some food delivered(배당시키다) 
+			-I usually try to get to(늘하려한다,노력) | work | a little earlier than I have to | just so that(..하고싶어서) I can get .st. pp(할수있도록) | get some extra work done | before the day starts
+			-there's always some construction on going | the noise makes it impossible to | get any work done
+			-Oh, I'm sorry. I'm late. Have you been waiting long? | waiting long? | No, it's OK. | I was just going over | some things | we're going to talk about | was ..ing (중이..였어!!)
+			
+			
+-title : 10가지 표현, 문맥, 패턴 응용, 복습
+	-script :
+		-This actually happened to me. I had just gotten up, I went downstairs into the living room and I slipped on some water on the floor.
+		-I'm guessing my dogs must've spilt some the night before. (spill[쓰삘]-spilled-spilt[쓰삘ㄸ], 쏟다)
+		-I fell flat on my back and the impact was so strong, I don't think I'd ever felt anything like that before, I literally couldn't breathe[브리드(1음절)]  for like 10 seconds. (fall-fell[펠]-fallen[폴른])
+		
+		-I was able to get back up not long afterwards(after that), but, I haven't been able to turn my head properly ever since. 
+		-I guess this is kind of what a light neck strain feel like after a car accident. But I consider myself really lucky, because it could've been a lot worse.
+		-I could've broken a bone or something. I'm just glad I didn't hurt my head.
+		
+			-this actually happened to me | I had just gotten up | I went downstairs into the living room | I slipped on some water on the floor
+			-I'm guessing my dogs must've spilt[스삘뜨] some | the night before | I fell flat on my back(등으로어퍼지다) | the impact was so strong | I don't think I'd ever pp before(그런적이없었던것같다)
+			-I don't think I'd ever felt anything like that before | I literally couldn't | breathe[동사, 브리드(1음절)] | breath[명사, 브레스(1음절)] | for like(정도) 10 seconds
+			-I was able to | get back up | not long afterwards(그리고얼마안되서) | not long after that | I haven't been able to(할수가없다,지금까지) | turn my head properly | ever since 
+			-I guess this is kind of what a(일종의..인것같다) | light neck train | feel like (..같은느낌의) | after a car accident | I consider myself really lucky 
+			-it could've been a lot worse | I could've broken a bone | or something | I'm just glad | I didn't hurt my head
+
+
+-title : 제대로 공부모드인 사람을 위한 하드코어 연습모드 #35
+	-script :	
+		-I think for those of us who have jobs and have been working for some time have this habit of telling ourselves that we deserve to take the money that we earn and spend it
+			on things that we like, whether it's shopping or booking a flight for our next trip. Isn't that how we reward ourselves for putting up with our difficult jobs?
+			And for many of us, this becomes more or less a habit - something that we do unconsciously and also kind of like an addiction because, let's face it, 
+			spending money feels good right? It provides us with instant satisfaction.
+			
+			-I think for those of us | for those of us(사람들이, 사람들은, 사람들에게 있어, 나를포함한, 주격형느낌) | who have been working | for some time(어느정도오래) | have this habit of telling ourselves that
+			-this habit of ..ing(..하는 이런습관) | take money that we earn and spend it on something we like, whether it's shoping or booking a flight | take ST and DO | spend ST on ST
+			-something whether it's ST or ST | book a flight for our next trip | isn't that how we....(그런식으로 하지 않나요?)| reward ourselves for ST (누구에게 뭐에대한 보상을 하다) | putting up with(..을견디다) 
+			-And for many of us(많은사람들이, 많은사람들은, 많은사람들에게 있어, 나를포함한, 주격형느낌) | this becomes more or less a habit (더도덜도않고습관처럼) | ..추상적인ST - somthing that | we do unconsciously 
+			-and also kind of like ST (..처럼) | because, let's face it, (왜냐하면솔찍히말해서..) | ..ing feels good(..하는건 기분이좋다) | it provides us with..(우리에게 ..를제공한다) | instant satisfaction
+
+
+-title : 제대로 공부모드인 사람을 위한 하드코어 연습모드 #35 후속
+	-script :	
+		-But If you're anything like me, I'm sure you've found yourself, at one point or another, feeling trapped in this endless loof of work and play, week and week.
+		-And it gets to the point where all that matter is how we reward ourselves after a tough week at work.
+		-And so, what happen? We become nearsighted. We forget how to be ambitious with our goal and with our lives.(life의 복수형은 lives임, 유사하게 leaf->leaves, knife->knives)
+		-We allow others to determine our limits and we learn to accept them. We learn to quit.
+		-And we grow this mindset where coming to terms with misery and complaining about it is just a lot easier than struggling for a better life. 
+			-(come to.. 에이르다(닿다)-> 조건(terms)에이르다 -> 합의하다 -> 받아드리다(come to terms with)), where(어디에리르다), 불행과 불평을 받아드리는 것이 ..보다 쉽다는 것에 이르다)
+			
+			-if you're anything like me(나같은보통사람이라면->평범한사람들은) | I'm sure you've found yourself feeling trapped in.. (갇힌느낌을받았을꺼에요) | I've found myself feeling trapped in..
+			-at one point or another(한번쯤) | endless of work and play | , week and week(매주반복적으로) | it gets to the point where(로 다다른다, 지경까지간다) | 
+			-all that matter is (그것만이문제이다->이것말고는의미가없다->이것만이 중요하다) | how we reward ourselves after a tough week | at work | and so, what happen? | we become nearsighted
+			-we forget how to be ambitious with our goal and with our lives(life의 복수) | we allow others to | we lean to accept .. (받아들이는걸배운다->받아들이게된다) | we learn to quit(포기)
+			-we grow this mindset where(이러한생각을키우게된다) | coming to terms with misery and complaining about it is just a lot easier than | struggling for a better life.
+			
 	
+-title : 생각할수록 좀 아닌것 같더라고
+	-script :	
+		-I considered working there for another several months, you know, for the experience. 
+		-But the conditions weren't very good and the more I thought about it, it just wasn't worth it. (I considered ..ing 생각할수록..)
+		
+		-I considered getting the latest model, you know, to see what the hype was all about. But I never really use(do) anything beyond the basic phone calls and texting
+		-and the more I thought about it, it just wasn't worth it for me.
+		
+		-I considered installing an air-conditioner but, you know, I'm only going to be there for another several months and the more I thought about it, it just wasn't worth it.
+		
+			-I considered ..ing .. but(할까도생각해봤는데..) | I considered working | I considered getting | I considered installing | for anothere several months | you know, for the experience
+			-conditions weren't very good | and the more I thought about it, it just wasn't worth it (for me) | I considered getting the latest model |
+			-you know, to see what the hype was all about | I never really use anything beyond the basic phone calls and texting 
+			-I considered installing an air-conditioner | you know, I'm only going to be there for anothor several months(몇개월만더 있을예정이다) | for another several months
+			
+			
+-title : apparently를 배워보자, 무슨 의미이고 언제 어떻게 쓰는걸까
+	-script :	한다고한다. 한다나봐, 나봐 
 	
+		-Apparently, during holiday seasons, deliveries can be delayed up to a week. (for as long as a(one) week) 한달까지도
+		-It was my friend and, apparently he was in an accident and he is in the hospital now.
+		
+			-Apparently, ... | during holiday seasons(복수,일반화) | deliveries(복수,일반화) can be delayed | up to a week | for as long as a week |
+			-it was my friend (통화같은상황) | and apparently | he was in an accident | and he is in the hospital now |
+			
+			-he was killed | in an accident | one in seven accidents | is caused by | sleepy drivers | I had an accident | on the way here | fatal(serious,minor) accident 
+			-I didn't mean to |  break it | it was an accident | .. was just an accident (..는 그저우연이었다) | it is no accident that.. (..는 우연이 아니다) | men fill most of the top job in nersing
+
+
+-title : apparently 연습문장 5개
+	-script :	다나봐, apparently[어페런ㅅ리]
 	
-	
-	
-	
+		-Jack can't come. Jack isn't coming.(미래의미의 현진형) Jack says he can't come. I heard Jack can't come.(젝말고다른사람한테들은상황) Apparently, he has to work this weekend.
+		-My mom likes dogs too but apparently she's allergic.[엘러직] (she's allergic to dogs.)
+		-Apparently, the fine dust is going to be pretty bad throughout next week (as well 다음주 "에도").
+		-Apparently, it's going to take (It's taking) a while because it's being sent from overseas. (걸리거라나봐, 걸리고있다나봐, 배송중이다)
+		-Apparently, he and his younger brother don't get along. Apparently, he don't get along with his younger brother. Apparently, he is not very close with his younger brother.
+		
+			-Jack can't come(못와) | Jack isn't coming(못올꺼야) | Jack sysa he can't come | I heard Jack can't come | apparently, he has to work this weekend | apparently, he has to |
+			-My mom likes dogs(복수, 일반화) | apparently, she's allergic[엘러직] | apparently, she's allergic to dogs | is allergic to |
+			-fine dust | is going to be pretty bad | throughout next week(다음주내내) | as well (마찮가지로)
+			-it's going to take a while(쫌걸리꺼다) | it's taking a while(쫌걸리는중이다) | a while | it's being sent(배송중이다) | from overseas
+			-apparently, he and his(he's가 아님) younger brother | dong't get along | get along with (친하게지내다) | he's not very close with 
+			
+
+-title : Recently, Lately, These days 구분해서 말해야 더 자연스럽다
+	-script :	
+		-A friend of mine had a baby recently.
+		-The air pollution has gotten really bad lately. Lately, I've been having strange dreams at night.
+		-These days, a lot of men wear makeup, too. (변화된 트렌드를 말하고자 할때) 
+			-A friend of mine | have a baby | recently | The air pollution has gotten really bad lately | I've been having strenge dreams | have a dream (꿈꾸다) | a lot of men | wear makeup
+
+
+-title : Recently, Lately, These days, nowadays, currently 연습문장 8개
+	-script :	
+		-They dated for a really long time and recently got married. Recently, I started reading this book and it's really good.
+		
+		-The number of people moving abroad has greatly increased lately. There have been a lot of people moving overseas lately.
+		-Lately, a lot of people have been traveling overseas during the holidays. I haven't been in touch with him lately.(연락을안해왔어, be in touch 연락하고있다/상태, get in touch 하다/행동 ) 
+		
+		-I'm not very busy these days.(요즘에 안바뻐) I haven't been very busy lately.(요즘에 안바뻣어) I've gained a lot of weight lately.
+		-At first, it was kind of hard but lately, I've gotten much more used to it so I'm OK.
+		
+		-I used to drink a lot. I used to be a heavy drinker but nowadays, I just don't enjoy it anymore. (예전과달라진짐부각)
+		-Currently, I'm living in an apartment. I'm currently living in an apartment. My current phone is an older model. (바뀔수도있지만 지금현재는의 의미)
+		
+			-they dated(사겼다) | for a really long time | got married | get married | I started ..ing | I started reading this book |
+			-The number of.. (어떤숫자가)| the number of people moving abroad | has greatly increased | there have been a lot of 복수 | there has been a lot of 단수 
+			-there have been a lot of people moving abroad | people moving abroad | people moving overseas | a lot of people | have been traveling overseas | during the holidays
+			
+			-I haven't been in touch with him lately (연락을안해오고있다,상태) | I haven't gotten in touch with him | be in touch with(상태) | get in touch with(행동)
+			-I'm not very busy | I haven't been very busy | I've gained a lot of weight | At first,(처음엔) | it was kind of hard but lately | I've gotten much more used to it
+			
+			-I used to | drink a lot | I used to be | a heavy drinker | but nowadays | I just don't enjoy it anymore | currently(현재는, 지금은, 바뀔여지가있음) | my current phone is an older model
+			
+
+-title : I found it hard to, 원어민이 자주 쓰는 표현을 배워보자
+	-script :	
+		-When I was (staying) in Prague[프러그,프라하] a few years ago, I found it difficult to socialize with the locals.
+		
+		-A lot of people seem to be upset about her new album but I found it really interesting and fun because it's different but it's new 
+			and I appreciate it when artists try different things and explore different sounds.
+			
+		-Whenever I see an ad about some revolutionary new method to lean English quickly and easily, 
+			I found it hard to believe that anybody would actually buy into that but, apparently, people do.
+			
+			-When I was in | When I was staying in | I found it difficult to | socialize with | the locals
+			-seem to be upset about(대해화나보이다) | but I found it really interesting and fun | it's different but it's new | I appreciate it when | artists try new things | explore different sounds
+			-Whenever I see | an ad(advertisement명, advertise동) about | some revolutionary new methods to | lean English quickly and easily | 
+			-I found it hard to believe that (믿기가어렵다는것을 느겼다 -> 믿기어렵더라구) | anybody would(늘,늘상?) actually buy into that | buy into that | but, apparently, people do (근데사람들이그런다나봐)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

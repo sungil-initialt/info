@@ -308,8 +308,13 @@ That's the default behavior of most web servers, and it makes sense from the sta
 
 	
 Whenever possible, the types of directives you can place in an .htaccess file are better off being place in the httpd.conf file, which is a configuration settings file for the entire server.
-			-are better off (..ing) being  place in the httpd.conf : .. 하는게 더 낫다
+	-are better off (..ing) being  place in the httpd.conf : .. 하는게 더 낫다
 			
+By default .class does not store parameters and returns argsN as parameter name, where N is a number of parameters in the method.
+	-By default : 기본적으로 (디폴트는)
+	-where N is : 여기서 N은
+	
+What does this symbol mean in JavaScript?	
 			
 ---------------------------------------------------------------------------------------------------------------------------------------
 
