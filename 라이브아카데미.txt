@@ -87,7 +87,7 @@
 
 		-How are you? How are you doding? How is it going? Hey, how are you doing today? How do you do? (안녕? 어떻게 지내?)
 			-How are you doding? | How is it going? | Hey, how are you doing today? | How do you do?
-			-Fine | Greate | Oh! Not bad, How are you doing today? | Excellent | Fantastic | Not bad But today, .... (인사 답변)
+			-Fine | Great | Oh! Not bad, How are you doing today? | Excellent | Fantastic | Not bad But today, .... (인사 답변)
 
 		-what's up? what's going on? what's happening? (안녕, 뭔일 있어?)
 			-what's going on? | what's happening? | Not much.
@@ -148,8 +148,8 @@
 		-What are you doing during the chuseok holidays? Do you have any plans? What are you going to do during the chuseok holidays? (뭐할꺼야? ..동안, 계획있어?)
 			-What ar you doing during the.. | any plans?| What are you going to do?
 
-		-A big holiday is comming up. There's a big holiday comming up. (명절, 연휴, 다가오는)
-			-A big holiday | is comming up(다가온다) | is comming soon(곧 온다) |
+		-A big holiday is coming up. There's a big holiday coming up. (명절, 연휴, 다가오는)
+			-A big holiday | is coming up(다가온다) | is coming soon(곧 온다) |
 
 		-I'm going to go see my parents during the Chuseok holiday. (보러가다)
 			-go xxx | go see
@@ -2820,12 +2820,198 @@
 			-I found it hard to believe that (믿기가어렵다는것을 느겼다 -> 믿기어렵더라구) | anybody would(늘,늘상?) actually buy into that | buy into that | but, apparently, people do (근데사람들이그런다나봐)
 
 
+-title : 2019년 NEW 연습가이드 체험해보세요, 하드코어
+	-script :	
+		-Alright, so.. I feel really strongly about this topic.(이주제에확고한생각이있어) Given what I do, I come across a lot of people learning English. (하는일이있다보니.. 하는일이그러다보니..)
+		-Actually, I feel more inclined to say that I come across a lot of people who want to learn English. (incline 기울다, decline 감소하다)
+		
+		-And that's because a lot of people obsess over the methodology[메쏘도로지,방법론] of learning English instead of going through the actual learning process.
+		-There is something that I naver forget to say when I'm advising people on this topic, and that is, 
+			Don't think of learning English any differently from learning to play a musical instrument or learning to drive.
+			
+		-And you know what? That's not an analogy[언 날로지, 비유]. that's just straight up true. (straight up, 꾸밈없이 말그데로)
+		-Learning a English isn't any different from anything else that we learn to do in life. (사라가면서 뭔가하기 위해 배우는, in life(살아가면서))
+		-I get a lot of people saying that they have this fear of English and asking how they could overcome it.(I see 또는 I meet 이 아닌이유는 찾아온다는 느낌이 있다 유사하게 I get a lot of questions..)
+		-But think about it, what do we usually say to people who are scared of driving? You just have to do it(그냥해야해). it's no big deal once you get used to it.
+		-The reason that this is all we can say is because there really is no sure way to overcome the fear of driving other than to get better at it.
+		-Is it wrong to feel scared? NO! And deep inside(마음속에는), we all know this and we accept it.
+		-Learning English is no different but English education in Korea has become extremely commercialized 
+			and it has succeeded in having us belive that we can purchase a quick and easy way.
+		-So does that mean we should blame them for waiting our time and money? No! It's business.
+		-They come up with(생각해내다,만들어내다) products, they market their products and we, the consumers, make the decisions for ourselves. That's how it's always been, am I right?(늘그래왔다)
+		-What we must not forget is that what they provide are tools and guidelines to learn.
+		-Will they make it easier for us to learn? Maybe not easier but maybe more convenient.
+		-Will thoes tools and guidelines improve my English? That's completely up to you.
+		-This is not about companies and businesses trying to sell us bad products, no, it's not about that.
+		-This is about us coming to terms with what we already know, that when it comes to learning something, nothing and no one can learn it for us.
+		-We have to put in the work, we have to go through the painful process of learning.
+		-Let's be clear,(확실히하자고요, 분명히해두자고요) this is not like(..같은게아니다, ..랑은다른거다) buying a product and putting it in our hands.
+		-That's why we can buy something for someone, but we can naver learn something for someone.
+		
+
+-title : 주어로 여러명을 묶어서 말할 때
+	-script : 우리 넷, 걔네 셋, 그들 셋
+		-My mother, my sister and her boyfriend and I , the four of us, We went to see a musical together.
+		-My mom and my sister and her boyfriend , the three of them, they went to see a musical together.
+		
+			-.... and I| the four of us | went to see a musical together | go to see a movie | the three of them
 
 
+-title : ..한적없어 의 두가지 유형
+	-script : ..한적없어, ..해본적 없어
+		-I naver apologized. I naver said anything. I naver mentioned his name. I naver said anything about where I lived. How dose he know?
+		-I have naver apologized.(해본적 없다)
+		
+			-I naver said.. | I naver mentioned.. | I have naver said | I naver apologized | I naver said anything about | where I lived | how does he know?
+			
+			
+-title : but then, as mush as.. 
+	-script : 근데 그러면, 좋긴 한데..
+		-I wish we had a place like this in our neighborhood. 
+		-That would be really nice. But then, we wouldn't have the foun of making the trip to get here. 
+		-I mean, As mush as I love this place,(나도 여기가 좋긴한데..) I don't think I would enjoy coming here as mush(지금만큼) if it was right around the corner and I knew I could come anytime.
+		
+			-I wish we had a place | we have a place like this | in our neighborhood | that would be really nice | but then(근데 그러면..) | I wouldn't (못할것 같어)| have the fun of ..ing
+			-the fun of making the trip(오는 재미) | the fun of making the trip to get here(여기까지 오는 재미) | the fun of driving(운전하는 재미) | the fun of cooking(요리하는 재미)
+			-As mush as I love this place, I don't think I would enjoy coming here as much(지금만큼) if it was right around the corner and I knew I could come anytime.
+			
+			
+-title : 하드코어 Working from Home
+	-script : 
+		-I've been working (from home 재택근무) for well over a year and although it's somthing that I've been wanting to do for a long time, (오랫동안 그렇고 싶어했던거 이긴 하지만)
+		-it's certainly not without its challenges.(힘든점이 없지 않아요) It's true, I can be as flexible as I want with my schedule (스케줄에 있어서는)
+		-but as great as that sound,(좋게 들리겠지만) it can get extremely stressful to maintain the discipline that (it takes to make sure that ~을 확실히 하다) I'm working regularly.
+		-My friend told me that it must be really convenient to be able to work in my own home and sure it's convenient, 
+		-but then(근데..) I'm constantly struggling to draw the line between work and personal life because practically I'm working where I sleep and sleeping where I work.
+		-And more often than not,(그런경우가 많아요, 이러기 다반사에요) I'm trying to take care of my personal errands(에런드,일) and trying to get work done at the same time.
+	
+	
+-title : 하드코어 추가 예문으로 응용 연습
+	-script :
+		-For almost 2 years now(2년정도되었다), my father has been talking about leaving his job and pursuing a different career. It's true, he has put a lot of effort to get to where he is now.
+		-So it's a huge decision and (it's certainly not without its risks. 위험이 없는것도 아니다) And my mother keep saying that he need to think about how it affect us. 
+		-And sure that's important, too. But then(근데), (who says that 누가 이렇게 말할수 있겠어) we deserve his endless sacrifice? 
+		-I mean, as mush as he's responsible for providing for the family, I think he has done more than enough all these years, and he deserve to take chance at something different. 
+		-And even though things might not go well, the rest of the family should be willing to support that. I think that's the least we can do.
+		
+		
+-title : I think that, I figure that, I assume that, I guess that. I feel like
+	-script :
+		-Wow, Are you really going to spend all your savings on this?
+		-Well, I figured that if I'm going to do this, I might as well try everything I can. 
+		-I think that that's the only way I won't have any regrets.
+		-And I'm assuming that I can always make more money late on, you know?
+		-I guess I'm being a little reckless but this seems like a rere opportunity and I feel like it can be a really good experience for me.
+	
+			
+-title : 위치, 의상, 행동으로 사람 식별하기
+	-script :		
+		-What are you keep looking at? 
+		-Oh, it's nothing. It's just that that guy looks kind of familiar. I think know him.
+		-The guy over there (who is) sitting at the bus stop?
+		-No, the guy(one) next to him with (wearing) glasses, looking at his phone.
+		-Why don't you go and talk to him?
+		-Nah~ forget it.
+		
+			-what are you keep looking at? | it's just that(그냥..) | I think I know him | the guy over there sitting | at the bus stop | the one next to him | with classes | 
+			-why don't you | go and talk | Nah~ forget it
+			
 
+-title : 오늘같은 날 바깥에서 일해야 하는 사람들은 안됐어요. 영어로
+	-script :
+		-Have you been outside today? The smog is really bad.
+		-Oh that's too bad.(그거참 안됐다). I feel really bad for people who have to work outside on a day like this.
+			
+			-Have you been side | is really bad | Oh, that's too bad | I feel really bad for people.. | on a day like this
+			
+			
+-title : 영어 연습가이드, mainly because, that's partly reason, it has to do with the fact that
+	-script :
+		-My sister and I aren't very close. I think it's mainly because we just have very different lifestyle. so we simply don't have very much in common.
+		-When we were growing up, she stayed with our uncle in Singapore for many years and she did most of her schooling there.
+		-So, we naver really got a chance to know each other and I think that's partly the reason (why).
+		-I guess some of it simply has to do with the fact that I'm a man and she's a woman, you know? We can only share and communicate so much. 
+		-Especially without that initial bond as brother and sister, we're practically strangers.
+		
+			-.. and .. aren't very close | I think it's mainly because.. we..(이게 가장 큰이유 같아요) | have very different lifestyle | don't have very much in common | when we are growing up, 
+			-she did most of her schooling there | we naver really got a chance to | and I think that's partly the reason (why) (그래서 그런 이유도 있는것 같아요)
+			-I guess some of it simply has to do with the fact that (내 생각에는 약간은 이런점과도 연결되는게 있는것 같다, 이런 이유도 있는것 같다)
+			-we can only (share and communicate) so much. (..하는데 한계가 있다)
+			-Especially without that (특히 ..를 빼면) | initial bond as brother and sister(남매로써의 유대감) | we're practically strangers  
+			
+			
+-title : 구동사, put together
+	-script :
+		-The company put togeher a team consisting of some of their smartest people to come up with a solution. They put together an urgent meeting.
+		-They were able to put together a new set of guidelines.
+		-she knows computers like the back of her hand. She can take them apart and put them back together with her eyes closed.
+		-She is much smarter than the rest of us put together. (the rest of us combined)
+		
+			-put together a report | put together a resume | put together a proposal
+			-company put together a team | company organized a team | consisting of | some of their smartest people | to come up with a solution
+			-they put together an urgent meeting | they set up an urgent meeting | they organized an urgent meeting | they arranged an urgent meeting | they scheduled an urgent meeting
+			-they called an urgent meeting | they were able to | put together new set of a guidelins |
+			-she knows computers like | the back of her hand | she can take them apart and put them back together | with her eyes closed  | is much smarter than lest of us put together(combined)
+			
+			
+-title : 왜 ..할 수는 없었던걸까? 그랬으면 ..하지 않아도 됐을 텐데.
+	-script : 
+		-Hey, did you see this?
+		-Umm.. what? That's Christian Bale?
+		-Yeah, they say he gained like 40 pounds to play this role.
+		-That's unbelievable.. I get that hi is a really great actor and everything but, I've got to say, the first thing that's going through my mind right now is, 
+		-why couldn't they have just casted an older actor? That way, they wouldn't have had to go through all that trouble with (the) makeup.
+		-Well, apparently, the director especially had him in mind for the role. And you know, it's Christian Bale. As an actor, he enjoys the challenge.
+			
+			-did you see this? | What? that's Christian Bale? | they say he.. | he gained like 40 pounds | to play this role | that's unbelievable 
+			-he is a great actor and everything | but I've got to say (이말을 안할수 없어 -> 왜그랬을까?) | the first thing that's going through my mind right now is, 
+			-why couldn't they have just casted an order actor? | that way,(그랬으면) | they wouldn't have had to going through all that trouble with the makeup.
+			-well, apparently, | the director had him in mind for the role | As an actor, he enjoys the challenge.
+			
+			
+-title : 관계절 응용, 복습 및 추가 표현
+	-script :
+		-I have a friend who is currently working in another country (overseas). The company that he is working for is Korean company but they have an overseas branch 
+		-and I think he is running things over there. Anyway, he is back in Korea for about a week. so we are going to get togethr with some other friends sometime this week.
+		-We haven't seen him in almost a year so we are all really eager to see him and hear about how he has been.
+		
+			-friend who is currently working in another country (overseas) | the company that he is working for is .. | they have an overseas branch | I think he is running things over there
+			-he is back in Korean(한국에 돌아와 있다) | for about a week | we are going to get together | with some other friends | sometime this week
+			-we haven't seen him | in almost a year | we are really eager to see | we can't wait to see | about how he has been
 
-
-
+3/17			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 
 
 
